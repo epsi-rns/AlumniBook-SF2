@@ -1,0 +1,187 @@
+{% block theme_main %}
+
+    <div id="lay_main" class="{{ options.main_layout }}"><div class="fixed">
+        {% if options.flip_leftright %}
+        {% if options.show_right %}
+        <div id="lay_right">
+            {{ block('right') }}
+        </div>
+        {% endif %}
+        {% endif %}
+
+        {% if options.show_left %}
+        <div id="lay_left">
+            {{ block('left') }}
+        </div>
+        {% endif %}
+
+        {% if options.flip_leftright %}
+        {% if options.show_right %}
+        <div id="lay_right">
+            {{ block('right') }}
+        </div>
+        {% endif %}
+        {% endif %}
+
+        <div id="lay_content">
+            {{ block('theme_breadcumbs') }}
+
+            <div id="main_content" class="main_content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+        <div class="clr"></div>
+
+        {% if blocks.main_bottom %}
+        <div id="lay_bottom">
+            {% block main_bottom %}{% endblock %}
+        </div>
+        {% endif %}
+
+    </div></div>
+
+{% endblock %}
+
+{% block theme_header %}
+
+    <div id="lay_header"><div class="fixed" id="lay_header_container">
+        {% if oriclone.layout.logo is defined %}
+        <div class="logo" id="{{ oriclone.layout.logo }}"></div>
+        {% endif %}
+
+        <div id="lay_header_left">
+            {{ oriclone.layout.sitename }}
+        </div>
+
+        {% if (blocks.user3 or blocks.user4) %}
+        <div id="lay_header_right">
+            {% if blocks.user4 %}
+            <div id="tabsearch">
+                <div id="tabmenu_left"></div>
+                <div id="tabmenu_center">
+                    {% block user4 %}{% endblock %}
+                </div>
+                <div id="tabmenu_right"></div>
+            </div>
+            <div class="clr"></div>
+            {% endif %}
+
+            {% if blocks.user4 %}
+            <div id="tabmenu">
+                <div id="tabmenu_right"></div>
+                <div id="tabmenu_center">
+                    {% block user3 %}{% endblock %}
+                </div>
+                <div id="tabmenu_left"></div>
+            </div>
+            <div class="clr"></div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div></div>
+
+    {% if blocks.menumatic %}
+    <div id="menumaticwrap">
+        {% block menumatic %}{% endblock %}
+    <div>
+    <div class="clr"></div>
+    {% endif %}
+
+    <div id="lay_top">
+    <div class="fixed">
+    {% if blocks.top %}
+        {% block top %}{% endblock %}
+    {% endif %}
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block theme_footer %}
+    {% if (blocks.bottom or blocks.user1 or blocks.user2) %}
+    <div id="lay_top" class="no-print {{ options.top_layout }}"><div class="fixed">
+
+        <div id="lay_top_left">
+        {% if blocks.bottom %}
+            {% block bottom %}{% endblock %}
+        {% endif %}
+        </div>
+
+        {% if blocks.user2 %}
+        <div id="lay_top_right">
+            {% block user2 %}{% endblock %}
+        </div>
+        {% endif %}
+
+        {% if blocks.user1 %}
+        <div id="lay_top_center">
+            {% block user1 %}{% endblock %}
+        </div>
+        {% endif %}
+
+        <div class="clr"></div>
+    </div></div>
+    {% endif %}
+
+    {% if blocks.footer %}
+    <div id="lay_footer">
+    {% block footer %}<div id="footer"></div>{% endblock %}
+    </div>
+    {% endif %}
+
+    <div class="no-print">
+    </div>
+
+{% endblock %}
+
+{% block theme_breadcumbs %}
+    {% set _subtitle = block('subtitle') %}
+    {% set _breadtitle = block('breadtitle') %}
+    {% set _title = _breadtitle ? _breadtitle : block('title') %}
+
+    {% if _title is defined %}
+    <div id="gloss"><div class="breadcrumbs">
+        <strong>{% trans %}Home{% endtrans %}</strong>
+            &nbsp; &#x00bb; &nbsp; {{ _title }}
+        {% if _subtitle is not empty %}
+            &nbsp; &#x00bb; &nbsp; {{ _subtitle }}
+        {% endif %}
+    </div></div>
+    {% endif %}
+{% endblock %}
+
+{% block theme_flash %}
+    <div id="system-message">
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="flash_notice">{{ flashMessage|trans }}</div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        <div class="flash_error">{{ flashMessage|trans }}</div>
+    {% endfor %}
+
+    {% for flashMessage in app.session.flashbag.get('info') %}
+        <div class="flash_info">{{ flashMessage|trans }}</div>
+    {% endfor %}
+    </div>
+{% endblock %}
+
+{% block theme_page_top %}{% endblock %}
+
+{% block theme_page_peel %}
+{% if oriclone.effects %}
+
+    <p class="accessibility">
+    This website was created to reach every audience possible.</p>
+
+    <div id="page-flip" class="no-print">
+        <a href="{{ path('main_feed_atom') }}">
+            <img src="{{ asset('bundles/oriclone/images/notmine/page_flip.png') }}"
+                id="page-flip-image" alt="Subscribe!"
+                style="width: 50px; height: 52px;">
+        </a>
+        <div id="page-flip-message"></div>
+    </div>
+{% endif %}
+{% endblock %}

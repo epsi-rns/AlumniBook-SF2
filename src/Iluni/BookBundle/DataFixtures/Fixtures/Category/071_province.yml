@@ -1,0 +1,31 @@
+Province:
+  -1:
+    province_id: -1
+    province:    Di luar negeri
+  0:
+    province_id: 0
+    province:    Tidak diketahui
+  2:
+    province_id: 2
+    province:    Sumatera Utara
+  4:
+    province_id: 4
+    province:    Jambi
+  5:
+    province_id: 5
+    province:    Riau
+  6:
+    province_id: 6
+    province:    Sumatera Barat
+  12:
+    province_id: 12
+    province:    Jawa Barat
+  13:
+    province_id: 13
+    province:    DKI Jakarta
+  16:
+    province_id: 16
+    province:    Daerah Istimewa Yogyakarta
+  20:
+    province_id: 20
+    province:    Kalimantan Barat

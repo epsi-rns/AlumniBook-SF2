@@ -1,0 +1,4 @@
+org:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Organization:index" }
+

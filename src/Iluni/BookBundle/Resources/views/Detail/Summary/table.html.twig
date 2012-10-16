@@ -1,0 +1,23 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% set img = asset('bundles/ilunibook/images/accs/blank.png') %}
+
+{% block table_header %}
+        <th width="20">#</th>
+
+        {{ 'Group'|th }}
+        {{ 'Percent'|th }}
+        {{ 'Total'|th }}
+        {{ 'Chart'|th }}
+{% endblock %}
+
+{% block table_row %}
+        <td valign="top" width="2%">{{ count }}</td>
+
+        <td width="20%" align="left"><a href="{{ entity.url }}">{{ entity.name }}</a></td>
+        <td width="10%" align="center">{{ entity.percent }}</td>
+        <td width="10%" align="center">{{ entity.total }}</td>
+        <td width="300" align="left"><img src="{{ img
+            }}" class="bars_color_{{ entity.color
+            }}" height="2" width="{{ entity.width
+            }}" alt="" /></td>
+{% endblock %}

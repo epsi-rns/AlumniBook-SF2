@@ -1,0 +1,23 @@
+#lay_content a.readon:hover, .button:hover,
+tr:hover td.sectiontableheader,
+#gloss:hover {
+    background : url(../../images/gloss/bar-white.gif) repeat-x;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.menu_tabs ul li a:hover,
+#lay_main .moduletable h3:hover,
+.moduletable_text h3:hover,
+.moduletable_menu h3:hover {
+    background : url(../../images/gloss/title-white.gif) no-repeat;
+}
+
+.moduletable_menu ul.menu li:hover,
+.moduletable_menu ul.menu li li:hover {
+    background : url(../../images/gloss/item-white.gif) no-repeat;
+}
+
+.breadcrumbs:hover a,
+.moduletable_menu ul.menu li:hover a,
+.moduletable_menu ul.menu li li:hover a {   color : #888; }

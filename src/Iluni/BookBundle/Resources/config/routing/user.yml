@@ -1,0 +1,11 @@
+user_login:
+    pattern:  /login
+    defaults: { _controller: IluniBookBundle:User:login }
+
+user_check:
+    pattern:  /check
+    defaults: { _controller: IluniBookBundle:User:check }
+
+user_logout:
+    pattern:  /logout
+    defaults: { _controller: IluniBookBundle:User:logout }

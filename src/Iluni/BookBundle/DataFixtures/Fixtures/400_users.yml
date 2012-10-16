@@ -1,0 +1,22 @@
+Users:
+  admin:
+    first_name:     Administrator
+    last_name:      Root
+    email:          admin@iluni.org
+    username:       admin
+    password:       admin
+    roles:          ROLE_ADMIN
+  editor:
+    first_name:     Data
+    last_name:      Entry
+    email:          editor@iluni.org
+    username:       editor
+    password:       editor
+    roles:          ROLE_EDITOR
+  guest:
+    first_name:     Demo Site
+    last_name:      Guest
+    email:          guest@iluni.org
+    username:       guest
+    password:       guest
+    roles:          ROLE_GUEST

@@ -1,0 +1,31 @@
+<div class="sheet_summary" align="center">
+<h4>Summary for this Community</h4>
+
+{% if pairs is defined %}
+<table border="0" cellspacing="2" cellpadding="3">
+    <tr class="even" align="right">
+        <td>&nbsp;{% trans %}Year{% endtrans %}&nbsp;</td>
+        {% for i in 0..9 %}
+        <td>&nbsp;0{{ i }}&nbsp;</td>
+        {% endfor %}
+    </tr>
+    {% for d in [1970, 1980, 1990, 2000, 2010] %}
+    <tr class="{{ cycle(['even', 'odd'], loop.index) }}" align="right">
+        <td>&nbsp;<a href="{{ path('acommunities_filter_decade',
+            { 'decade': d }) }}">{{ d/10 }}x</a>&nbsp;</td>
+
+        {% for i in 0..9 %}
+            {% set year = d+i %}
+            {% if pairs[year] is defined %}
+                <td nowrap><a href="{{ path('acommunities_filter_year',
+                    { 'year': year }) }}">{{ pairs[year] }}</a></td>
+            {% else %}
+                <td nowrap></td>
+            {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+</div>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Group Display</source>
+        <target>Gabungkan Tampilan</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Sort Display</source>
+        <target>Urutkan Tampilan</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Order by</source>
+        <target>Urutkan dengan</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Filter Display</source>
+        <target>Saring Tampilan</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Grouping:</source>
+        <target>Pengelompokan:</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Ordering:</source>
+        <target>Pengurutan:</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Filter:</source>
+        <target>Penyaringan:</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Community</source>
+        <target>Komunitas</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Choose Occupation/ Job Type</source>
+        <target>Pilih Jenis Pekerjaan</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Choose Competency</source>
+        <target>Pilih Kompetensi</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Choose Job Position</source>
+        <target>Pilih Jabatan</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Choose Business Field</source>
+        <target>Pilih Bidang Usaha</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Detail of this alumna/us</source>
+        <target>Lihat detail dari alumna/us ini</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Detail of this organization</source>
+        <target>Lihat detail dari organisasi ini</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Browse alumni with same competency</source>
+        <target>Jelajah lulusan dengan kompetensi yang sama</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Browse alumni with same community</source>
+        <target>Jelajah lulusan dengan komunitas yang sama</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Browse organization with same business field</source>
+        <target>Jelajah perusahaan dengan bidang usaha yang sama</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Mr.</source>
+        <target>Bapak</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Ms.</source>
+        <target>Ibu</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Brother</source>
+        <target>Abang</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Sister</source>
+        <target>Kakak</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

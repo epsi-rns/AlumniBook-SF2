@@ -1,0 +1,45 @@
+#logo-orikara {
+    width: 40px;
+    height: 40px;
+    background: url(../images/logo/makara.png) no-repeat top left;
+}
+
+.clip_population {
+    background: url(../images/openclipart/population.png) no-repeat top left;
+    float: left;
+    width: 73px;
+    height: 73px;
+    padding-right: 30px;
+}
+
+.clip_institution {
+    background: url(../images/openclipart/institution.png) no-repeat top left;
+    float: left;
+    width: 75px;
+    height: 75px;
+    padding-right: 30px;
+}
+
+.clip_attributes {
+    background: url(../images/openclipart/race_drivers.png) no-repeat top left;
+    float: left;
+    width: 100px;
+    height: 100px;
+    padding-right: 30px;
+}
+
+.clip_industrial {
+    background: url(../images/openclipart/industrial.png) no-repeat top left;
+    float: left;
+    width: 107px;
+    height: 86px;
+    padding-right: 30px;
+}
+
+.clip_yellow_jacket {
+    background: url(../images/openclipart/motorsports-jacket.png) no-repeat top left;
+    float: left;
+    width: 90px;
+    height: 81px;
+    padding-right: 30px;
+}

@@ -1,0 +1,101 @@
+.main_content a:hover { text-decoration: underline blink; }
+
+/* Unordered list */
+ul li, .main_content li { list-style: none; }
+ul li:hover { list-style-image: url(../../images/accs/li2.gif); }
+
+.main_content ul    {
+    margin: 0px 5px 3px 10px;
+    padding-left: 20px;
+}
+
+.main_content ul li { background: transparent; }
+.main_content ul li:hover { background: #ff8; border:1px solid #fc0;}
+
+.main_content ul li  {padding-left : 3px;}
+.main_content ul li:hover {padding-left : 9px;}
+
+.main_content ul li { list-style-image: url(../../images/accs/arrowbullet-yellow.png);  }
+.main_content ul li:hover { list-style-image: url(../../images/accs/arrowbullet-blue.png);  }
+
+/* Ordered list */
+
+.main_content ol li
+    {   background: transparent url(../../images/accs/arrowbullet-yellow.png) no-repeat left 2px; }
+.main_content ol li:hover
+    {   background: #ff8 url(../../images/accs/arrowbullet-blue.png) no-repeat 4px 2px;
+        border:1px solid #fc0; }
+
+.main_content li {padding-left : 13px;}
+.main_content li:hover {padding-left : 19px;}
+
+.main_content form li {padding-left : 13px;}
+.main_content form li:hover {padding-left : 13px;}
+
+/* com_content */
+.small, .modifydate, .createdate {
+    padding: 5px 0px 5px 0px;
+    font-style: italic;
+    font-size: 90%;
+}
+
+/* Table of Content :: mittwoch css */
+
+.pagenavcounter {
+    height: 16px;
+    padding-left : 20px;
+    background: url(../../images/accs/toc.png) no-repeat;
+}
+
+table.contenttoc {
+    font-size : 11px;
+    border : 1px solid #fc0;
+    background: #ff8;
+    padding : 2px;
+    margin-left : 10px;
+    margin-bottom : 10px;
+    float : right;
+}
+.toclink {
+    padding: 4px;
+}
+.contentpaneopen table.contenttoc a:hover,
+table.contenttoc a:hover {
+    text-decoration : underline blink;
+}
+table.contenttoc td {
+    padding : 2px;
+    margin : 2px;
+}
+table.contenttoc td:hover {
+    background-color: #ff0;
+}
+table.contenttoc th {
+    font-size : 110%;
+    font-weight : normal;
+
+    text-align : left;
+    padding : 5px;
+    margin : 5px;
+
+    padding-left : 20px;
+    background: #fd8 url(../../images/icons/toc.png) no-repeat 2px 4px;
+}
+
+/* trash */
+.unused a.readon:hover, .unused a.readon:active, .unused a.readon:focus  {
+    text-decoration:underline;
+    border:solid 1px #D5D4D4;
+}
+.unused a.readon  {padding-left : 13px;}
+.unused a.readon:hover {padding-left : 19px; padding-right: 10px;}
+.unused a.readon    {
+    background: url(../../images/accs/arrowbullet-yellow.png) no-repeat left;
+    border : 3px double #d5d4d4;
+}
+.unused a.readon:hover  {
+    background: #f0f0c0 url(../../images/accs/arrowbullet-blue.png) no-repeat left;
+    color: #5093bd; /*#ebca71;*/
+}
+
+

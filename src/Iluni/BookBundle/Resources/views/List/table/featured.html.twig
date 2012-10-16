@@ -1,0 +1,16 @@
+{% use 'IluniBookBundle:List:table/loop.html.twig' %}
+
+{% if groups is not defined %}
+    {% set groups = { '': entities } %}
+{% endif %}
+
+<div class="sheet">
+    {% set count = (pager is defined) ? (pager.getPage-1) * pager.getMaxPerPage : 0 %}
+
+    {% for key, entities in groups %}
+        {% if key %}<div class="group-key">{{ key }}</div>{% endif %}
+        {{ block('table_loop') }}
+    {% endfor %}
+</div>
+
+{% include 'IluniBookBundle:List:pager.html.twig' %}

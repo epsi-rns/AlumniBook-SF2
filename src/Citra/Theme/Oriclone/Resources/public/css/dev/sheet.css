@@ -1,0 +1,121 @@
+.sheet table {
+    border: 1px solid #CCCCCC;
+    padding: 3px;
+    width: 98%;
+    _width: 760px;
+    margin: 0 auto;
+}
+
+.sheet th {
+    /*text-align: center;*/
+    font-weight: bold;
+    border-bottom: 1px solid #BBBBBB;
+    background: #efefef;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    padding: 2px 4px;
+}
+
+.sheet td {
+    text-align: left;
+    padding: 2px 4px;
+}
+
+
+tr.even {
+    background: #EFEFEF;
+}
+
+tr.odd {
+    background: #FFF;
+}
+
+tr.even:hover,
+tr.odd:hover { background: #fff966; }
+
+tr.even:hover td,
+tr.odd:hover td { border-bottom: 1px dotted #000; }
+
+/* joomla admin: standard form style table */
+div.col50 { float: left; width: 50%; }
+div.col70 { float: left; width: 70%; }
+div.col30 { float: left; width: 30%; }
+div.col60 { float: left; width: 60%; }
+div.col40 { float: left; width: 40%; }
+
+.sheet_admin td.key:hover {
+    background-color:#F6F6F6;
+    color:#666666;
+    font-weight:bold;
+}
+
+.sheet_admin tr.masterfields td,
+.sheet_admin tr.masterfields th {
+    border-bottom: solid 1px black
+}
+
+/* joobet jobs.css */
+.pagination_desc
+{
+  margin-left: 15px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.pagination_desc strong
+{
+
+}
+
+.pagination
+{
+  margin-top: 10px;
+  float: right;
+  margin-right: 10px;
+
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.pagination a
+{
+  margin: 0 1px;
+  text-decoration: none;
+
+  font-size: 75%;
+  vertical-align: 1px;
+  font-weight: normal;
+}
+
+.pagination a:hover
+{
+  text-decoration: underline;
+}
+
+.pagination img
+{
+  vertical-align: -2px;
+}
+
+.sheet_filter label {
+    width: 100px;
+    float:left;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.sheet_filter {
+    background: #f8f8f8;
+}
+.sheet_filter fieldset {
+    background: #efefef;
+}
+
+.sheet_filter li {
+    clear: both;
+}
+
+.sheet .group-key {
+  font-style: italic;
+}

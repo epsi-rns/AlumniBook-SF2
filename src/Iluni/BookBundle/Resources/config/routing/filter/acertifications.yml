@@ -1,0 +1,3 @@
+acertifications:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\ACertifications:index" }

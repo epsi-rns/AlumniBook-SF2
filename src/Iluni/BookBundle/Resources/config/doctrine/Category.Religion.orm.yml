@@ -1,0 +1,15 @@
+Iluni\BookBundle\Entity\Category\Religion:
+  type: entity
+  table: religion
+  id:
+    id:
+      type: smallint
+      column: religion_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: religion
+      length: 20
+      unique: true
+  lifecycleCallbacks: {  }

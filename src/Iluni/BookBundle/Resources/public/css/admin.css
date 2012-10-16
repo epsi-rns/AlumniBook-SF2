@@ -1,0 +1,100 @@
+body
+{
+  background: none;
+}
+
+.sfadmin #container
+{
+  width: 100%;
+  background: none;
+}
+
+.sfadmin #content
+{
+  padding: 25px;
+  padding-top: 0;
+}
+
+.sfadmin #menu
+{
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+  background-color: #fff;
+}
+
+.sfadmin #menu ul
+{
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.sfadmin #menu li
+{
+  margin-right: 15px;
+  display: inline;
+}
+
+.sfadmin #content h1
+{
+  padding: 0;
+  background: transparent;
+  margin-bottom: 20px;
+  font-size: 140%;
+  color: #000;
+}
+
+.sfadmin td, .sfadmin th
+{
+  padding: 7px;
+}
+
+.sfadmin th
+{
+  font-weight: bold;
+}
+
+.sfadmin #footer
+{
+  clear: both;
+  padding: 25px;
+  margin-top: 0;
+  height: auto;
+  font-family: arial,sans-serif;
+  font-size: 80%;
+  float: right;
+  color: #666;
+  background: none;
+}
+
+.sfadmin #footer img
+{
+  vertical-align: middle;
+}
+
+.sfadmin #sf_admin_container fieldset h2
+{
+  font-size: 110%;
+  font-family: arial,sans-serif;
+  font-style: italic;
+}
+
+.sfadmin .sf_admin_form_field_logo div div
+{
+  margin-left: 120px;
+}
+
+.sfadmin #sf_admin_container .sf_admin_form_field_logo div div label
+{
+  display: inline;
+  float: none;
+}
+
+.sfadmin #header h1
+{
+  width: auto;
+}
+
+.sfadmin #header { float: left; }
+.sfadmin .clr { clear: both; }

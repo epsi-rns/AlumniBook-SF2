@@ -1,0 +1,75 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}About AlumniBook{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    window.addEvent('domready', function() {
+        mootools_skypebutton();
+    });
+{% endblock %}
+
+{% block body %}
+    {% set reposite = 'https://github.com/epsi/AlumniBook-SF2' %}
+<h4>AlumniBook on Symfony</h4>
+
+<p>This is a rewrite of my first symfony application.
+For learning purpose so others may have sample
+and speed up their development process.</p>
+
+<p>This is just another unofficial sample of symfony application.
+Several common tricks for data entry problem has been solved,
+just take a look at the source code.</p>
+
+<p>More about this project: &#x00bb; &nbsp;
+<a class="readon" href="{{ reposite }}">AlumniBook on Github</a>
+&nbsp; &#x00ab;</p>
+
+<h4>Support for ILUNI</h4>
+<p>No support as this project is not main goal.</p>
+<p>If you are a developer too and stay near Jakarta,
+I'll be glad to share my little knowledge. Let's meet.</p>
+
+<p>More about Business Directory Project: &#x00bb; &nbsp;
+<a class="readon" href="{{ reposite }}/wiki/ILUNI">Wiki - ILUNI Page</a>
+&nbsp; &#x00ab;</p>
+
+
+<h4>Featuring (not finished)</h4>
+
+<ul>
+    <li>
+    Included many good things from Jobeet documentation from
+    <a href="http://www.symfony-project.org/jobeet/1_4/Doctrine/en/"></a>
+    I also skipped many other good parts.
+    </li>
+    <li>Simple routing class for master-detail table relationship.</li>
+    <li>
+    Base component to render table sheet report
+    with header, footer and grouping feature.</li>
+    <li>Different layouts: layout, error404, ajax, and modal.</li>
+    <li>
+    <b>Mootools integration:</b>
+    <ul>
+        <li>ajax request</li>
+        <li>form field validation</li>
+        <li>theme effects</li>
+        <li>sfWidgetFormDatePicker</li>
+        <li>dynamic drop down list using ajax (master-detail)</li>
+        <li>Using a special iframe lightbox for value lookup.
+        This input also utilize a lookup modal widget.</li>
+    </ul>
+    </li>
+    <li>
+    <b>Oriclone Theme:</b>
+    My personal theme, the original clone.
+    Although I've made it from scratch, it is inspired by other design.
+    I also have included some source images.
+    </li>
+    <li>Few plugins:
+    each has their own README.md,
+    most are only mootools wrapper.</li>
+    <li>Also utilize I18n translation in form filter.</li>
+</ul>
+
+{% endblock %}

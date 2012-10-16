@@ -1,0 +1,39 @@
+{% block include_stylesheets_diabox %}
+    {% set path_diabox = 'bundles/diabox' %}
+
+    <link rel="stylesheet" href="{{
+        asset(path_diabox ~ '/css/diabox.css')
+    }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block include_javascripts_diabox %}
+    {% set path_diabox = 'bundles/diabox' %}
+
+    <script type="text/javascript" src="{{
+        asset(path_diabox ~ '/js/diabox.min.js')
+    }}"></script>
+{% endblock %}
+
+{% block inline_javascripts_diabox %}
+<script type="text/javascript" charset="utf-8">
+    window.addEvent("domready", function(){
+        window.diabox = new Diabox();
+    });
+</script>
+{% endblock %}
+
+{% block inline_javascripts_diabox_frame %}
+<script type="text/javascript" charset="utf-8">
+    window.addEvent("domready", function(){
+        window.diabox = new Diabox({
+            iframe : {width : 640, height: 400}
+        });
+    });
+
+    // no ajax;
+    Diabox.AjaxRenderable = new Class({
+        Extends : Diabox.RemoteRenderable
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,23 @@
+about_alumni:
+    pattern:  /{aid}/alumni/
+    defaults: { _controller: "IluniBookBundle:About:alumni" }
+
+about_org:
+    pattern:  /{oid}/org/
+    defaults: { _controller: "IluniBookBundle:About:org" }
+
+detail_alumni:
+    pattern:  /{aid}/adet/
+    defaults: { _controller: "IluniBookBundle:About:adet" }
+
+detail_org:
+    pattern:  /{oid}/odet/
+    defaults: { _controller: "IluniBookBundle:About:odet" }
+
+detail_alumni_org:
+    pattern:  /{mid}/adeto/
+    defaults: { _controller: "IluniBookBundle:About:adeto" }
+
+detail_org_alumni:
+    pattern:  /{mid}/odeta/
+    defaults: { _controller: "IluniBookBundle:About:odeta" }

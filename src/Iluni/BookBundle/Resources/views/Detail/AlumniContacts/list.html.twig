@@ -1,0 +1,44 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Personal Contacts by Alumna/us{% endblock %}
+{% block breadtitle %}Personal Contacts :: list{% endblock %}
+{% block subtitle %}{{ alumni }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact Type{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'acontacts_show',
+                'acontacts_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.contactType }}</td>
+        <td>{{ entity.contact }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('acontacts_new', 'aid', 'aid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : app.request.attributes.get('aid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

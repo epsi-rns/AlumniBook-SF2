@@ -1,0 +1,64 @@
+body {	color: #444; }
+
+/* heading */	
+h1 {color: #111; }
+h2 {color: #222; }
+h3 {color: #333; }
+h4 {color: #444; }
+h5 {color: #555; }
+h6 {color: #666; }
+
+/* 
+a.readon, .button {	color : #088; } 
+#lay_content a.readon:hover, .button:hover { color : #b22; }
+*/
+
+a {color: #08f; }
+a:hover, a:link, a:visited, {color: #048; }
+
+.componentheading {	color : #777; }
+.contentheading { color : #4ad; }
+
+.bannerheader {	color : #cd3; }
+.banneritem_text a { color : #1be; }
+.banneritem_text a:hover { color : #cd3; }
+
+/* colourlovers.com 
+
+.scheme_ h1 {color: ; }
+.scheme_ h2 {color: ; }
+.scheme_ h3 {color: ; }
+.scheme_ h4 {color: ; }
+.scheme_ h5 {color: ; }
+.scheme_ h6 {color: ; }
+
+body .scheme_ { color: ; }
+.scheme_ .componentheading	{ color: ; }
+.scheme_ .contentheading,
+.scheme_ .bannerheader  	{ color: ; }
+.scheme_ a,
+.scheme_ .button,
+.scheme_ .banneritem_text a	{ color : ; }
+.scheme_ a:hover,
+.scheme_ .button:hover,
+.scheme_ .banneritem_text a:hover	{ color : ; }
+
+*/
+
+
+/* beauty, but text fail on light background */
+
+.scheme_slinkmag h1 {color: #111133; }
+.scheme_slinkmag h2 {color: #FF6600; }
+.scheme_slinkmag h3 {color: #001166; }
+.scheme_slinkmag h4 {color: #007799; }
+.scheme_slinkmag h5 {color: #007799; }
+.scheme_slinkmag h6 {color: #CCDDED; }
+
+.scheme_why h1 {color: #FFF1BF; }
+.scheme_why h2 {color: #FFCE80; }
+.scheme_why h3 {color: #BAB87D; }
+.scheme_why h4 {color: #52595E; }
+.scheme_why h5 {color: #3D3640; }
+.scheme_why h6 {color: #FFF1BF; }
+

@@ -1,0 +1,3 @@
+office:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Office:index" }

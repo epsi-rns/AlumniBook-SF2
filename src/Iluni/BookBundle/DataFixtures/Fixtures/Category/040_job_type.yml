@@ -1,0 +1,71 @@
+JobType:
+  1:
+    job_type_id: 1
+    Translation:
+      en:
+        job_type: Unknown
+      id:
+        job_type: Tidak Diketahui
+  2:
+    job_type_id: 2
+    Translation:
+      en:
+        job_type: Unemployed
+      id:
+        job_type: Tidak Bekerja
+  3:
+    job_type_id: 3
+    Translation:
+      en:
+        job_type: Civil Service, State Institutions
+      id:
+        job_type: Pegawai Negeri Sipil, Lembaga Negara
+  4:
+    job_type_id: 4
+    Translation:
+      en:
+        job_type: Private Company
+      id:
+        job_type: Perusahaan Swasta
+  5:
+    job_type_id: 5
+    Translation:
+      en:
+        job_type: Freelance / Non Permanent
+      id:
+        job_type: Freelance / Tidak Tetap
+  6:
+    job_type_id: 6
+    Translation:
+      en:
+        job_type: Army / Police
+      id:
+        job_type: TNI / POLRI
+  7:
+    job_type_id: 7
+    Translation:
+      en:
+        job_type: Entrepreneurial / Business Own
+      id:
+        job_type: Wira Usaha / Usaha Sendiri
+  8:
+    job_type_id: 8
+    Translation:
+      en:
+        job_type: Retired
+      id:
+        job_type: Pensiunan
+  9:
+    job_type_id: 9
+    Translation:
+      en:
+        job_type: State-owned Enterprises
+      id:
+        job_type: BUMN
+  10:
+    job_type_id: 10
+    Translation:
+      en:
+        job_type: NGO/ LSM / Social Institutions / Political Party
+      id:
+        job_type: NGO/ LSM / Lembaga Sosial / Parpol

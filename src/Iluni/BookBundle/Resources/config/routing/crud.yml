@@ -1,0 +1,67 @@
+IBB_crud_alumni:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/alumni.yml"
+    prefix:   /alumni
+    
+IBB_crud_org:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/organization.yml"
+    prefix:   /org
+
+IBB_crud_community:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/community.yml"
+    prefix:   /community
+
+IBB_crud_acommunities:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/acommunities.yml"
+    prefix:   /acommunities
+    
+IBB_crud_acompetencies:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/acompetencies.yml"
+    prefix:   /acompetencies
+
+IBB_crud_aexperiences:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/aexperiences.yml"
+    prefix:   /aexperiences
+
+IBB_crud_acertifications:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/acertifications.yml"
+    prefix:   /acertifications
+
+IBB_crud_adegrees:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/adegrees.yml"
+    prefix:   /adegrees
+    
+IBB_crud_ofields:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/ofields.yml"
+    prefix:   /ofields
+
+IBB_crud_amap:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/amap.yml"
+    prefix:   /amap
+
+IBB_crud_omap:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/omap.yml"
+    prefix:   /omap
+    
+IBB_crud_residence:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/residence.yml"
+    prefix:   /residence
+
+IBB_crud_office:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/office.yml"
+    prefix:   /office
+
+IBB_crud_workplace:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/workplace.yml"
+    prefix:   /workplace
+
+IBB_crud_acontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/acontacts.yml"
+    prefix:   /acontacts
+    
+IBB_crud_ocontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/ocontacts.yml"
+    prefix:   /ocontacts
+    
+IBB_crud_mcontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/crud/mcontacts.yml"
+    prefix:   /mcontacts

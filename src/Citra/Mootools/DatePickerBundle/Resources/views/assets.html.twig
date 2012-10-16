@@ -1,0 +1,30 @@
+{% block include_stylesheets_datepicker %}
+    {% set path_datepicker = 'bundles/datepicker' %}
+    {% if theme is not defined %}{% set theme = 'dashboard' %}{% endif %}
+
+    <link rel="stylesheet" href="{{
+        asset(path_datepicker ~ '/css/datepicker.css')
+    }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{
+        asset(path_datepicker ~ '/css/datepicker_'~theme~'/datepicker_'~theme~'.css')
+    }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block include_javascripts_datepicker %}
+    {% set path_datepicker = 'bundles/datepicker' %}
+    {% if locale is not defined %}{% set locale = 'en-US' %}{% endif %}
+
+    <script type="text/javascript" src="{{
+        asset(path_datepicker ~ '/js/Locale.' ~ locale ~ '.DatePicker.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_datepicker ~ '/js/Picker.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_datepicker ~ '/js/Picker.Attach.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_datepicker ~ '/js/Picker.Date.js')
+    }}"></script>
+{% endblock %}

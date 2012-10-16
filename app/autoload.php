@@ -1,5 +1,7 @@
 <?php
 
+ini_set('xdebug.max_nesting_level', '150');
+
 use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = require __DIR__.'/../vendor/autoload.php';

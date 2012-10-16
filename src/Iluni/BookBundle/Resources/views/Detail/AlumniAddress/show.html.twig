@@ -1,0 +1,26 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Home Address :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+{% include 'IluniBookBundle:Common:show/address.html.twig' with {
+    'masterfields' : { 'Alumni': entity.alumni }
+} %}
+
+<hr />
+{{ crud.link_to__edit('residence_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('residence_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

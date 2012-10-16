@@ -1,0 +1,47 @@
+Iluni\BookBundle\Entity\Community:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\CommunityRepository
+  table: community
+  id:
+    id:
+      type: smallint
+      column: cid
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 50
+    brief:
+      type: string
+      length: 4
+      nullable: true
+    typeId:
+      type: smallint
+      column: type_id
+  manyToOne:
+    department:
+      targetEntity: Iluni\BookBundle\Entity\Category\Department
+      joinColumns:
+        department_id:
+          referencedColumnName: department_id
+      orphanRemoval: false
+    faculty:
+      targetEntity: Iluni\BookBundle\Entity\Category\Faculty
+      joinColumns:
+        faculty_id:
+          referencedColumnName: faculty_id
+      orphanRemoval: false
+    program:
+      targetEntity: Iluni\BookBundle\Entity\Category\Program
+      joinColumns:
+        program_id:
+          referencedColumnName: program_id
+      orphanRemoval: false
+  oneToMany:
+    acommunities:
+      targetEntity: Iluni\BookBundle\Entity\Detail\AlumniCommunities
+      mappedBy: community
+      joinColumns:
+        cid:
+          referencedColumnName: cid
+  lifecycleCallbacks: {  }

@@ -1,0 +1,78 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Alumni.orm.yml
+Iluni\BookBundle\Entity\Alumni:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\AlumniRepository
+  table: alumni
+  id:
+    id:
+      type: integer
+      column: aid
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 50
+      # unique: true --> note: alumni name can be very similar
+      # fixed: false
+      # nullable: false
+    prefix:
+      type: string
+      length: 15
+      nullable: true
+    suffix:
+      type: string
+      length: 15
+      nullable: true
+    note:
+      type: text
+      nullable: true
+    gender:
+      type: string
+      length: 1
+      fixed: true
+      nullable: true
+    birthplace:
+      type: string
+      length: 15
+      nullable: true
+    birthdate:
+      type: date
+      nullable: true
+    fullname:
+      type: string
+      length: 80
+      nullable: true
+    created:
+      type: datetime
+      column: created_at
+      gedmo:
+        timestampable:
+          on: create
+    updated:
+      type: datetime
+      nullable: true
+      column: updated_at
+      gedmo:
+        timestampable:
+          on: update
+  manyToOne:
+    religion:
+      targetEntity: Iluni\BookBundle\Entity\Category\Religion
+      # cascade: {  }
+      # mappedBy: null
+      # inversedBy:
+      joinColumns:
+        religion_id:
+          referencedColumnName: religion_id
+      # orphanRemoval: false
+  oneToMany:
+    acommunities:
+      targetEntity: Iluni\BookBundle\Entity\Detail\AlumniCommunities
+      # cascade: {  }
+      mappedBy: alumni
+      # inversedBy:
+      # orphanRemoval: false
+
+  lifecycleCallbacks:
+    prePersist: [ setFullnameValue ]
+    preUpdate: [ setFullnameValue ]

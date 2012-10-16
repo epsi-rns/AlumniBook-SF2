@@ -1,0 +1,130 @@
+# src/Iluni/BookBundle/Resources/config/validation.yml
+Iluni\BookBundle\Entity\Alumni:
+    properties:
+        name:
+            - NotBlank: ~
+            - MinLength: 3
+            - MaxLength: 50
+        gender:
+            - Choice: { choices: [M, F] }
+        birthdate:
+            - Date: ~
+
+
+Iluni\BookBundle\Entity\Organization:
+    constraints:
+        - Callback:
+            methods:   [isParentValid]
+    properties:
+        name:
+            - NotBlank: ~
+            - MinLength: 3
+            - MaxLength: 50
+
+Iluni\BookBundle\Entity\Community:
+    properties:
+        name:
+            - NotBlank: ~
+            - MinLength: 3
+            - MaxLength: 50
+        typeId:
+            - Choice: { choices: [1, 2] }
+
+Iluni\BookBundle\Entity\Detail\AlumniCommunities:
+    properties:
+        classYear:
+            - Range:
+                min: 1960
+                max: 2020
+
+Iluni\BookBundle\Entity\Base\Contacts:
+    properties:
+        contact:
+            - NotBlank: ~
+            - MinLength: 3
+
+Iluni\BookBundle\Entity\Detail\AlumniExperiences:
+    properties:
+        yearIn:
+            - Range:
+                min: 1960
+                max: 2020
+        yearOut:
+            - Range:
+                min: 1960
+                max: 2020
+
+Iluni\BookBundle\Entity\Detail\AlumniDegrees:
+    properties:
+        admitted:
+            - Range:
+                min: 1960
+                max: 2020
+        graduated:
+            - Range:
+                min: 1960
+                max: 2020
+
+Iluni\BookBundle\Entity\Detail\AlumniCertifications:
+    properties:
+        certification:
+            - NotBlank: ~
+            - MinLength: 5
+            - MaxLength: 50
+        institution:
+            - MinLength: 5
+            - MaxLength: 20
+
+# Below is used by Sonata
+
+Iluni\BookBundle\Entity\Category\Religion:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Competency:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\BizField:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\JobType:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\JobPosition:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Strata:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Program:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Faculty:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Department:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\ContactType:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Country:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\Province:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id
+
+Iluni\BookBundle\Entity\Category\District:
+    constraints:
+        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: id

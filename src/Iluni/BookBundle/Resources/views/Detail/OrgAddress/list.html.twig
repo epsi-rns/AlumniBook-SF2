@@ -1,0 +1,44 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Office Addresses by Organization{% endblock %}
+{% block breadtitle %}Office Addresses :: list{% endblock %}
+{% block subtitle %}{{ organization }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Address{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Region{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'office_show',
+                'office_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.address }}</td>
+        <td>{{ entity.region }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('office_new', 'oid', 'oid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : app.request.attributes.get('oid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

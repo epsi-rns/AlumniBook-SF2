@@ -1,0 +1,53 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Type{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Brief{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Members{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Faculty{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Program{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+        {% set total = entity.total ? entity.total : '' %}
+        {% set item = entity[0] %}
+        {% set type = (item.typeId==2)?  'Club' : 'Formal' %}
+
+        {% set id = {
+            'p': item.program.id,
+            'f': item.faculty.id,
+            'd': item.department.id,
+            'c': item.id,
+        } %}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_show(
+                'community_show', { 'id': item.id }) }}
+            {{ crud.link_to_action_edit(
+                'community_edit', { 'id': item.id }) }}
+        </td>
+        {% endif %}
+
+        <td>{{ type }}</td>
+        <td><a href="{{ path('acommunities_filter_community',
+            { 'cid': id.c }) }}">{{ item.name|textShort(20) }}</a></td>
+        <td>{{ item.brief }}</td>
+        <td>{{ total }}</a></td>
+        <td><a href="{{ path('acommunities_filter_department',
+            { 'did': id.d }) }}">{{ item.department|textShort(15) }}</a></td>
+        <td><a href="{{ path('acommunities_filter_faculty',
+            { 'fid': id.f }) }}">{{ item.faculty|textShort(15) }}</a></td>
+        <td><a href="{{ path('acommunities_filter_program',
+            { 'pid': id.p }) }}">{{ item.program|textShort(15) }}</a></td>
+{% endblock %}

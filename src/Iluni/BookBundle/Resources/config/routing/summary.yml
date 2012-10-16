@@ -1,0 +1,3 @@
+summary_total:
+    pattern:  /total
+    defaults: { _controller: "IluniBookBundle:Summary:total" }

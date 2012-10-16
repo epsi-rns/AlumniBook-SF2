@@ -1,0 +1,35 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Full Name{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Last Update{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Note{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_show(
+                'org_show', { 'id': entity.id }) }}
+            {{ crud.link_to_action_edit(
+                'org_edit', { 'id': entity.id }) }}
+        </td>
+        {% endif %}
+
+        <td><a href="{{ path('about_org', { 'oid': entity.id }) }}"
+          >{{ entity.fullname|textShort(20) }}</a>
+          {{ entity.updated|pastDateImage }}</td>
+        <td>{% if entity.updated %}
+            {{ entity.updated|date('Y-m-d H:i:s') }}
+        {% endif %}</td>
+        <td>{{ entity.note|textShort(20)  }}</td>
+{% endblock %}

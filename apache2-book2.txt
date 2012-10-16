@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    ServerName book2
+    DocumentRoot /home/epsi/www/symfony2/book2/web
+    DirectoryIndex app.php
+    # ErrorLog /var/log/apache2/jobeet-error.log
+    # CustomLog /var/log/apache2/jobeet-access.log combined
+    <Directory "/home/epsi/www/symfony2/book2/web">
+        AllowOverride All
+        Allow from All
+    </Directory>
+</VirtualHost>

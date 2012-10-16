@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Top of Page</source>
+        <target>Ke atas halaman</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>First page</source>
+        <target>Halaman awal</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Last page</source>
+        <target>Halaman akhir</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Previous page</source>
+        <target>Halaman sebelumnya</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Next page</source>
+        <target>Halaman selanjutnya</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>logged in as</source>
+        <target>Tercatat sebagai</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>About</source>
+        <target>Ikhtisar</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Happy birthday dear alumna/us</source>
+        <target>Selamat ulang tahun alumni...</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>Table of Contents</source>
+        <target>Daftar Isi</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>%A, %e %B %Y, %T</source>
+        <target>%d %B %Y, jam %H:%M:%S</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Saved successfully</source>
+        <target>Berhasil disimpan</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Deleted successfully</source>
+        <target>Berhasil dihapus</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Not saved! Please verify entry.</source>
+        <target>Tidak disimpan! Mohon periksa masukan.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

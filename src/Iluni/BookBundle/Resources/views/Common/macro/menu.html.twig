@@ -1,0 +1,5 @@
+{% macro item(caption, mod) %}
+    <ul class="menu"><li>
+        <a href="{{ path(mod) }}">{{ caption|trans({},'navigation') }}</a>
+    </li></ul>
+{% endmacro %}

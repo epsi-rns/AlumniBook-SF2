@@ -1,0 +1,13 @@
+OFields:
+  CJA:
+    oid: 25
+    biz_field_id: 3
+  Ikan Lele:
+    oid: 35
+    biz_field_id: 4
+    product: ..Cat & Fish.. Business
+    description: test keterangan
+  Dexa Medica:
+    oid: 283
+    biz_field_id: 2
+    product: Obat-obatan

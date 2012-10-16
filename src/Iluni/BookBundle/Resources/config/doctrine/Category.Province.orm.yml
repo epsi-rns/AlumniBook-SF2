@@ -1,0 +1,15 @@
+Iluni\BookBundle\Entity\Category\Province:
+  type: entity
+  table: province
+  id:
+    id:
+      type: smallint
+      column: province_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: province
+      length: 30
+      unique: true
+  lifecycleCallbacks: {  }

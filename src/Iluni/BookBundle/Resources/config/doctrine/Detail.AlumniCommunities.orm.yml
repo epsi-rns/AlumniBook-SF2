@@ -1,0 +1,57 @@
+Iluni\BookBundle\Entity\Detail\AlumniCommunities:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniCommunitiesRepository
+  table: a_communities
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    classYear:
+      type: smallint
+      column: class_year
+    classSub:
+      type: string
+      length: 15
+      nullable: true
+      column: class_sub
+    name:   # calculated field
+      type: string
+      length: 70
+      nullable: true
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      inversedBy: acommunities
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+      orphanRemoval: false
+    community:
+      targetEntity: Iluni\BookBundle\Entity\Community
+      joinColumns:
+        cid:
+          referencedColumnName: cid
+      orphanRemoval: false
+    department:
+      targetEntity: Iluni\BookBundle\Entity\Category\Department
+      joinColumns:
+        department_id:
+          referencedColumnName: department_id
+      orphanRemoval: false
+    faculty:
+      targetEntity: Iluni\BookBundle\Entity\Category\Faculty
+      joinColumns:
+        faculty_id:
+          referencedColumnName: faculty_id
+      orphanRemoval: false
+    program:
+      targetEntity: Iluni\BookBundle\Entity\Category\Program
+      joinColumns:
+        program_id:
+          referencedColumnName: program_id
+      orphanRemoval: false
+  lifecycleCallbacks:
+    prePersist: [ setCommunityNameValue ]
+    preUpdate: [ setCommunityNameValue ]

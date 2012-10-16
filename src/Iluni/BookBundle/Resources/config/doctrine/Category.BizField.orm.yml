@@ -1,0 +1,29 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Category.BizField.orm.yml
+Iluni\BookBundle\Entity\Category\BizField:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Category\BizFieldRepository
+  table: biz_field
+  id:
+    id:
+      type: smallint
+      column: biz_field_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: biz_field
+      length: 35
+      unique: true
+      gedmo:
+        - translatable
+    description:
+      type: text
+      nullable: true
+  oneToMany:
+    ofields:
+      targetEntity: Iluni\BookBundle\Entity\Detail\OrgFields
+      mappedBy: bizField
+      joinColumns:
+        biz_field_id:
+          referencedColumnName: biz_field_id
+  lifecycleCallbacks: {  }

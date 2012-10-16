@@ -1,0 +1,573 @@
+Department:
+  -1:
+    faculty_id:     -1
+    department_id:  -1
+    Translation:
+      en:
+        department: Independent
+      id:
+        department: Otonom/ Mandiri
+  401:
+    faculty_id:     4
+    department_id:  401
+    Translation:
+      en:
+        department: Civil Engineering
+      id:
+        department: Teknik Sipil
+  402:
+    faculty_id:     4
+    department_id:  402
+    Translation:
+      en:
+        department: Mechanical Engineering
+      id:
+        department: Teknik Mesin
+  403:
+    faculty_id:     4
+    department_id:  403
+    Translation:
+      en:
+        department: Electrical Engineering
+      id:
+        department: Teknik Elektro
+  404:
+    faculty_id:     4
+    department_id:  404
+    Translation:
+      en:
+        department: Metallurgy and Materials Engineering
+      id:
+        department: Teknik Metalurgi dan Material
+  405:
+    faculty_id:     4
+    department_id:  405
+    Translation:
+      en:
+        department: Architecture
+      id:
+        department: Arsitek
+  406:
+    faculty_id:     4
+    department_id:  406
+    Translation:
+      en:
+        department: Chemical Engineering
+      id:
+        department: Teknik Gas dan Petrokimia
+  407:
+    faculty_id:     4
+    department_id:  407
+    Translation:
+      en:
+        department: Industrial Engineering
+      id:
+        department: Teknik Industri
+  408:
+    faculty_id:     4
+    department_id:  408
+    Translation:
+      en:
+        department: Naval Engineering
+      id:
+        department: Teknik Perkapalan
+
+  101:
+    faculty_id:     1
+    department_id:  101
+    Translation:
+      en:
+        department: Medicine
+      id:
+        department: Kedokteran Umum
+
+  201:
+    faculty_id:     2
+    department_id:  201
+    Translation:
+      en:
+        department: Dentistry
+      id:
+        department: Kedokteran Gigi
+
+  301:
+    faculty_id:     3
+    department_id:  301
+    Translation:
+      en:
+        department: Mathematics
+      id:
+        department: Matematika
+  302:
+    faculty_id:     3
+    department_id:  302
+    Translation:
+      en:
+        department: Physics
+      id:
+        department: Fisika
+  303:
+    faculty_id:     3
+    department_id:  303
+    Translation:
+      en:
+        department: Chemistry
+      id:
+        department: Kimia
+  304:
+    faculty_id:     3
+    department_id:  304
+    Translation:
+      en:
+        department: Biology
+      id:
+        department: Biologi
+  305:
+    faculty_id:     3
+    department_id:  306
+    Translation:
+      en:
+        department: Geography
+      id:
+        department: Geografi
+
+  501:
+    faculty_id:     5
+    department_id:  501
+    Translation:
+      en:
+        department: untranslated (Ilmu Hukum Dasar)
+      id:
+        department: Ilmu Hukum Dasar
+  502:
+    faculty_id:     5
+    department_id:  502
+    Translation:
+      en:
+        department: untranslated (Hukum Keperdataan)
+      id:
+        department: Hukum Keperdataan
+  503:
+    faculty_id:     5
+    department_id:  503
+    Translation:
+      en:
+        department: untranslated (Hukum Pidana)
+      id:
+        department: Hukum Pidana
+  504:
+    faculty_id:     5
+    department_id:  504
+    Translation:
+      en:
+        department: untranslated (Hukum Tata Negara)
+      id:
+        department: Hukum Tata Negara
+  505:
+    faculty_id:     5
+    department_id:  505
+    Translation:
+      en:
+        department: untranslated (Hukum Administrasi...)
+      id:
+        department: Hukum Administrasi Negara
+  506:
+    faculty_id:     5
+    department_id:  506
+    Translation:
+      en:
+        department: untranslated (Hukum Internasional)
+      id:
+        department: Hukum Internasional
+  507:
+    faculty_id:     5
+    department_id:  507
+    Translation:
+      en:
+        department: untranslated (Hukum dan Masyarakat)
+      id:
+        department: Hukum dan Masyarakat
+  508:
+    faculty_id:     5
+    department_id:  508
+    Translation:
+      en:
+        department: untranslated (Ilmu Hukum Acara)
+      id:
+        department: Ilmu Hukum Acara
+
+  601:
+    faculty_id:     6
+    department_id:  601
+    Translation:
+      en:
+        department: Economics and Development Studies
+      id:
+        department: Ekonomi dan Studi Pembangunan
+  602:
+    faculty_id:     6
+    department_id:  602
+    Translation:
+      en:
+        department: Accounting
+      id:
+        department: Akuntansi
+  603:
+    faculty_id:     6
+    department_id:  603
+    Translation:
+      en:
+        department: Management
+      id:
+        department: Manajemen
+
+  701:
+    faculty_id:     7
+    department_id:  701
+    Translation:
+      en:
+        department: Archeology
+      id:
+        department: Arkeologi
+  702:
+    faculty_id:     7
+    department_id:  702
+    Translation:
+      en:
+        department: History
+      id:
+        department: Sejarah
+  703:
+    faculty_id:     7
+    department_id:  703
+    Translation:
+      en:
+        department: China Studies
+      id:
+        department: Studi Cina
+  704:
+    faculty_id:     7
+    department_id:  704
+    Translation:
+      en:
+        department: Japan Studies
+      id:
+        department: Studi Jepang
+  705:
+    faculty_id:     7
+    department_id:  705
+    Translation:
+      en:
+        department: Regional Literature / Java (??)
+      id:
+        department: Sastra Daerah/ Jawa
+  706:
+    faculty_id:     7
+    department_id:  706
+    Translation:
+      en:
+        department: Philosophy
+      id:
+        department: Filsafat
+  707:
+    faculty_id:     7
+    department_id:  707
+    Translation:
+      en:
+        department: German Studies
+      id:
+        department: Studi Jerman
+  708:
+    faculty_id:     7
+    department_id:  708
+    Translation:
+      en:
+        department: English Studies
+      id:
+        department: Studi Inggris
+  709:
+    faculty_id:     7
+    department_id:  709
+    Translation:
+      en:
+        department: French Studies
+      id:
+        department: Studi Perancis
+  710:
+    faculty_id:     7
+    department_id:  710
+    Translation:
+      en:
+        department: East Asian Studies
+      id:
+        department: Studi Asia Timur
+  711:
+    faculty_id:     7
+    department_id:  711
+    Translation:
+      en:
+        department: Slavic Literature (??)
+      id:
+        department: Sastra Slavia
+  712:
+    faculty_id:     7
+    department_id:  712
+    Translation:
+      en:
+        department: Library and Information Science (??)
+      id:
+        department: Ilmu Perpustakaan
+  713:
+    faculty_id:     7
+    department_id:  713
+    Translation:
+      en:
+        department: Linguistics
+      id:
+        department: Linguistik
+  714:
+    faculty_id:     7
+    department_id:  714
+    Translation:
+      en:
+        department: untranslated (Kesusasteraan)
+      id:
+        department: Kesusasteraan
+
+  802:
+    faculty_id:     8
+    department_id:  802
+    Translation:
+      en:
+        department: untranslated (Psikologi Industri...)
+      id:
+        department: Psikologi Industri Organisasi
+  803:
+    faculty_id:     8
+    department_id:  803
+    Translation:
+      en:
+        department: untranslated (Psikologi Klinis)
+      id:
+        department: Psikologi Klinis
+  804:
+    faculty_id:     8
+    department_id:  804
+    Translation:
+      en:
+        department: untranslated (Psikologi Perkembangan)
+      id:
+        department: Psikologi Perkembangan
+  805:
+    faculty_id:     8
+    department_id:  805
+    Translation:
+      en:
+        department: untranslated (Psikologi Pendidikan)
+      id:
+        department: Psikologi Pendidikan
+  806:
+    faculty_id:     8
+    department_id:  806
+    Translation:
+      en:
+        department: untranslated (Psikologi Sosial)
+      id:
+        department: Psikologi Sosial
+  807:
+    faculty_id:     8
+    department_id:  807
+    Translation:
+      en:
+        department: untranslated (Psikologi Umum...)
+      id:
+        department: Psikologi Umum dan Eksperimen
+
+  902:
+    faculty_id:     9
+    department_id:  902
+    Translation:
+      en:
+        department: Anthropology
+      id:
+        department: Antropologi
+  903:
+    faculty_id:     9
+    department_id:  903
+    Translation:
+      en:
+        department: Administration Studies
+      id:
+        department: Ilmu Administrasi
+  904:
+    faculty_id:     9
+    department_id:  904
+    Translation:
+      en:
+        department: International Relations
+      id:
+        department: Hubungan Internasional
+  905:
+    faculty_id:     9
+    department_id:  905
+    Translation:
+      en:
+        department: Communication
+      id:
+        department: Ilmu Komunikasi
+  906:
+    faculty_id:     9
+    department_id:  906
+    Translation:
+      en:
+        department: Social Welfare
+      id:
+        department: Kesejahteraan Sosial
+  907:
+    faculty_id:     9
+    department_id:  907
+    Translation:
+      en:
+        department: Criminology
+      id:
+        department: Kriminologi
+  908:
+    faculty_id:     9
+    department_id:  908
+    Translation:
+      en:
+        department: Political Science
+      id:
+        department: Ilmu Politik
+  909:
+    faculty_id:     9
+    department_id:  909
+    Translation:
+      en:
+        department: Sociology
+      id:
+        department: Sosiologi
+
+  1002:
+    faculty_id:     10
+    department_id:  1002
+    Translation:
+      en:
+        department: untranslated(Administrasi ...)
+      id:
+        department: Administrasi Kebijakan Kesehatan
+  1003:
+    faculty_id:     10
+    department_id:  1003
+    Translation:
+      en:
+        department: untranslated(Studi Kebijakan)
+      id:
+        department: Studi Kebijakan
+  1004:
+    faculty_id:     10
+    department_id:  1004
+    Translation:
+      en:
+        department: untranslated(Epidemiologi)
+      id:
+        department: Epidemiologi
+  1005:
+    faculty_id:     10
+    department_id:  1005
+    Translation:
+      en:
+        department: untranslated(Gizi dan ...)
+      id:
+        department: Gizi dan Kesehatan Masyarakat
+  1006:
+    faculty_id:     10
+    department_id:  1006
+    Translation:
+      en:
+        department: untranslated(Ilmu Kependu...)
+      id:
+        department: Ilmu Kependudukan dan Biostatistik
+  1007:
+    faculty_id:     10
+    department_id:  1007
+    Translation:
+      en:
+        department: untranslated(Kesehatan Lingkungan)
+      id:
+        department: Kesehatan Lingkungan
+  1008:
+    faculty_id:     10
+    department_id:  1008
+    Translation:
+      en:
+        department: untranslated(Pendidikan Kesehatan...)
+      id:
+        department: Pendidikan Kesehatan dan Ilmu Perilaku
+
+  1101:
+    faculty_id:     11
+    department_id:  1101
+    Translation:
+      en:
+        department: untranslated(Dasar Keperawatan dan ...)
+      id:
+        department: Dasar Keperawatan dan Keperawatan Dasar
+  1102:
+    faculty_id:     11
+    department_id:  1102
+    Translation:
+      en:
+        department: Medical Surgery Nursing
+      id:
+        department: Keperawatan Medikal Bedah
+  1103:
+    faculty_id:     11
+    department_id:  1103
+    Translation:
+      en:
+        department: untranslated(Keperawatan Anak)
+      id:
+        department: Keperawatan Anak
+  1104:
+    faculty_id:     11
+    department_id:  1104
+    Translation:
+      en:
+        department: untranslated(Keperawatan Maternitas)
+      id:
+        department: Keperawatan Maternitas
+  1105:
+    faculty_id:     11
+    department_id:  1105
+    Translation:
+      en:
+        department: Mental Health Nursing
+      id:
+        department: Keperawatan Jiwa
+  1106:
+    faculty_id:     11
+    department_id:  1106
+    Translation:
+      en:
+        department: untranslated(Keperawatan Komunitas)
+      id:
+        department: Keperawatan Komunitas
+
+  1201:
+    faculty_id:     12
+    department_id:  1201
+    Translation:
+      en:
+        department: Computer Science
+      id:
+        department: Ilmu Komputer
+
+  1301:
+    faculty_id:     13
+    department_id:  1301
+    Translation:
+      en:
+        department: Pharmacy
+      id:
+        department: Farmasi

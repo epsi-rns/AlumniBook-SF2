@@ -1,0 +1,11 @@
+form div label { 
+    display: block;
+    float: left;
+	width: 100px;
+	font-weight: bold;
+
+}
+
+form div { 
+	margin-top: 5px;
+}

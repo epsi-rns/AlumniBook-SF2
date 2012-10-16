@@ -1,0 +1,3 @@
+residence:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Residence:index" }

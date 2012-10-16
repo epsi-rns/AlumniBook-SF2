@@ -1,0 +1,18 @@
+h1 {color: #E6A06F; }
+h2 {color: #9E9C71; }
+h3 {color: #5E8271; }
+h4 {color: #33454E; }
+h5 {color: #242739; }
+h6 {color: #E6A06F; }
+
+body { color: #33454E; }
+.componentheading	{ color: #9E9C71; }
+.pagination_desc strong,
+.contentheading,
+.bannerheader  	{ color: #5E8271; }
+a,
+.button,
+.banneritem_text a	{ color : #242739; }
+a:hover, a:link, a:visited,
+.button:hover,
+.banneritem_text a:hover	{ color : #E6A06F; }

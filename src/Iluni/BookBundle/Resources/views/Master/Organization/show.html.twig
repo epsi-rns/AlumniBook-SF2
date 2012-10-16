@@ -1,0 +1,49 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Organization :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : entity.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr>
+            <th>{% trans from 'forms' %}Name{% endtrans %}</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        {% if entity.parent %}
+        <tr>
+            <th>{% trans from 'forms' %}Parent{% endtrans %}</th>
+            <td>{{ entity.parent.name }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+            <th>{% trans from 'forms' %}Prefix{% endtrans %}</th>
+            <td>{{ entity.prefix }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Suffix{% endtrans %}</th>
+            <td>{{ entity.suffix }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Note{% endtrans %}</th>
+            <td>{{ entity.note }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('org_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('org', {}) }}
+
+</div>
+
+{% endblock %}

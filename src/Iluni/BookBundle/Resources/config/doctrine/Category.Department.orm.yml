@@ -1,0 +1,27 @@
+Iluni\BookBundle\Entity\Category\Department:
+  type: entity
+  table: department
+  id:
+    id:
+      type: smallint
+      column: department_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: department
+      length: 40
+      unique: true
+      gedmo:
+        - translatable
+  manyToOne:
+    faculty:
+      targetEntity: Iluni\BookBundle\Entity\Category\Faculty
+      joinColumns:
+        faculty_id:
+          referencedColumnName: faculty_id
+  oneToMany:
+    community:
+      targetEntity: Iluni\BookBundle\Entity\Community
+      mappedBy: department
+  lifecycleCallbacks: {  }

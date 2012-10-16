@@ -1,0 +1,34 @@
+# Linked Drop Down
+
+partial_department_filter:
+    pattern:  /department/filter/name/{name}/id/{master_index}/val/{detail_index}
+    # pattern:  /pfdfn/{name}/{master_index}/{detail_index}
+
+    defaults: { _controller: "IluniBookBundle:Parts\DynamicDropdown:departmentFilter" }
+    requirements: { _method: GET, master_index: -?\d+, detail_index: -?\d+ }
+
+partial_department_filter_dummy:
+    pattern:  /department/filter
+    # pattern:  /pfdfn
+
+partial_department_edit:
+    pattern:  /department/edit/name/{name}/id/{master_index}/val/{detail_index}
+    # pattern:  /pfden/{name}/{master_index}/{detail_index}
+
+    defaults: { _controller: "IluniBookBundle:Parts\DynamicDropdown:departmentEdit" }
+    requirements: { _method: GET, master_index: \d+, detail_index: \d+ }
+
+partial_department_edit_dummy:
+    pattern:  /department/edit
+    # pattern:  /pfden
+
+partial_district_edit:
+    pattern:  /district/edit/name/{name}/id/{master_index}/val/{detail_index}
+    # pattern:  /ppden/{name}/{master_index}/{detail_index}
+
+    defaults: { _controller: "IluniBookBundle:Parts\DynamicDropdown:districtEdit" }
+    requirements: { _method: GET, master_index: \d+, detail_index: \d+ }
+
+partial_district_edit_dummy:
+    pattern:  /district/edit
+    # pattern:  /ppden

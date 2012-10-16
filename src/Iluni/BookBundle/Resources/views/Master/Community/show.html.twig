@@ -1,0 +1,47 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Community :: Show{% endblock %}
+
+{% block body %}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr>
+            <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Brief{% endtrans %}</th>
+            <td>{{ entity.brief }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Type{% endtrans %}</th>
+            <td>{{ (entity.typeId==2)?  'Club' : 'Formal' }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Program{% endtrans %}</th>
+            <td>{{ entity.program }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+            <td>{{ entity.department }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Faculty{% endtrans %}</th>
+            <td>{{ entity.faculty }}</td>
+        </tr>
+  </tbody>
+</table>
+<hr />
+{{ crud.link_to__edit('community_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('community', {}) }}
+
+</div>
+
+{% endblock %}

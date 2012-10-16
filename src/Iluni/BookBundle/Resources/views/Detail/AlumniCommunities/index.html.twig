@@ -1,0 +1,21 @@
+{% extends 'IluniBookBundle:List:template.html.twig' %}
+
+{% block title %}Communities :: Filtered{% endblock %}
+
+{% block table_summary %}
+{% if summary is defined %}
+<script type="text/javascript">
+    target = '{{ path ('acommunities_summary', {
+        'pid': summary.program,
+        'fid': summary.faculty,
+        'did': summary.department
+    }) }}';
+    bindInnerRequest(target, 'part_summary');
+</script>
+<?php endif; ?>
+
+<div id="part_summary"></div>
+<br/>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Job Addresses by Map{% endblock %}
+{% block breadtitle %}Job Addresses :: list{% endblock %}
+{% block subtitle %}{{ map.alumni }} - {{ map.organization }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Address{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Region{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'workplace_show',
+                'workplace_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.address }}</td>
+        <td>{{ entity.region }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('workplace_new', 'mid', 'mid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('map', {
+        'mid' : app.request.attributes.get('mid'),
+        'aid' : map.alumni.id,
+        'oid' : map.organization.id
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

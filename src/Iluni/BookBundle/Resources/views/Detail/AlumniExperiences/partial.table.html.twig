@@ -1,0 +1,36 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Experience{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Job Position{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_list(
+                'aexperiences_list', { 'aid': entity.alumni.id }) }}
+            {{ crud.link_to_action_edit(
+                'aexperiences_edit', { 'id': entity.id }) }}
+        </td>
+        {% endif %}
+
+        <td><a href="{{ path('about_alumni', { 'aid': entity.alumni.id }) }}"
+          >{{ entity.alumni }}</a></td>
+        <td>{{ entity.alumni.community }}</td>
+        <td>{{ entity.organization }}</td>
+        <td>{{ entity.description }}</td>
+        <td>{{ entity.jobPosition }}</td>
+{% endblock %}

@@ -1,0 +1,43 @@
+acommunities:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\ACommunities:filtrate" }
+
+acommunities_summary:
+    pattern:  /summary/{pid}/{fid}/{did}
+    defaults: { _controller: "IluniBookBundle:Filter\ACommunities:summary" }
+    requirements: { _method: GET, pid: -?\d+, fid: -?\d+, did: -?\d+ }
+
+acommunities_filter_program:
+    pattern:  /{pid}/p
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:program" }
+    requirements: { _method: GET, pid: -?\d+ }
+
+acommunities_filter_faculty:
+    pattern:  /{fid}/f
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:faculty" }
+    requirements: { _method: GET, fid: -?\d+ }
+
+acommunities_filter_department:
+    pattern:  /{did}/d
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:department" }
+    requirements: { _method: GET, did: -?\d+ }
+
+acommunities_filter_community:
+    pattern:  /{cid}/c
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:community" }
+    requirements: { _method: GET, cid: -?\d+ }
+
+acommunities_filter_year:
+    pattern:  /{year}/y
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:year" }
+    requirements: { _method: GET, year: \d+ }
+
+acommunities_filter_community_year:
+    pattern:  /{cid}/{year}/cy
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:comyear" }
+    requirements: { _method: GET, cid: -?\d+, year: \d+ }
+
+acommunities_filter_decade:
+    pattern:  /{decade}/de
+    defaults: { _controller: "IluniBookBundle:Filter/ACommunities:decade" }
+    requirements: { _method: GET, decade: \d+ }

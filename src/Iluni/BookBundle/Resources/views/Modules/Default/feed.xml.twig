@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Recent Alumni Record</title>
+  <subtitle>Record of new alumni entry by questionnaire</subtitle>
+  <link href="{{ path('main_feed_atom') }}" rel="self"/>
+  <link href="{{ url('main_homepage') }}"/>
+  <updated>{{ last_update|feedTime }}</updated>
+  <author><name>AlumniBook</name></author>
+  <id>{{ path('main_feed_atom')|sha1 }}</id>
+
+{% for entity in entities %}
+  <entry>
+    <title>{{ entity.fullname }}</title>
+    <link href="{{ path('about_alumni', { 'aid' : entity.id}) }}" />
+    <id>{{ entity.id|sha1 }}</id>
+    <updated>{{ entity.updated.date|feedTime }}</updated>
+    {% if entity.acommunities|length %}
+        {% set communities = {} %}
+
+        {% for index, community in entity.acommunities %}
+            {% set communities = communities|merge({(index):community.name}) %}
+        {% endfor %}
+
+    <summary type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+        {{ communities|join('<br/>')|raw }}
+        </div>
+    </summary>
+    {% endif %}
+
+  </entry>
+
+{% endfor %}
+</feed>

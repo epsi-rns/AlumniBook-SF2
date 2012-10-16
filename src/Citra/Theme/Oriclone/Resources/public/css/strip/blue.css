@@ -1,0 +1,27 @@
+a.readon, .button,
+#gloss {
+    background : url(../../images/gloss/bar-blue.gif) repeat-x;
+}
+
+button[type="submit"],
+input[type="submit"],
+.menu_tabs ul li a,
+#lay_main .moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3 {
+    background : url(../../images/gloss/title-blue.gif) no-repeat;
+}
+
+.moduletable_menu ul.menu li,
+.moduletable_menu ul.menu li li {
+    background : url(../../images/gloss/bar-blue.gif) repeat-x;
+}
+
+.moduletable_menu ul.menu li.active,
+.moduletable_menu ul.menu li li.active {
+    background : url(../../images/gloss/item-blue.gif) no-repeat;
+}
+
+.breadcrumbs a,
+.moduletable_menu ul.menu li a,
+.moduletable_menu ul.menu li li a { color : #884; }

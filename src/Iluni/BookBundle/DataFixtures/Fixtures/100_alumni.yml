@@ -1,0 +1,54 @@
+Alumni:
+  rizqi:
+    aid: 25
+    name:   Epsiarto Rizqi Nurwijayadi
+    suffix: ST
+    note:   Periksa ulang nama pengguna ini!
+    gender: M
+    birthplace:  Sungai Gerong
+    birthdate:   '1975-11-04'
+    religion_id: 1
+  aswil:
+    aid: 283
+    name:   Aswil Nazir
+    prefix: Ir.
+    gender: M
+    birthplace:  Jakarta
+    birthdate:   '1955-08-1'
+    religion_id: 1
+  desi:
+    aid: 3
+    name:   Desrinda Syahfarin
+    suffix: ST, MSc.
+    gender: F
+    religion_id: 1
+  idris:
+    aid: 4
+    name:   Idris Hadi Sikumbang
+    suffix: ST, MSc.
+    gender: M
+    religion_id: 1
+  jos:
+    aid: 5
+    name:   Jos Istiyanto
+    suffix: ST
+    gender: M
+    religion_id: 1
+    birthplace:  Pemalang
+    birthdate:   '1975-01-27'
+  dwika:
+    aid: 11
+    name:   Dwika Budhyantara
+    suffix: SE
+    gender: M
+    religion_id: 1
+
+  johndoe:
+    aid: 50
+    name:   John Doe
+    note:   Person without community test
+
+  janedoe:
+    aid: 51
+    name:   Jane Doe
+    note:   Person without community test

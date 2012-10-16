@@ -1,0 +1,33 @@
+acertifications_list:
+    pattern:  /{aid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:list" }
+    requirements: { aid:  \d+ }
+    
+acertifications_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:show" }
+    requirements: { id:  \d+ }
+    
+acertifications_new:
+    pattern:  /{aid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:new" }
+
+acertifications_create:
+    pattern:  /{aid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:create" }
+    requirements: { _method: post }
+
+acertifications_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:edit" }
+    requirements: { id:  \d+ }
+    
+acertifications_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:update" }
+    requirements: { _method: post }
+
+acertifications_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\ACertifications:delete" }
+    requirements: { _method: post }

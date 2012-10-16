@@ -1,0 +1,36 @@
+{% block form_filter %}
+{% if filter_form is defined %}
+    {% use 'IluniBookBundle:List:filter/community.html.twig' %}
+    {{ block('form_filter_community_javascript') }}
+
+<div class="sheet_filter">
+    <form action="{{ path(options['path']) }}" method="post" id="form_validate">
+        {% if filter_form.orderBy is defined %}
+        <fieldset title="{% trans from 'elements' %}Sort Display{% endtrans %}">
+            <legend>{% trans from 'elements' %}Ordering:{% endtrans %}</legend>
+            {{ form_row(filter_form.orderBy) }}
+        </fieldset>
+        {% endif %}
+
+        {% block form_filter_fields %}
+        {% if (options['use_fields'] is defined)
+          and (options['use_fields'] is not empty) %}
+        <fieldset title="{% trans from 'elements' %}Filter Display{% endtrans %}">
+            <legend>{% trans from 'elements' %}Filter:{% endtrans %}</legend>
+            {% for field in options['use_fields'] %}
+                {{ form_row( attribute(filter_form, field) ) }}
+            {% endfor %}
+        </fieldset>
+        {% endif %}
+        {% endblock %}
+
+        {{ block('form_filter_community_fields') }}
+
+        <input type="submit" value="{% trans from 'actions' %}Apply{% endtrans %}"/>
+        <a href="{{ path(options['path'])
+            }}?_reset">{% trans from 'actions' %}Reset{% endtrans %}</a>
+    </form>
+</div>
+
+{% endif %}
+{% endblock %}

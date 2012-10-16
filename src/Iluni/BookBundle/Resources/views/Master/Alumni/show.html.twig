@@ -1,0 +1,59 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Alumna/us :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr>
+            <th>{% trans from 'forms' %}Name{% endtrans %}</th>
+            <td>{{ entity.name }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Prefix{% endtrans %}</th>
+            <td>{{ entity.prefix }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Suffix{% endtrans %}</th>
+            <td>{{ entity.suffix }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Gender{% endtrans %}</th>
+            <td>{{ entity.genderText|trans }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Birth Place{% endtrans %}</th>
+            <td>{{ entity.birthplace }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Birth Date{% endtrans %}</th>
+            <td>{{ entity.birthdate|date('Y-m-d') }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Religion{% endtrans %}</th>
+            <td>{{ entity.religion }}</td>
+        </tr>
+        <tr>
+           <th>{% trans from 'forms' %}Note{% endtrans %}</th>
+            <td>{{ entity.note }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('alumni_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('alumni', {}) }}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,67 @@
+IBB_filter_alumni:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/alumni.yml"
+    prefix:   /alumni
+    
+IBB_filter_org:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/organization.yml"
+    prefix:   /org
+
+IBB_filter_community:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/community.yml"
+    prefix:   /community
+
+IBB_filter_acommunities:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/acommunities.yml"
+    prefix:   /acommunities
+    
+IBB_filter_acompetencies:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/acompetencies.yml"
+    prefix:   /acompetencies
+
+IBB_filter_aexperiences:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/aexperiences.yml"
+    prefix:   /aexperiences
+
+IBB_filter_acertifications:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/acertifications.yml"
+    prefix:   /acertifications
+
+IBB_filter_adegrees:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/adegrees.yml"
+    prefix:   /adegrees
+
+IBB_filter_ofields:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/ofields.yml"
+    prefix:   /ofields
+
+IBB_filter_amap:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/amap.yml"
+    prefix:   /amap
+
+IBB_filter_omap:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/omap.yml"
+    prefix:   /omap
+
+IBB_filter_residence:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/residence.yml"
+    prefix:   /residence
+
+IBB_filter_office:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/office.yml"
+    prefix:   /office
+
+IBB_filter_workplace:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/workplace.yml"
+    prefix:   /workplace
+
+IBB_filter_acontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/acontacts.yml"
+    prefix:   /acontacts
+    
+IBB_filter_ocontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/ocontacts.yml"
+    prefix:   /ocontacts
+    
+IBB_filter_mcontacts:
+    resource: "@IluniBookBundle/Resources/config/routing/filter/mcontacts.yml"
+    prefix:   /mcontacts

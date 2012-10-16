@@ -1,0 +1,43 @@
+{# datepicker_widget.html.twig #}
+
+{% block datepicker_widget %}
+    {% set path = 'bundles/datepicker' %}
+    {% set idns = form.parent.vars.name ~'_'~ form.vars.name %}
+    {% set doc_toggle = doc_toggle? "toggle: '"~idns~"_pick'," :doc_toggle %}
+
+    {% if not asset_loaded %}
+        {% use 'DatePickerBundle::assets.html.twig' %}
+        {{ block('datepicker_include_stylesheets') }}
+        {{ block('datepicker_include_javascripts') }}
+    {% endif %}
+
+    {{ form_widget(form) }}
+
+    <img class="calendar pointer" alt="clear" title="clear"
+        id="{{ idns }}_clear"
+        src="{{ asset(path ~ '/images/tango/edit-clear.png') }}" />
+
+    {% if doc_toggle %}
+    <img alt="pick date" title="pick date" style="float: none; margin: 0px;"
+        id="{{ idns }}_pick"
+        src="{{ asset(path ~ '/images/silk/date.png') }}" />
+    {% endif %}
+
+<script type="text/javascript">
+    {{ doc_locale|raw }}
+
+    window.addEvent("domready",function(){
+        new Picker.Date('{{ idns }}', {
+            format: '%Y-%m-%d',
+            draggable: false,
+            useFadeInOut: !Browser.ie,
+            {{ doc_toggle }}
+            {{ doc_picker_class|raw }}
+        });
+        document.id('{{ idns }}_clear').addEvent('click', function() {
+            document.id('{{ idns }}').set('value', '');
+        });
+    });
+</script>
+
+{% endblock datepicker_widget %}

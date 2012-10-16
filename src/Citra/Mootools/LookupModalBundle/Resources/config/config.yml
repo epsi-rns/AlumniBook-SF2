@@ -1,0 +1,4 @@
+twig:
+    form:
+        resources:
+            - 'LookupModalBundle:Form:lookupmodal_widget.html.twig'

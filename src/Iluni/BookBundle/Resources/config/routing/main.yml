@@ -1,0 +1,29 @@
+main_homepage:
+    pattern:  /
+    defaults: { _controller: IluniBookBundle:Default:index }
+
+main_menu:
+    pattern:  /menu
+    defaults: { _controller: IluniBookBundle:Default:menu }
+
+main_feed_atom:
+    pattern:  /index.atom
+    defaults: { _controller: IluniBookBundle:Default:feed }
+
+main_about:
+    pattern:  /about
+    defaults: { _controller: "IluniBookBundle:Default:about" }
+
+main_screenshot:
+    pattern:  /screenshot
+    defaults: { _controller: "IluniBookBundle:Default:screenshot" }
+
+main_department_all:
+    pattern:  /departments
+    defaults: { _controller: "IluniBookBundle:Default:departments" }
+
+main_language:
+    pattern:  /{locale}/language.{_format}
+    defaults: { _controller: IluniBookBundle:Default:language, _format: html }
+    requirements: { locale: ^en|id$, _format: (html|json), _method: GET }
+

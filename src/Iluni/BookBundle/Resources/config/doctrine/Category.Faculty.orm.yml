@@ -1,0 +1,25 @@
+Iluni\BookBundle\Entity\Category\Faculty:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Category\FacultyRepository
+  table: faculty
+  id:
+    id:
+      type: smallint
+      column: faculty_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: faculty
+      length: 35
+      unique: true
+      gedmo:
+        - translatable
+  oneToMany:
+    departments:
+      targetEntity: Iluni\BookBundle\Entity\Category\Department
+      mappedBy: faculty
+    community:
+      targetEntity: Iluni\BookBundle\Entity\Community
+      mappedBy: faculty
+  lifecycleCallbacks: {  }

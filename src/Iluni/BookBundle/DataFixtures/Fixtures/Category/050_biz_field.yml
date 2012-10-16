@@ -1,0 +1,176 @@
+BizField:
+  1:
+    biz_field_id: 1
+    Translation:
+      en:
+        biz_field:    Other Business Field
+      id:
+        biz_field:    Bidang Usaha Lain
+  2:
+    biz_field_id: 2
+    Translation:
+      en:
+        biz_field:    Industry / Manufacturer
+      id:
+        biz_field:    Industri / Manufacturer        
+  3:
+    biz_field_id: 3
+    Translation:
+      en:
+        biz_field:    Home Industry
+      id:
+        biz_field:    Industri Kecil
+  4:
+    biz_field_id: 4
+    Translation:
+      en:
+        biz_field:    Trading
+      id:
+        biz_field:    Perdagangan    
+  5:
+    biz_field_id: 5
+    Translation:
+      en:
+        biz_field:    Consultant ( Engineering )
+      id:
+        biz_field:    Konsultan ( Bidang Teknik )    
+  6:
+    biz_field_id: 6
+    Translation:
+      en:
+        biz_field:    Construction
+      id:
+        biz_field:    Konstruksi
+  7:
+    biz_field_id: 7
+    Translation:
+      en:
+        biz_field:    Consultant ( General)
+      id:
+        biz_field:    Konsultan ( Non Teknik )
+  8:
+    biz_field_id: 8
+    Translation:
+      en:
+        biz_field:    Oil and Gas
+      id:
+        biz_field:    Migas
+  9:
+    biz_field_id: 9
+    Translation:
+      en:
+        biz_field:    Energy
+      id:
+        biz_field:    Energi
+  10:
+    biz_field_id: 10
+    Translation:
+      en:
+        biz_field:    Mining
+      id:
+        biz_field:    Pertambangan
+  11:
+    biz_field_id: 11
+    Translation:
+      en:
+        biz_field:    Agribusiness
+      id:
+        biz_field:    Agrobisnis
+  12:
+    biz_field_id: 12
+    Translation:
+      en:
+        biz_field:    Courrier and Transport
+      id:
+        biz_field:    Transportasi dan Kurir
+  13:
+    biz_field_id: 13
+    Translation:
+      en:
+        biz_field:    Certification Service
+      id:
+        biz_field:    Jasa Sertifikasi
+  14:
+    biz_field_id: 14
+    Translation:
+      en:
+        biz_field:    Holding Group
+      id:
+        biz_field:    Group Holding
+  15:
+    biz_field_id: 15
+    Translation:
+      en:
+        biz_field:    Banking and Finance
+      id:
+        biz_field:    Perbankan & Finance
+  16:
+    biz_field_id: 16
+    Translation:
+      en:
+        biz_field:    Information and Telecommunication
+      id:
+        biz_field:    IT dan Telekomunikasi
+  17:
+    biz_field_id: 17
+    Translation:
+      en:
+        biz_field:    Electronic and Printed Media
+      id:
+        biz_field:    Media Cetak & Elektronik   
+  18:
+    biz_field_id: 18
+    Translation:
+      en:
+        biz_field:    Tourism, Hotel and Restaurant
+      id:
+        biz_field:    Pariwisata, Hotel dan Restoran
+  19:
+    biz_field_id: 19
+    Translation:
+      en:
+        biz_field:    Art and Entertainment
+      id:
+        biz_field:    Seni dan Pertunjukan
+  20:
+    biz_field_id: 20
+    Translation:
+      en:
+        biz_field:    Entertainment
+      id:
+        biz_field:    Hiburan
+  21:
+    biz_field_id: 21
+    Translation:
+      en:
+        biz_field:    Advertising
+      id:
+        biz_field:    Periklanan
+  22:
+    biz_field_id: 22
+    Translation:
+      en:
+        biz_field:    Small and Medium Businesses
+      id:
+        biz_field:    Usaha Kecil Menengah (UKM)
+  23:
+    biz_field_id: 23
+    Translation:
+      en:
+        biz_field:    Health Service
+      id:
+        biz_field:    Pelayanan Kesehatan
+  24:
+    biz_field_id: 24
+    Translation:
+      en:
+        biz_field:    Education and Training
+      id:
+        biz_field:    Pendidikan dan Pelatihan
+  25:
+    biz_field_id: 25
+    Translation:
+      en:
+        biz_field:    Special Services
+      id:
+        biz_field:    Jasa Services Khusus

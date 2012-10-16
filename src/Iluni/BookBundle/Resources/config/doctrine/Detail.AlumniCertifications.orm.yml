@@ -1,0 +1,24 @@
+Iluni\BookBundle\Entity\Detail\AlumniCertifications:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniCertificationsRepository
+  table: a_certifications
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    certification:
+      type: string
+      length: 50
+    institution:
+      type: string
+      length: 20
+      nullable: true
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+  lifecycleCallbacks: {  }

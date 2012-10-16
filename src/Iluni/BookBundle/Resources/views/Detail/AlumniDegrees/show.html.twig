@@ -1,0 +1,63 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Academic Degrees :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Strata{% endtrans %}</th>
+            <td>{{ entity.strata }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Admitted{% endtrans %}</th>
+            <td>{{ entity.admitted }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Graduated{% endtrans %}</th>
+            <td>{{ entity.graduated }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Degree{% endtrans %}</th>
+            <td>{{ entity.degree }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Institution{% endtrans %}</th>
+            <td>{{ entity.institution }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Major{% endtrans %}</th>
+            <td>{{ entity.major }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Minor{% endtrans %}</th>
+            <td>{{ entity.minor }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Concentration{% endtrans %}</th>
+            <td>{{ entity.concentration }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('adegrees_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('adegrees_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

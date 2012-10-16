@@ -1,0 +1,38 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Organization{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Address{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Region{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+        {% set map = entity.AlumniOrgMap %}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_list(
+                'workplace_list', { 'mid': map.alumni.id }) }}
+            {{ crud.link_to_action_edit(
+                'workplace_edit', { 'id': entity.id }) }}
+        </td>
+        {% endif %}
+
+        <td><a href="{{ path('about_alumni', { 'aid': map.alumni.id }) }}"
+          >{{ map.alumni|textShort(20) }}</a></td>
+        <td>{{ map.alumni.community|textShort(20) }}</td>
+        <td><a href="{{ path('about_org', { 'oid': map.organization.id }) }}"
+          >{{ map.organization }}</a></td>
+        <td>{{ entity.address|textShort(25) }}</td>
+        <td>{{ entity.region|textShort(25) }}</td>
+{% endblock %}

@@ -1,0 +1,34 @@
+alumni_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:show" }
+    requirements: { id:  \d+ }
+
+alumni_new:
+    pattern:  /new
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:new" }
+
+alumni_create:
+    pattern:  /create
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:create" }
+    requirements: { _method: post }
+
+alumni_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:edit" }
+    requirements: { id:  \d+ }
+
+alumni_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:update" }
+    requirements: { _method: post }
+
+alumni_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:delete" }
+    requirements: { _method: post }
+
+# utility for testing purpose, master-detail crawler
+alumni_first:
+    pattern:  /first.{_format}
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:first", _format: html }
+    requirements: { _format: (html|json), _method: GET }

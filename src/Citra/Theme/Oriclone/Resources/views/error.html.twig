@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+{% set site = 'http://book2/' %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>An Error Occurred: {{ status_text }}</title>
+    <link rel="stylesheet" href="{{site}}oriclone/styles.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{site}}bundles/oriclone/css/error.css" type="text/css" media="all" />
+    <script type="text/javascript" src="{{site}}js/mootools/core.js"></script>
+    <script type="text/javascript" src="{{site}}js/mootools/more.js"></script>
+    <script type="text/javascript" src="{{site}}bundles/oriclone/js/mootools/Fx.Shake.js"></script>
+    <script type="text/javascript" src="{{site}}bundles/oriclone/js/mootools/effects.js"></script>
+    <script type="text/javascript">
+        window.addEvent('domready', function() { mootools_shake(); });
+    </script>
+</head>
+
+
+<body class="width_fluid mbg_feathers hbg_red">
+
+<div id="wrapper">
+    <a name="top" id="top"></a>
+
+    <div id="lay_header"><div class="fixed" id="lay_header_container">
+        <div id="continfo"><div id="errorinfo">
+            {% if (status_code==404) %}
+            <h5>Whoops! Page down!! Page no sound!</h5>
+            {% endif %}
+            <h4>{{ status_code }} - {{ status_text }}"</h4>
+        </div></div>
+    </div></div>
+
+    <div id="lay_top">
+    </div>
+
+{# --- begin of main layout --- #}
+
+    <div id="lay_main" class="pos_c lay_main_login"><div class="fixed">
+        <div id="lay_content">
+
+    <div align="center">
+        <div id="system-message">
+        <div class="flash_error fade">
+            Uh oh... We are sorry.
+            Whatever you are looking isn't around.
+            Go back friend, go back...
+        </div></div>
+
+        <div class="lay_box">
+
+<dl>
+    <dt>Oops! An Error Occurred</dt>
+    <dd>Something is broken. Please e-mail us at [email] and let us know
+    what you were doing when this error occurred. We will fix it as soon
+    as possible. Sorry for any inconvenience caused.</dd>
+
+</dl>
+
+    <div class="suggestion">
+        <h4>The server returned a "{{ status_code }} {{ status_text }}".</h4>
+        {% if (status_code==404) %}
+        <p>We all make mistakes. Please take me out of here.</p>
+        {% endif %}
+    </div>
+
+        <br/>
+        </div>{# laybox #}
+    </div>{# center #}
+
+        </div>
+    </div></div>
+{# --- end of main layout --- #}
+
+    <div id="lay_footer">
+        <div id="footer">
+        Copyright &copy; {{ "now"|date("Y") }}</div>
+    </div>
+
+<a href="#top" id="gototop" class="no-click no-print">Top of Page</a>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Office Contacts by Organization{% endblock %}
+{% block breadtitle %}Office Contacts :: list{% endblock %}
+{% block subtitle %}{{ organization }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact Type{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'ocontacts_show',
+                'ocontacts_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.contactType }}</td>
+        <td>{{ entity.contact }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('ocontacts_new', 'oid', 'oid') }}
+        <a class="icon_new" href="{{ path('ocontacts_new',
+            { 'oid': app.request.attributes.get('oid') })
+        }}">{% trans from 'actions' %}Create a new entry{% endtrans %}</a>
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : app.request.attributes.get('oid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

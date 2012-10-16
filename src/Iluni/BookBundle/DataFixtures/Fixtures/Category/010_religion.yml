@@ -1,0 +1,22 @@
+Religion:
+  1:
+    religion_id: 1
+    religion:    Islam
+  2:
+    religion_id: 2
+    religion:    Kristen Protestan
+  3:
+    religion_id: 3
+    religion:    Katholik
+  4:
+    religion_id: 4
+    religion:    Buddha
+  5:
+    religion_id: 5
+    religion:    Hindu
+  6:
+    religion_id: 6
+    religion:    Kong Hu Cu
+  7:
+    religion_id: 7
+    religion:    Kepercayaan

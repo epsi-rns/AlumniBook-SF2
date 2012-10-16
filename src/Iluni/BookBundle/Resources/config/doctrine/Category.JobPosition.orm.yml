@@ -1,0 +1,25 @@
+Iluni\BookBundle\Entity\Category\JobPosition:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Category\JobPositionRepository
+  table: job_position
+  id:
+    id:
+      type: smallint
+      column: job_position_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: job_position
+      length: 50
+      unique: true
+      gedmo:
+        - translatable
+  oneToMany:
+    alumni_org_map:
+      targetEntity: Iluni\BookBundle\Entity\Detail\AlumniOrgMap
+      mappedBy: jobPosition
+      joinColumns:
+        job_position_id:
+          referencedColumnName: job_position_id
+  lifecycleCallbacks: {  }

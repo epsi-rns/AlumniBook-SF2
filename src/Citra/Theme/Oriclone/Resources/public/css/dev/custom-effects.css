@@ -1,0 +1,69 @@
+/**
+* @style: Ajax or JSON response
+*
+* @reading
+* http://davidwalsh.name/dwrequest-mootools-12-ajax-listener-message
+* http://woork.blogspot.com/2008/03/nice-ajax-effect-for-message-box-using.html
+* http://demos111.mootools.net/
+**/
+
+#container-console  {
+    width:150px;
+    text-align:center;
+    padding:5px 8px;
+    font-weight:bold;
+    position:absolute;
+    right:2%;
+    font:12px arial;
+    z-index:59;
+
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+}
+
+/**
+* @style: form validation
+*
+* http://www.clientcide.com/wiki/cnet-libraries/09-forms/04-formvalidator
+**/
+.validation-failed {
+  border: 1px solid #f00;
+}
+.validation-passed {
+  border: 1px solid green;
+}
+.validation-advice {
+  margin: 2px;
+  padding: 2px 6px;
+  height: 20px;
+  color:#f00;
+}
+.warning {
+    border: 1px solid #c66;
+}
+.warning-advice {
+    margin: 2px;
+    padding: 2px;
+    color:#fff;
+    background-color:#bbb;
+}
+
+.validation-advice {
+    background: #0df url(../../images/gloss/title-white.gif) repeat-x;
+
+    border : 1px solid #eee;
+    border-right : 5px solid #88f;
+    border-left : 5px solid #f80;
+
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+
+    -moz-box-shadow: #888 3px 3px 5px;
+    -webkit-box-shadow: #888 3px 3px 5px;
+    box-shadow: 3px 3px 5px #888;
+}
+
+
+

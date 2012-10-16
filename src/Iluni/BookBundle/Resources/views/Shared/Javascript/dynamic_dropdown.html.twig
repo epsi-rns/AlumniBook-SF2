@@ -1,0 +1,46 @@
+{#  Note:
+
+    Use: This will linked two dropdown with master detail relationship
+
+    Required Parameters:
+        - form_holder_name
+        - ld3 (linked dynamic drop down)
+            - short_form_name
+            - base_path_route, main_path_route
+            - master_name, detail_name
+            - master_index, detail_index
+
+    Have Fun!
+#}
+
+{% if ld3 is not empty %}
+    {% set url_init = path(ld3['main_path_route'], {
+            'name'  : ld3['short_form_name'],
+            'master_index'  : ld3['master_index'],
+            'detail_index'  : ld3['detail_index']
+    }) %}
+
+<script type="text/javascript">
+    window.addEvent("domready",function(){
+        var el_master = document.id('{{ form_holder_name }}_{{ ld3['master_name'] }}');
+        var el_detail = document.id('{{ form_holder_name }}_{{ ld3['detail_name'] }}');
+
+        var el_container = new Element('div', {id: 'el_container'});
+        el_container.wraps(el_detail);
+
+        el_master.addEvent('change', function() {
+            id = el_master.get('value');
+            if (id=='') id = 0; // fix
+            url_detail = '{{ path( ld3['base_path_route'] ) }}'
+                + '/name/{{ ld3['short_form_name'] }}'
+                + '/id/'+id
+                + '/val/{{ ld3['detail_index'] }}';
+            bindInnerRequest(url_detail, 'el_container');
+        });
+
+        url_init = '{{ url_init }}';
+        bindInnerRequest(url_init, 'el_container');
+    });
+</script>
+
+{% endif %}

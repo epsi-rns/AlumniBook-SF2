@@ -1,0 +1,209 @@
+/*
+http://www.barelyfitz.com/screencast/html-training/css/positioning/
+*/
+.clr { clear: both; }
+
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body div#wrapper { text-align: left; margin:0 auto; }
+body.width_small    div#wrapper { width: 780px; }
+body.width_medium   div#wrapper { width: 950px; }
+body.width_fluid    div#wrapper {
+    min-width: 780px;
+    max-width: 1260px;
+}
+
+/*
+#lay_header, #lay_footer, #lay_top, #lay_main
+    { min-width:780px;}
+*/
+
+.fixed {min-width: 780px; margin: 0 auto; padding: 0; }
+
+#lay_footer {
+    text-align: center;
+}
+
+#lay_bottom {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Fix div p, unwanted margin */
+div#lay_main p, div#lay_header p, div#lay_footer p,
+div#lay_top p, div#lay_top h3 {
+    margin:0 .25em;
+    padding:.25em 0;
+}
+
+#lay_header_container {
+    position:relative;
+}
+#lay_header_right {
+    padding-right: 10px;
+}
+
+#lay_header_left {float: left;  padding-top: 6px; margin-left: 20px;}
+#lay_header_right {float:right;}
+
+/* Top Layout */
+#lay_top_left, #lay_top_center, #lay_top_right {
+    padding-top: 5px;
+}
+#lay_top_left {
+    float:left;
+    max-width:350px;
+    bottom: 0;
+}
+#lay_top_center, #lay_top_right {
+    float:right;
+    width:300px;
+}
+
+.pos_col3 #lay_top_left { max-width: 350px; }
+.pos_col2 #lay_top_left { max-width: 645px; }
+.pos_col1 #lay_top_left { max-width: 940px; }
+
+@media print {
+    #lay_header, #lay_top, #lay_footer, #lay_right, #lay_left,
+    #container-message, #container-console,
+    .no-print
+        { display:none; }
+
+    #lay_content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen {
+/* Main Layout */
+
+#lay_main {
+    text-align: left;
+    /*position:relative;    ie6 problem, do not uncomment */
+    padding: 10px 0 10px 0;
+}
+
+#lay_main  { min-height:500px; } * html #lay_main { height:400px; } /*ie6*/
+* html #main_content { width: 97%; }
+
+#lay_left {
+    float:left;
+    width:180px;
+    margin-left: 10px;
+}
+#lay_content {
+    margin-left:190px;
+    margin-right:190px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width:380px;
+}
+#lay_right {
+    float:right;
+    width:180px;
+    margin-right: 10px;
+}
+
+#main_content {
+    /*float: left;  /* fix clear scope */
+}
+
+.pos_c #lay_content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pos_lcr  #lay_left, .pos_lc #lay_left {
+    float:left;
+    margin-left: 10px;
+}
+.pos_lcr #lay_right, .pos_cr #lay_right {
+    float:right;
+    margin-right: 10px;
+}
+
+.pos_lcr #lay_content {
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+.pos_lc #lay_content {
+    margin-left: 190px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.pos_cr #lay_content {
+    margin-left: 10px;
+    margin-right: 190px;
+    padding-left: 10px;
+}
+
+.pos_rcl #lay_left, .pos_cl #lay_left {
+    float:right;
+    margin-right: 10px;
+}
+.pos_rcl #lay_right, .pos_rc #lay_right {
+    float:left;
+    margin-left: 10px;
+}
+
+.pos_rcl #lay_content {
+    margin-left: 190px;
+    margin-right: 190px;
+}
+
+.pos_cl #lay_content {
+    margin-left: 10px;
+    margin-right: 190px;
+    padding-left: 10px;
+}
+
+.pos_rc #lay_content {
+    margin-left: 190px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.pos_lrc #lay_left, .pos_lrc #lay_right,
+.pos_rlc #lay_left, .pos_rlc #lay_right {
+    float:left;
+    margin-left: 10px;
+}
+
+.pos_rlc #lay_left { margin-left: 0px; }
+
+.pos_lrc #lay_content,
+.pos_rlc #lay_content {
+    min-width:360px;
+    margin-left: 380px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.pos_clr #lay_left, .pos_clr #lay_right,
+.pos_crl #lay_left, .pos_crl #lay_right {
+    float:right;
+    margin-right: 10px;
+}
+.pos_crl #lay_right { margin-right: 10px; } /* list-style arrow space */
+
+.pos_clr #lay_content,
+.pos_crl #lay_content {
+    margin-left: 10px;
+    margin-right: 380px;
+    padding-left: 10px;
+}
+
+/* end of media screen */
+}

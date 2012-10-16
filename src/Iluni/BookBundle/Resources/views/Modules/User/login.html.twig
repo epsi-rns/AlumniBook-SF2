@@ -1,0 +1,38 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block top_logon %}
+{% endblock %}
+
+{% block body %}
+    <br/>
+    <b>Demo login:</b>
+
+    <p>
+        Choose one of three default users:
+        <ul>
+            <li><em>guest/guest</em> <small>(ROLE_GUEST)</small> or</li>
+            <li><em>editor/editor</em> <small>(ROLE_EDITOR)</small> or</li>
+            <li><em>admin/admin</em> <small>(ROLE_ADMIN)</small></li>
+        </ul>
+    </p>
+
+    {% if error %}
+        <div class="error">{{ error.message }}</div>
+    {% endif %}
+
+    <form action="{{ path("user_check") }}" method="post" id="login">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" />
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="_password" />
+        </div>
+
+        <button type="submit">login</button>
+    </form>
+{% endblock %}

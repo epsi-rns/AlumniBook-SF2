@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Action</source>
+        <target>Tindakan</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Apply</source>
+        <target>Terapkan</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Reset</source>
+        <target>Tata Ulang</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>Create</source>
+        <target>Bikin</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>Add</source>
+        <target>Tambahkan</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>New</source>
+        <target>Baru</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>Update</source>
+        <target>Perbarukan</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Update Data</source>
+        <target>Perbarui Data</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Create a new entry</source>
+        <target>Bikin isian data baru</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Show</source>
+        <target>Tampilkan</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>show</source>
+        <target>tampilkan</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Edit</source>
+        <target>Sunting</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>edit</source>
+        <target>sunting</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Save</source>
+        <target>Simpan</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Delete</source>
+        <target>Hapus</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>List</source>
+        <target>Daftar</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>list</source>
+        <target>daftar</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Back to the list</source>
+        <target>Kembali ke daftar</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

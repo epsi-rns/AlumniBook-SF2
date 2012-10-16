@@ -1,0 +1,89 @@
+District:
+  -1:
+    district_id:  -1
+    district:     Kosongkan
+    province_id: -1
+  0:
+    district_id:  0
+    district:     Tidak Diketahui
+    province_id: 0
+  30:
+    district_id:  30
+    district:     Mandailing Natal
+    province_id: 2
+  42:
+    district_id:  42
+    district:     Kota Medan
+    province_id: 2
+  57:
+    district_id:  57
+    district:     Kota Jambi
+    province_id: 4
+  59:
+    district_id:  59
+    district:     Muaro Bungo
+    province_id: 4
+  63:
+    district_id:  63
+    district:     Sarolangun
+    province_id: 4
+  72:
+    district_id:  72
+    district:     Rokan Hulu
+    province_id: 5
+  73:
+    district_id:  73
+    district:     Rokan Hilir
+    province_id: 5
+  81:
+    district_id:  81
+    district:     Padang Pariaman
+    province_id: 6
+  88:
+    district_id:  88
+    district:     Tanah Datar
+    province_id: 6
+  142:
+    district_id:  142
+    district:     Bogor
+    province_id: 12
+  146:
+    district_id:  146
+    district:     Depok
+    province_id: 12
+  160:
+    district_id:  160
+    district:     Kota Bogor
+    province_id: 12
+  163:
+    district_id:  163
+    district:     Kota Depok
+    province_id: 12
+  166:
+    district_id:  166
+    district:     Jakarta Barat
+    province_id: 13
+  167:
+    district_id:  167
+    district:     Jakarta Pusat
+    province_id: 13
+  168:
+    district_id:  168
+    district:     Jakarta Selatan
+    province_id: 13
+  169:
+    district_id:  169
+    district:     Jakarta Timur
+    province_id: 13
+  170:
+    district_id:  170
+    district:     Jakarta Utara
+    province_id: 13
+  248:
+    district_id:  248
+    district:     Kota Yogyakarta
+    province_id: 16
+  292:
+    district_id:  292
+    district:     Kota Pontianak
+    province_id: 20

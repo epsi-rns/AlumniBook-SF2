@@ -1,0 +1,16 @@
+Strata:
+  7:
+    strata_id: 7
+    strata:    D3
+  10:
+    strata_id: 10
+    strata:    S1
+  20:
+    strata_id: 20
+    strata:    S2
+  30:
+    strata_id: 30
+    strata:    S3
+  40:
+    strata_id: 40
+    strata:    Post

@@ -1,0 +1,8 @@
+{% extends 'IluniBookBundle:List:template.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block title %}All Communities :: Filtered{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new('community_new', {}) }}
+{% endblock %}

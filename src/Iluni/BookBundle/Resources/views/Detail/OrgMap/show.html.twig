@@ -1,0 +1,61 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Map (org) :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('map', {
+        'mid' : entity.id,
+        'aid' : entity.alumni.id,
+        'oid' : entity.organization.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Organization{% endtrans %}</th>
+            <td>{{ entity.organization }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+            <td>{{ entity.department }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Structural Job Position{% endtrans %}</th>
+            <td>{{ entity.struktural }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Functional Job Position{% endtrans %}</th>
+            <td>{{ entity.fungsional }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Job Type{% endtrans %}</th>
+            <td>{{ entity.JobType }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Job Position{% endtrans %}</th>
+            <td>{{ entity.jobPosition }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('omap_edit', { 'mid': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('omap_list', { 'oid': entity.organization.id }) }}
+
+</div>
+
+{% endblock %}

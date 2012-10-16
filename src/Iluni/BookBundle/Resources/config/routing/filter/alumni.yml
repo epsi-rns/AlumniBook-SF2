@@ -1,0 +1,7 @@
+alumni:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Alumni:index" }
+
+alumni_birth:
+    pattern:  /birth
+    defaults: { _controller: "IluniBookBundle:Filter\Alumni:birth" }

@@ -1,0 +1,43 @@
+{% macro pagination_item(index, pager, route) %}
+        {% set imgpath = asset('/bundles/ilunibook/images/silk/resultset') %}
+        {% set navtext = ['First page', 'Previous page', 'Next page', 'Last page'] %}
+        {% set getfunc = ['getFirstPage', 'getPreviousPage', 'getNextPage', 'getLastPage'] %}
+        {% set imgname = ['first.png', 'previous.png', 'next.png', 'last.png'] %}
+
+        <a href="{{ path(route) }}?page={{ attribute(pager, getfunc[index]) }}">
+        <img src="{{ imgpath }}_{{ imgname[index] }}"
+             alt="{{ navtext[index]|trans }}" title="{{ navtext[index]|trans }}" />
+        </a>
+{% endmacro %}
+
+{% block table_pagination %}
+{% if pager is defined %}
+
+    {% if pager.haveToPaginate %}
+    <div class="pagination">
+        {{ _self.pagination_item(0, pager, path) }}
+        {{ _self.pagination_item(1, pager, path) }}
+
+        {% for page in pager.getLinks %}
+            {% if page == pager.getPage %}
+                {{ page }}
+            {% else %}
+                <a href="{{ path(path) }}?page={{ page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {{ _self.pagination_item(2, pager, path) }}
+        {{ _self.pagination_item(3, pager, path) }}
+    </div>
+    {% endif %}
+
+    <div class="pagination_desc">
+        <strong>{{ entities|length }}</strong> records
+
+        {% if pager.haveToPaginate %}
+        - page <strong>{{ pager.getPage }}/{{ pager.getLastPage }}</strong>
+        {% endif %}
+    </div>
+
+{% endif %}
+{% endblock %}

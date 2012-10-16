@@ -1,0 +1,17 @@
+Iluni\BookBundle\Entity\Category\ContactType:
+  type: entity
+  table: contact_type
+  id:
+    id:
+      type: smallint
+      column: ct_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: contact_type
+      length: 25
+      unique: true
+      gedmo:
+        - translatable
+  lifecycleCallbacks: {  }

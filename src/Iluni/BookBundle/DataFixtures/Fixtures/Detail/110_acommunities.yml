@@ -1,0 +1,45 @@
+ACommunities:
+  Rizqi:
+    aid: 25
+    cid: 2
+    class_year: 1993
+  Aswil:
+    aid: 283
+    cid: 3
+    class_year: 1974
+  Desi-1:
+    aid: 3
+    cid: 3
+    class_year: 1993
+  Desi-2:
+    aid: 3
+    cid: 113
+    class_year: 1992
+  Desi-3:
+    aid: 3
+    cid: 47
+    class_year: 2008
+  Idris:
+    aid: 4
+    cid: 8
+    class_year: 2002
+  Jos:
+    aid: 5
+    cid: 2
+    class_year: 1993
+  Dwika:
+    aid: 11
+    cid: 110
+    class_year: 1993
+
+
+# Good idea, but need careful consideration
+  Rizqi Int-04:
+    aid: 25
+    cid: 1002
+    class_year: 1996
+  Rizqi fake ACVC:
+    aid: 25
+    cid: 1004
+    class_year: 1996
+    class_sub: fake

@@ -1,0 +1,25 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Summary of Communities{% endblock %}
+
+{% block include_stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{
+        asset('bundles/ilunibook/css/bars.css')
+        }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block body %}
+
+    {% include 'IluniBookBundle:Detail\\Summary:filter.html.twig' %}
+    <br/>
+
+    {% set count = 0 %}
+    {% include 'IluniBookBundle:Detail\\Summary:table.html.twig' %}
+    <br/>
+
+    {% block table_links %}{% endblock %}
+
+{% endblock %}
+
+

@@ -1,0 +1,44 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Competencies by Alumna/us{% endblock %}
+{% block breadtitle %}Competencies :: list{% endblock %}
+{% block subtitle %}{{ alumni }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Competency{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'acompetencies_show',
+                'acompetencies_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.competency }}</td>
+        <td>{{ entity.description }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('acompetencies_new', 'aid', 'aid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : app.request.attributes.get('aid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

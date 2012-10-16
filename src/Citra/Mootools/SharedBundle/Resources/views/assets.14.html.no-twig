@@ -1,0 +1,23 @@
+{# http://stackoverflow.com/questions/10830129/with-assetic-twig-symfony2-can-i-define-front-end-libraries #}
+{% block mootools %}
+
+    {% javascripts
+        combine=true
+        output='js/mootools/core.js'
+        'bundles/mootools/js/mootools-core-1.4.5.js'
+    %}<script type="text/javascript" src="{{
+        asset_url
+    }}"></script>{% endjavascripts %}
+
+    {% javascripts
+        combine=true
+        output='js/mootools/more.js'
+        'bundles/mootools/js/mootools-more-1.4.0.1.js'
+    %}<script type="text/javascript" src="{{
+        asset_url
+    }}"></script>{% endjavascripts %}
+
+    <script type="text/javascript" src="{{
+        asset('bundles/mootools/js/request.js')
+    }}"></script>
+{% endblock %}

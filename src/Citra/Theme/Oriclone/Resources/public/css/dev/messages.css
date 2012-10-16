@@ -1,0 +1,37 @@
+/* System Messages */
+#system-message    {
+    margin-bottom: 10px;
+    padding: 0;
+    font-weight: bold;
+}
+#system-message div {
+    color: #05b;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    border-top: 3px solid #84A7DB;
+    border-bottom: 3px solid #84A7DB;
+
+    -moz-box-shadow: #888 3px 3px 5px;
+    -webkit-box-shadow: #888 3px 3px 5px;
+    box-shadow: 3px 3px 5px #888;
+}
+
+/* System Standard Messages */
+#system-message div.flash_info {
+    background: #cde url(../../images/accs/msg-info.gif) 4px center no-repeat;}
+
+/* System Error Messages */
+#system-message div.flash_error {
+    color: #404; border-bottom: 3px solid #fc0; border-top: 3px solid #fc0;
+    background: #fea url(../../images/accs/msg-error.gif) 4px top no-repeat; }
+
+/* System Notice Messages */
+#system-message div.flash_warning {
+    color: #640; border-bottom: 3px solid #F0DC7E; border-top: 3px solid #F0DC7E;
+    background: #eeb url(../../images/accs/msg-warning.gif) 4px top no-repeat; }
+
+/* Custom Okay Messages */
+#system-message div.flash_notice {
+    color: #046; border-bottom: 3px solid #F0DC7E; border-top: 3px solid #F0DC7E;
+    background: #fff9db url(../../images/accs/msg-okay.gif) 4px top no-repeat;  }

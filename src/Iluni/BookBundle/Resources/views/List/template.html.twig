@@ -1,0 +1,21 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block body %}
+
+    {% render filterAction
+        with {'params': params}
+    %}
+    <br/>
+
+    {% block table_summary %}{% endblock %}
+
+    {% render tableAction
+        with {'params': params, 'page': page}
+    %}
+    <br/>
+
+    {% block table_links %}{% endblock %}
+
+{% endblock %}
+
+

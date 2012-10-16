@@ -1,0 +1,4 @@
+twig:
+    form:
+        resources:
+            - 'DatePickerBundle:Form:datepicker_widget.html.twig'

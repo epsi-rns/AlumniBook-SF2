@@ -1,0 +1,46 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Job Positions by Organization{% endblock %}
+{% block breadtitle %}Job Positions :: list{% endblock %}
+{% block subtitle %}{{ organization }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Job Type{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Job Position{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'omap_show',
+                'omap_edit',
+                { 'mid': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.alumni|textShort(20) }}</td>
+        <td>{{ entity.department|textShort(20) }}</td>
+        <td>{{ entity.jobType|textShort(20) }}</td>
+        <td>{{ entity.jobPosition|textShort(20) }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('omap_new', 'oid', 'oid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : app.request.attributes.get('oid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}

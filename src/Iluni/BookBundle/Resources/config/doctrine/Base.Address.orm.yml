@@ -1,0 +1,67 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Base.Address.orm.yml
+Iluni\BookBundle\Entity\Base\Address:
+  type: entity
+  table: address
+  inheritanceType: SINGLE_TABLE
+  discriminatorColumn:
+    name: discr
+    type: string
+    length: 1
+    column: link_type
+  discriminatorMap:
+    A: Iluni\BookBundle\Entity\Detail\AlumniAddress
+    O: Iluni\BookBundle\Entity\Detail\OrgAddress
+    M: Iluni\BookBundle\Entity\Detail\MapAddress
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    area:
+      type: string
+      length: 50
+      nullable: true
+    building:
+      type: string
+      length: 50
+      nullable: true
+    street:
+      type: string
+      length: 50
+      nullable: true
+    postalCode:
+      type: string
+      length: 7
+      nullable: true
+      column: postal_code
+    address: # Calculated field
+      type: string
+      length: 175
+      nullable: true
+    region: # Calculated field
+      type: string
+      length: 110
+      nullable: true
+  manyToOne:
+    country:
+      targetEntity: Iluni\BookBundle\Entity\Category\Country
+      joinColumns:
+        country_id:
+          referencedColumnName: country_id
+      orphanRemoval: false
+    province:
+      targetEntity: Iluni\BookBundle\Entity\Category\Province
+      joinColumns:
+        province_id:
+          referencedColumnName: province_id
+      orphanRemoval: false
+    district:
+      targetEntity: Iluni\BookBundle\Entity\Category\District
+      joinColumns:
+        district_id:
+          referencedColumnName: district_id
+      orphanRemoval: false
+  lifecycleCallbacks:
+    prePersist: [ setFullAddressValue ]
+    preUpdate: [ setFullAddressValue ]

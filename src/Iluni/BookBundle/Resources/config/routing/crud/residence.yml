@@ -1,0 +1,33 @@
+residence_list:
+    pattern:  /{aid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:list" }
+    requirements: { aid:  \d+ }
+    
+residence_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:show" }
+    requirements: { id:  \d+ }
+    
+residence_new:
+    pattern:  /{aid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:new" }
+
+residence_create:
+    pattern:  /{aid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:create" }
+    requirements: { _method: post }
+
+residence_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:edit" }
+    requirements: { id:  \d+ }
+
+residence_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:update" }
+    requirements: { _method: post }
+
+residence_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\Residence:delete" }
+    requirements: { _method: post }

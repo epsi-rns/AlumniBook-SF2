@@ -1,0 +1,18 @@
+#diabox {z-index:1000;position:fixed;background-color:black;border:2px solid #999;padding:8px;}
+#diabox.with_title {padding-bottom:30px;}
+#diabox.loading {background:black url(../images/loading_small.gif) center center no-repeat;}
+#diabox.draggable {cursor:move;}
+#diabox_content {position:relative;background-color:white;cursor:default;}
+#diabox.loading #diabox_content {background-color:transparent;}
+#diabox_overlay {position:fixed;width:100%;height:100%;top:0;left:0;z-index:999;background:transparent url(../images/overlay.png) top left repeat;}
+#diabox_test {padding:0;margin:0;}
+#diabox #diabox_title {position:absolute;left:8px;right:58px;overflow:hidden;color:#eee;padding:5px 0;width:100%;font-style:italic;font-size:18px;height:20px;line-height:20px;}
+#diabox #diabox_title strong {font-weight:normal;}
+#diabox #diabox_title em {margin-left:5px;color:#ccc;font-size:.75em;line-height:1em;}
+#diabox #diabox_prev, #diabox #diabox_next {position:absolute;top:50%;margin:-30px 20px 0;text-indent:-9999px;height:84px;width:32px;display:block;cursor:pointer;background:transparent url(../images/prev_next.png) top left no-repeat;}
+#diabox #diabox_prev:active, #diabox #diabox_next:active {margin-top:-29px;}
+#diabox #diabox_next {left:100%;background-position:-32px 0;}
+#diabox #diabox_prev {left:0;margin-left:-50px;}
+#diabox #diabox_prev.diabox_disabled, #diabox #diabox_next.diabox_disabled {display:none;}
+#diabox #diabox_close {position:absolute;left:100%;bottom:100%;margin:0 0 -15px -11px;color:white;text-decoration:none;cursor:pointer;text-indent:-9999px;background:transparent url(../images/close.png) top left no-repeat;width:25px;height:29px;}
+#diabox_loading {width:100px;height:100px;}

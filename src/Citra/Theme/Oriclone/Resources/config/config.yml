@@ -1,0 +1,41 @@
+# sample, no need to include
+
+oriclone:
+    # optional
+    debug_css: false
+    effects:   true
+
+    layout:
+        sitename: Oriclone
+        logo:     logo-orb-yellow
+        css:
+            text_scheme:  peachykeen
+            strip_normal: white-simple
+            strip_hover:  ice
+            marble:       mix
+        classes:
+            width_style:       fluid
+            background_main:   white
+            background_header: grey_blue
+            variation_top:     grad_black
+
+        blocks:
+            left: true
+            top: true
+            footer: true
+
+        options: []
+
+    modal:
+        css:
+            text_scheme:  peachykeen
+
+    # not implemented
+    error:
+        code: 404
+        message: 'The server returned a 404 response.'
+        classes:
+            width_style:       fluid
+            background_main:   feathers
+            background_header: red
+

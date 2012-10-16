@@ -1,0 +1,37 @@
+Iluni\BookBundle\Entity\Detail\AlumniExperiences:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniExperiencesRepository
+  table: a_experiences
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    organization:
+      type: string
+      length: 35
+    description:
+      type: string
+      length: 50
+      nullable: true
+    jobPosition:
+      type: string
+      length: 35
+      nullable: true
+      column: job_position
+    yearIn:
+      type: smallint
+      nullable: true
+      column: year_in
+    yearOut:
+      type: smallint
+      nullable: true
+      column: year_out
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+  lifecycleCallbacks: {  }

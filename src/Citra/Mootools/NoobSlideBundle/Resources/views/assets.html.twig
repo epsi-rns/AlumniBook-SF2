@@ -1,0 +1,25 @@
+{% block include_stylesheets_noobslide %}
+    {% set path_noobslide = 'bundles/noobslide' %}
+
+    <link rel="stylesheet" href="{{
+        asset(path_noobslide ~ '/css/noob.css')
+    }}" type="text/css" media="all" />
+{% endblock %}
+
+
+{% block include_javascripts_noobslide %}
+    {% set path_noobslide = 'bundles/noobslide' %}
+
+    <script type="text/javascript" src="{{
+        asset(path_noobslide ~ '/js/mooclass.reflection.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_noobslide ~ '/js/mooclass.gpw.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_noobslide ~ '/js/mooclass.noobSlide.js')
+    }}"></script>
+    <script type="text/javascript" src="{{
+        asset(path_noobslide ~ '/js/moohelper.noob.js')
+    }}"></script>
+{% endblock %}

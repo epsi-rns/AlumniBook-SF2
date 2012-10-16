@@ -1,0 +1,3 @@
+mcontacts:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\MContacts:index" }

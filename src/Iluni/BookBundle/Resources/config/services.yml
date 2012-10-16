@@ -1,0 +1,59 @@
+imports:
+    - { resource: services.form.yml }
+    - { resource: services.sonata.yml }
+
+parameters:
+    ideato.pager.max_per_page: 20
+
+services:
+#    iluni_book.example:
+#        class: %iluni_book.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    # twig
+    iluni_book.twig.extension:
+        class: Iluni\BookBundle\Library\Twig\BookExtension
+        tags:
+            - { name: twig.extension }
+        arguments:
+            - "@service_container"
+
+    iluni_book.twig.tab:
+        class: Iluni\BookBundle\Library\Twig\BookTabExtension
+        tags:
+            - { name: twig.extension }
+        arguments:
+            - "@router"
+
+    # listener
+    iluni_book.listener.locale:
+        class: Iluni\BookBundle\Library\Listener\LocaleListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+
+    iluni_book.listener.before_controller:
+        class: Iluni\BookBundle\Library\Listener\BeforeControllerListener
+        scope: request
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    # summary (total) repository
+    iluni_book.repository.summary:
+        class: Iluni\BookBundle\Repository\SummaryRepository
+        arguments:
+            entity_manager: "@doctrine.orm.entity_manager"
+
+    # options Holder, processing parameter related
+    iluni_book.options_holder:
+        class: Iluni\BookBundle\Library\OptionsHolder\OptionsHolder
+
+    iluni_book.filter_options_holder:
+        class: Iluni\BookBundle\Library\OptionsHolder\FilterOptionsHolder
+        arguments: ["@session"]
+
+    # 3rd party fork
+    ideato.pager:
+        class: Iluni\BookBundle\Library\Pager\DoctrinePager
+        arguments:
+            - %ideato.pager.max_per_page%

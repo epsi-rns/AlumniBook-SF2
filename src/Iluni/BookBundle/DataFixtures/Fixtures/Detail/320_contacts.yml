@@ -1,0 +1,22 @@
+AContacts:
+  10:
+    aid: 25
+    ct_id: 5
+    contact: iluni.org
+  11:
+    aid: 25
+    ct_id: 4
+    contact: epsi.rns [at] gmail.com
+
+OContacts:
+  20:
+    oid: 35
+    ct_id: 2
+    contact: 021-1313-test
+
+MContacts:
+  30:
+    mid: 2
+    ct_id: 2
+    contact: 021-1313-coba
+

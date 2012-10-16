@@ -1,0 +1,21 @@
+Iluni\BookBundle\Entity\Category\District:
+  type: entity
+  table: district
+  id:
+    id:
+      type: smallint
+      column: district_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: district
+      length: 30
+      unique: true
+  manyToOne:
+    province:
+      targetEntity: Iluni\BookBundle\Entity\Category\Province
+      joinColumns:
+        province_id:
+          referencedColumnName: province_id
+  lifecycleCallbacks: {  }

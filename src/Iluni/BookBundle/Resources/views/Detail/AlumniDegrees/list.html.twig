@@ -1,0 +1,59 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Academic Degrees by Alumna/us{% endblock %}
+{% block breadtitle %}Academic Degrees :: list{% endblock %}
+{% block subtitle %}{{ alumni }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+
+        <th>{% trans from 'forms' %}Strata{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Admitted{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Graduated{% endtrans %}</th>
+
+        <th>{% trans from 'forms' %}Degree{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Institution{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Major{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Minor{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Concentration{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'adegrees_show',
+                'adegrees_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.strata }}</td>
+        <td>{{ entity.admitted }}</td>
+        <td>{{ entity.graduated }}</td>
+
+        <td>{{ entity.degree }}</td>
+        <td>{{ entity.institution }}</td>
+        <td>{{ entity.major }}</td>
+        <td>{{ entity.minor }}</td>
+        <td>{{ entity.concentration }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('adegrees_new', 'aid', 'aid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : app.request.attributes.get('aid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}
+
+

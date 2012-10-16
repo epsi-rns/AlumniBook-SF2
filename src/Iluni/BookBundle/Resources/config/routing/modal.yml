@@ -1,0 +1,11 @@
+modal_alumni:
+    pattern:  /alumni/
+    defaults: { _controller: "IluniBookBundle:Modal:alumni" }
+
+modal_org:
+    pattern:  /org/
+    defaults: { _controller: "IluniBookBundle:Modal:org" }
+
+modal_community:
+    pattern:  /community/
+    defaults: { _controller: "IluniBookBundle:Modal:community" }

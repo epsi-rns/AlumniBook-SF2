@@ -1,0 +1,15 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+{% use 'IluniBookBundle:List:table/loop.html.twig' %}
+
+{% block body %}
+
+<div class="sheet">
+    {% set count = 0 %}
+    {{ block('table_loop') }}
+</div>
+
+    {% block table_links %}{% endblock %}
+
+{% endblock %}
+
+

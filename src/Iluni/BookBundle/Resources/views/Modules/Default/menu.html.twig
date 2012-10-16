@@ -1,0 +1,58 @@
+{% import 'IluniBookBundle:Common:macro/menu.html.twig' as menu %}
+
+<script type="text/javascript">
+    window.addEvent('domready', function() {
+        hover_sidemenu();
+    });
+</script>
+
+<div class="moduletable_menu">
+    <h3>{{ 'Community Summary'|trans({},'navigation') }}</h3>
+
+    {{ menu.item('Community', 'community') }}
+    {{ menu.item('Total Chart', 'summary_total') }}
+    {{ menu.item('All Departments', 'main_department_all') }}
+
+</div>
+
+{% if is_granted('ROLE_EDITOR') %}
+<div class="moduletable_menu">
+    <h3>{{ 'Manage Data'|trans({},'navigation') }}</h3>
+
+    {{ menu.item('Add Alumna/us', 'alumni_new') }}
+    {{ menu.item('Add Organization', 'org_new') }}
+    {{ menu.item('Manage Alumni', 'alumni') }}
+    {{ menu.item('Manage Organization', 'org') }}
+
+</div>
+{% endif %}
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+<div class="moduletable_menu">
+    <h3>{{ 'Browse Alumni'|trans({},'navigation') }}</h3>
+
+    {{ menu.item('Alumni',              'acommunities') }}
+    {{ menu.item('Birthday',            'alumni_birth') }}
+    {{ menu.item('Competencies',        'acompetencies_categories') }}
+    {{ menu.item('Certifications',      'acertifications') }}
+    {{ menu.item('Academic Degrees',    'adegrees') }}
+    {{ menu.item('Experiences',         'aexperiences') }}
+
+</div>
+
+<div class="moduletable_menu">
+    <h3>{{ 'Browse Organization'|trans({},'navigation') }}</h3>
+
+    {{ menu.item('Organization/ Companies', 'org') }}
+    {{ menu.item('Business Fields',         'ofields_categories') }}
+
+</div>
+
+<div class="moduletable_menu">
+    <h3>{{ 'Browse Mapping'|trans({},'navigation') }}</h3>
+
+    {{ menu.item('Occupation',          'amap_categories') }}
+    {{ menu.item('Job Position',        'omap_categories') }}
+
+</div>
+{% endif %}

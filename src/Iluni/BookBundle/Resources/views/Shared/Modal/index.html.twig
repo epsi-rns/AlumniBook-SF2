@@ -1,0 +1,51 @@
+{% extends 'IluniBookBundle:Common:layout/modal.html.twig' %}
+{% use 'IluniBookBundle:List:table/loop.html.twig' %}
+
+{% block title %}Lookup{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Name{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+        <td><a href="#" class="pick" id="{{ entity.id
+            }}">{{ entity.name }}</a></td>
+{% endblock %}
+
+{% block body %}
+<script type="text/javascript">
+    window.addEvent('domready', function() {
+        $$('.pick').addEvent('click', function(){
+            window.parent.el_lookup.set('value', this.get('id'));
+            window.parent.el_select.set('value', this.get('text'));
+            window.parent.diabox.hide();
+        });
+    });
+</script>
+
+<div class="sheet_filter">
+    <form action="{{ path(path) }}" method="post" {{ form_enctype(filter_form) }}>
+        <fieldset title="{% trans from 'elements' %}Filter Display{% endtrans %}">
+            <legend>{% trans from 'elements' %}Filter:{% endtrans %}</legend>
+            {{ form_widget(filter_form) }}
+        </fieldset>
+
+        <input type="submit" value="{% trans from 'actions' %}Apply{% endtrans %}"/>
+        <a href="{{ path(path)
+            }}?_reset">{% trans from 'actions' %}Reset{% endtrans %}</a>
+    </form>
+
+</div>
+
+<br/><br/>
+
+<div class="sheet">
+    {% set count = 0 %}
+    {{ block('table_loop') }}
+</div>
+
+{% include 'IluniBookBundle:List:pager.html.twig' %}
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Competency :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Competency{% endtrans %}</th>
+            <td>{{ entity.competency }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('acompetencies_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('acompetencies_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

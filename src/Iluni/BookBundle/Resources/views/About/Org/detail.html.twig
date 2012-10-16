@@ -1,0 +1,62 @@
+{% set css = ['sectiontableentry1', 'sectiontableentry2'] %}
+{% set count = 1 %}
+
+{% for entity in bizFields %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}" title="{%
+        trans from 'elements' %}Browse alumni with same business field{%
+        endtrans %}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Business Field{% endtrans %}</td>
+        <td><a href="{{ path('ofields_category', {
+            'cid': entity.bizField.id }) }}">{{ entity.bizField }}</a>
+            {% if entity.product %} ({{ entity.product }}){% endif %}
+        </td>
+    </tr>
+{% endfor %}
+
+{% for entity in parent %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Parent{% endtrans %}</td>
+        <td><strong>
+            <a href="{{ path('about_org', {
+            'oid': entity.id }) }}">{{ entity.fullname }}</a>
+        </strong></td>
+    </tr>
+{% endfor %}
+
+{% for entity in branches %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Branch{% endtrans %}</td>
+        <td><strong>
+            <a href="{{ path('about_org', {
+            'oid': entity.id }) }}">{{ entity.fullname }}</a>
+        </strong></td>
+    </tr>
+{% endfor %}
+
+{% for entity in address %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Office{% endtrans %}</td>
+        <td>{{ entity.address }}<br/>{{ entity.region }}</td>
+    </tr>
+{% else %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Office{% endtrans %}</td>
+        <td>-</td>
+    </tr>
+{% endfor %}
+
+{% for entity in contacts %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{{ entity.contactType|trans }}</td>
+        <td>{{ entity.contact }}</td>
+    </tr>
+{% endfor %}

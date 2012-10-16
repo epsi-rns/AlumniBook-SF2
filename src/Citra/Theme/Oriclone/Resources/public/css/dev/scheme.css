@@ -1,0 +1,68 @@
+/* Joomla */
+.inputbox {	color : #888; }
+
+input#mod_search_searchword 
+	{ 	color: #ccc;	}
+
+.breadcrumbs a:hover,
+#lay_main .moduletable h3,
+.moduletable_text h3,	
+.moduletable_menu h3 {
+	color : #666;
+}
+
+tr.sectiontableentry0:hover,
+tr.sectiontableentry1:hover,
+tr.sectiontableentry2:hover { color: #000; }
+td.sectiontableheader {	color: #eee;	}
+tr:hover td.sectiontableheader { color:#333; }
+tr td.sectiontableheader a { color: #ff8; }
+tr:hover td.sectiontableheader a { color: #008; }
+
+.pollstableborder tr:hover td.sectiontableentry1,
+.pollstableborder tr:hover td.sectiontableentry2 { color: #000; }
+
+
+
+/* docs */
+#lay_content ul li:hover,
+#lay_content ol li:hover { color: #000; }
+
+.small, .modifydate, .createdate { color: #777;  }
+
+table.contenttoc a:link, table.contenttoc a:visited { color : #666; }
+
+#lay_content table.contenttoc a:hover,
+table.contenttoc a:hover { color: #222; }
+
+table.contenttoc th { color : #444; }
+
+/* Layout */
+
+#lay_top h3,
+#lay_top { color: #fff; }
+#lay_top a { color: #888; }
+#lay_top a:visited { color: #ccc; }
+#lay_top a:link { color: #ccc; }
+#lay_top a:hover { color: #08b; }
+
+.grad_orange #lay_top h3,
+.grad_orange #lay_top { color: #222; }
+.grad_orange #lay_top a { color: #444; }
+.grad_orange #lay_top a:visited { color: #044; }
+.grad_orange #lay_top a:link { color: #044; }
+.grad_orange #lay_top a:hover { color: #0fa; }
+
+.grad_blue #lay_top h3,
+.grad_blue #lay_top { color: #fff; }
+.grad_blue #lay_top a { color: #888; }
+.grad_blue #lay_top a:visited { color: #ccc; }
+.grad_blue #lay_top a:link { color: #ccc; }
+.grad_blue #lay_top a:hover { color: #0fa; }
+
+
+#lay_header { color: #fff; }
+#lay_header a {color: #6bd; } 
+#lay_header a:hover {color: #FFF; }
+
+#lay_footer { color: #444; }

@@ -1,0 +1,213 @@
+Community:
+  1:
+    cid:           1
+    name:          Sipil (Regular)
+    brief:         S
+    department_id: 401
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  2:
+    cid:           2
+    name:          Mesin (Regular)
+    brief:         M
+    department_id: 402
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  3:
+    cid:           3
+    name:          Elektro (Regular)
+    brief:         E
+    department_id: 403
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  4:
+    cid:           4
+    name:          Metalurgi (Regular)
+    brief:         Mt
+    department_id: 404
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  5:
+    cid:           5
+    name:          Arsitek (Regular)
+    brief:         A
+    department_id: 405
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  6:
+    cid:           6
+    name:          Kimia (Regular)
+    brief:         GP
+    department_id: 406
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  7:
+    cid:           7
+    name:          Industri (Regular)
+    brief:         TI
+    department_id: 407
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+  8:
+    cid:           8
+    name:          Perkapalan (Regular)
+    department_id: 408
+    faculty_id:    4
+    program_id:    10
+    type_id:       1
+
+  21:
+    cid:           21
+    name:          Sipil (Ekstensi)
+    department_id: 401
+    faculty_id:    4
+    program_id:    11
+    type_id:       1
+  22:
+    cid:           22
+    name:          Mesin (Ekstensi)
+    department_id: 402
+    faculty_id:    4
+    program_id:    11
+    type_id:       1
+  23:
+    cid:           23
+    name:          Elektro (Ekstensi)
+    department_id: 403
+    faculty_id:    4
+    program_id:    11
+    type_id:       1
+  26:
+    cid:           26
+    name:          Kimia (Ekstensi)
+    department_id: 406
+    faculty_id:    4
+    program_id:    11
+    type_id:       1
+
+  41:
+    cid:           41
+    name:          Sipil (Magister)
+    department_id: 401
+    faculty_id:    4
+    program_id:    21
+    type_id:       1
+  42:
+    cid:           42
+    name:          Mesin (Magister)
+    department_id: 402
+    faculty_id:    4
+    program_id:    21
+    type_id:       1
+  44:
+    cid:           44
+    name:          Metalurgi (Magister)
+    department_id: 404
+    faculty_id:    4
+    program_id:    21
+    type_id:       1
+  46:
+    cid:           46
+    name:          Kimia (Magister)
+    department_id: 406
+    faculty_id:    4
+    program_id:    21
+    type_id:       1
+  47:
+    cid:           47
+    name:          Industri (Magister)
+    department_id: 407
+    faculty_id:    4
+    program_id:    21
+    type_id:       1
+
+  61:
+    cid:           61
+    name:          Elektronika (S2)
+    department_id: 403
+    faculty_id:    4
+    program_id:    20
+    type_id:       1
+  62:
+    cid:           62
+    name:          Optoelektronika (S2)
+    department_id: 403
+    faculty_id:    4
+    program_id:    20
+    type_id:       1
+
+  81:
+    cid:           81
+    name:          Sipil (Doktor)
+    department_id: 401
+    faculty_id:    4
+    program_id:    30
+    type_id:       1
+  82:
+    cid:           82
+    name:          Mesin (Doktor)
+    department_id: 402
+    faculty_id:    4
+    program_id:    30
+    type_id:       1
+  83:
+    cid:           83
+    name:          Elektro (Doktor)
+    department_id: 403
+    faculty_id:    4
+    program_id:    30
+    type_id:       1
+  110:
+    cid:           110
+    name:          Ekonomi (Regular)
+    department_id: 603
+    faculty_id:    6
+    program_id:    10
+    type_id:       1
+  113:
+    cid:           113
+    name:          Farmasi (Regular)
+    department_id: 1301
+    faculty_id:    13
+    program_id:    10
+    type_id:       1
+
+# Good idea, but need careful consideration
+  1001:
+    cid:           1001
+    name:          Madah Bahana (Marching Band)
+    brief:         MB
+    type_id:       2
+    department_id: -1
+    faculty_id:    -1
+    program_id:    -1
+  1002:
+    cid:           1002
+    name:          Interrupt-04
+    type_id:       2
+    department_id: -1
+    faculty_id:    4
+    program_id:    -1
+  1003:
+    cid:           1003
+    name:          Tim Robot UI
+    brief:         TRUI
+    type_id:       2
+    department_id: -1
+    faculty_id:    4
+    program_id:    -1
+  1004:
+    cid:           1004
+    name:          Air Cushion Vehicle Club
+    brief:         ACVC
+    type_id:       2
+    department_id: 402
+    faculty_id:    4
+    program_id:    10

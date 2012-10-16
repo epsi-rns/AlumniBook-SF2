@@ -1,0 +1,23 @@
+a.readon, .button,
+#gloss {
+    background : transparent;
+}
+
+button[type="submit"],
+input[type="submit"],
+.menu_tabs ul li a,
+#lay_main .moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3 {
+    background : transparent;
+}
+
+.moduletable_menu ul.menu li,
+.moduletable_menu ul.menu li li {
+    background : transparent;
+}
+
+.moduletable_menu ul.menu li.active,
+.moduletable_menu ul.menu li li.active {
+    background : transparent;
+}

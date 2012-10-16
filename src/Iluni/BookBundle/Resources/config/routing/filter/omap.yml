@@ -1,0 +1,13 @@
+omap:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\OMap:index" }
+
+omap_categories:
+    pattern:  /categories
+    defaults: { _controller: "IluniBookBundle:Filter\OMap:categories" }
+
+omap_category:
+    pattern:  /{cid}/cat
+    defaults: { _controller: "IluniBookBundle:Filter\OMap:category" }
+    requirements: { cid:  \d+ }
+

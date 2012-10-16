@@ -1,0 +1,99 @@
+Faculty:
+  -1:
+    faculty_id:  -1
+    Translation:
+      en:
+        faculty: Independent
+      id:
+        faculty: Otonom/ Mandiri
+  1:
+    faculty_id:  1
+    Translation:
+      en:
+        faculty: Medicine
+      id:
+        faculty: Kedokteran
+  2:
+    faculty_id:  2
+    Translation:
+      en:
+        faculty: Dentistry
+      id:
+        faculty: Kedokteran Gigi
+  3:
+    faculty_id:  3
+    Translation:
+      en:
+        faculty: Mathematic and Natural Science
+      id:
+        faculty: MIPA
+  4:
+    faculty_id:  4
+    Translation:
+      en:
+        faculty: Engineering
+      id:
+        faculty: Teknik
+  5:
+    faculty_id:  5
+    Translation:
+      en:
+        faculty: Law
+      id:
+        faculty: Hukum
+  6:
+    faculty_id:  6
+    Translation:
+      en:
+        faculty: Economics
+      id:
+        faculty: Ekonomi
+  7:
+    faculty_id:  7
+    Translation:
+      en:
+        faculty: Humanities
+      id:
+        faculty: Ilmu Pengetahuan Budaya
+  8:
+    faculty_id:  8
+    Translation:
+      en:
+        faculty: Psychology
+      id:
+        faculty: Psikologi
+  9:
+    faculty_id:  9
+    Translation:
+      en:
+        faculty: Social and Political Science
+      id:
+        faculty: Ilmu Sosial dan Ilmu Politik
+  10:
+    faculty_id:  10
+    Translation:
+      en:
+        faculty: Public Health
+      id:
+        faculty: Kesehatan Masyarakat
+  11:
+    faculty_id:  11
+    Translation:
+      en:
+        faculty: Nursing
+      id:
+        faculty: Keperawatan
+  12:
+    faculty_id:  12
+    Translation:
+      en:
+        faculty: Computer Science
+      id:
+        faculty: Ilmu Komputer
+  13:
+    faculty_id:     13
+    Translation:
+      en:
+        faculty: Pharmacy
+      id:
+        faculty: Farmasi

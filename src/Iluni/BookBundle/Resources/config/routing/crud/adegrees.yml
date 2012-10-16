@@ -1,0 +1,33 @@
+adegrees_list:
+    pattern:  /{aid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:list" }
+    requirements: { aid:  \d+ }
+    
+adegrees_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:show" }
+    requirements: { id:  \d+ }
+    
+adegrees_new:
+    pattern:  /{aid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:new" }
+
+adegrees_create:
+    pattern:  /{aid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:create" }
+    requirements: { _method: post }
+
+adegrees_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:edit" }
+    requirements: { id:  \d+ }
+    
+adegrees_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:update" }
+    requirements: { _method: post }
+
+adegrees_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\ADegrees:delete" }
+    requirements: { _method: post }

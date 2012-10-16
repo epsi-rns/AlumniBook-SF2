@@ -1,0 +1,29 @@
+{% block form_filter_community_javascript %}
+{% if filter_form.community is defined %}
+    {% set form_name = filter_form.vars.name %}
+    {% set form_holder_name = form_name ~ '_community' %}
+
+    {% if options['ld3'] is defined %}
+        {% set ld3 = options['ld3'] %}
+        {% include 'IluniBookBundle:Shared/Javascript:dynamic_dropdown.html.twig' %}
+    {% endif %}
+
+    {% include 'IluniBookBundle:Shared/Javascript:toggle_yeardecade.html.twig' %}
+    {% include 'IluniBookBundle:Shared/Javascript:validate_community.html.twig' %}
+{% endif %}
+{% endblock %}
+
+{% block form_filter_community_fields %}
+        {% if filter_form.community is defined %}
+
+        <fieldset title="{% trans from 'elements' %}Filter Display{% endtrans %}">
+            <legend>{% trans from 'elements' %}Filter:{% endtrans %}
+            {% trans from 'elements' %}Community{% endtrans %}</legend>
+                {{ form_row(filter_form.community.program) }}
+                {{ form_row(filter_form.community.faculty) }}
+                {{ form_row(filter_form.community.department) }}
+                {{ form_row(filter_form.community.classYear) }}
+                {{ form_row(filter_form.community.decade) }}
+        </fieldset>
+        {% endif %}
+{% endblock %}

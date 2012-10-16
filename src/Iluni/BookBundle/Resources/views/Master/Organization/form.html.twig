@@ -1,0 +1,47 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% use 'DiaBoxBundle::assets.html.twig' %}
+
+{% set is_new   = entity.id ? false : true %}
+{% set title    = (is_new ? 'Add' : 'Update')|trans({},'actions') %}
+{% set button   = (is_new ? 'Create' : 'Save')|trans({},'actions') %}
+
+{% set path = is_new ? path('org_create') : path('org_update', { 'id': entity.id })%}
+{% block title %}Organization :: {{ title }}{% endblock %}
+
+{% block body %}
+    {% set form_id = edit_form.vars.name %}
+
+    <script type="text/javascript">
+        window.addEvent("domready",function(){
+            document.id('{{ form_id }}_name').addClass('required');
+            new FormValidator.Inline('form_validate');
+        });
+    </script>
+
+    <form action="{{ path }}" method="post" id="form_validate" {{ form_enctype(edit_form) }}>
+        {{ form_widget(edit_form) }}
+        &nbsp;
+        {{ crud.link_to_backtolist('org', {}) }}
+        <button type="submit">{{ button }}</button>
+    </form>
+
+    {% if not is_new %}
+        {{ crud.form_delete(delete_form, 'org_delete', { 'id': entity.id }) }}
+    {% endif %}
+{% endblock %}
+
+{% block include_stylesheets %}
+    {{ parent() }}
+    {{ block('include_stylesheets_diabox') }}
+{% endblock %}
+
+{% block include_javascripts %}
+    {{ parent() }}
+    {{ block('include_javascripts_diabox') }}
+{% endblock %}
+
+{% block inline_javascripts %}
+    {{ parent() }}
+    {{ block('inline_javascripts_diabox_frame') }}
+{% endblock %}

@@ -1,0 +1,31 @@
+{# src/Iluni/BookBundle/Resources/views/Modal/layout.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block include_javascripts_effects %}{% endblock %}
+
+{% block include_stylesheets_variation %}
+    {% for variation in oriclone.modal.css %}
+    <link rel="stylesheet" href="{{
+        asset('bundles/oriclone/css/'~variation)
+    }}" type="text/css" media="all" />
+    {% endfor %}
+{% endblock %}
+
+{% block theme_body %}
+<body class="width_fluid mbg_white">
+    <a name="top" id="top"></a>
+    <div id="container-console"></div>
+
+    <div id="lay_main" class="pos_c">
+        <div id="lay_content">
+        <div id="main_content" class="main_content">
+
+        {% block body %}{% endblock %}
+
+        </div>
+        </div>
+    </div>
+
+    <a name="bottom" id="bottom"></a>
+</body>
+{% endblock %}

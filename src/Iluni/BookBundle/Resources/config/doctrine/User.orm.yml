@@ -1,0 +1,25 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/User.orm.yml
+Iluni\BookBundle\Entity\User:
+    type: entity
+    table: user
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+            unique: true
+            nullable: false
+        email:
+            type: string
+            length: 255
+        password:
+            type: string
+        salt:
+            type: string
+        roles:
+            type: array
+

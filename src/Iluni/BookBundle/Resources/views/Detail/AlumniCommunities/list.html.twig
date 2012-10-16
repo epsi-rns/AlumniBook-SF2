@@ -1,0 +1,50 @@
+{% extends 'IluniBookBundle:List:table/simple.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Communities by Alumna/us{% endblock %}
+{% block breadtitle %}Communities :: list{% endblock %}
+{% block subtitle %}{{ alumni }}{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Class of (year){% endtrans %}</th>
+        <th>{% trans from 'forms' %}Subclass{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Program{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Faculty{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        <td width="8%">
+            {{ crud.link_to_actions_in_list(
+                'acommunities_show',
+                'acommunities_edit',
+                { 'id': entity.id }
+            ) }}
+        </td>
+
+        <td>{{ entity.community }}</td>
+        <td>{{ entity.classYear }}</td>
+        <td>{{ entity.classSub }}</td>
+        <td>{{ entity.community.program }}</td>
+        <td>{{ entity.community.department }}</td>
+        <td>{{ entity.community.faculty }}</td>
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new_in_list('acommunities_new', 'aid', 'aid') }}
+{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : app.request.attributes.get('aid')
+    }) }}
+
+    {{ parent() }}
+{% endblock %}

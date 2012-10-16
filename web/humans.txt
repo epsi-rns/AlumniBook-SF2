@@ -1,0 +1,12 @@
+/* TEAM */
+	Chef: Epsiarto Rizqi Nurwijayadi
+	Contact: epsi.rns [at] gmail.com
+	Twitter: @nurwijayadi
+	From: Jakarta, Indonesia
+
+/* SITE */
+	Last update: 2012/06/19
+	Language: English/ Indonesia
+	Doctype: XHTML with CSS3
+	Tools: PHP, Symfony2, Mootools
+	IDE: Geany and GIMP

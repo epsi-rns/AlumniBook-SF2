@@ -1,0 +1,8 @@
+services:
+    form.type.lookupmodal:
+        class: Citra\Mootools\LookupModalBundle\Form\Type\LookupModalType
+        arguments:
+            entity_manager: "@doctrine.orm.entity_manager"
+        tags:
+            - { name: form.type, alias: lookupmodal }
+

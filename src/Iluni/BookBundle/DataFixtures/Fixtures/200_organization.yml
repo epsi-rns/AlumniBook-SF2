@@ -1,0 +1,44 @@
+Organization:
+  1:
+    oid: 1
+    name: Universitas Indonesia
+    # product: Pendidikan
+    note: Sample of tree, a parent with many branches
+    children:
+      1_4:
+        name: Fakultas Teknik UI
+        children:
+          1_4_1: 
+            name: Departemen Sipil FTUI
+          1_4_2: 
+            name: Departemen Mesin FTUI
+          1_4_3: 
+            name: Departemen Elektro FTUI
+          1_4_4: 
+            name: Departemen Metalurgi dan Material FTUI
+          1_4_5: 
+            name: Departemen Arsitektur FTUI
+          1_4_6: 
+            name: Departemen Kimia FTUI
+          1_4_7: 
+            name: Departemen Teknik Industri FTUI
+          1_4_8: 
+            name: Departemen Perkapalan FTUI
+      1_8:
+        name: Fakultas Psikologi UI
+  0:
+    oid: 100
+    name: Freelance (Tanpa Organisasi)
+  25 epsi CJA:
+    oid: 25
+    name: Citra Jayaara Andalan
+    prefix: PT.
+  35 Rizqi:
+    oid: 35
+    name: Ikan Lele
+    prefix: UD
+    note:   Ordinary test    
+  283 Aswil:
+    oid: 283
+    name: Dexa Medica
+    prefix: PT.

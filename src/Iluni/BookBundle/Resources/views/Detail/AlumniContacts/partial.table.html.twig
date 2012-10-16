@@ -1,0 +1,34 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact Type{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Contact{% endtrans %}</th>
+{% endblock %}
+
+{% block table_row %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_list(
+                'acontacts_list', { 'aid': entity.alumni.id }) }}
+            {{ crud.link_to_action_edit(
+                'acontacts_edit', { 'id': entity.id }) }}
+        </td>
+        {% endif %}
+
+        <td><a href="{{ path('about_alumni', { 'aid': entity.alumni.id }) }}"
+          >{{ entity.alumni }}</a></td>
+        <td>{{ entity.alumni.community }}</td>
+        <td>{{ entity.contactType }}</td>
+        <td>{{ entity.contact }}</td>
+{% endblock %}

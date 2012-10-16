@@ -1,0 +1,13 @@
+parameters:
+    oriclone.config: ~
+
+services:
+    oriclone.twig.extension:
+        class: Citra\Theme\Oriclone\Twig\OricloneExtension
+        tags:
+            -  { name: twig.extension }
+        arguments:
+            - "@service_container"
+
+
+

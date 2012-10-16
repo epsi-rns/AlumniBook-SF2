@@ -1,0 +1,41 @@
+{% block top_message %}
+
+    {% if app.user %}
+        You are browsing the Alumni Book demo website.<br />
+        Feel free to play with it as the database is reset every day, daily, every 24 hours.
+    {% else %}
+        You can login with one of these username/password pairs:<br />
+        editor/editor (frontend), guest/guest (frontend) or admin/admin (backend).
+    {% endif %}
+{% endblock %}
+
+{% block top_logon %}
+        {% set username = app.user ? app.user.username : 'Anonymous' %}
+
+        [<strong title="{% trans %}logged in as {% endtrans
+            %} {{ username }}">{{ username }}</strong>]
+        - <a href="{{ path('user_logout')
+            }}">{% trans from 'navigation'%}Logout{% endtrans %}</a>
+        <br/>
+{% endblock %}
+
+{% block top_language %}
+
+        <a href="{{ path('main_language', { 'locale' : 'en' }) }}">
+            <img alt="English" title="English (United Kingdom)" border="0"
+            src="{{ asset('bundles/ilunibook/images/cultures/en.gif') }}" /></a>
+        <a href="{{ path('main_language', { 'locale' : 'id' }) }}">
+            <img alt="Indonesia" title="Bahasa Indonesia (Indonesia)" border="0"
+            src="{{ asset('bundles/ilunibook/images/cultures/id.gif') }}" /></a>
+{% endblock %}
+
+{% block top %}
+    <div style="float: left; padding-left: 20px; width: 70%;">
+    {{ block('top_message') }}
+    </div>
+    <div style="float: right; padding-right: 20px; width: 20%; text-align: right;">
+    {{ block('top_logon') }}
+    {{ block('top_language') }}
+    </div>
+    <div class="clr"></div>
+{% endblock %}

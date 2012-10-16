@@ -1,0 +1,33 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% set map = entity.AlumniOrgMap %}
+
+{% set is_new   = entity.id ? false : true %}
+{% set title    = (is_new ? 'Add' : 'Update')|trans({},'actions') %}
+{% set button   = (is_new ? 'Create' : 'Save')|trans({},'actions') %}
+
+{% set path = is_new ?
+    path('workplace_create', { 'mid': app.request.attributes.get('mid') }) :
+    path('workplace_update',{ 'id': entity.id })
+%}
+
+{% block title %}Job Address :: {{ title }}{% endblock %}
+{% block subtitle %}{{ map.alumni }} - {{ map.organization }}{% endblock %}
+
+{% block body %}
+    {% if ld3 is defined %}
+        {% set form_holder_name = edit_form.vars.name %}
+        {% include 'IluniBookBundle:Shared/Javascript:dynamic_dropdown.html.twig' %}
+    {% endif %}
+
+    <form action="{{ path }}" method="post" id="form_validate" {{ form_enctype(edit_form) }}>
+        {{ form_widget(edit_form) }}
+        &nbsp;
+        {{ crud.link_to_backtolist('workplace_list', { 'mid': map.id }) }}
+        <button type="submit">{{ button }}</button>
+    </form>
+
+    {% if not is_new %}
+        {{ crud.form_delete(delete_form, 'workplace_delete', { 'id': entity.id }) }}
+    {% endif %}
+{% endblock %}

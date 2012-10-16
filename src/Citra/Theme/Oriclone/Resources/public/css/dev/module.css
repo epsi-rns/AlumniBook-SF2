@@ -1,0 +1,123 @@
+/* list in menu */
+.moduletable_menu ul.menu li.active,
+.moduletable_menu ul.menu li li.active
+    {   list-style-image:url(../../images/accs/arrow.gif) ; }
+.moduletable_menu ul.menu li:hover,
+.moduletable_menu ul.menu li li:hover,
+.moduletable_menu ul.menu li.active:hover,
+.moduletable_menu ul.menu li li.active:hover
+    {   list-style-image:url(../../images/accs/li1.gif) ; }
+
+/* mittwoch clone of background images */
+#gloss {
+    border : 1px solid #e3e3e3;
+}
+
+#lay_main .moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3 {
+    border : 1px solid #e3e3e3;
+}
+
+.moduletable_menu ul.menu li,
+.moduletable_menu ul.menu li li {
+    border : 1px solid #eee;
+}
+.moduletable_menu ul.menu li {
+    border-right : 5px solid #dd6;
+}
+.moduletable_menu ul.menu li li {
+    border-left : 5px solid #dd6;
+}
+.moduletable_menu ul.menu li.active,
+.moduletable_menu ul.menu li li.active {
+    border-left : 5px solid #88f;
+}
+.moduletable_menu ul.menu li:hover,
+.moduletable_menu ul.menu li li:hover {
+    border-left : 5px solid #f80;
+}
+
+
+.moduletable_menu ul.menu li a span {
+    background : none;
+}
+.moduletable_menu ul.menu li.active a span {
+    background : none;
+}
+.moduletable_menu ul.menu li li a span {
+    background : none;
+}
+
+/* inspired by mittwoch */
+
+#gloss {
+    height : 24px;
+    margin: 0px 5px 4px 5px;
+}
+
+.breadcrumbs {
+    overflow : hidden;
+    display : block;
+    height : 24px;
+    line-height : 24px;
+    float : left;
+    padding-left : 10px;
+}
+.breadcrumbs a:hover {
+    text-decoration : none;
+}
+
+/* menu and module */
+#lay_main .moduletable,
+.moduletable_text,
+.moduletable_menu {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#lay_main .moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3 {
+    text-align : right;
+    height : 24px;
+    line-height : 24px;
+    padding-right : 10px;
+    margin : 0 0 3px 0;
+}
+
+.moduletable_menu ul.menu li a,
+.moduletable_menu ul.menu li li a {
+    height : 24px;
+    list-style : none;
+    display : block;
+    vertical-align : middle;
+    font-size : 11px;
+    text-align : left;
+    padding : 0px 6px 0 10px;
+    text-decoration : none;
+}
+.moduletable_menu ul.menu,
+.moduletable_menu ul.menu li,
+.moduletable_menu ul.menu li ul,
+.moduletable_menu ul.menu li li  {
+    margin : 0;
+    padding : 0;
+}
+
+.moduletable_menu ul.menu li {
+    line-height : 22px;
+    margin-bottom : 2px;
+}
+.moduletable_menu ul.menu li li {
+    line-height : 22px;
+    margin-bottom : 2px;
+}
+
+.moduletable_menu ul.menu li li a span {
+    list-style : none;
+}
+.moduletable_menu ul.menu li ul {
+    padding-top : 8px;
+    margin-left : 3px;
+    margin-right : 3px;
+}

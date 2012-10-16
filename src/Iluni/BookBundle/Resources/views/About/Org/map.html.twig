@@ -1,0 +1,73 @@
+<strong><a href="{{ path('about_alumni', { 'aid': map.alumni.id})
+    }}">{{map.alumni.fullname }}</a></strong>
+
+<table cellpadding="4" cellspacing="0" border="0" width="100%">
+{% set css = ['sectiontableentry1', 'sectiontableentry2'] %}
+{% set count = 1 %}
+
+{% if map.jobType is not empty %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Occupation{% endtrans %}</td>
+        <td><a href="{{ path('amap_category', { 'cid': map.jobType.id})
+            }}">{{ map.jobType }}</a></td>
+    </tr>
+{% endif %}
+
+{% if map.jobPosition is not empty %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Job Position{% endtrans %}</td>
+        <td><a href="{{ path('omap_category', { 'cid': map.jobPosition.id})
+            }}">{{ map.jobPosition }}</a>
+            {% if JPInfo|length > 0 %}
+            <br/>{{ JPInfo|join(', ')|raw }}
+            {% endif %}
+        </td>
+    </tr>
+
+    {% if map.department is not empty %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">Department</td>
+        <td>{{ map.department }}</td>
+    </tr>
+    {% endif %}
+{% endif %}
+
+{% for entity in aaddress %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Residence{% endtrans %}</td>
+        <td>{{ entity.address }}<br/>{{ entity.region }}</td>
+    </tr>
+{% endfor %}
+
+{% for entity in acontacts %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{{ entity.contactType|trans }}</td>
+        <td>{{ entity.contact }}</td>
+    </tr>
+{% endfor %}
+
+{% for entity in maddress %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Workplace{% endtrans %}</td>
+        <td>{{ entity.address }}<br/>{{ entity.region }}</td>
+    </tr>
+{% endfor %}
+
+{% for entity in mcontacts %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{{ entity.contactType|trans }}</td>
+        <td>{{ entity.contact }}</td>
+    </tr>
+{% endfor %}
+
+</table>

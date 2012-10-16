@@ -1,0 +1,5 @@
+services:
+    form.type.datepicker:
+        class: Citra\Mootools\DatePickerBundle\Form\Type\DatePickerType
+        tags:
+            - { name: form.type, alias: datepicker }

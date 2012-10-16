@@ -1,0 +1,18 @@
+<table>
+  <tbody>
+        {% for caption, textvalue in masterfields %}
+        <tr class="masterfields">
+            {{ caption|th }}
+            <td>{{ textvalue }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            {{ 'Contact Type'|th }}
+            <td>{{ entity.contactType }}</td>
+        </tr>
+        <tr>
+            {{ 'Contact'|th }}
+            <td>{{ entity.contact }}</td>
+        </tr>
+  </tbody>
+</table>

@@ -1,0 +1,32 @@
+Iluni\BookBundle\Entity\Detail\OrgFields:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\OrgFieldsRepository
+  table: o_fields
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    product:
+      type: string
+      length: 60
+      nullable: true
+    description:
+      type: string
+      length: 35
+      nullable: true
+  manyToOne:
+    organization:
+      targetEntity: Iluni\BookBundle\Entity\Organization
+      joinColumns:
+        oid:
+          referencedColumnName: oid
+      orphanRemoval: false
+    bizField:
+      targetEntity: Iluni\BookBundle\Entity\Category\BizField
+      joinColumns:
+        biz_field_id:
+          referencedColumnName: biz_field_id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

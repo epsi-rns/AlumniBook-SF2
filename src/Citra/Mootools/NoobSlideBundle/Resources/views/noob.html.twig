@@ -1,0 +1,98 @@
+{% set path_images = 'bundles/noobslide/images/' %}
+
+{% if (picasa_user is defined) and (picasa_album is defined) %}
+    {% set adapter = false %}
+    {% set picasa_link = 'http://picasaweb.google.com/'~picasa_user~'/'~picasa_album %}
+{% else %}
+    {# otherwise file mode .. not implemented here #}
+    {% set adapter = true %}
+    {% set host = app.request.getBaseURL() %}
+{% endif %}
+
+<script type="text/javascript">
+window.addEvent('domready',function(){
+    var spinner = document.id('noob_cont').getElement('.noob_info');
+    spinner.spin();
+
+    myNoobSlide = function(images) {
+        spinner.unspin();
+        if (images.length>0) {
+            new mooNoobSlideHelper({
+            {% if lightbox_type is defined %}
+                {{ lightbox_type }}: true,
+            {% endif %}
+            {% if adapter %}
+                path: (typeof noobPrefix)=='undefined'? ''
+                    : '{{ host }}' + noobPrefix,
+            {% endif %}
+                items: images
+            });
+        }
+    }
+
+{% if adapter %}
+    myNoobSlide(noobImages);
+{% else %}
+    new mooGooglePicasaWeb({
+        user: '{{ picasa_user }}',
+        album: '{{ picasa_album }}',
+        onComplete: myNoobSlide
+    }).send();
+{% endif %}
+});
+</script>
+
+<div id="noob_cont">
+
+<div class="noob_sample">
+
+    <div class="noob_thumbs" id="noob_thumbs_left">
+        <div class="noob_nav_mask" id="noob_handles_1">
+        <div class="noob_nav_box" id="noob_lnav_box">
+        </div>
+        </div>
+
+        <div class="noob_nav_buttons">
+            <span id="noob_lnav_prev">
+            <img src="{{ asset(path_images~'go-up.png') }}" /></span>
+            <span id="noob_lnav_next">
+            <img src="{{ asset(path_images~'go-down.png') }}" /></span>
+        </div>
+    </div>
+
+    <div class="noob_thumbs" id="noob_thumbs_right">
+        <div class="noob_nav_mask" id="noob_handles_2">
+        <div class="noob_nav_box" id="noob_rnav_box">
+        </div>
+        </div>
+
+        <div class="noob_nav_buttons">
+            <span id="noob_rnav_prev">
+            <img src="{{ asset(path_images~'go-up.png') }}" /></span>
+            <span id="noob_rnav_next">
+            <img src="{{ asset(path_images~'go-down.png') }}" /></span>
+        </div>
+    </div>
+
+    <div class="noob_mask">
+        <div id="noob_main_box" title="click to zoom"></div>
+        <div class="noob_info">
+            <h4>{{ title }}
+            {% if adapter == false %}
+            <a href="{{ picasa_link }}" target="_blank">Link</a>
+            {% endif %}</h4>
+            <p>{{ subtitle }}</p>
+        </div>
+    </div>
+
+    <p class="noob_buttons">
+        <span id="noob_prev">Previous</span>
+        <span id="noob_playback">Playback</span>
+        <span id="noob_stop">Stop</span>
+        <span id="noob_play">Play</span>
+        <span id="noob_next">Next</span>
+    </p>
+</div>
+
+<div style="clear:both;"></div>
+</div>

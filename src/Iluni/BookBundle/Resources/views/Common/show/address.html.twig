@@ -1,0 +1,38 @@
+<table>
+  <tbody>
+        {% for caption, textvalue in masterfields %}
+        <tr class="masterfields">
+            {{ caption|th }}
+            <td>{{ textvalue }}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            {{ 'Area'|th }}
+            <td>{{ entity.area }}</td>
+        </tr>
+        <tr>
+            {{ 'Building'|th }}
+            <td>{{ entity.building }}</td>
+        </tr>
+        <tr>
+            {{ 'Street'|th }}
+            <td>{{ entity.street }}</td>
+        </tr>
+        <tr>
+            {{ 'Postal Code'|th }}
+            <td>{{ entity.postalCode }}</td>
+        </tr>
+        <tr>
+            {{ 'Country'|th }}
+            <td>{{ entity.country }}</td>
+        </tr>
+        <tr>
+            {{ 'Province'|th }}
+            <td>{{ entity.province }}</td>
+        </tr>
+        <tr>
+            {{ 'District'|th }}
+            <td>{{ entity.district }}</td>
+        </tr>
+  </tbody>
+</table>

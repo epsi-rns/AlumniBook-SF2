@@ -1,0 +1,43 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Business Field :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : entity.organization.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Organization{% endtrans %}</th>
+            <td>{{ entity.organization }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Business Field{% endtrans %}</th>
+            <td>{{ entity.bizField }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Product{% endtrans %}</th>
+            <td>{{ entity.product }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('ofields_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('ofields_list', { 'oid': entity.organization.id }) }}
+
+</div>
+
+{% endblock %}

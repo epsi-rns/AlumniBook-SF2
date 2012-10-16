@@ -1,0 +1,13 @@
+ofields:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\OFields:index" }
+
+ofields_categories:
+    pattern:  /categories
+    defaults: { _controller: "IluniBookBundle:Filter\OFields:categories" }
+
+ofields_category:
+    pattern:  /{cid}/cat
+    defaults: { _controller: "IluniBookBundle:Filter\OFields:category" }
+    requirements: { cid:  \d+ }
+

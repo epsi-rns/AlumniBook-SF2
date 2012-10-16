@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends 'OricloneBundle::base.html.twig' %}
+
+{% block projecttitle %}IluniBook{% endblock %}
+
+{% block include_metas %}
+    {{ parent() }}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{
+        asset('images/favicon.ico') }}" />
+    <link type="text/plain" rel="author" href="{{
+        asset('humans.txt') }}" />
+{% endblock %}

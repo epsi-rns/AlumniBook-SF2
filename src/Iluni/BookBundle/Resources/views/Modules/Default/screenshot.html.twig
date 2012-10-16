@@ -1,0 +1,34 @@
+{# src/Iluni/BookBundle/Resources/views/Default/screenshot.html.twig #}
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Screenshot{% endblock %}
+
+{% use 'DiaBoxBundle::assets.html.twig' %}
+{% use 'NoobSlideBundle::assets.html.twig' %}
+
+{% block include_stylesheets %}
+    {{ parent() }}
+    {{ block('include_stylesheets_diabox') }}
+    {{ block('include_stylesheets_noobslide') }}
+{% endblock %}
+
+{% block include_javascripts %}
+    {{ parent() }}
+    {{ block('include_javascripts_diabox') }}
+    {{ block('include_javascripts_noobslide') }}
+{% endblock %}
+
+{% block inline_javascripts %}
+    {{ parent() }}
+    {{ block('inline_javascripts_diabox') }}
+{% endblock %}
+
+{% block body %}
+    {% include 'NoobSlideBundle::noob.html.twig' with {
+        'title'         : 'AlumniBook Screenshot',
+        'subtitle'      : 'Any related AlumniBook ports.',
+        'lightbox_type' : 'diabox',
+        'picasa_user'   : 'epsi.rns',
+        'picasa_album'  : 'AlumniBook'
+    } %}
+{% endblock %}

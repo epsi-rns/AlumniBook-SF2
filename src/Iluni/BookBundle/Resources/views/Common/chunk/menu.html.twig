@@ -1,0 +1,54 @@
+{% block theme_menu %}
+
+{% import 'IluniBookBundle:Common:macro/menu.html.twig' as menu %}
+
+<div class="moduletable_menu">
+<h3>{{ 'Start Page'|trans({},'navigation') }}</h3>
+    <ul class="menu"><li>
+        <a href="{{ path('main_homepage') }}">
+            {{ 'Home'|trans({},'navigation') }}
+        </a>
+    </li></ul>
+
+    <ul class="menu"><li>
+        <a href="{{ path('main_about') }}">
+            {{ 'About'|trans({},'navigation') }}
+        </a>
+        <ul class="menu"><li>
+          <a href="{{ path('main_screenshot') }}">
+              {{ 'Screenshot'|trans({},'navigation') }}
+          </a>
+        </li></ul>
+
+    </li></ul>
+</div>
+
+{% if app.user and book_app.allow_menu %}
+<script type="text/javascript">
+    target = '{{ path ('main_menu') }}';
+    bindInnerRequest(target, 'part_book_menu');
+</script>
+<?php endif; ?>
+
+<div id="part_book_menu"></div>
+
+<div class="moduletable_menu">
+<h3>{{ 'Users'|trans({},'navigation') }}</h3>
+    <ul class="menu"><li>
+        <a href="{{ path('sonata_admin_dashboard') }}">
+            {{ 'Administrator'|trans({},'navigation') }}
+        </a>
+    </li></ul>
+
+    <ul class="menu"><li>
+        <a href="{{ path('user_logout') }}">
+            {{ 'Logout'|trans({},'navigation') }}
+        </a>
+    </li></ul>
+</div>
+
+{% endif %}
+
+
+
+{% endblock %}

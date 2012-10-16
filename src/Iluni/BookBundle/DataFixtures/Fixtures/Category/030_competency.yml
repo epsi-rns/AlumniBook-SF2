@@ -1,0 +1,57 @@
+Competency:
+  1:
+    competency_id: 1
+    Translation:
+      en:
+        competency: Other Competency
+      id:
+        competency: Kompetensi Lain
+  2:
+    competency_id: 2
+    Translation:
+      en:
+        competency: Management
+      id:
+        competency: Managemen
+  3:
+    competency_id: 3
+    Translation:
+      en:
+        competency: Expert
+      id:
+        competency: Tenaga Ahli
+  4:
+    competency_id: 4
+    Translation:
+      en:
+        competency: Surveyor
+      id:
+        competency: Surveyor (keahlian)
+  5:
+    competency_id: 5
+    Translation:
+      en:
+        competency: Marketing
+      id:
+        competency: Pemasaran
+  6:
+    competency_id: 6
+    Translation:
+      en:
+        competency: Engineer / Designer
+      id:
+        competency: Insinyur / Desainer
+  7:
+    competency_id: 7
+    Translation:
+      en:
+        competency: Teacher / Trainer
+      id:
+        competency: Pengajar / Pelatih
+  8:
+    competency_id: 8
+    Translation:
+      en:
+        competency: Auditor
+      id:
+        competency: Auditor (keahlian)

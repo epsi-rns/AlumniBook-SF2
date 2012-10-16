@@ -1,0 +1,32 @@
+Iluni\BookBundle\Entity\Base\Contacts:
+  type: entity
+  table: contacts
+  inheritanceType: SINGLE_TABLE
+  discriminatorColumn:
+    name: discr
+    type: string
+    length: 1
+    column: link_type
+  discriminatorMap:
+    A: Iluni\BookBundle\Entity\Detail\AlumniContacts
+    O: Iluni\BookBundle\Entity\Detail\OrgContacts
+    M: Iluni\BookBundle\Entity\Detail\MapContacts
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    contact:
+      type: string
+      length: 50
+      fixed: false
+      nullable: false
+  manyToOne:
+    contactType:
+      targetEntity: Iluni\BookBundle\Entity\Category\ContactType
+      joinColumns:
+        ct_id:
+          referencedColumnName: ct_id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

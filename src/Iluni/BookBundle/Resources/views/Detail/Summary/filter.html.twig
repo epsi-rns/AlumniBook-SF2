@@ -1,0 +1,20 @@
+{% block form_filter %}
+{% if filter_form is defined %}
+
+<div class="sheet_filter">
+    <form action="{{ path('summary_total') }}" method="post" >
+        {% if filter_form.groupBy is defined %}
+        <fieldset title="{% trans from 'elements' %}Group Display{% endtrans %}">
+            <legend>{% trans from 'elements' %}Grouping:{% endtrans %}</legend>
+            {{ form_row(filter_form.groupBy) }}
+        </fieldset>
+        {% endif %}
+
+        <input type="submit" value="{% trans from 'actions' %}Apply{% endtrans %}"/>
+        <a href="{{ path('summary_total')
+            }}?_reset">{% trans from 'actions' %}Reset{% endtrans %}</a>
+    </form>
+</div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Experiences :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Organization{% endtrans %}</th>
+            <td>{{ entity.organization }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Description{% endtrans %}</th>
+            <td>{{ entity.description }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Job Position{% endtrans %}</th>
+            <td>{{ entity.jobPosition }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Year in{% endtrans %}</th>
+            <td>{{ entity.yearIn }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Year out{% endtrans %}</th>
+            <td>{{ entity.yearOut }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('aexperiences_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('aexperiences_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

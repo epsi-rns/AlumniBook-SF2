@@ -1,0 +1,12 @@
+Iluni\BookBundle\Entity\Detail\OrgContacts:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\OrgContactsRepository
+  table: null
+  manyToOne:
+    organization:
+      targetEntity: Iluni\BookBundle\Entity\Organization
+      joinColumns:
+        oid:
+          referencedColumnName: oid
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

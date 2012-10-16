@@ -1,0 +1,43 @@
+Program:
+  -1:
+    program_id: -1
+    Translation:
+      en:
+        program: Independent
+      id:
+        program: Otonom/ Mandiri
+  10:
+    program_id: 10
+    Translation:
+      en:
+        program: Regular Bachelor
+      id:
+        program: Reguler
+  11:
+    program_id: 11
+    Translation:
+      en:
+        program: Extension Bachelor
+      id:
+        program: Ekstensi
+  20:
+    program_id: 20
+    Translation:
+      en:
+        program: Master
+      id:
+        program: S2 (Strata Dua)
+  21:
+    program_id: 21
+    Translation:
+      en:
+        program: Magister
+      id:
+        program: S2 - Magister
+  30:
+    program_id: 30
+    Translation:
+      en:
+        program: Doctoral
+      id:
+        program: Doktor

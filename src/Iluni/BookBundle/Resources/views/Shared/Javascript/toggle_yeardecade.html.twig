@@ -1,0 +1,16 @@
+{#  Note:
+
+    Use: This toggle will erase other field if one is set
+
+    Required Parameters: form_holder_name
+#}
+
+<script type="text/javascript">
+window.addEvent('domready', function() {
+    var deca = document.id('{{ form_holder_name }}_decade');
+    var year = document.id('{{ form_holder_name }}_classYear');
+
+    deca.addEvent('change', function(){ year.set('value', '');  });
+    year.addEvent('change', function(){ deca.set('value', '');  });
+});
+</script>

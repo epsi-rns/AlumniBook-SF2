@@ -1,0 +1,12 @@
+Iluni\BookBundle\Entity\Detail\MapContacts:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\MapContactsRepository
+  table: null
+  manyToOne:
+    alumni_org_map:
+      targetEntity: Iluni\BookBundle\Entity\Detail\AlumniOrgMap
+      joinColumns:
+        mid:
+          referencedColumnName: mid
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

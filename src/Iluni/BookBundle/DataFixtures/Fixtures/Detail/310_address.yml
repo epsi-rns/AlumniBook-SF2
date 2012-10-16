@@ -1,0 +1,25 @@
+AAddress:
+  1:
+    aid: 25
+    area:     Pakualaman
+    street:   Purwanggan 8
+    province_id: 16
+    district_id: 248
+    
+OAddress:
+  2:
+    oid: 35
+    area:     Test
+    street:   Jl. Contoh Raya 17F
+    postal_code: 12620
+    province_id: 13
+    district_id: 168
+
+MAddress:
+  3:
+    mid: 2
+    area:     Cinere
+    province_id: 12
+    district_id: 146
+
+

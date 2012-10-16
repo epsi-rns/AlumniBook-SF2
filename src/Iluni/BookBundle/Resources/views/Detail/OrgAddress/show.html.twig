@@ -1,0 +1,26 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Office Address :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('org', {
+        'oid' : entity.organization.id
+    }) }}
+
+<div class="sheet_admin">
+
+{% include 'IluniBookBundle:Common:show/address.html.twig' with {
+    'masterfields' : { 'Organization': entity.organization }
+} %}
+
+<hr />
+{{ crud.link_to__edit('office_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('office_list', { 'oid': entity.organization.id }) }}
+
+</div>
+
+{% endblock %}

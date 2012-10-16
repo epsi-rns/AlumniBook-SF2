@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Sunday</source>
+        <target>Minggu</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Monday</source>
+        <target>Senin</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Tuesday</source>
+        <target>Selasa</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Wednesday</source>
+        <target>Rabu</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Thursday</source>
+        <target>Kamis</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Friday</source>
+        <target>Jumat</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Saturday</source>
+        <target>Sabtu</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>January</source>
+        <target>Januari</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>February</source>
+        <target>Februari</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>March</source>
+        <target>Maret</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>April</source>
+        <target>April</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>May</source>
+        <target>Mei</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>June</source>
+        <target>Juni</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>July</source>
+        <target>Juli</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>August</source>
+        <target>Agustus</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>September</source>
+        <target>September</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>October</source>
+        <target>Oktober</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>November</source>
+        <target>November</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>December</source>
+        <target>Desember</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

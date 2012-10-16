@@ -1,0 +1,12 @@
+amap:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\AMap:index" }
+
+amap_categories:
+    pattern:  /categories
+    defaults: { _controller: "IluniBookBundle:Filter\AMap:categories" }
+
+amap_category:
+    pattern:  /{cid}/cat
+    defaults: { _controller: "IluniBookBundle:Filter\AMap:category" }
+    requirements: { cid:  \d+ }

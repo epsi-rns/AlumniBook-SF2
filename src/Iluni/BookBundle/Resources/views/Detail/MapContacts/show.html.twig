@@ -1,0 +1,29 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+{% set map = entity.AlumniOrgMap %}
+
+{% block title %}Job Contact :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('map', {
+        'mid' : map.id,
+        'aid' : map.alumni.id,
+        'oid' : map.organization.id
+    }) }}
+
+<div class="sheet_admin">
+
+{% include 'IluniBookBundle:Common:show/contact.html.twig' with {
+    'masterfields' : { 'Alumni': map.alumni, 'Organization': map.organization }
+} %}
+
+<hr />
+{{ crud.link_to__edit('mcontacts_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('mcontacts_list', { 'mid': map.id }) }}
+
+</div>
+
+{% endblock %}

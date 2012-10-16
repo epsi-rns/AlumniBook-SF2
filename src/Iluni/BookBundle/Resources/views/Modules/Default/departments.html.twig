@@ -1,0 +1,36 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block body %}
+
+  <script type="text/javascript">
+    window.addEvent('domready', function() {
+        mootools_accordion();
+    });
+  </script>
+
+<div class="sheet">
+    {% for faculty in faculties %}
+    <div class="category__facultyname">
+        <div class="acdn_toggler category" title="Click to expand/ collapse accordion.">
+        <div id="gloss" style="width: 200px;"><div class="breadcrumbs">
+            {{ faculty.name }}
+        </div></div>
+        </div>
+
+        <div class="acdn_element category" style="padding-left: 50px; width: 300px;">
+        <table>
+        {% for index, department in faculty.departments %}
+            <tr class="{{ cycle(['even', 'odd'], loop.index) }}">
+            <td><a href="{{
+                path('acommunities_filter_department', { 'did': department.id })
+                }}">{{ department.name }}</a></td>
+            </tr>
+        {% endfor %}
+        </table>
+        <br/>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

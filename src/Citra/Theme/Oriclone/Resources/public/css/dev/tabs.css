@@ -1,0 +1,72 @@
+
+.menu_tabs {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left : 3px solid #dd6;
+    border-right : 3px solid #dd6;
+
+    background: #eaeaea url(../../images/theme/shade.gif) repeat-x top;
+
+    margin:25px 0 20px;
+    overflow:hidden;
+
+    padding-top: 12px;
+}
+
+.menu_tabs ul {
+    padding:0;
+    width:auto;
+}
+
+.menu_tabs ul li:first-child {
+    margin-left:20px;
+}
+
+.menu_tabs ul li  {
+    float:left;
+    margin:5px 0 0 5px;
+}
+
+.main_content .menu_tabs ul li,
+.main_content .menu_tabs ul li:hover,
+.menu_tabs ul li,
+.menu_tabs ul li:hover {
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    background: transparent;
+    border: none;
+    padding-left: 3px;
+}
+
+.menu_tabs ul li a {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px dotted #ccc;
+    border-left : 2px solid #dd6;
+    border-right : 2px solid #dd6;
+
+    border-top-left-radius:  7px;
+    border-top-right-radius: 7px;
+    -webkit-border-top-left-radius: 7px;
+    -webkit-border-top-right-radius: 7px;
+    -moz-border-radius-topleft:  7px;
+    -moz-border-radius-topright: 7px;
+
+    white-space:nowrap;
+
+    display:block;
+    padding:5px 10px;
+}
+
+.menu_tabs ul li.selected a {
+    border-left:5px solid #8888FF;
+    border-right:5px solid #DDDD66;
+
+    background:#fff;
+    color:#555;
+    font-weight:bold;
+}

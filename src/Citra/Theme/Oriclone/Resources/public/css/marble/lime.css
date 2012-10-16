@@ -1,0 +1,12 @@
+.componentheading {
+    background-image : url(../../images/marbles/lime-spiral.png);
+}
+.componentheading:hover {
+    background-image : url(../../images/marbles/lime-tick.png);
+}
+.contentheading {
+    background-image : url(../../images/marbles/lime-star-in.png);
+}
+.contentheading:hover {
+    background-image : url(../../images/marbles/lime-star-out.png);
+}

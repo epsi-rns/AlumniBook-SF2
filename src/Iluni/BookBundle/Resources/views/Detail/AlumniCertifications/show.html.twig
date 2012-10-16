@@ -1,0 +1,39 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Certifications :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Certification{% endtrans %}</th>
+            <td>{{ entity.certification }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Institution{% endtrans %}</th>
+            <td>{{ entity.institution }}</td>
+        </tr>
+  </tbody>
+</table>
+
+<hr />
+{{ crud.link_to__edit('acertifications_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('acertifications_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

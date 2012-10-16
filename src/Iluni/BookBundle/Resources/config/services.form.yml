@@ -1,0 +1,48 @@
+parameters:
+    iluni_book.translatable_choice: Iluni\BookBundle\Form\Type\TranslatableChoiceType
+
+services:
+    # sonata: translatable
+    form.type.translatable:
+      class: Iluni\BookBundle\Form\Type\TranslatedFieldType
+      arguments: [ @service_container ]
+      tags:
+       - { name: form.type, alias: translatable_field }
+
+    # shortcut: order by type
+    form.type.order_by:
+        class: Iluni\BookBundle\Form\Type\OrderByType
+        tags:
+            - { name: form.type, alias: order_by }
+
+    # shortcut: community holder form contain some entities
+    form.type.community_holder:
+        class: Iluni\BookBundle\Form\Type\CommunityFormType
+        tags:
+            - { name: form.type, alias: community_holder }
+
+    # translatable choice
+    form.type.translatable_choice:
+        class: Iluni\BookBundle\Form\ChoiceType\TranslatableChoiceType
+        arguments:
+            entity_manager: "@doctrine.orm.entity_manager"
+        tags:
+            - { name: form.type, alias: translatable_choice }
+
+    # partial for ajax, linked drop down
+    form.type.partial_choice:
+        class: Iluni\BookBundle\Form\ChoiceType\PartialChoiceType
+        arguments:
+            entity_manager: "@doctrine.orm.entity_manager"
+        tags:
+            - { name: form.type, alias: partial_choice }
+
+    form.type.partial_department_choice:
+        class: Iluni\BookBundle\Form\ChoiceType\PartialDepartmentChoiceType
+        tags:
+            - { name: form.type, alias: partial_department_choice }
+
+    form.type.partial_district_choice:
+        class: Iluni\BookBundle\Form\ChoiceType\PartialDistrictChoiceType
+        tags:
+            - { name: form.type, alias: partial_district_choice }

@@ -1,0 +1,95 @@
+{% set css = ['sectiontableentry1', 'sectiontableentry2'] %}
+{% set count = 1 %}
+
+{% for entity in communities %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}" title="{%
+        trans from 'elements' %}Browse alumni with same community{%
+        endtrans %}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Community{% endtrans %}</td>
+        <td><a href="{{ path(
+            'acommunities_filter_community_year',
+            { 'cid' : entity.community.id, 'year' : entity.classYear}
+        ) }}">{{ entity.getRefText }}</a></td>
+    </tr>
+{% endfor %}
+
+{% if one.gender is not empty %}
+    {% set count = count + 1 %}
+    {% set gender   = (one.gender=='M') ? 'Male' : 'Female' %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Gender{% endtrans %}</td>
+        <td>{{ gender|trans({},'forms') }}</td>
+    </tr>
+{% endif %}
+
+{% if birthInfo is not empty %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Birth Place/ Date{% endtrans %}</td>
+        <td>{{ birthInfo|join('<br/>')|raw }}</td>
+    </tr>
+{% endif %}
+
+{% for entity in competencies %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}" title="{%
+        trans from 'elements' %}Browse alumni with same competency{%
+        endtrans %}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Competency{% endtrans %}</td>
+        <td><a href="{{ path('acompetencies_category', {
+            'cid': entity.competency.id }) }}">{{ entity.competency }}</a>
+            {% if entity.description %} ({{ entity.description }}){% endif %}
+        </td>
+    </tr>
+{% endfor %}
+
+{% for entity in certifications %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Certification{% endtrans %}</td>
+        <td>{{ entity.certification }}
+            {% if entity.institution %} ({{ entity.institution }}){% endif %}
+        </td>
+    </tr>
+{% endfor %}
+
+{% if experiences|length > 0 %}
+    {% set count = count + 1 %}
+
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Experiences{% endtrans %}</td>
+        <td><ul>
+        {% for entity in experiences %}
+            <li>{{ entity.organization }}</li>
+        {% endfor %}
+        </ul></td>
+    </tr>
+{% endif %}
+
+{% for entity in address %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Residence{% endtrans %}</td>
+        <td>{{ entity.address }}<br/>{{ entity.region }}</td>
+    </tr>
+{% else %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{% trans from 'forms' %}Residence{% endtrans %}</td>
+        <td>-</td>
+    </tr>
+{% endfor %}
+
+{% for entity in contacts %}
+    {% set count = count + 1 %}
+    <tr class="{{ cycle(css, count) }}">
+        <td nowrap vAlign="top">{{ entity.contactType|trans }}</td>
+        <td>{{ entity.contact }}</td>
+    </tr>
+{% endfor %}

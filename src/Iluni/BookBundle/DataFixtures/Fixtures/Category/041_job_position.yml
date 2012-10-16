@@ -1,0 +1,65 @@
+JobPosition:
+  1:
+    job_position_id: 1
+    Translation:
+      en:
+        job_position:    Other Job Position
+      id:
+        job_position:    Pekerjaan Lain
+  2:
+    job_position_id: 2
+    Translation:
+      en:
+        job_position:    Company Owner
+      id:
+        job_position:    Pemilik Perusahaan
+  3:
+    job_position_id: 3
+    Translation:
+      en:
+        job_position:    Commissioner
+      id:
+        job_position:    Komisaris
+  4:
+    job_position_id: 4
+    Translation:
+      en:
+        job_position:    Director
+      id:
+        job_position:    Direksi
+  5:
+    job_position_id: 5
+    Translation:
+      en:
+        job_position:    Executive / Senior Management / GM
+      id:
+        job_position:    Eksekutif / Senior Management / GM
+  6:
+    job_position_id: 6
+    Translation:
+      en:
+        job_position:    Manager Level  / Departement Head
+      id:
+        job_position:    Setingkat Pengelola  / Kepala Departemen
+  7:
+    job_position_id: 7
+    Translation:
+      en:
+        job_position:    Team Leader / Chief Group
+      id:
+        job_position:    Pimpinan Regu / Ketua Kelompok
+  8:
+    job_position_id: 8
+    Translation:
+      en:
+        job_position:    Engineer / Designer / Technical / Staff
+      id:
+        job_position:    Insinyur / Desainer / Teknis / Staf
+  9:
+    job_position_id: 9
+    Translation:
+      en:
+        job_position:    Expert Staff / Special Staff
+      id:
+        job_position:    Staf Ahli / Staf Khusus
+

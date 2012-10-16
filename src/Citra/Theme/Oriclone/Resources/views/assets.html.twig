@@ -1,0 +1,134 @@
+{# /* ---No dependencies manager yet -- */ #}
+{% use 'MootoolsBundle::assets.13.html.twig' %}
+
+{% block head_assets %}
+
+    {{ block ('include_metas') }}
+    {{ block ('include_stylesheets') }}
+    {{ block ('include_javascripts') }}
+    {{ block ('include_assets') }}
+    {{ block ('inline_stylesheets') }}
+    {{ block ('inline_javascripts') }}
+{% endblock %}
+
+
+{% block include_metas %}
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="MSThemeCompatible" content="No"/>
+{% endblock %}
+
+
+{% block include_stylesheets_main %}
+    {#
+        'bundles/oriclone/css/dev/hmenu.css'
+        'bundles/oriclone/css/dev/admin.css'
+        'bundles/oriclone/css/dev/specific.css'
+
+         <link rel="stylesheet" href="{{
+             asset('bundles/oriclone/css/import.css')
+         }}" type="text/css" media="all" />
+    #}
+
+    {% if oriclone.debug_css %}
+    <link rel="stylesheet" href="{{
+        asset('bundles/oriclone/css/import.css')
+    }}" type="text/css" media="all" />
+    {% else %}
+    {% stylesheets
+        combine=true
+        output='oriclone/styles.css'
+        filter="cssrewrite"
+
+        'bundles/oriclone/css/dev/layout.css'
+        'bundles/oriclone/css/dev/theme.css'
+        'bundles/oriclone/css/dev/typography.css'
+        'bundles/oriclone/css/dev/scheme.css'
+        'bundles/oriclone/css/dev/joomla.css'
+        'bundles/oriclone/css/dev/module.css'
+        'bundles/oriclone/css/dev/docs.css'
+        'bundles/oriclone/css/dev/sheet.css'
+        'bundles/oriclone/css/dev/messages.css'
+        'bundles/oriclone/css/dev/effects.css'
+        'bundles/oriclone/css/dev/tabs.css'
+        'bundles/oriclone/css/dev/custom-effects.css'
+        'bundles/oriclone/css/dev/messages.css'
+        'bundles/oriclone/css/dev/form.css'
+
+    %}<link rel="stylesheet" href="{{
+        asset_url
+    }}" type="text/css" media="all" />{% endstylesheets %}
+    {% endif %}
+{% endblock %}
+
+{% block include_stylesheets_variation %}
+    {# stylesheets
+        combine=true
+        output='oriclone/variation.css'
+        filter="cssrewrite"
+
+        'bundles/oriclone/css/scheme/peachykeen.css'
+        'bundles/oriclone/css/strip/white-simple.css'
+        'bundles/oriclone/css/hover/ice.css'
+        'bundles/oriclone/css/marble/mix.css'
+
+    %}<link rel="stylesheet" href="{{
+        asset_url
+    }}" type="text/css" media="all" />{% endstylesheets #}
+
+    {% for variation in oriclone.layout.css %}
+    <link rel="stylesheet" href="{{
+        asset('bundles/oriclone/css/'~variation)
+    }}" type="text/css" media="all" />
+    {% endfor %}
+{% endblock %}
+
+{% block include_stylesheets %}
+    {{ block('include_stylesheets_main') }}
+    {{ block('include_stylesheets_variation') }}
+{% endblock %}
+
+{% block include_javascripts_effects %}
+    <script type="text/javascript" src="{{
+        asset('bundles/oriclone/js/mootools/effects.js')
+    }}"></script>
+{% endblock %}
+
+{% block include_javascripts %}
+    {{ block('mootools') }}
+
+    {% if oriclone.effects %}
+        {{ block ('include_javascripts_effects') }}
+    {% endif %}
+
+    {#<script type="text/javascript" src="{{
+        asset('js/hinclude.js')
+    }}"></script>#}
+
+{% endblock %}
+
+{% block include_assets %}
+{% endblock %}
+
+{% block inline_stylesheets %}
+{% set _stylesheets = block('stylesheets') %}
+
+{% if _stylesheets is not empty %}
+<style type="text/css">
+    {{ _stylesheets|raw }}
+</style>
+{% endif %}
+{% endblock %}
+
+
+{% block inline_javascripts %}
+{% set _javascripts = block('javascripts') %}
+
+{% if _javascripts is not empty %}
+<script type="text/javascript">
+<!--
+    {{ _javascripts|raw }}
+// -->
+</script>
+{% endif %}
+{% endblock %}

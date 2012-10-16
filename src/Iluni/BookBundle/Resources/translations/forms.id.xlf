@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="0">
+        <source>Action</source>
+        <target>Tindakan</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>Id</source>
+        <target>ID</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Name</source>
+        <target>Nama</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Full Name</source>
+        <target>Nama Lengkap</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Last Update</source>
+        <target>Pembaruan</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Note</source>
+        <target>Catatan</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Alumni</source>
+        <target>Alumni</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Organization</source>
+        <target>Organisasi</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>Community</source>
+        <target>Komunitas</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>Name (Organization/ Company)</source>
+        <target>Nama (Organisasi/ Perusahaan)</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>Name (Alumna/us)</source>
+        <target>Nama (Alumni)</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>Prefix</source>
+        <target>Prefix</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>Suffix</source>
+        <target>Suffix</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>Gender</source>
+        <target>Jenis Kelamin</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>Male</source>
+        <target>Pria</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>Female</source>
+        <target>Wanita</target>
+      </trans-unit>
+      <trans-unit id="20">
+        <source>Religion</source>
+        <target>Agama</target>
+      </trans-unit>
+      <trans-unit id="21">
+        <source>Birth Place</source>
+        <target>Tempat Lahir</target>
+      </trans-unit>
+      <trans-unit id="22">
+        <source>Birth Date</source>
+        <target>Tanggal Lahir</target>
+      </trans-unit>
+      <trans-unit id="23">
+        <source>Weekday</source>
+        <target>Hari</target>
+      </trans-unit>
+      <trans-unit id="24">
+        <source>Day</source>
+        <target>Tanggal</target>
+      </trans-unit>
+      <trans-unit id="25">
+        <source>Month</source>
+        <target>Bulan</target>
+      </trans-unit>
+      <trans-unit id="26">
+        <source>Parent</source>
+        <target>Induk</target>
+      </trans-unit>
+      <trans-unit id="27">
+        <source>Branch</source>
+        <target>Cabang</target>
+      </trans-unit>
+      <trans-unit id="28">
+        <source>Brief</source>
+        <target>Singkat</target>
+      </trans-unit>
+      <trans-unit id="29">
+        <source>Type</source>
+        <target>Jenis</target>
+      </trans-unit>
+      <trans-unit id="30">
+        <source>Program</source>
+        <target>Program</target>
+      </trans-unit>
+      <trans-unit id="31">
+        <source>Faculty</source>
+        <target>Fakultas</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Department</source>
+        <target>Jurusan</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Department </source>
+        <target>Departemen</target>
+      </trans-unit>
+      <trans-unit id="34">
+        <source>Class of</source>
+        <target>Angkatan</target>
+      </trans-unit>
+      <trans-unit id="35">
+        <source>Subclass</source>
+        <target>Khusus</target>
+      </trans-unit>
+      <trans-unit id="36">
+        <source>Class of (year)</source>
+        <target>Angkatan (tahun)</target>
+      </trans-unit>
+      <trans-unit id="37">
+        <source>Decade</source>
+        <target>Dekade</target>
+      </trans-unit>
+      <trans-unit id="38">
+        <source>Members</source>
+        <target>Anggota</target>
+      </trans-unit>
+      <trans-unit id="39">
+        <source>Members Count</source>
+        <target>Jumlah Anggota</target>
+      </trans-unit>
+      <trans-unit id="40">
+        <source>Total for each communities</source>
+        <target>Jumlah untuk tiap komunitas</target>
+      </trans-unit>
+      <trans-unit id="41">
+        <source>Percent</source>
+        <target>Persentase</target>
+      </trans-unit>
+      <trans-unit id="42">
+        <source>Total</source>
+        <target>Jumlah</target>
+      </trans-unit>
+      <trans-unit id="43">
+        <source>Chart</source>
+        <target>Bagan</target>
+      </trans-unit>
+      <trans-unit id="44">
+        <source>Contact</source>
+        <target>Kontak</target>
+      </trans-unit>
+      <trans-unit id="45">
+        <source>Contact Type</source>
+        <target>Jenis Kontak</target>
+      </trans-unit>
+      <trans-unit id="46">
+        <source>Address</source>
+        <target>Alamat</target>
+      </trans-unit>
+      <trans-unit id="47">
+        <source>Region</source>
+        <target>Daerah</target>
+      </trans-unit>
+      <trans-unit id="48">
+        <source>Area</source>
+        <target>Kawasan</target>
+      </trans-unit>
+      <trans-unit id="49">
+        <source>Building</source>
+        <target>Gedung</target>
+      </trans-unit>
+      <trans-unit id="50">
+        <source>Street</source>
+        <target>Jalan</target>
+      </trans-unit>
+      <trans-unit id="51">
+        <source>Postal Code</source>
+        <target>Kode Pos</target>
+      </trans-unit>
+      <trans-unit id="52">
+        <source>Country</source>
+        <target>Negara</target>
+      </trans-unit>
+      <trans-unit id="53">
+        <source>Province</source>
+        <target>Propinsi</target>
+      </trans-unit>
+      <trans-unit id="54">
+        <source>District</source>
+        <target>Wilayah</target>
+      </trans-unit>
+      <trans-unit id="55">
+        <source>Code: Country</source>
+        <target>Kode: Negara</target>
+      </trans-unit>
+      <trans-unit id="56">
+        <source>Code: Province</source>
+        <target>Kode: Propinsi</target>
+      </trans-unit>
+      <trans-unit id="57">
+        <source>Code: District</source>
+        <target>Kode: Wilayah</target>
+      </trans-unit>
+      <trans-unit id="58">
+        <source>Community - Year</source>
+        <target>Komunitas - Angkatan</target>
+      </trans-unit>
+      <trans-unit id="59">
+        <source>Job Type</source>
+        <target>Pekerjaan</target>
+      </trans-unit>
+      <trans-unit id="60">
+        <source>Job position</source>
+        <target>Jabatan</target>
+      </trans-unit>
+      <trans-unit id="61">
+        <source>Structural Job Position</source>
+        <target>Jabatan Struktural</target>
+      </trans-unit>
+      <trans-unit id="62">
+        <source>Functional Job Position</source>
+        <target>Jabatan Fungsional</target>
+      </trans-unit>
+      <trans-unit id="63">
+        <source>Certification</source>
+        <target>Sertifikasi</target>
+      </trans-unit>
+      <trans-unit id="64">
+        <source>Institution</source>
+        <target>Institusi</target>
+      </trans-unit>
+      <trans-unit id="65">
+        <source>Competency</source>
+        <target>Kompetensi</target>
+      </trans-unit>
+      <trans-unit id="66">
+        <source>Description</source>
+        <target>Keterangan</target>
+      </trans-unit>
+      <trans-unit id="67">
+        <source>Year</source>
+        <target>Tahun</target>
+      </trans-unit>
+      <trans-unit id="68">
+        <source>Experience</source>
+        <target>Pengalaman</target>
+      </trans-unit>
+      <trans-unit id="69">
+        <source>Business Field</source>
+        <target>Bidang Usaha</target>
+      </trans-unit>
+      <trans-unit id="70">
+        <source>Product</source>
+        <target>Produk</target>
+      </trans-unit>
+      <trans-unit id="71">
+        <source>Year in</source>
+        <target>Tahun masuk</target>
+      </trans-unit>
+      <trans-unit id="72">
+        <source>Year out</source>
+        <target>Tahun keluar</target>
+      </trans-unit>
+      <trans-unit id="73">
+        <source>Strata</source>
+        <target>Strata</target>
+      </trans-unit>
+      <trans-unit id="74">
+        <source>Admitted</source>
+        <target>Diterima</target>
+      </trans-unit>
+      <trans-unit id="75">
+        <source>Graduated</source>
+        <target>Lulus</target>
+      </trans-unit>
+      <trans-unit id="76">
+        <source>Degree</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="77">
+        <source>Major</source>
+        <target>Fakultas</target>
+      </trans-unit>
+      <trans-unit id="78">
+        <source>Minor</source>
+        <target>Jurusan</target>
+      </trans-unit>
+      <trans-unit id="79">
+        <source>Concentration</source>
+        <target>Program Studi</target>
+      </trans-unit>
+      <trans-unit id="80">
+        <source>Birth Place/ Date</source>
+        <target>Tempat/ Tanggal Lahir</target>
+      </trans-unit>
+      <trans-unit id="81">
+        <source>Experiences</source>
+        <target>Pengalaman Kerja</target>
+      </trans-unit>
+      <trans-unit id="82">
+        <source>Occupation</source>
+        <target>Pekerjaan</target>
+      </trans-unit>
+      <trans-unit id="83">
+        <source>Job Position</source>
+        <target>Jabatan</target>
+      </trans-unit>
+      <trans-unit id="84">
+        <source>Parent</source>
+        <target>Induk</target>
+      </trans-unit>
+      <trans-unit id="85">
+        <source>Branch</source>
+        <target>Cabang</target>
+      </trans-unit>
+      <trans-unit id="86">
+        <source>Residence</source>
+        <target>Alamat Rumah</target>
+      </trans-unit>
+      <trans-unit id="87">
+        <source>Workplace</source>
+        <target>Alamat Kerja</target>
+      </trans-unit>
+      <trans-unit id="88">
+        <source>Office</source>
+        <target>Alamat Kantor</target>
+      </trans-unit>
+      <trans-unit id="89">
+        <source>-- Select Religion --</source>
+        <target>-- Pilih Agama --</target>
+      </trans-unit>
+      <trans-unit id="90">
+        <source>-- Select Occupation --</source>
+        <target>-- Pilih Pekerjaan --</target>
+      </trans-unit>
+      <trans-unit id="91">
+        <source>-- Select Job Position --</source>
+        <target>-- Pilih Jabatan --</target>
+      </trans-unit>
+      <trans-unit id="92">
+        <source>-- Select Country --</source>
+        <target>-- Pilih Negara --</target>
+      </trans-unit>
+      <trans-unit id="93">
+        <source>-- Select Province --</source>
+        <target>-- Pilih Propinsi --</target>
+      </trans-unit>
+      <trans-unit id="94">
+        <source>-- Select District --</source>
+        <target>-- Pilih Kabupaten --</target>
+      </trans-unit>
+      <trans-unit id="95">
+        <source>-- Pick Alumni --</source>
+        <target>-- Petik Alumni --</target>
+      </trans-unit>
+      <trans-unit id="96">
+        <source>-- Lookup Alumna/us Name --</source>
+        <target>-- Cari nama alumni dalam daftar --</target>
+      </trans-unit>
+      <trans-unit id="97">
+        <source>-- Pick Organization/ Company --</source>
+        <target>-- Petik Organisasi/ Perusahaan --</target>
+      </trans-unit>
+      <trans-unit id="98">
+        <source>-- Lookup Organization/ Company Nam --</source>
+        <target>-- Cari nama perusahaan dalam daftar --</target>
+      </trans-unit>
+      <trans-unit id="99">
+        <source>-- Pick Community --</source>
+        <target>-- Petik Komunitas --</target>
+      </trans-unit>
+      <trans-unit id="100">
+        <source>-- Lookup Community Name --</source>
+        <target>-- Cari nama komunitas dalam daftar --</target>
+      </trans-unit>
+      <trans-unit id="101">
+        <source>-- Academic Formal --</source>
+        <target>-- Struktur Kampus Resmi --</target>
+      </trans-unit>
+      <trans-unit id="102">
+        <source>-- Student Club --</source>
+        <target>-- Badan Kemahasiswaan --</target>
+      </trans-unit>
+      <trans-unit id="103">
+        <source>-- Default --</source>
+        <target>-- Pilihan Default --</target>
+      </trans-unit>
+      <trans-unit id="104">
+        <source>-- All Kind of Contacts --</source>
+        <target>-- Semua Jenis Kontak --</target>
+      </trans-unit>
+      <trans-unit id="105">
+        <source>-- All Programs --</source>
+        <target>-- Semua Program --</target>
+      </trans-unit>
+      <trans-unit id="106">
+        <source>-- All Faculties --</source>
+        <target>-- Semua Fakultas --</target>
+      </trans-unit>
+      <trans-unit id="107">
+        <source>-- All Departments --</source>
+        <target>-- Semua Departemen --</target>
+      </trans-unit>
+      <trans-unit id="108">
+        <source>-- All Classes --</source>
+        <target>-- Semua Angkatan --</target>
+      </trans-unit>
+      <trans-unit id="109">
+        <source>-- All Strata --</source>
+        <target>-- Semua Strata --</target>
+      </trans-unit>
+      <trans-unit id="110">
+        <source>-- All Occupations --</source>
+        <target>-- Semua Jenis Pekerjaan --</target>
+      </trans-unit>
+      <trans-unit id="111">
+        <source>-- All Job Positions --</source>
+        <target>-- Semua Jabatan --</target>
+      </trans-unit>
+      <trans-unit id="112">
+        <source>-- All Business Fields -</source>
+        <target>-- Semua Bidang Usaha --</target>
+      </trans-unit>
+      <trans-unit id="113">
+        <source>-- All Competencies --</source>
+        <target>-- Semua Kompetensi --</target>
+      </trans-unit>
+      <trans-unit id="114">
+        <source>-- please select faculty first --</source>
+        <target>-- Pilihlah fakultas terlebih dahulu  --</target>
+      </trans-unit>
+      <trans-unit id="115">
+        <source>-- all departments in this faculty --</source>
+        <target>-- Semua departemen di fakultas ini --</target>
+      </trans-unit>
+      <trans-unit id="116">
+        <source>-- please select province first --</source>
+        <target>-- Pilihlah propinsi terlebih dahulu  --</target>
+      </trans-unit>
+      <trans-unit id="117">
+        <source>-- all districts in this province --</source>
+        <target>-- Semua kabupaten di propinsi ini --</target>
+      </trans-unit>
+      <trans-unit id="118">
+        <source>Group</source>
+        <target>Kelompok</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

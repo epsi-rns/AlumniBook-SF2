@@ -1,0 +1,66 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Detail.AlumniOrgMap.orm.yml
+Iluni\BookBundle\Entity\Detail\AlumniOrgMap:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniOrgMapRepository
+  table: a_o_map
+  id:
+    id:
+      type: integer
+      column: mid
+      generator: { strategy: AUTO }
+  fields:
+    department:
+      type: string
+      length: 60
+      nullable: true
+    description:
+      type: string
+      length: 40
+      nullable: true
+    struktural:
+      type: string
+      length: 50
+      nullable: true
+    fungsional:
+      type: string
+      length: 50
+      nullable: true
+    created:
+      type: datetime
+      column: created_at
+      gedmo:
+        timestampable:
+          on: create
+    updated:
+      type: datetime
+      nullable: true
+      column: updated_at
+      gedmo:
+        timestampable:
+          on: update
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+      orphanRemoval: false
+    organization:
+      targetEntity: Iluni\BookBundle\Entity\Organization
+      joinColumns:
+        oid:
+          referencedColumnName: oid
+      orphanRemoval: false
+    jobPosition:
+      targetEntity: Iluni\BookBundle\Entity\Category\JobPosition
+      joinColumns:
+        job_position_id:
+          referencedColumnName: job_position_id
+      orphanRemoval: false
+    jobType:
+      targetEntity: Iluni\BookBundle\Entity\Category\JobType
+      joinColumns:
+        job_type_id:
+          referencedColumnName: job_type_id
+      orphanRemoval: false
+  lifecycleCallbacks: {}

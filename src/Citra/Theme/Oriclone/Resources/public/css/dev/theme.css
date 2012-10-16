@@ -1,0 +1,92 @@
+/* Base */
+body {  background: #FFF; }
+form { margin: 0; padding: 0; }
+img {border: none; margin: 0;}
+select, label, .pointer { cursor:pointer; }
+
+/* layout related */
+
+#lay_header {
+    border-top: 2px solid #0095CC;
+    height: 50px;
+}
+
+#lay_header_left {padding-left: 15px; }
+#lay_header_right li {float: right; margin-left: 30px;}
+
+#lay_top {
+    background: #000;
+    border-top:1px solid #fff;
+    border-bottom: 2px solid #007eae;
+    text-align:left;
+}
+
+.grad_black #lay_top {
+    background: #000 url(../../images/theme/grad-black.png) repeat-x;
+}
+
+.grad_blue #lay_top {
+    background: #08f url(../../images/theme/grad-blue.png) repeat-x;
+}
+.grad_orange #lay_top {
+    background: #f80 url(../../images/theme/grad-orange.png) repeat-x;
+}
+
+#lay_main p {padding: 3px 0 4px;}
+
+#lay_footer {
+    border-top: 2px solid #007eae;
+    background: #fff url(../../images/theme/shade.gif) repeat-x;
+    text-align:center;
+    padding:5px 0 5px 0;
+    bottom: 0;
+}
+
+#lay_left .moduletable ul li:hover,
+#lay_right .moduletable ul li:hover
+    { list-style: square outside url(../../images/accs/arrowbullet-blue.png);   }
+
+#lay_header_left { color: #222; }
+.hbg_grey_blue #lay_header_left,
+.hbg_red #lay_header_left,
+.hbg_red_gloss #lay_header_left {color: white;}
+
+.hbg_blue #lay_header
+    {   background:url(../../images/header_150/blue.jpg) bottom repeat-x;   }
+.hbg_yellow #lay_header
+    {   background:url(../../images/header/yellow.jpg) bottom repeat-x; }
+.hbg_grey_blue #lay_header
+    {   background:url(../../images/header/grey-blue.jpg) bottom repeat-x;  }
+.hbg_blue_tutor #lay_header
+    {   background:url(../../images/header/orig-tut.jpg) bottom repeat-x;   }
+.hbg_olive #lay_header
+    {   background:url(../../images/header/olive.jpg) bottom repeat-x;  }
+.hbg_orange #lay_header
+    {   background:url(../../images/header/orange.jpg) bottom repeat-x; }
+.hbg_red #lay_header
+    {   background:url(../../images/header/red.jpg) bottom repeat-x;    }
+.hbg_red_gloss #lay_header
+    {   background:url(../../images/header/red-gloss.jpg) bottom repeat-x;  }
+.hbg_yellow_orange #lay_header
+    {   background:url(../../images/header_150/yellow-orange.jpg) bottom repeat-x;  }
+
+.mbg_black #lay_main
+    { background: #222; }
+.mbg_white #lay_main
+    { background: #fff url(../../images/theme/shade.gif) repeat-x; }
+.mbg_feathers
+    { background: #fff url(../../images/pattern/feathers.gif) fixed; }
+.mbg_strolling
+    { background: #fff url(../../images/pattern/strolling.png) fixed; }
+.mbg_p159
+    { background: #fff url(../../images/pattern/159.gif); }
+.mbg_p129
+    { background: #fff url(../../images/pattern/squidfinger-pattern_129.gif); }
+.mbg_echeveria
+    { background: #fff url(../../images/pattern/dinpattern-echeveria.gif); }
+
+/* Logo */
+
+.logo { position:relative;  left:20px;  top:8px; z-index: 9; float: left; }
+#logo-orb-yellow {  width: 40px;    height: 40px;   background: url(../../images/logo/orb-spiral-yellow.png) no-repeat top left; }
+#logo-orb-blue {    width: 40px;    height: 40px;   background: url(../../images/logo/orb-spiral-blue.png) no-repeat top left; }

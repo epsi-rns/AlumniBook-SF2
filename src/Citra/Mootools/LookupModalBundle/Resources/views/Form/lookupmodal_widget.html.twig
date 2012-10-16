@@ -1,0 +1,34 @@
+{# lookupmodal_widget.html.twig #}
+
+{% block lookupmodal_widget %}
+    {% set path = 'bundles/lookupmodal' %}
+    {% set el_root = form.parent.vars.name ~'_'~ form.vars.name %}
+    {% set el_idns = el_root ~'_'~ form.id.vars.name %}
+    {% set el_name = el_root ~'_'~ form.name.vars.name %}
+
+    {{ form_widget(form.id) }}
+    {{ form_widget(form.name) }}
+
+    &nbsp;
+    <img class="calendar pointer" alt="clear" title="clear"
+        id="{{ el_root }}_clear"
+        src="{{ asset(path ~ '/images/tango/edit-clear.png') }}" />
+    &nbsp;
+    <a href="{{ path(link_route)
+        }}" title="{{ link_title
+        }}" class="{{ link_style
+        }}" rel="lightbox">{{ link_text }}</a>
+
+<script type="text/javascript">
+    window.addEvent('domready', function() {
+        el_lookup = document.id('{{ el_idns }}');
+        el_select = document.id('{{ el_name }}');
+        el_clear  = document.id('{{ el_root }}_clear');
+
+        el_clear.addEvent('click', function() {
+            el_lookup.set('value', '');
+            el_select.set('value', '');
+        });
+    });
+</script>
+{% endblock lookupmodal_widget %}

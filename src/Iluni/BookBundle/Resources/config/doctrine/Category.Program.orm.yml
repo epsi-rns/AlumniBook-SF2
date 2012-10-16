@@ -1,0 +1,22 @@
+Iluni\BookBundle\Entity\Category\Program:
+  type: entity
+  table: program
+  id:
+    id:
+      type: smallint
+      column: program_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: program
+      length: 20
+      unique: true
+      gedmo:
+        - translatable
+  oneToMany:
+    community:
+      targetEntity: Iluni\BookBundle\Entity\Community
+      mappedBy: program
+  lifecycleCallbacks: {  }
+

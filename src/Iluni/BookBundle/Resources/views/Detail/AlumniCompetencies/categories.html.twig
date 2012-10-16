@@ -1,0 +1,21 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Competency by Categories{% endblock %}
+
+{% block body %}
+    <table width="100%" cellpadding="4" cellspacing="0" border="0" align="center" class="contentpane">
+      <tr>
+        <td width="100%" colspan="2" valign="top" class="contentdescription">
+            <div class="componentheading">
+            {% trans from 'elements' %}Choose Competency{% endtrans %}</div></td>
+      </tr>
+      <tr>
+        <td><ul id="categories">
+        {% for cat in cats %}
+            <li><a href="{{ path('acompetencies_category', { 'cid': cat[0].id })
+                }}">{{ cat[0].name }}</a> ({{ cat.total }})</li>
+        {% endfor %}
+        </ul></td>
+      </tr>
+    </table>
+{% endblock %}

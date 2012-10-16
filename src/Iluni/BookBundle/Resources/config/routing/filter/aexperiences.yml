@@ -1,0 +1,4 @@
+aexperiences:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\AExperiences:index" }
+

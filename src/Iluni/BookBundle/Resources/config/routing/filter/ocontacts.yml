@@ -1,0 +1,4 @@
+ocontacts:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\OContacts:index" }
+

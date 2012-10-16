@@ -1,0 +1,49 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Alumna/us :: {% trans %}About{% endtrans %}{% endblock %}
+
+{% block body %}
+
+<script type="text/javascript">
+    target = '{{ path ('detail_alumni', { 'aid': one.id }) }}';
+    bindInnerRequest(target, 'AlumnaID');
+
+{% for map in maps %}
+    {% set mid = map.id %}
+
+    target = '{{ path ('detail_alumni_org', { 'mid': mid }) }}';
+    bindInnerRequest(target, 'MID-{{ mid }}');
+{% endfor %}
+</script>
+
+<table align="center" border="0">
+  <tr><td>
+<!-- Begin Document -->
+
+<div class="sheet">
+    <h4>{{ one.fullname }}</h4>
+
+    {% if is_granted('ROLE_EDITOR') %}
+    <a class="icon_edit" href="{{
+        path('alumni_show', { 'id': one.id }) }}">edit</a>
+    {% endif %}
+
+    <table cellpadding="4" cellspacing="0" border="0" width="100%">
+        <tbody id="AlumnaID"></tbody>
+
+    {% for map in maps %}
+        <tbody>
+        <tr class="sectiontableentry1"
+        title="{% trans from 'elements' %}Detail of this organization{% endtrans %}">
+          <td vAlign="top">{% trans from 'forms' %}Organization{% endtrans %}</td>
+          <td id="MID-{{ map.id }}"></td>
+        </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+</div>
+
+<!-- End Document -->
+  </td></tr>
+</table>
+{% endblock %}

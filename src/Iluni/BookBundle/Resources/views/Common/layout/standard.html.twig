@@ -1,0 +1,49 @@
+{# src/Iluni/BookBundle/Resources/views/Common/layout.html.twig #}
+{% extends '::base.html.twig' %}
+{% use 'IluniBookBundle:Common/chunk:top.html.twig' %}
+
+{% block title %}Our simple data entry for alumni{% endblock %}
+
+{% block include_stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/ilunibook/css/silk.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('bundles/ilunibook/css/clipart.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block content %}
+    {% block before_content %}{% endblock %}
+    {# --- begin of content --- #}
+    {{ block ('theme_flash') }}
+    {% block body %}{% endblock %}
+    {# --- end of content --- #}
+    {% block after_content %}{% endblock %}
+{% endblock %}
+
+{% block theme_page_top %}
+    {% if book_app.allow_more_effects %}
+        {{ block ('theme_page_peel') }}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% if book_app.allow_more_effects %}
+    window.addEvent('domready', function() {
+        mootools_peel_effect();
+    });
+{% endif %}
+{% endblock %}
+
+{% block left %}
+    {% include 'IluniBookBundle:Common/chunk:menu.html.twig' %}
+{% endblock %}
+
+{% block footer %}
+    <div id="footer">&#x00bb; &nbsp;
+        <a href="{{ path('main_feed_atom') }}">
+        {% trans from "navigation" %}Full Feed{% endtrans %}</a>
+        {% trans from "navigation" %}Copyright{% endtrans %}
+        &copy; {{ "now"|date("Y") }},
+        <a href="https://github.com/epsi/AlumniBook-SF2">AlumniBook</a>
+    &nbsp; &#x00ab;</div>
+{% endblock %}

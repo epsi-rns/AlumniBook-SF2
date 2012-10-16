@@ -1,0 +1,242 @@
+/* http://davidwalsh.name/mootools-watermark */
+#gototop {
+    display:none; position:fixed; right:5px; bottom:5px;
+    color:green; text-decoration:underline;
+    border:1px solid green; background:Lightgreen; padding:10px;
+}
+
+/* http://davidwalsh.name/hidden-accessibility-message-using-css */
+.accessibility { position: absolute; left: -9999px; font-size: small; }
+
+/* http://davidwalsh.name/css-page-breaks  */
+
+@media all
+{
+    .page-break { display:none; }
+}
+
+@media screen {
+    .page-break {
+        height:10px;
+        background:url(../../images/notmine/page-break.gif) 0 center repeat-x;
+        border-top:1px dotted #999;
+        margin-bottom:13px;
+    }
+}
+
+@media print
+{
+    .page-break {
+        display:block; page-break-before:always;
+        margin:0;
+        border-top:none;
+    }
+    .contentpaneopen a:after {  content: " [" attr(href) "] "; font-size: 90%;  }
+    a.readon:after { content: none; }
+}
+
+/* http://davidwalsh.name/peel-effect */
+.moo12demo #tabsearch { padding-right: 45px; }
+
+#page-flip {
+    position:relative; right:0; top:0; float:right; z-index:40;
+}
+#page-flip-image {
+    width:50px; height:52px;
+    z-index:49; position:absolute;
+    right:0; top:0;
+    -ms-interpolation-mode:bicubic;
+}
+#page-flip-message {
+    width:50px; height:50px;
+    overflow:hidden; position:absolute;
+    right:0; top:0;
+    background:url(../../images/notmine/subscribe.png) no-repeat right top;
+}
+
+/* CSS3 */
+#gototop,
+#gloss,
+#lay_main .moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3,
+.moduletable_menu ul.menu li,
+.moduletable_menu ul.menu li li {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+
+td.sectiontableheader,
+table.contenttoc,
+table.contenttoc th {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+/* http://davidwalsh.name/css-enhancements-user-experience */
+::selection
+    { background:#fa8; color:#000; /* Safari and Opera */ }
+::-moz-selection
+    { background:#fa8; color:#000; /* Firefox */ }
+
+
+
+/* http://davidwalsh.name/advanced-css-links-spice-up-your-links */
+a[href$='.pdf'] {
+    padding:0 20px 0 0;
+    background:transparent url(..images/accs/pdf-button.png) no-repeat center right;
+}
+
+
+/* CSS3: http://davidwalsh.name/animate-opacity */
+.login_opacity fieldset{
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    padding:20px;
+
+    border: 1px dashed #ccc;
+    background: #fff;
+
+    opacity: 1;
+}
+.login_opacity fieldset:hover {
+    opacity: 0.9;
+    /* -moz-opacity:.90; */
+    filter:alpha(opacity=90);
+}
+
+/* http://davidwalsh.name/mootools-shake */
+#system-message {}
+
+/* http://davidwalsh.name/external-favicon */
+.favicon {
+    background-repeat:no-repeat;
+    padding:2px 0 3px 22px;
+    border-bottom: 1px dotted #ccc;
+}
+
+/* http://davidwalsh.name/dw-content/mootools-skype.php */
+a.readon { position:relative; }
+.skypebutton {
+    width: 32px;
+    height: 32px;
+    background: transparent url(../../images/accs/tick.gif);
+    position:absolute;
+    top:-8px;
+    left:-12px;
+    border:none;
+}
+
+/* http://davidwalsh.name/simple-mootools-accordion */
+h5#gloss {  height : 24px;  line-height : 24px; padding-left : 10px;}
+h5.acdn_toggler  { cursor:pointer; }
+div.acdn_element     { padding:0 5px; }
+
+
+/* CSS3: Filter */
+.sheet th {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+
+.sheet table,
+.sheet_summary table,
+.sheet_filter,
+.sheet_filter fieldset {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+}
+
+.sheet table,
+.sheet_summary table,
+.sheet_filter {
+    -moz-box-shadow: #888 3px 3px 5px;
+    -webkit-box-shadow: #888 3px 3px 5px;
+    box-shadow: 3px 3px 5px #888;
+}
+.sheet_filter div:hover label{
+    text-shadow: 10px 10px 5px #888;
+}
+
+.sheet_filter fieldset {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left : 3px solid #dd6;
+    border-right : 3px solid #dd6;
+}
+
+label, select, .pointer    { cursor:pointer; }
+
+/* CSS3: Form */
+
+form select,
+form textarea,
+form input {
+    padding : 2px;
+    margin : 2px;
+    border : 1px solid #bbb;
+    background-color : #eee;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius:    5px;
+}
+
+.sheet_filter form select,
+.sheet_filter form textarea,
+.sheet_filter form input {
+    background-color : #fff;
+}
+
+form select:hover,
+form textarea:hover,
+form input:hover {
+    border : 1px solid #888;
+    background-color : #ddd;
+
+    text-shadow: 10px 10px 5px #888;
+}
+
+form select:focus,
+form textarea:focus,
+form input:focus {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left : 3px solid #8888FF;
+    border-right : 3px solid #8888FF;
+
+    box-shadow: 3px 3px 5px #888;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    cursor:pointer;
+
+    margin: 3px;
+
+    -webkit-border-radius: 7px;
+    -moz-border-radius:    7px;
+
+    box-shadow: 3px 3px 5px #888;
+
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left : 3px solid #dd6;
+    border-right : 3px solid #dd6;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    /*override form input:hover*/
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left : 3px solid #dd6;
+    border-right: 5px solid #8888FF;
+
+    /*override input*/
+    text-shadow: none;
+}

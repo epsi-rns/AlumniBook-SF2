@@ -1,0 +1,15 @@
+Iluni\BookBundle\Entity\Category\Strata:
+  type: entity
+  table: strata
+  id:
+    id:
+      type: smallint
+      column: strata_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: strata      
+      length: 15
+      unique: true
+  lifecycleCallbacks: {  }

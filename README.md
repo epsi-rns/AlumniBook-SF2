@@ -1,174 +1,201 @@
-Symfony Standard Edition
-========================
+AlumniBook on Symfony
+=====================
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony2
-application that you can use as the skeleton for your new applications.
+This is my first symfony application.
+For learning purpose so others may have sample
+and speed up their development process.
 
-This document contains information on how to download, install, and start
-using Symfony. For a more detailed explanation, see the [Installation][1]
-chapter of the Symfony Documentation.
+## Goal
 
-1) Installing the Standard Edition
-----------------------------------
+*   Simple questionnaire-based data-entry, rewritten on Symfony2.
+*   Learn, share, and get rid of legacy version.
 
-When it comes to installing the Symfony Standard Edition, you have the
-following options.
 
-### Use Composer (*recommended*)
+Related Link
+------------
 
-As Symfony uses [Composer][2] to manage its dependencies, the recommended way
-to create a new project is to use it.
+This rewrite version:
 
-If you don't have Composer yet, download it following the instructions on
-http://getcomposer.org/ or just run the following command:
+*   The source code at github
+    [AlumniBook on Symfony](https://github.com/epsi/AlumniBook-SF2)
+*   <del>Demo site in [book.iluni.org](http://book.iluni.org)</del>
+    This site and any preloaded data is only a demonstration of its capability.
+    It is not intended for real data entry process.
+*   <del>Screenshot at [picasaweb.google.com/epsi.rns](https://picasaweb.google.com/epsi.rns/AlumniBook#)</del>
 
-    curl -s http://getcomposer.org/installer | php
+The original legacy version:
 
-Then, use the `create-project` command to generate a new Symfony application:
+*   [AlumniBook on CodeIgniter](https://github.com/epsi/AlumniBook-CI)
+*   [AlumniBook on Delphi](https://github.com/epsi/AlumniBook-D7)
+*   [AlumniBook on Symfony](https://github.com/epsi/AlumniBook-SF)
 
-    php composer.phar create-project symfony/framework-standard-edition path/to/install
+<del>Wiki</del>
 
-Composer will install Symfony and all its dependencies under the
-`path/to/install` directory.
+*   [Home](https://github.com/epsi/AlumniBook-SF/wiki)
+*   [Feature Plan](https://github.com/epsi/AlumniBook-SF/wiki/Feature-Plan)
+*   [ILUNI](https://github.com/epsi/AlumniBook-SF/wiki/ILUNI)
 
-### Download an Archive File
 
-To quickly test Symfony, you can also download an [archive][3] of the Standard
-Edition and unpack it somewhere under your web server root directory.
+Feature
+-------
 
-If you downloaded an archive "without vendors", you also need to install all
-the necessary dependencies. Download composer (see above) and run the
-following command:
+*   Included many good things from Jobeet documentation from
+    [Practical Symfony Book](http://www.symfony-project.org/jobeet/1_4/Doctrine/en/).
+    I also skipped many other good parts.
+    <del>Log of this work in step-by-step.txt.</del>
+*   Different layouts: layout, error404, ajax, and modal.
+*   Mootools integration:
+    * ajax request,
+      now we have mootools-symfony-ajax combination (but not integration).
+    * form field validation
+    * theme effects
+    * <del>sfWidgetFormDatePicker</del>
+    * dynamic drop down list using ajax (master-detail)
+    * Using a special iframe lightbox for value lookup.
+      This input also utilize a lookup modal widget.
+*   Oriclone Theme:
+    My personal theme, the original clone.
+    Although I've made it from scratch, it is inspired by other design.
+    * <del>CSS compressor task class</del>
+    * Custom 404 error page.
+    * <del>Control parameter via app.yml</del>
+    * <del>A few source images (XCF's GIMP), only small files.<del>
+*   Few plugins: each has their own README.md, most are only mootools wrapper.
+*   <del>Also utilize I18n translation in form filter.</del>
 
-    php composer.phar install
 
-2) Checking your System Configuration
--------------------------------------
+<del>Screenshot</del>
+----------
 
-Before starting coding, make sure that your local system is properly
-configured for Symfony.
+*   [Table of contents in multi language](https://picasaweb.google.com/epsi.rns/AlumniBook#5578354736029962338)
+*   [Backend for administrator](https://picasaweb.google.com/epsi.rns/AlumniBook#5578354763983509922)
+*   [General sheet](https://picasaweb.google.com/epsi.rns/AlumniBook#5578354816024650978)
+*   [Alumni detail with AJAX](https://picasaweb.google.com/epsi.rns/AlumniBook#5578355526800334082)
+*   [Validation before submit](https://picasaweb.google.com/epsi.rns/AlumniBook#5578360327113373458)
+*   [Show with related tabs menu](https://picasaweb.google.com/epsi.rns/AlumniBook#5578355602314296898)
+*   [List for master detail table](https://picasaweb.google.com/epsi.rns/AlumniBook#5578355513394329666)
+*   [Map relation of person and company](https://picasaweb.google.com/epsi.rns/AlumniBook#5578355686298380562)
+*   [Modal box for lookup](https://picasaweb.google.com/epsi.rns/AlumniBook#5578360380680365346)
+*   [Custom 404 error page](https://picasaweb.google.com/epsi.rns/AlumniBook#5578356441184900050)
+*   [Module item lime test](https://picasaweb.google.com/epsi.rns/AlumniBook#5582497997088174482)
+*   [All functional lime test](https://picasaweb.google.com/epsi.rns/AlumniBook#5582498018623503426)
 
-Execute the `check.php` script from the command line:
-
-    php app/check.php
-
-Access the `config.php` script from a browser:
-
-    http://localhost/path/to/symfony/app/web/config.php
-
-If you get any warnings or recommendations, fix them before moving on.
-
-3) Browsing the Demo Application
---------------------------------
-
-Congratulations! You're now ready to use Symfony.
-
-From the `config.php` page, click the "Bypass configuration and go to the
-Welcome page" link to load up your first Symfony page.
-
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the `config.php` page.
-
-To see a real-live Symfony page in action, access the following page:
-
-    web/app_dev.php/demo/hello/Fabien
-
-4) Getting started with Symfony
--------------------------------
-
-This distribution is meant to be the starting point for your Symfony
-applications, but it also contains some sample code that you can learn from
-and play with.
-
-A great way to start learning Symfony is via the [Quick Tour][4], which will
-take you through all the basic features of Symfony2.
-
-Once you're feeling good, you can move onto reading the official
-[Symfony2 book][5].
-
-A default bundle, `AcmeDemoBundle`, shows you Symfony2 in action. After
-playing with it, you can remove it by following these steps:
-
-  * delete the `src/Acme` directory;
-
-  * remove the routing entries referencing AcmeBundle in
-    `app/config/routing_dev.yml`;
-
-  * remove the AcmeBundle from the registered bundles in `app/AppKernel.php`;
-
-  * remove the `web/bundles/acmedemo` directory;
-
-  * remove the `security.providers`, `security.firewalls.login` and
-    `security.firewalls.secured_area` entries in the `security.yml` file or
-    tweak the security configuration to fit your needs.
-
-What's inside?
+<del>Private Plugins</del>
 ---------------
 
-The Symfony Standard Edition is configured with the following defaults:
+Each plugins has its own readmes:
 
-  * Twig is the only configured template engine;
+*   [sfThemeOriclonePlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfThemeOriclonePlugin)
+*   [sfMootoolsPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMootoolsPlugin)
+*   [sfMooDatePickerPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMooDatePickerPlugin)
+*   [sfMooDiaBoxPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMooDiaBoxPlugin)
+*   [sfMooNoobSlidePlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMooNoobSlidePlugin)
+*   [sfMooSideBarMenuPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMooSideBarMenuPlugin)
+*   [sfMooTwitterGitterPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfMooTwitterGitterPlugin)
+*   [sfFormInputLookupModalPlugin](https://github.com/epsi/AlumniBook-SF/tree/master/plugins/sfFormInputLookupModalPlugin)
 
-  * Doctrine ORM/DBAL is configured;
 
-  * Swiftmailer is configured;
+Install
+-------
 
-  * Annotations for everything are enabled.
+These guidance below a common installation step for symfony2 project.
+Although it looks long. It should be easy for symfony coder.
 
-It comes pre-configured with the following bundles:
+For more guidance please visit
+[symfony installation](http://symfony.com/doc/2.0/book/installation.html).
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+*   Download AlumniBook at https://github.com/epsi/AlumniBook-SF.
+    then extract in your project directory.
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+*   Configure virtual host on apache.
+    Let's say we are going to setup setup http:\\book2 (localhost)
+    in /home/yourname/www/book2 directory.
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+        # pico /etc/hosts
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+        # pico /etc/apache2/sites-available/book2
+        # a2ensite book2
+        # service apache2 reload
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+    You can find sample in apache-alumni.txt in this package
+    for use in sites-available directory.
+    Don't forget to make it available by running a2ensite in terminal.
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+*   Set-up permission
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+        $ sudo setfacl -R -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs
+        $ sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs
 
-  * [**AsseticBundle**][12] - Adds support for Assetic, an asset processing
-    library
+*   Install vendors using composer,
+    this might take a couple of minutes.
 
-  * [**JMSSecurityExtraBundle**][13] - Allows security to be added via
-    annotations
+        $ php ../composer.phar update
 
-  * [**JMSDiExtraBundle**][14] - Adds more powerful dependency injection
-    features
+*   Configure database connection,
+    mysql is recommended for first use.
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+        $ cat app/config/parameters.yml
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+*   Load initial sample data (fixtures).
 
-  * [**SensioGeneratorBundle**][15] (in dev/test env) - Adds code generation
-    capabilities
+        $ app/console doctrine:database:drop --force
+        $ app/console doctrine:database:create
+        $ app/console doctrine:schema:update --force
+        $ app/console doctrine:fixtures:load --append
+        $ app/console cache:clear --env=dev
 
-  * **AcmeDemoBundle** (in dev/test env) - A demo bundle with some example
-    code
+*   Set-up assets
 
-Enjoy!
+        $ php app/console assets:install web --symlink
+        $ php app/console assetic:dump --env=prod
 
-[1]:  http://symfony.com/doc/2.1/book/installation.html
-[2]:  http://getcomposer.org/
-[3]:  http://symfony.com/download
-[4]:  http://symfony.com/doc/2.1/quick_tour/the_big_picture.html
-[5]:  http://symfony.com/doc/2.1/index.html
-[6]:  http://symfony.com/doc/2.1/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  http://symfony.com/doc/2.1/book/doctrine.html
-[8]:  http://symfony.com/doc/2.1/book/templating.html
-[9]:  http://symfony.com/doc/2.1/book/security.html
-[10]: http://symfony.com/doc/2.1/cookbook/email.html
-[11]: http://symfony.com/doc/2.1/cookbook/logging/monolog.html
-[12]: http://symfony.com/doc/2.1/cookbook/assetic/asset_management.html
-[13]: http://jmsyst.com/bundles/JMSSecurityExtraBundle/master
-[14]: http://jmsyst.com/bundles/JMSDiExtraBundle/master
-[15]: http://symfony.com/doc/2.1/bundles/SensioGeneratorBundle/index.html
+*   Browse and login in development environment:
+    [book2](http://book2/app_dev.php/).
+
+
+More
+-------
+
+If you want, you can do functional test.
+
+    $ phpunit --debug -c app src/Iluni/BookBundle/Tests/Controller
+
+Using PSR-[0,1,2] standard,
+coding style is written to be as close as PSR as possible.
+
+    $ cd ~/ ... /CodeSniffer/scripts
+    $ php phpcs --config-set default_standard PSR2
+    $ php phpcs --extensions=php ~/ ... /book2/src/Iluni/BookBundle
+
+
+License
+-------
+
+This work is licensed under
+[MIT License](http://www.opensource.org/licenses/mit-license.php).
+
+The Symfony Framework is licensed under MIT License.
+
+Mootools Javascript is licensed under MIT License.
+
+However some works may apply different license,
+so I would like to list each to appreciate them.
+
+*   Icons: [Silk Icons](http://www.famfamfam.com/lab/icons/silk/)
+    licensed under a Creative Commons Attribution 2.5 License.
+*   Images: [OpenClipArt](http://openclipart.org)
+    licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication.
+*   [Mootools Javascript Framework](http://mootools.net)
+    also licensed under MIT-style license.
+*   Mootools-Datepicker by Arian Stolwijk (see sfMooDatePickerPlugin),
+    Mootools-NoobSlide by luistar15,
+    Mootools-Reflection by Christophe Beyls and
+    Mootools-Diabox by Mike Nelson
+    licensed under MIT license.
+*   Mootools Effects: I also grab many smart sample from
+    [David Walsh](http://davidwalsh.name),
+    and modify those goodies for use with my oriclone themes.
+    It is considered as knowledge for public, not license.
+*   The glossy orb logo provided contain Makara logo inside.
+    The Makara logo itself belong to University of Indonesia.
+    You may preferred to use your own logo.

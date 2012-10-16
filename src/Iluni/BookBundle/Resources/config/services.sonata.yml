@@ -1,0 +1,92 @@
+services:
+    # sonata person
+    iluni_book.admin.religion:
+        class: Iluni\BookBundle\Admin\Person\ReligionAdmin
+        tags:
+          - { name: sonata.admin, manager_type: orm, group: person, label: Religion }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Religion, SonataAdminBundle:CRUD]
+
+
+    # sonata category
+    iluni_book.admin.competency:
+        class: Iluni\BookBundle\Admin\Category\CompetencyAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: category, label: Competency }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Competency, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.bizfield:
+        class: Iluni\BookBundle\Admin\Category\BizFieldAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: category, label: Business Field }
+        arguments: [null, Iluni\BookBundle\Entity\Category\BizField, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.jobtype:
+        class: Iluni\BookBundle\Admin\Category\JobTypeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: category, label: Occupation }
+        arguments: [null, Iluni\BookBundle\Entity\Category\JobType, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.jobposition:
+        class: Iluni\BookBundle\Admin\Category\JobPositionAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: category, label: Job Position }
+        arguments: [null, Iluni\BookBundle\Entity\Category\JobPosition, SonataAdminBundle:CRUD]
+
+
+    # sonata campus
+    iluni_book.admin.strata:
+        class: Iluni\BookBundle\Admin\Campus\StrataAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: campus, label: Strata }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Strata, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.program:
+        class: Iluni\BookBundle\Admin\Campus\ProgramAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: campus, label: Program }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Program, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.faculty:
+        class: Iluni\BookBundle\Admin\Campus\FacultyAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: campus, label: Faculty }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Faculty, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.department:
+        class: Iluni\BookBundle\Admin\Campus\DepartmentAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: campus, label: Department }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Department, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.community:
+        class: Iluni\BookBundle\Admin\Campus\CommunityAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: campus, label: Community }
+        arguments: [null, Iluni\BookBundle\Entity\Community, SonataAdminBundle:CRUD]
+
+
+    # sonata card
+    iluni_book.admin.contacttype:
+        class: Iluni\BookBundle\Admin\Card\ContactTypeAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: card, label: Contact Type }
+        arguments: [null, Iluni\BookBundle\Entity\Category\ContactType, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.country:
+        class: Iluni\BookBundle\Admin\Card\CountryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: card, label: Country }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Country, SonataAdminBundle:CRUD]
+
+    iluni_book.admin.province:
+        class: Iluni\BookBundle\Admin\Card\ProvinceAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: card, label: Province }
+        arguments: [null, Iluni\BookBundle\Entity\Category\Province, SonataAdminBundle:CRUD]
+
+
+    iluni_book.admin.district:
+        class: Iluni\BookBundle\Admin\Card\DistrictAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: card, label: District }
+        arguments: [null, Iluni\BookBundle\Entity\Category\District, SonataAdminBundle:CRUD]

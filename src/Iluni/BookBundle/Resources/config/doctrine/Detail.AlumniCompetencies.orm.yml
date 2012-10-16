@@ -1,0 +1,26 @@
+Iluni\BookBundle\Entity\Detail\AlumniCompetencies:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniCompetenciesRepository
+  table: a_competencies
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    description:
+      type: string
+      length: 35
+      nullable: true
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+    competency:
+      targetEntity: Iluni\BookBundle\Entity\Category\Competency
+      joinColumns:
+        competency_id:
+          referencedColumnName: competency_id
+  lifecycleCallbacks: {  }

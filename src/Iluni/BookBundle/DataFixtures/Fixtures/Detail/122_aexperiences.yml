@@ -1,0 +1,32 @@
+AExperiences:
+  Rizqi:
+    aid: 25
+    organization: Citra Jayaara Andalan
+    description:  
+    job_position: Owner
+    year_in:      2000
+    year_out:     
+  Epsi:
+    aid: 25
+    organization: Freelance
+    description:  Aplikasi Web, Administrasi Linux
+    job_position: Coder (Programmer)
+    year_in:      2003
+  Nurwijayadi:
+    aid: 25
+    organization: Ikan Lele
+    description:  Business Startup Phase
+    job_position: Trainee
+    year_in:      2008
+  Aswil_1:
+    aid: 283
+    organization: IBM
+  Aswil_2:
+    aid: 283
+    organization: Citibank N.A.
+  Aswil_3:
+    aid: 283
+    organization: Dexa Medica
+  Aswil_4:
+    aid: 283
+    organization: YARSI

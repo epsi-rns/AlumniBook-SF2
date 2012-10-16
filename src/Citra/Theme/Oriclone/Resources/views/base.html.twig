@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+{% use 'OricloneBundle::assets.html.twig' %}
+{% use 'OricloneBundle::blocks.html.twig' %}
+
+{% set blocks  = oriclone.layout.blocks %}
+{% set options = oriclone.layout.options %}
+
+<head>
+    <title>{{ mergetitle(block('title')|trans, block('projecttitle')|trans) }}</title>
+
+    {{ block('head_assets') }}
+</head>
+
+{% block theme_body %}
+<body class="{{ oriclone.layout.classes }}">
+
+<div id="wrapper">
+    <a name="top" id="top"></a>
+    {{ block ('theme_page_top') }}
+
+    {{ block ('theme_header') }}
+    <div id="container-console"></div>
+    {{ block ('theme_main') }}
+    {{ block ('theme_footer') }}
+
+<a href="#top" id="gototop" class="no-click no-print"
+    >{% trans %}Top of Page{% endtrans %}</a>
+<a name="bottom" id="bottom"></a>
+</div>
+</body>
+{% endblock %}
+
+</html>

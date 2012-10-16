@@ -1,0 +1,33 @@
+acontacts_list:
+    pattern:  /{aid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:list" }
+    requirements: { aid:  \d+ }
+    
+acontacts_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:show" }
+    requirements: { id:  \d+ }
+    
+acontacts_new:
+    pattern:  /{aid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:new" }
+
+acontacts_create:
+    pattern:  /{aid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:create" }
+    requirements: { _method: post }
+
+acontacts_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:edit" }
+    requirements: { id:  \d+ }
+
+acontacts_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:update" }
+    requirements: { _method: post }
+
+acontacts_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\AContacts:delete" }
+    requirements: { _method: post }

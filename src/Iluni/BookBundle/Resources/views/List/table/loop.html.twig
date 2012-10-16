@@ -1,0 +1,23 @@
+{% block table_loop %}
+    <table>
+      <thead>
+        <tr>
+            {% block table_header %}
+            <th width="20">#</th>
+            {% endblock %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for index, entity in entities %}
+        {% set count = count + 1 %}
+        <tr class="{{ cycle(['even', 'odd'], loop.index) }}"
+            {% block table_loop_attribute %}{% endblock %}>
+            {% block table_row %}
+            <td valign="top" width="2%">{{ count }}</td>
+            {% endblock %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br/>
+{% endblock %}

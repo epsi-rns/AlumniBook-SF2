@@ -1,0 +1,54 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+{% import 'IluniBookBundle:Common:macro/tab.html.twig' as tab %}
+
+{% block title %}Community :: Show{% endblock %}
+
+{% block body %}
+    {{ tab.tab('alumni', {
+        'aid' : entity.alumni.id
+    }) }}
+
+<div class="sheet_admin">
+
+<table>
+  <tbody>
+        <tr class="masterfields">
+            <th>{% trans from 'forms' %}Alumni{% endtrans %}</th>
+            <td>{{ entity.alumni }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+            <td>{{ entity.community }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Class of (year){% endtrans %}</th>
+            <td>{{ entity.classYear }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Subclass{% endtrans %}</th>
+            <td>{{ entity.classSub }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Program{% endtrans %}</th>
+            <td>{{ entity.community.program }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Department{% endtrans %}</th>
+            <td>{{ entity.community.department }}</td>
+        </tr>
+        <tr>
+            <th>{% trans from 'forms' %}Faculty{% endtrans %}</th>
+            <td>{{ entity.community.faculty }}</td>
+        </tr>
+  </tbody>
+</table>
+<hr />
+{{ crud.link_to__edit('acommunities_edit', { 'id': entity.id }) }}
+&nbsp;
+{{ crud.link_to__list('acommunities_list', { 'aid': entity.alumni.id }) }}
+
+</div>
+
+{% endblock %}

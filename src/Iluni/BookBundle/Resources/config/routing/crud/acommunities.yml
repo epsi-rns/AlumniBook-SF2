@@ -1,0 +1,33 @@
+acommunities_list:
+    pattern:  /{aid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:list" }
+    requirements: { aid:  \d+ }
+    
+acommunities_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:show" }
+    requirements: { id:  \d+ }
+    
+acommunities_new:
+    pattern:  /{aid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:new" }
+
+acommunities_create:
+    pattern:  /{aid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:create" }
+    requirements: { _method: post }
+
+acommunities_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:edit" }
+    requirements: { id:  \d+ }
+
+acommunities_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:update" }
+    requirements: { _method: post }
+
+acommunities_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD/ACommunities:delete" }
+    requirements: { _method: post }

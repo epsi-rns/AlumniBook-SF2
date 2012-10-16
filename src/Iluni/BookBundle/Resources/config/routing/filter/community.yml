@@ -1,0 +1,3 @@
+community:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Community:index" }

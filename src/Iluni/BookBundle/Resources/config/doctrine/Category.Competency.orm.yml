@@ -1,0 +1,34 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Category.Competency.orm.yml
+Iluni\BookBundle\Entity\Category\Competency:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Category\CompetencyRepository
+  table: competency
+  id:
+    id:
+      type: smallint
+      column: competency_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: competency
+      length: 30
+      unique: true
+      gedmo:
+        - translatable
+    memo:
+      type: text
+      nullable: true
+  oneToMany:
+    acompetencies:
+      targetEntity: Iluni\BookBundle\Entity\Detail\AlumniCompetencies
+      mappedBy: competency
+      joinColumns:
+        competency_id:
+          referencedColumnName: competency_id
+#  oneToMany:
+#    translations:
+#      targetEntity: CompetencyTranslation
+#      mappedBy: object
+#      cascade: [persist, remove]
+  lifecycleCallbacks: {  }

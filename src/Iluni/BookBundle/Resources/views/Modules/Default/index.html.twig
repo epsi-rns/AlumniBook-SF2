@@ -1,0 +1,132 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block title %}Table of Contents{% endblock %}
+
+{% block body %}
+    <form action="{{ path('main_homepage') }}" method="post" >
+        <label for="language">Choose a language:</label>
+        {{ form_widget(locale_form.locale) }}
+        <button type="submit">ok</button>
+    </form>
+
+    <br/>
+
+    <table width="100%" cellpadding="4" cellspacing="0" border="0" align="center" class="contentpane">
+      <tr>
+        <td>
+        <div class="clip_population"></div>
+        <ul>
+            <li><a class="icon_group" href="{{ path('community') }}">
+                {% trans from "navigation" %}Community{% endtrans %}
+            </a></li>
+            <li><a class="icon_chart_bar" href="{{ path('summary_total') }}">
+                {% trans from "navigation" %}Total Summary in Chart'{% endtrans %}
+            </a></li>
+        </ul></td>
+        <td>
+        <div class="clip_yellow_jacket"></div>
+        <ul>
+            <li><a class="icon_new" href="{{ path('alumni_new') }}">
+                {% trans from "navigation" %}Add Alumna/us{% endtrans %}
+            </a></li>
+            <li><a class="icon_new" href="{{ path('org_new') }}">
+                {% trans from "navigation" %}Add Organization{% endtrans %}
+            </a></li>
+            <li><a class="icon_edit" href="{{ path('alumni') }}">
+                {% trans from "navigation" %}Manage Alumni{% endtrans %}
+            </a></li>
+            <li><a class="icon_edit" href="{{ path('org') }}">
+                {% trans from "navigation" %}Manage Organization{% endtrans %}
+            </a></li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="top" class="contentdescription">
+        <div class="componentheading">{% trans from "navigation" %}Attribute of Alumni{% endtrans %}</div>
+        </td>
+        <td width="50%" valign="top" class="contentdescription">
+        <div class="componentheading">{% trans from "navigation" %}Attribute of Organization{% endtrans %}</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div class="clip_attributes"></div>
+        <ul>
+            <li><a href="{{ path('acommunities') }}">
+                {% trans from "navigation" %}Browse Alumni{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('acompetencies_categories') }}">
+                {% trans from "navigation" %}Competencies{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('acertifications') }}">
+                {% trans from "navigation" %}Certifications{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('aexperiences') }}">
+                {% trans from "navigation" %}Experiences{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('adegrees') }}">
+                {% trans from "navigation" %}Academic Degrees{% endtrans %}
+            </a></li>
+            <li><a class="icon_cake" href="{{ path('alumni_birth') }}">
+                {% trans from "navigation" %}Birthday{% endtrans %}
+            </a></li>
+        </ul>
+        <ul>
+            <li><a class="icon_building" href="{{ path('residence') }}">
+                {% trans from "navigation" %}Addresses: Home/ Residence{% endtrans %}
+            </a></li>
+            <li><a class="icon_telephone" href="{{ path('acontacts') }}">
+                {% trans from "navigation" %}Personal Contacts{% endtrans %}
+            </a></li>
+        </ul></td>
+        <td>
+        <div class="clip_institution"></div>
+        <ul>
+            <li><a class="icon_building" href="{{ path('org') }}">
+                {% trans from "navigation" %}Browse Organizations/ Companies{% endtrans %}
+            </a></li>
+            <li><a class="icon_telephone" href="{{ path('ofields_categories') }}">
+                {% trans from "navigation" %}Fields{% endtrans %}
+            </a></li>
+        </ul>
+        <ul>
+            <li><a href="{{ path('office') }}">
+                {% trans from "navigation" %}Addresses: Office{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('ocontacts') }}">
+                {% trans from "navigation" %}Office Contacts{% endtrans %}
+            </a></li>
+        </ul></td>
+      </tr>
+      <tr>
+        <td width="100%" colspan="2" valign="top" class="contentdescription">
+        <div class="componentheading">{% trans from "navigation" %}Job and Occupation{% endtrans %}</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <div class="clip_industrial"></div>
+        <ul>
+            <li><a href="{{ path('amap_categories') }}">
+                {% trans from "navigation" %}Occupation{% endtrans %}
+            </a></li>
+            <li><a href="{{ path('omap_categories') }}">
+                {% trans from "navigation" %}Job Position{% endtrans %}
+            </a></li>
+        </ul>
+        <ul>
+            <li><a class="icon_building" href="{{ path('workplace') }}">
+                {% trans from "navigation" %}Addresses: Job/ Work Place{% endtrans %}
+            </a></li>
+            <li><a class="icon_telephone" href="{{ path('mcontacts') }}">
+                {% trans from "navigation" %}Job Contacts{% endtrans %}
+            </a></li>
+        </ul></td>
+      </tr>
+    </table>
+
+  <br/>
+  <q>{% trans from "navigation" %}Last updated of this data:{% endtrans %}
+    <blink>{{ lastupdate }}</blink>.</q>
+
+{% endblock %}

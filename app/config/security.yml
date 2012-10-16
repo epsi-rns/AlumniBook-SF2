@@ -4,18 +4,32 @@ jms_security_extra:
 
 security:
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+       Symfony\Component\Security\Core\User\User: plaintext
+       Iluni\BookBundle\Entity\User:
+            algorithm:  sha1
+            iterations: 1
+            encode_as_base64: false
 
     role_hierarchy:
-        ROLE_ADMIN:       ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_EDITOR:      [ROLE_GUEST, ROLE_USER]
+        ROLE_ADMIN:       [ROLE_GUEST, ROLE_EDITOR]
+        ROLE_SUPER_ADMIN: [ROLE_GUEST, ROLE_EDITOR, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
+        chain_provider:
+            chain:
+                providers: [user_db, in_memory]
+
+        user_db:
+            entity:
+                class: Iluni\BookBundle\Entity\User
+                property: username
+
         in_memory:
             memory:
                 users:
                     user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+
 
     firewalls:
         dev:
@@ -23,21 +37,43 @@ security:
             security: false
 
         login:
-            pattern:  ^/demo/secured/login$
+            pattern:  ^/user/login$
             security: false
 
         secured_area:
-            pattern:    ^/demo/secured/
+            pattern:    ^/
             form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
+                check_path: /user/check
+                login_path: /user/login
             logout:
-                path:   /demo/secured/logout
-                target: /demo/
+                path:   /user/logout
+                target: /
+            #provider: user_db
+            #logout: true
+            #security: true
+            anonymous: true
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
 
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        # -> Anyone can see
+        - { path: ^/(menu|index.atom), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+
+        # -> Sample
+        #- { path: ^/user/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
         #- { path: ^/_internal/secure, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+
+        # -> Admin
+        - { path: ^/admin/dashboard, roles: ROLE_ADMIN }
+
+        # -> CRUD
+        - { path: ^/(\w+)/(new|create)$, roles: ROLE_EDITOR }
+        - { path: ^/(\w+)/(\d+)/(list|new|create)$, roles: ROLE_EDITOR }
+        - { path: ^/(\w+)/(\d+)/(show|edit|update|delete)$, roles: ROLE_EDITOR }
+
+        # -> Test
+        - { path: ^/(\w+)/first$, roles: ROLE_GUEST , ip: 127.0.0.1 }
+
+        # -> The rest except from above
+        - { path: ^/, roles: IS_AUTHENTICATED_FULLY }

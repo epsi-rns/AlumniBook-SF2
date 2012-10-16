@@ -1,0 +1,48 @@
+Iluni\BookBundle\Entity\Detail\AlumniDegrees:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\Detail\AlumniDegreesRepository
+  table: a_degrees
+  id:
+    id:
+      type: integer
+      column: did
+      generator: { strategy: AUTO }
+  fields:
+    admitted:
+      type: smallint
+      nullable: true
+    graduated:
+      type: smallint
+      nullable: true
+    degree:
+      type: string
+      length: 20
+      nullable: true
+    institution:
+      type: string
+      length: 40
+      nullable: false
+    major:
+      type: string
+      length: 40
+      nullable: true
+    minor:
+      type: string
+      length: 40
+      nullable: true
+    concentration:
+      type: string
+      length: 40
+      nullable: true
+  manyToOne:
+    alumni:
+      targetEntity: Iluni\BookBundle\Entity\Alumni
+      joinColumns:
+        aid:
+          referencedColumnName: aid
+    strata:
+      targetEntity: Iluni\BookBundle\Entity\Category\Strata
+      joinColumns:
+        strata_id:
+          referencedColumnName: strata_id
+  lifecycleCallbacks: {  }

@@ -1,0 +1,33 @@
+ofields_list:
+    pattern:  /{oid}/list
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:list" }
+    requirements: { oid:  \d+ }
+    
+ofields_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:show" }
+    requirements: { id:  \d+ }
+    
+ofields_new:
+    pattern:  /{oid}/new
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:new" }
+
+ofields_create:
+    pattern:  /{oid}/create
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:create" }
+    requirements: { _method: post }
+
+ofields_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:edit" }
+    requirements: { id:  \d+ }
+
+ofields_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:update" }
+    requirements: { _method: post }
+
+ofields_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "IluniBookBundle:CRUD\OFields:delete" }
+    requirements: { _method: post }

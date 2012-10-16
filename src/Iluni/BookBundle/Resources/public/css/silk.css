@@ -1,0 +1,32 @@
+a.icon_feed,
+a.icon_new,
+a.icon_edit,
+a.icon_list,
+a.icon_delete,
+a.icon_building,
+a.icon_telephone,
+a.icon_chart_bar,
+a.icon_cake,
+a.icon_group,
+a.icon_pick,
+a.icon_show
+{
+    padding: 2px 0px 2px 20px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+a.icon_feed    { background-image: url(../images/silk/feed.png); }
+a.icon_pick    { background-image: url(../images/silk/magnifier.png); }
+
+a.icon_show   { background-image: url(../images/silk/television.png); }
+a.icon_new    { background-image: url(../images/silk/add.png); }
+a.icon_edit   { background-image: url(../images/silk/pencil.png); }
+a.icon_list   { background-image: url(../images/silk/table.png); }
+a.icon_delete { background-image: url(../images/silk/delete.png); }
+
+a.icon_building     { background-image: url(../images/silk/building.png); }
+a.icon_telephone    { background-image: url(../images/silk/telephone.png); }
+a.icon_chart_bar        { background-image: url(../images/silk/chart_bar.png); }
+a.icon_cake     { background-image: url(../images/silk/cake.png); }
+a.icon_group    { background-image: url(../images/silk/group.png); }

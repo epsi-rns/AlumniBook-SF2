@@ -1,0 +1,23 @@
+{# src/Iluni/BookBundle/Resources/views/Master/Alumni/index.html.twig #}
+{% extends 'IluniBookBundle:List:template.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block title %}Alumni{% endblock %}
+
+{% use 'DatePickerBundle::assets.html.twig' %}
+
+{% block include_stylesheets %}
+    {{ parent() }}
+    {{ block('include_stylesheets_datepicker') }}
+{% endblock %}
+
+{% block include_javascripts %}
+    {{ parent() }}
+    {{ block('include_javascripts_datepicker') }}
+{% endblock %}
+
+{% block table_links %}
+    {{ crud.link_to_new('alumni_new', {}) }}
+    <br/>
+{% endblock %}
+

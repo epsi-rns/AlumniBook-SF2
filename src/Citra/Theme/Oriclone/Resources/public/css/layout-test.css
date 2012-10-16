@@ -1,0 +1,42 @@
+/* ---- Testing */
+/* 
+http://www.barelyfitz.com/screencast/html-training/css/positioning/ 
+*/
+
+#lay_header, #lay_footer {
+ background-color:#88d;
+ color:#000;
+}
+#lay_main {
+	background-color:#000;
+	color:#fff;
+	border: 1px dashed grey; 
+}
+#lay_left {
+	background-color:#d33;
+	color:#fff;
+	border: 1px dashed grey;
+}
+#lay_content {
+	background-color:#3d3;
+	color:#fff;
+	border: 1px dashed grey; 
+}
+#lay_right {
+	background-color:#33d;
+	color:#fff;
+	border: 1px dashed grey; 
+}
+#lay_bottom {
+	background-color:#33d;
+	color:#fff;
+	border: 1px dashed grey; 
+}
+
+/* other */
+
+#lay_top {
+	background-color:#33d;
+	color:#fff;
+	border: 1px dashed grey; 
+}

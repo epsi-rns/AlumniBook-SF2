@@ -1,0 +1,80 @@
+# src/Iluni/BookBundle/Resources/config/doctrine/Organization.orm.yml
+Iluni\BookBundle\Entity\Organization:
+  type: entity
+  repositoryClass: Iluni\BookBundle\Repository\OrganizationRepository
+  table: organization
+  gedmo:
+    tree:
+      type: nested
+  id:
+    id:
+      type: integer
+      column: oid
+      generator: { strategy: AUTO }
+  fields:
+    name:
+      type: string
+      length: 50
+    prefix:
+      type: string
+      length: 15
+      nullable: true
+    suffix:
+      type: string
+      length: 15
+      nullable: true
+    note:
+      type: text
+      nullable: true
+    fullname:
+      type: string
+      length: 80
+      nullable: true
+    created:
+      type: datetime
+      column: created_at
+      gedmo:
+        timestampable:
+          on: create
+    updated:
+      type: datetime
+      column: updated_at
+      gedmo:
+        timestampable:
+          on: update
+    lft:
+      type: integer
+      gedmo:
+        - treeLeft
+    rgt:
+      type: integer
+      gedmo:
+        - treeRight
+    root:
+      type: integer
+      nullable: true
+      gedmo:
+        - treeRoot
+    lvl:
+      type: integer
+      gedmo:
+        - treeLevel
+  manyToOne:
+    parent:
+      targetEntity: Iluni\BookBundle\Entity\Organization
+      inversedBy: children
+      joinColumn:
+        name: parent_id
+        referencedColumnName: oid
+        onDelete: SET NULL
+      gedmo:
+        - treeParent
+  oneToMany:
+    children:
+      targetEntity: Iluni\BookBundle\Entity\Organization
+      mappedBy: parent
+      orderBy:
+        lft: ASC
+  lifecycleCallbacks:
+    prePersist: [ setFullnameValue ]
+    preUpdate: [ setFullnameValue ]

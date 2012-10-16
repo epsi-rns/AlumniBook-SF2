@@ -1,0 +1,34 @@
+IBB_main: # default and homepage
+    resource: "@IluniBookBundle/Resources/config/routing/main.yml"
+
+IBB_user:
+    resource: "@IluniBookBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+IBB_admin:
+    resource: "@IluniBookBundle/Resources/config/routing/admin.yml"
+
+IBB_crud:
+    resource: "@IluniBookBundle/Resources/config/routing/crud.yml"
+
+IBB_filter:
+    resource: "@IluniBookBundle/Resources/config/routing/filter.yml"
+
+IBB_about:
+    resource: "@IluniBookBundle/Resources/config/routing/about.yml"
+    prefix:   /about
+
+IBB_modal:
+    resource: "@IluniBookBundle/Resources/config/routing/modal.yml"
+    prefix:   /modal
+
+IBB_summary:
+    resource: "@IluniBookBundle/Resources/config/routing/summary.yml"
+    prefix:   /summary
+
+IBB_partial:
+    resource: "@IluniBookBundle/Resources/config/routing/partial.yml"
+    prefix:   /partial
+
+
+

@@ -1,0 +1,15 @@
+Iluni\BookBundle\Entity\Category\Country:
+  type: entity
+  table: country
+  id:
+    id:
+      type: smallint
+      column: country_id
+      generator: { strategy: NONE }
+  fields:
+    name:
+      type: string
+      column: country
+      length: 35
+      unique: true
+  lifecycleCallbacks: {  }

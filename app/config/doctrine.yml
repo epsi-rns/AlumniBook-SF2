@@ -1,0 +1,42 @@
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   %database_driver%
+        host:     %database_host%
+        port:     %database_port%
+        dbname:   %database_name%
+        user:     %database_user%
+        password: %database_password%
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        #auto_mapping: true
+
+        entity_managers:
+            default:
+                connection: default
+                auto_mapping: true
+                mappings:
+                    translatable:
+                        type: annotation
+                        is_bundle: false
+                        prefix: Gedmo\Translatable\Entity
+                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
+
+                        # this one is optional and will default to the name set for the mapping
+                        alias: GedmoTranslatable
+
+                #dql:
+                #    datetime_functions:
+                #        test_datetime: Iluni\BookBundle\DQL\DatetimeFunction
+
+# Doctrine Extensions Configuration
+stof_doctrine_extensions:
+    default_locale: en_us
+    translation_fallback: true
+    orm:
+        default:
+            timestampable: true
+            translatable: true
+            tree: true

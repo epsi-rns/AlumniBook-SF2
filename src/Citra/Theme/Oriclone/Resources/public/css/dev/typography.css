@@ -1,0 +1,62 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#lay_content {
+    font-size: 13px;
+}
+
+/* Heading */
+h1,h2,h3,h4,h5,h6 {margin-bottom:10px;}
+.contentheading,
+h1 {line-height: 24px;}
+h2 {line-height: 18px;}
+h3 {line-height: 20px;}
+h4 {line-height: 14px;}
+h5 {line-height: 13px;}
+h6 {line-height: 12px;}
+
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover
+    { border-bottom:1px dashed #CCC;}
+
+h1 {padding-bottom: 8px;}
+h3 {border-bottom:1px dotted #CCC;}
+
+
+/* http://webdesign.about.com/od/beginningcss/a/aa092107.htm */
+h1 { font: bold italic 3em "Times New Roman", "MS Serif", "New York", serif; }
+h2 { font: bold italic 2em "Times New Roman", Times, serif; }
+h3 { font: bold 1.5em "Times New Roman", Times, serif; }
+h4 { font: bold 1.3em Arial, Geneva, Helvetica, sans-serif; }
+h5 { font: bold 1.2em Arial, Geneva, Helvetica, sans-serif; }
+h6 { font: bold 1.1em Arial, Geneva, Helvetica, sans-serif; }
+
+.breadcrumbs,
+.moduletable h3,
+.moduletable_text h3,
+.moduletable_menu h3 {
+    font-family:  Arial, Geneva, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight : normal;
+}
+#lay_top h3 {
+    border: none;
+    font-size: 1.5em;
+    line-height: 14px;
+}
+
+#lay_top a:link { text-transform: capitalize; }
+#lay_top a:hover { text-decoration: blink; }
+
+
+a { text-decoration: none;}
+a:hover { text-decoration: underline;}
+
+#lay_header_left {font-size: large; line-height: 40px;}
+
+#lay_header a {font-size: larger; text-decoration: none; }
+#lay_header a:hover {text-decoration: underline;}
+
+
+

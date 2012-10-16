@@ -1,0 +1,4 @@
+workplace:
+    pattern:  /
+    defaults: { _controller: "IluniBookBundle:Filter\Workplace:index" }
+
