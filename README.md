@@ -111,7 +111,7 @@ Although it looks long. It should be easy for symfony coder.
 For more guidance please visit
 [symfony installation](http://symfony.com/doc/2.0/book/installation.html).
 
-## Apache Configuration
+### Apache Configuration
 
 *   Configure virtual host on apache.
     Let's say we are going to setup setup http:\\book2 (localhost)
@@ -133,7 +133,7 @@ For more guidance please visit
         # a2enmod rewrite
         # service apache2 reload
 
-## Project Setup
+### Project Setup
 
 *   Download AlumniBook at https://github.com/epsi/AlumniBook-SF2.
     then extract in your project directory.
@@ -148,7 +148,7 @@ For more guidance please visit
 
         $ php ../composer.phar update
 
-## Database
+### Database
 
 *   Configure database connection,
     mysql is recommended for first use.
