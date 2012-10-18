@@ -202,6 +202,21 @@ coding style is written to be as close as possible to PSR-[0,1,2].
     $ php phpcs --config-set default_standard PSR2
     $ php phpcs --extensions=php ~/ ... /book2/src/Iluni/BookBundle
 
+### Tools
+
+I'm using these tools during development process
+
+*   LAMP stack on Debian/ Mint
+
+*   Windows: WampServer and Git for windows
+
+*   Client Side: Firebug
+
+*   Editor: Geany
+
+*   Amusement: mp3 player and many glass of coffee.
+
+
 
 License
 -------

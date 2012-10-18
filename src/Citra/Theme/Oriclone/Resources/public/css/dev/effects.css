@@ -241,7 +241,7 @@ input[type="submit"]:hover {
     text-shadow: none;
 }
 
-/* Header */
+/* Header and Footer */
 
 #lay_top,
 #lay_header {
@@ -255,6 +255,17 @@ input[type="submit"]:hover {
     box-shadow: 3px 3px 5px #888;
 }
 
+#lay_footer {
+    border-top-left-radius:  10px;
+    border-top-right-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft:  10px;
+    -moz-border-radius-topright: 10px;
+}
+
+/* Menu */
+
 .menu_tabs ul li a:hover,
 #lay_main .moduletable:hover h3,
 .moduletable_text:hover h3,
@@ -263,6 +274,8 @@ input[type="submit"]:hover {
 .moduletable_menu ul.menu li li:hover {
     box-shadow: 3px 3px 5px #888;
 }
+
+/* Sitename */
 
 .hbg_yellow #sitename {
     text-shadow: white 1px 1px 2px;
