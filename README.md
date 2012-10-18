@@ -63,7 +63,7 @@ Feature
 *   Oriclone Theme:
     My personal theme, the original clone.
     Although I've made it from scratch, it is inspired by other design.
-    * <del>CSS compressor task class</del>
+    * CSS compressor (custom assetic filter)
     * Custom 404 error page.
     * <del>Control parameter via app.yml</del>
     * <del>A few source images (XCF's GIMP), only small files.<del>
@@ -184,8 +184,8 @@ For more guidance please visit
     [http://book2/app_dev.php/](http://book2/app_dev.php/).
 
 
-More
--------
+More on Development
+-------------------
 
 ### Test
 
@@ -216,6 +216,17 @@ I'm using these tools during development process
 
 *   Amusement: mp3 player and many glasses of coffee.
 
+### Framework
+
+I'm using PHP + JS.
+
+*   PHP Framework: Symfony2
+
+*   ORM: Doctrine2
+
+*   Templating Engine: Twig
+
+*   Javascript Framework: Mootools 1.3
 
 
 License
