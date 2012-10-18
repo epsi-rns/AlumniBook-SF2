@@ -1,6 +1,6 @@
 {% block theme_main %}
 
-    <div id="lay_main" class="{{ options.main_layout }}"><div class="fixed">
+    <div id="lay_main" class="fixed {{ options.main_layout }}">
         {% if options.flip_leftright %}
         {% if options.show_right %}
         <div id="lay_right">
@@ -39,13 +39,13 @@
         </div>
         {% endif %}
 
-    </div></div>
+    </div>
 
 {% endblock %}
 
 {% block theme_header %}
 
-    <div id="lay_header"><div class="fixed" id="lay_header_container">
+    <div id="lay_header" class="fixed"><div id="lay_header_container">
         {% if oriclone.layout.logo is defined %}
         <div class="logo" id="{{ oriclone.layout.logo }}"></div>
         {% endif %}
@@ -88,19 +88,17 @@
     <div class="clr"></div>
     {% endif %}
 
-    <div id="lay_top">
-    <div class="fixed">
+    <div id="lay_top" class="fixed">
     {% if blocks.top %}
         {% block top %}{% endblock %}
     {% endif %}
-    </div>
     </div>
 
 {% endblock %}
 
 {% block theme_footer %}
     {% if (blocks.bottom or blocks.user1 or blocks.user2) %}
-    <div id="lay_top" class="no-print {{ options.top_layout }}"><div class="fixed">
+    <div id="lay_top" class="fixed no-print {{ options.top_layout }}">
 
         <div id="lay_top_left">
         {% if blocks.bottom %}
@@ -121,7 +119,7 @@
         {% endif %}
 
         <div class="clr"></div>
-    </div></div>
+    </div>
     {% endif %}
 
     {% if blocks.footer %}
@@ -178,8 +176,7 @@
     <div id="page-flip" class="no-print">
         <a href="{{ path('main_feed_atom') }}">
             <img src="{{ asset('bundles/oriclone/images/notmine/page_flip.png') }}"
-                id="page-flip-image" alt="Subscribe!"
-                style="width: 50px; height: 52px;">
+                id="page-flip-image" alt="Subscribe!">
         </a>
         <div id="page-flip-message"></div>
     </div>

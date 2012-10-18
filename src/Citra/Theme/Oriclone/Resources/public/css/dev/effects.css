@@ -43,13 +43,13 @@
 }
 #page-flip-image {
     width:50px; height:52px;
-    z-index:49; position:absolute;
+    z-index:49; position:fixed;
     right:0; top:0;
     -ms-interpolation-mode:bicubic;
 }
 #page-flip-message {
     width:50px; height:50px;
-    overflow:hidden; position:absolute;
+    overflow:hidden; position:fixed;
     right:0; top:0;
     background:url(../../images/notmine/subscribe.png) no-repeat right top;
 }

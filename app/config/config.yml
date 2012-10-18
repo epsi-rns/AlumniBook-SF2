@@ -64,7 +64,7 @@ swiftmailer:
     spool:     { type: memory }
 
 oriclone:
-    # debug_css: true
+    debug_css: true
     # effects:   false
 
     layout:

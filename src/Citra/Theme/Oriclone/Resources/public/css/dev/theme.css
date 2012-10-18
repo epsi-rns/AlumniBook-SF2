@@ -6,10 +6,6 @@ select, label, .pointer { cursor:pointer; }
 
 /* layout related */
 
-#lay_header {
-    border-top: 2px solid #0095CC;
-    height: 50px;
-}
 
 #lay_header_left {padding-left: 15px; }
 #lay_header_right li {float: right; margin-left: 30px;}

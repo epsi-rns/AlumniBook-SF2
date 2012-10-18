@@ -24,6 +24,19 @@ body.width_fluid    div#wrapper {
 #lay_header, #lay_footer, #lay_top, #lay_main
     { min-width:780px;}
 */
+#lay_header {
+    position: fixed;
+    width: 100%;
+    z-index: 39;
+
+    border-top: 2px solid #0095CC;
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+
+#lay_top {
+  padding-top: 53px;
+}
 
 .fixed {min-width: 780px; margin: 0 auto; padding: 0; }
 
