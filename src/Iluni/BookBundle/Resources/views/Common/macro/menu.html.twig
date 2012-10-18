@@ -1,5 +1,5 @@
-{% macro item(caption, mod) %}
-    <ul class="menu"><li>
+{% macro item(caption, mod, route) %}
+    <ul class="menu"><li{% if route==mod %} class="selected"{% endif %}>
         <a href="{{ path(mod) }}">{{ caption|trans({},'navigation') }}</a>
     </li></ul>
 {% endmacro %}

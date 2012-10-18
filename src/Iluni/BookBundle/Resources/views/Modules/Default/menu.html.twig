@@ -9,9 +9,9 @@
 <div class="moduletable_menu">
     <h3>{{ 'Community Summary'|trans({},'navigation') }}</h3>
 
-    {{ menu.item('Community', 'community') }}
-    {{ menu.item('Total Chart', 'summary_total') }}
-    {{ menu.item('All Departments', 'main_department_all') }}
+    {{ menu.item('Community', 'community', route) }}
+    {{ menu.item('Total Chart', 'summary_total', route) }}
+    {{ menu.item('All Departments', 'main_department_all', route) }}
 
 </div>
 
@@ -19,10 +19,10 @@
 <div class="moduletable_menu">
     <h3>{{ 'Manage Data'|trans({},'navigation') }}</h3>
 
-    {{ menu.item('Add Alumna/us', 'alumni_new') }}
-    {{ menu.item('Add Organization', 'org_new') }}
-    {{ menu.item('Manage Alumni', 'alumni') }}
-    {{ menu.item('Manage Organization', 'org') }}
+    {{ menu.item('Add Alumna/us', 'alumni_new', route) }}
+    {{ menu.item('Add Organization', 'org_new', route) }}
+    {{ menu.item('Manage Alumni', 'alumni', route) }}
+    {{ menu.item('Manage Organization', 'org', route) }}
 
 </div>
 {% endif %}
@@ -31,28 +31,28 @@
 <div class="moduletable_menu">
     <h3>{{ 'Browse Alumni'|trans({},'navigation') }}</h3>
 
-    {{ menu.item('Alumni',              'acommunities') }}
-    {{ menu.item('Birthday',            'alumni_birth') }}
-    {{ menu.item('Competencies',        'acompetencies_categories') }}
-    {{ menu.item('Certifications',      'acertifications') }}
-    {{ menu.item('Academic Degrees',    'adegrees') }}
-    {{ menu.item('Experiences',         'aexperiences') }}
+    {{ menu.item('Alumni',              'acommunities', route) }}
+    {{ menu.item('Birthday',            'alumni_birth', route) }}
+    {{ menu.item('Competencies',        'acompetencies_categories', route) }}
+    {{ menu.item('Certifications',      'acertifications', route) }}
+    {{ menu.item('Academic Degrees',    'adegrees', route) }}
+    {{ menu.item('Experiences',         'aexperiences', route) }}
 
 </div>
 
 <div class="moduletable_menu">
     <h3>{{ 'Browse Organization'|trans({},'navigation') }}</h3>
 
-    {{ menu.item('Organization/ Companies', 'org') }}
-    {{ menu.item('Business Fields',         'ofields_categories') }}
+    {{ menu.item('Organization/ Companies', 'org', route) }}
+    {{ menu.item('Business Fields',         'ofields_categories', route) }}
 
 </div>
 
 <div class="moduletable_menu">
     <h3>{{ 'Browse Mapping'|trans({},'navigation') }}</h3>
 
-    {{ menu.item('Occupation',          'amap_categories') }}
-    {{ menu.item('Job Position',        'omap_categories') }}
+    {{ menu.item('Occupation',          'amap_categories', route) }}
+    {{ menu.item('Job Position',        'omap_categories', route) }}
 
 </div>
 {% endif %}

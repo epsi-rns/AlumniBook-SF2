@@ -53,9 +53,11 @@ class DefaultController extends Controller
         return $this->render('IluniBookBundle:Modules/Default:about.html.twig');
     }
 
-    public function menuAction()
+    public function menuAction(Request $request)
     {
-        return $this->render('IluniBookBundle:Modules/Default:menu.html.twig');
+        return $this->render('IluniBookBundle:Modules/Default:menu.html.twig', array(
+            'route' => $request->query->get('route', '')
+        ));
     }
 
     public function screenshotAction()

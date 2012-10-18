@@ -29,6 +29,9 @@
 .moduletable_menu ul.menu li li {
     border-left : 5px solid #dd6;
 }
+
+.moduletable_menu ul.menu li.selected,
+.moduletable_menu ul.menu li li.selected,
 .moduletable_menu ul.menu li.active,
 .moduletable_menu ul.menu li li.active {
     border-left : 5px solid #88f;
@@ -37,7 +40,6 @@
 .moduletable_menu ul.menu li li:hover {
     border-left : 5px solid #f80;
 }
-
 
 .moduletable_menu ul.menu li a span {
     background : none;

@@ -214,7 +214,7 @@ I'm using these tools during development process
 
 *   Editor: Geany
 
-*   Amusement: mp3 player and many glass of coffee.
+*   Amusement: mp3 player and many glasses of coffee.
 
 
 
