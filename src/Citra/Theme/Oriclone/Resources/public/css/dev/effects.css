@@ -240,3 +240,44 @@ input[type="submit"]:hover {
     /*override input*/
     text-shadow: none;
 }
+
+/* Header */
+
+#lay_top,
+#lay_header {
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomleft:  10px;
+    -moz-border-radius-bottomright: 10px;
+
+    box-shadow: 3px 3px 5px #888;
+}
+
+.menu_tabs ul li a:hover,
+#lay_main .moduletable:hover h3,
+.moduletable_text:hover h3,
+.moduletable_menu:hover h3,
+.moduletable_menu ul.menu li:hover,
+.moduletable_menu ul.menu li li:hover {
+    box-shadow: 3px 3px 5px #888;
+}
+
+.hbg_yellow #sitename {
+    text-shadow: white 1px 1px 2px;
+}
+
+.hbg_red_gloss #sitename {
+    color: #fff;
+    text-shadow: black 1px 1px 2px;
+}
+
+.hbg_grey_blue #sitename {
+    color: #fe6;
+    text-shadow: black 3px 3px 7px;
+}
+
+.hbg_blue #sitename {
+    text-shadow: yellow 1px 1px 2px;
+}

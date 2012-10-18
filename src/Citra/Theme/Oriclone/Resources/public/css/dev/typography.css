@@ -3,6 +3,11 @@ body {
     font-size: 12px;
 }
 
+@font-face {
+    font-family: Diavlo;
+    src: url(../../fonts/Diavlo_MEDIUM_II_37.otf) format("opentype");
+}
+
 #lay_content {
     font-size: 13px;
 }
@@ -53,10 +58,28 @@ h6 { font: bold 1.1em Arial, Geneva, Helvetica, sans-serif; }
 a { text-decoration: none;}
 a:hover { text-decoration: underline;}
 
-#lay_header_left {font-size: large; line-height: 40px;}
+
+lay_header_left {font-size: large; line-height: 40px;}
 
 #lay_header a {font-size: larger; text-decoration: none; }
 #lay_header a:hover {text-decoration: underline;}
 
 
+#sitename {
+    margin-top: 5px;
+    font-size: 28px;
+    font-weight:bold;
+    margin: 0px;
+    text-decoration: none;
+    line-height: 50px;
+    vertical-align: middle;
+
+    text-shadow: white 1px 1px 2px;
+}
+
+#sitename,
+#lay_top {
+    font-family: Diavlo, Arial, Geneva, Helvetica, serif;
+    _font-family: Arial, Geneva, Helvetica, serif;
+}
 

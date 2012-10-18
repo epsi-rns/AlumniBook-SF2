@@ -68,6 +68,19 @@ div#lay_top p, div#lay_top h3 {
 #lay_header_right {float:right;}
 
 /* Top Layout */
+#lay_top_message {
+    float: left;
+    padding-left: 20px;
+    width: 70%;
+}
+
+#lay_top_status {
+    float: right;
+    padding-right: 20px;
+    width: 20%;
+    text-align: right;
+}
+
 #lay_top_left, #lay_top_center, #lay_top_right {
     padding-top: 5px;
 }
