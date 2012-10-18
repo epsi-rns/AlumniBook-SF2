@@ -1,7 +1,7 @@
 AlumniBook on Symfony
 =====================
 
-This is my first symfony application.
+This is a rewrite of symfony application.
 For learning purpose so others may have sample
 and speed up their development process.
 
@@ -9,6 +9,13 @@ and speed up their development process.
 
 *   Simple questionnaire-based data-entry, rewritten on Symfony2.
 *   Learn, share, and get rid of legacy version.
+
+## Support for ILUNI
+
+No support as this project is for learnig purpose only.
+
+But of course for live site, if anyone interested,
+can use this source code freely without my permission.
 
 
 Related Link
@@ -104,22 +111,32 @@ Although it looks long. It should be easy for symfony coder.
 For more guidance please visit
 [symfony installation](http://symfony.com/doc/2.0/book/installation.html).
 
-*   Download AlumniBook at https://github.com/epsi/AlumniBook-SF.
-    then extract in your project directory.
+## Apache Configuration
 
 *   Configure virtual host on apache.
     Let's say we are going to setup setup http:\\book2 (localhost)
     in /home/yourname/www/book2 directory.
 
         # pico /etc/hosts
-
         # pico /etc/apache2/sites-available/book2
-        # a2ensite book2
-        # service apache2 reload
 
     You can find sample in apache-alumni.txt in this package
     for use in sites-available directory.
+
     Don't forget to make it available by running a2ensite in terminal.
+
+        # a2ensite book2
+        # apache2ctl restart
+
+    Also don't forget to activate mod rewrite.
+
+        # a2enmod rewrite
+        # service apache2 reload
+
+## Project Setup
+
+*   Download AlumniBook at https://github.com/epsi/AlumniBook-SF2.
+    then extract in your project directory.
 
 *   Set-up permission
 
@@ -131,37 +148,55 @@ For more guidance please visit
 
         $ php ../composer.phar update
 
+## Database
+
 *   Configure database connection,
     mysql is recommended for first use.
 
         $ cat app/config/parameters.yml
 
-*   Load initial sample data (fixtures).
+*   Populate database.
+
+    You can skip this part by creating database manually,
+    e.g via phpmyadmin.
 
         $ app/console doctrine:database:drop --force
         $ app/console doctrine:database:create
+
+    Load initial sample data (fixtures).
+
         $ app/console doctrine:schema:update --force
         $ app/console doctrine:fixtures:load --append
         $ app/console cache:clear --env=dev
+
+    You might need to populate database many times during development process.
 
 *   Set-up assets
 
         $ php app/console assets:install web --symlink
         $ php app/console assetic:dump --env=prod
 
+    You might need to dump assets, anytime you change css, or set debug_css to true.
+
+### Happy browsing
+
 *   Browse and login in development environment:
-    [book2](http://book2/app_dev.php/).
+    [http://book2/app_dev.php/](http://book2/app_dev.php/).
 
 
 More
 -------
 
+### Test
+
 If you want, you can do functional test.
 
     $ phpunit --debug -c app src/Iluni/BookBundle/Tests/Controller
 
-Using PSR-[0,1,2] standard,
-coding style is written to be as close as PSR as possible.
+### Coding style
+
+Using PSR standard,
+coding style is written to be as close as possible to PSR-[0,1,2].
 
     $ cd ~/ ... /CodeSniffer/scripts
     $ php phpcs --config-set default_standard PSR2

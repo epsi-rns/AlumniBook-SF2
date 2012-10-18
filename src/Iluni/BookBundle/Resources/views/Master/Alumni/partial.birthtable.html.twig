@@ -22,9 +22,20 @@
         <th>{% trans from 'forms' %}Year{% endtrans %}</th>
 {% endblock %}
 
+{% block table_rows_outer %}
+    {% for entity in entities %}
+    {% set count = count + 1 %}
+    {% set day = entity.birthdate %}
+
+    <tr class="post-bg-{{ day|date('m')
+        }}" {{ block('table_loop_attribute') }}>
+        {{ block('table_row') }}
+    </tr>
+    {% endfor %}
+ {% endblock %}
+
 {% block table_row %}
-        {{ parent() }}
-        {% set day = entity.birthdate %}
+        <td valign="top" width="2%">{{ count }}</td>
 
         {% if is_granted('ROLE_EDITOR') %}
         <td width="8%">

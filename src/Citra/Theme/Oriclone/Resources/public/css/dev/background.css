@@ -1,0 +1,23 @@
+.post {
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+
+    background-color: ansparent;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+.post-bg-00 { background-image: none;  }
+.post-bg-01 { background-image: url(../../images/shade/olive.jpg);    }
+.post-bg-02 { background-image: url(../../images/shade/red.jpg);  }
+.post-bg-03 { background-image: url(../../images/shade/orange.jpg);   }
+.post-bg-04 { background-image: url(../../images/shade/blue.jpg); }
+.post-bg-05 { background-image: url(../../images/shade/brown.jpg);    }
+.post-bg-06 { background-image: url(../../images/shade/yellow.jpg);   }
+.post-bg-07 { background-image: url(../../images/shade/olive.jpg);    }
+.post-bg-08 { background-image: url(../../images/shade/red.jpg);  }
+.post-bg-09 { background-image: url(../../images/shade/orange.jpg);   }
+.post-bg-10 { background-image: url(../../images/shade/blue.jpg); }
+.post-bg-11 { background-image: url(../../images/shade/grey.jpg); }
+.post-bg-12 { background-image: url(../../images/shade/yellow.jpg);   }

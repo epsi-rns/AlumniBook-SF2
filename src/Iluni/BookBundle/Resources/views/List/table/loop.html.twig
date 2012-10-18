@@ -8,6 +8,7 @@
         </tr>
       </thead>
       <tbody>
+        {% block table_rows_outer %}
         {% for index, entity in entities %}
         {% set count = count + 1 %}
         <tr class="{{ cycle(['even', 'odd'], loop.index) }}"
@@ -17,6 +18,7 @@
             {% endblock %}
         </tr>
         {% endfor %}
+        {% endblock %}
       </tbody>
     </table>
     <br/>
