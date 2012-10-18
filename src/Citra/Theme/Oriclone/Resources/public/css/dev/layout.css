@@ -1,7 +1,11 @@
 /*
 http://www.barelyfitz.com/screencast/html-training/css/positioning/
 */
-.clr { clear: both; }
+.clr {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
 
 html {
     height: 100%;
