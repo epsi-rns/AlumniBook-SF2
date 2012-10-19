@@ -14,7 +14,7 @@
 }
 
 h3, h4, h5 { margin: 5px; }
-h3, h4, h5 { color:#6bc; }
+h3, h4, h5 { color:#dd6; text-shadow: black 1px 1px 2px; }
 h3:hover, h4:hover, h5:hover { border: none; }
 
 .lay_box .suggestion h4  { color:#000; }

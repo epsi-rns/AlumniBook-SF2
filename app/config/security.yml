@@ -30,7 +30,7 @@ security:
                 users:
                     user:  { password: userpass, roles: [ 'ROLE_USER' ] }
 
-
+    # authentication
     firewalls:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
@@ -56,6 +56,7 @@ security:
             #http_basic:
             #    realm: "Secured Demo Area"
 
+    # authorization
     access_control:
         # -> Anyone can see
         - { path: ^/(menu|index.atom), roles: IS_AUTHENTICATED_ANONYMOUSLY }
