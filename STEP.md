@@ -2,7 +2,7 @@ How do I learn
 --------------
 
 This section explain this project step-by-step.
-I'm learning by doing. And this project is the result.
+I'm learning SF2 by doing. And this project is the result.
 
 For more comprehensive material,
 there are many good tutorial that you can read in internet.
@@ -191,6 +191,40 @@ To limit data viewed, we are using pagination.
 *   Test
 
         Tests/Controller/Filter/AlumniControllerTest.php
+
+### 3rd Party
+
+*   Admin Bundle
+
+    Sometimes you need other bundle, eg. Sonata. The famous admin bundle.
+
+        vendor/sonata-project/*
+
+*   Admin Form
+
+    It might needs special directory,
+    you are free to place it in any directory
+    as long as you don't get yourself confused about it.
+
+    Let's name it Admin directory as it is self explainatory.
+
+        Admin/Category/CompetencyAdmin.php
+
+*   Browser
+
+        http://book2/app_dev.php/admin/iluni/book/category-competency/list
+
+
+### Libraries
+
+After many hours of refactoring,
+you might end up with a base class to handle repeated task, a common helper,
+an extension (e.g twig, or assetic), a service listener (e.g. form type)
+or maybe a whole new class to handle specific things (e.g pager).
+
+This bundle group together this special folder in library folder.
+I just want to keep my folder tidy.
+
 
 ### Conclusion
 
