@@ -14,8 +14,13 @@
 
         [<strong title="{% trans %}logged in as {% endtrans
             %} {{ username }}">{{ username }}</strong>]
+        {% if app.user %}
         - <a href="{{ path('user_logout')
             }}">{% trans from 'navigation'%}Logout{% endtrans %}</a>
+        {% else %}
+        - <a href="{{ path('user_login')
+            }}">{% trans from 'navigation'%}Login{% endtrans %}</a>
+        {% endif %}
         <br/>
 {% endblock %}
 

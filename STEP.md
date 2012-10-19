@@ -2,10 +2,14 @@ How do I learn
 --------------
 
 This section explain this project step-by-step.
-I'm learning SF2 by doing. And this project is the result.
+I'm learning SF2 by doing it step by step.
+And this project is the result.
 
 For more comprehensive material,
 there are many good tutorial that you can read in internet.
+My favorite reading stuff is
+[Jobeet2 by ens.ro](http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/).
+
 Reading official symfony documentation is a must.
 
 
@@ -55,6 +59,10 @@ Let's say the alumni entity as example.
     You can add any necessary method or modify to suit your needs.
 
         $ app/console doctrine:schema:update --force
+
+    Or list them all
+
+        $ app/console doctrine:mapping:info
 
 *   Data Fixtures
 
@@ -146,6 +154,10 @@ To limit data viewed, we are using pagination.
 
         ../Resources/config/routing/filter/alumni.yml
 
+    Debugging
+
+        $ php app/console router:debug alumni
+
 *   Controller
 
         ../Controller/Filter/AlumniController.php
@@ -222,13 +234,13 @@ you might end up with a base class to handle repeated task, a common helper,
 an extension (e.g twig, or assetic), a service listener (e.g. form type)
 or maybe a whole new class to handle specific things (e.g pager).
 
-This bundle group together this special folder in library folder.
+This bundle group together this special needs in library folder.
 I just want to keep my folder tidy.
 
 
 ### Conclusion
 
-That's all.
-
 Now you can make any entity easier,
 because you already have working example in this bundle.
+
+That's all.

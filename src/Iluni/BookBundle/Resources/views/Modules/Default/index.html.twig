@@ -11,6 +11,7 @@
 
     <br/>
 
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
     <table width="100%" cellpadding="4" cellspacing="0" border="0" align="center" class="contentpane">
       <tr>
         <td>
@@ -124,9 +125,10 @@
         </ul></td>
       </tr>
     </table>
+    {% endif %}
 
-  <br/>
-  <q>{% trans from "navigation" %}Last updated of this data:{% endtrans %}
-    <blink>{{ lastupdate }}</blink>.</q>
+    <br/>
+    <q>{% trans from "navigation" %}Last updated of this data:{% endtrans %}
+        <blink>{{ lastupdate }}</blink>.</q>
 
 {% endblock %}
