@@ -16,7 +16,6 @@ class DistrictAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array('help'=>'District/ City'))
             ->add('province', null, array(
                 'help'=>'Select province where the district belong to'

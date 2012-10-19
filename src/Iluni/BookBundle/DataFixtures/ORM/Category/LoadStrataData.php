@@ -21,6 +21,9 @@ class LoadStrataData extends LoadBookCategoryData implements OrderedFixtureInter
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Strata'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Strata());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $fixture = new Strata();

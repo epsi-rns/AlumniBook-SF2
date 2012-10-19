@@ -16,7 +16,6 @@ class CompetencyAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array('help'=>'Personal Competency Category'))
             ->add('memo');
     }

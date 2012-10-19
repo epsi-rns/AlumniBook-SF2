@@ -7,7 +7,7 @@ Iluni\BookBundle\Entity\Category\BizField:
     id:
       type: smallint
       column: biz_field_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string

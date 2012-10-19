@@ -21,6 +21,9 @@ class LoadDistrictData extends LoadBookCategoryData implements OrderedFixtureInt
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['District'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new District());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $fixture = new District();

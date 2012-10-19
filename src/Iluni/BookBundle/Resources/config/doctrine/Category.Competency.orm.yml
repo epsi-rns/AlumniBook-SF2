@@ -7,7 +7,7 @@ Iluni\BookBundle\Entity\Category\Competency:
     id:
       type: smallint
       column: competency_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string

@@ -21,5 +21,16 @@ abstract class LoadBookCategoryData extends LoadBookData implements ContainerAwa
 
         return $fixtures;
     }
+
+    protected function setForceId($em, $fixture_class)
+    {
+        $metadata = $em->getClassMetaData(get_class($fixture_class));
+        $metadata->setIdGenerator(
+            new \Doctrine\ORM\Id\AssignedGenerator()
+        );
+        $metadata->setIdGeneratorType(constant(
+            '\Doctrine\ORM\Mapping\ClassMetadata::GENERATOR_TYPE_NONE'
+        ));
+    }
 }
 

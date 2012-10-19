@@ -16,7 +16,6 @@ class DepartmentAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array('help'=>'A department name'))
             ->add('faculty', null, array(
                 'help'=>'Select faculty where the department belong to'

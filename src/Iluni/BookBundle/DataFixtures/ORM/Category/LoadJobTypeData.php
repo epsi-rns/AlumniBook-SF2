@@ -22,6 +22,9 @@ class LoadJobTypeData extends LoadBookCategoryData implements OrderedFixtureInte
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['JobType'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new JobType());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];

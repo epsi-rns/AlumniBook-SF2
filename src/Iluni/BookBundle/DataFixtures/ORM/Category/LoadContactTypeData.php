@@ -22,6 +22,9 @@ class LoadContactTypeData extends LoadBookCategoryData implements OrderedFixture
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['ContactType'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new ContactType());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];

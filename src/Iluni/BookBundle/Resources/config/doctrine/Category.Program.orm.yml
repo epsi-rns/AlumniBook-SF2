@@ -5,7 +5,7 @@ Iluni\BookBundle\Entity\Category\Program:
     id:
       type: smallint
       column: program_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string

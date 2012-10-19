@@ -21,6 +21,9 @@ class LoadProvinceData extends LoadBookCategoryData implements OrderedFixtureInt
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Province'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Province());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $fixture = new Province();

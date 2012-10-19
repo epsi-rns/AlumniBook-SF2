@@ -72,7 +72,7 @@ oriclone:
         logo:        logo-orikara
 
         classes:
-            background_header: yellow
+            # background_header: yellow
             # just black, no gradient
             variation_top:     ""
 

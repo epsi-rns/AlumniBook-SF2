@@ -16,7 +16,6 @@ class BizFieldAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array(
                 'label'=>'Business Field',
                 'help'=>'Business Line Category for Organization/ Company'

@@ -22,6 +22,9 @@ class LoadCompetencyData extends LoadBookCategoryData implements OrderedFixtureI
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Competency'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Competency());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];
@@ -35,9 +38,12 @@ class LoadCompetencyData extends LoadBookCategoryData implements OrderedFixtureI
 
             $em->persist($fixture);
 
+
+
             // Add a reference to be able to use this object in others entities loaders
             $this->addReference('competency-'. $ref, $fixture);
         }
+
 
         $em->flush();
     }

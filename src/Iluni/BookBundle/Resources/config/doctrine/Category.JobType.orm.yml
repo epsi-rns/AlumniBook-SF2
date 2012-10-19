@@ -6,7 +6,7 @@ Iluni\BookBundle\Entity\Category\JobType:
     id:
       type: smallint
       column: job_type_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string

@@ -28,6 +28,9 @@ class LoadProgramData extends LoadBookCategoryData implements OrderedFixtureInte
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Program'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Program());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];

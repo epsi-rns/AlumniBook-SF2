@@ -22,6 +22,9 @@ class LoadFacultyData extends LoadBookCategoryData implements OrderedFixtureInte
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Faculty'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Faculty());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];

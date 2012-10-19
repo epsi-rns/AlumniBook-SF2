@@ -6,7 +6,7 @@ Iluni\BookBundle\Entity\Category\Faculty:
     id:
       type: smallint
       column: faculty_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string

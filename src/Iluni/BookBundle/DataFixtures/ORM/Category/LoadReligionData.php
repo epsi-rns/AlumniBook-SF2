@@ -21,6 +21,9 @@ class LoadReligionData extends LoadBookCategoryData implements OrderedFixtureInt
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['Religion'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new Religion());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $fixture = new Religion();

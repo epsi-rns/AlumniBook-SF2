@@ -5,11 +5,11 @@ Iluni\BookBundle\Entity\Category\Strata:
     id:
       type: smallint
       column: strata_id
-      generator: { strategy: NONE }
+      generator: { strategy: AUTO }
   fields:
     name:
       type: string
-      column: strata      
+      column: strata
       length: 15
       unique: true
   lifecycleCallbacks: {  }

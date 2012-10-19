@@ -16,7 +16,6 @@ class ContactTypeAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array(
                 'label'=>'Type',
                 'help'=>'Contact Type'

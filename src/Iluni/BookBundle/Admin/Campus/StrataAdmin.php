@@ -16,7 +16,6 @@ class StrataAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id', null, array('label'=>'ID'))
             ->add('name', null, array(
                 'label'=>'Strata',
                 'help'=>'Educational Level of Achievement, or Degree'

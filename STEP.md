@@ -71,8 +71,8 @@ Let's say the alumni entity as example.
 
     You need fixtures bundle to run data fixtures
 
-        vendor/doctrine/data-fixtures
-        vendor/doctrine/data-fixtures-bundle
+        vendor/doctrine/data-fixtures/
+        vendor/doctrine/data-fixtures-bundle/
 
     Let's run it from console
 
@@ -198,7 +198,7 @@ To limit data viewed, we are using pagination.
 
     Sometimes you need other bundle, eg. Sonata. The famous admin bundle.
 
-        vendor/sonata-project/*
+        vendor/sonata-project/*/
 
 *   Admin Form
 

@@ -22,6 +22,9 @@ class LoadBizFieldData extends LoadBookCategoryData implements OrderedFixtureInt
         $fixtures = $this->getModelFixtures();
         $items = $fixtures['BizField'];
 
+        // generator: { strategy: AUTO }
+        $this->setForceId($em, new BizField());
+
         // Now iterate over all fixtures
         foreach ($items as $ref => $item) {
             $item_en = $item['Translation']['en'];
