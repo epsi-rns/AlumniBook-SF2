@@ -42,9 +42,9 @@ assetic:
     use_controller: false
 #    read_from: %kernel.root_dir%/../web/bundles/oriclonetheme
 #    write_to:  %kernel.root_dir%/../web
-    bundles:
-        - MootoolsBundle
-        - OricloneBundle
+    #bundles:
+    #    - MootoolsBundle
+    #    - OricloneBundle
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
