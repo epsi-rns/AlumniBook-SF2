@@ -6,6 +6,12 @@
 {% endblock %}
 
 {% block body %}
+    {% if error %}
+    <div id="system-message">
+        <div class="flash_notice">{{ error.message|trans }}</div>
+    </div>
+    {% endif %}
+
     <br/>
     <b>Demo login:</b>
 
@@ -18,19 +24,25 @@
         </ul>
     </p>
 
-    {% if error %}
-        <div class="error">{{ error.message }}</div>
-    {% endif %}
+    <script type="text/javascript">
+        window.addEvent("domready",function(){
+            new FormValidator.Inline('login');
+        });
+    </script>
 
     <form action="{{ path("user_check") }}" method="post" id="login">
         <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="_username" value="{{ last_username }}" />
+            <label for="username">{% trans %}Username{% endtrans %}</label>
+            <input type="text" id="username" name="_username"
+                class="required validate-nospace validate-alphanum minLength:4 maxLength:10"
+                maxlength="10"/>
         </div>
 
         <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="_password" />
+            <label for="password">{% trans %}Password{% endtrans %}</label>
+            <input type="password" id="password" name="_password"
+                class="required validate-nospace  minLength:4 maxLength:30"
+                value="{{ last_username }}" />
         </div>
 
         <button type="submit">login</button>

@@ -54,6 +54,18 @@
         <source>Not saved! Please verify entry.</source>
         <target>Tidak disimpan! Mohon periksa masukan.</target>
       </trans-unit>
+      <trans-unit id="31">
+        <source>Username</source>
+        <target>Nama Pengguna</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Password</source>
+        <target>Kata Sandi</target>
+      </trans-unit>
+      <trans-unit id="33">
+        <source>Bad credentials</source>
+        <target>Mandat Tidak Sah</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
