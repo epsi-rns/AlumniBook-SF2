@@ -4,6 +4,14 @@
 
 {% block title %}Our simple data entry for alumni{% endblock %}
 
+{% block include_metas %}
+    {{ parent() }}
+    <meta name="title" content="AlumniBook - Our simple data entry for alumni" />
+    <meta name="description" content="Official Demo of AlumniBook" />
+    <meta name="keywords" content="Symfony2, AlumniBook, Alumni, Book, Alumni, Data Entry, Information System" />
+    <meta name="generator" content="Karimata 1.2.3 Media Engine" />
+{% endblock %}
+
 {% block include_stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('bundles/ilunibook/css/silk.css') }}" type="text/css" media="all" />

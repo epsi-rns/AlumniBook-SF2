@@ -19,31 +19,21 @@ No support as this project is for learnig purpose only.
 But of course for live site, if anyone interested,
 can use this source code freely without my permission.
 
+## Sections
 
-## Detail
+*   [Detail](https://github.com/epsi/AlumniBook-SF2/blob/master/FEATURE.md)
 
-[FEATURE.md](https://github.com/epsi/AlumniBook-SF2/blob/master/FEATURE.md)
+    This page containing
 
-This page containing
+    *   Related Link,
+    *   Feature,
+    *   Screenshot,
+    *   included Bundle,
+    *   More on License
 
-*   Related Link,
+*   [Install](https://github.com/epsi/AlumniBook-SF2/blob/master/INSTALL.md)
 
-*   Feature,
-
-*   Screenshot,
-
-*   included Bundle,
-
-*   More on License
-
-## Install
-
-[INSTALL.md](https://github.com/epsi/AlumniBook-SF2/blob/master/INSTALL.md)
-
-
-## Learning
-
-[STEP.md](https://github.com/epsi/AlumniBook-SF2/blob/master/STEP.md)
+*   [Learning](https://github.com/epsi/AlumniBook-SF2/blob/master/STEP.md)
 
 
 
