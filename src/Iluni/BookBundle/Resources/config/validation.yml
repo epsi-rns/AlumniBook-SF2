@@ -37,6 +37,11 @@ Iluni\BookBundle\Entity\Detail\AlumniCommunities:
                 min: 1960
                 max: 2020
 
+Iluni\BookBundle\Entity\Base\Address:
+    constraints:
+        - Callback:
+            methods:   [isCombinationValid]
+
 Iluni\BookBundle\Entity\Base\Contacts:
     properties:
         contact:

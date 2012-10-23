@@ -31,10 +31,10 @@ twig:
 
     form:
         resources:
+            # 'form_table_layout.html.twig'
             - 'IluniBookBundle:Shared/Form:forms_override.html.twig'
             - 'LookupModalBundle:Form:lookupmodal_widget.html.twig'
             - 'DatePickerBundle:Form:datepicker_widget.html.twig'
-
 
 # Assetic Configuration
 assetic:

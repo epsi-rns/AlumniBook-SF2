@@ -22,4 +22,5 @@ Iluni\BookBundle\Entity\Category\JobType:
       joinColumns:
         job_type_id:
           referencedColumnName: job_type_id
-  lifecycleCallbacks: {  }
+  lifecycleCallbacks:
+    preRemove: [ preventDelete ]

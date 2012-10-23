@@ -12,4 +12,5 @@ Iluni\BookBundle\Entity\Category\Province:
       column: province
       length: 30
       unique: true
-  lifecycleCallbacks: {  }
+  lifecycleCallbacks:
+    preRemove: [ preventDelete ]

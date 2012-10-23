@@ -18,4 +18,5 @@ Iluni\BookBundle\Entity\Category\District:
       joinColumns:
         province_id:
           referencedColumnName: province_id
-  lifecycleCallbacks: {  }
+  lifecycleCallbacks:
+    preRemove: [ preventDelete ]

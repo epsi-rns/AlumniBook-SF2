@@ -427,7 +427,8 @@ class Organization
         if ($this->getParent()) {
             $parent = $this->getParent();
             if ($this->getId()==$parent->getId()) {
-                $context->addViolationAtSubPath('parent', 'Cannot set child as parent!', array(), null);
+                $message = 'An organization cannot be made a descendent of itself.!';
+                $context->addViolationAtSubPath('parent', $message, array(), null);
                 $context->addViolationAtSubPath('name', 'The child cannot match parent!', array(), null);
             }
         }

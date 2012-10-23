@@ -8,11 +8,26 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 
+use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
+
 /**
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
 class JobPositionAdmin extends Admin
 {
+    /**
+     * @return \Sonata\AdminBundle\Datagrid\ProxyQueryInterface
+     */
+    public function createQuery($context = 'list')
+    {
+        $query = parent::createQuery($context);
+
+        $alias = $query->getRootAlias();
+        $query->andWhere($alias.'.id > 1');
+
+        return $query;
+    }
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

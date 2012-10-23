@@ -113,5 +113,12 @@ class JobType
     {
         return $this->alumni_org_map;
     }
+
+    public function preventDelete()
+    {
+        if ($this->id <= 2) {
+            throw new \Exception('avoid delete');
+        }
+    }
 }
 

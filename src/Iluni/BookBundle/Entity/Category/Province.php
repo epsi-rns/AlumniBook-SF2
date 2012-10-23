@@ -67,5 +67,12 @@ class Province
     {
         return $this->getName();
     }
+
+    public function preventDelete()
+    {
+        if ($this->id <= 0) {
+            throw new \Exception('avoid delete');
+        }
+    }
 }
 

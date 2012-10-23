@@ -24,6 +24,8 @@ abstract class LoadBookCategoryData extends LoadBookData implements ContainerAwa
 
     protected function setForceId($em, $fixture_class)
     {
+        // should replace $fixture_class with new MyFixture::class ini PHP 5.5.
+
         $metadata = $em->getClassMetaData(get_class($fixture_class));
         $metadata->setIdGenerator(
             new \Doctrine\ORM\Id\AssignedGenerator()

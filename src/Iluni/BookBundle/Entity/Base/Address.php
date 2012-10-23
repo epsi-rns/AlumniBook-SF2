@@ -3,6 +3,7 @@
 namespace Iluni\BookBundle\Entity\Base;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\ExecutionContext;
 
 /**
  * Iluni\BookBundle\Entity\Base\Address
@@ -304,6 +305,26 @@ class Address
     public function getDistrict()
     {
         return $this->district;
+    }
+
+    public function isCombinationValid(ExecutionContext $context)
+    {
+        if (! ($this->area
+            || $this->building
+            || $this->street) ) {
+
+            $message = 'Address is empty.';
+            $context->addViolation($message, array(), null);
+        }
+
+        if ($this->country==null
+            && $this->province==null
+            && $this->district==null
+            && !$this->postalCode) {
+
+            $message = 'Region is empty.';
+            $context->addViolation($message, array(), null);
+        }
     }
 }
 
