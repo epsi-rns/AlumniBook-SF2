@@ -5,3 +5,8 @@ alumni:
 alumni_birthday:
     pattern:  /birthday
     defaults: { _controller: "IluniBookBundle:Filter\Birthday:index" }
+
+alumni_birthday_month:
+    pattern:  /birthday/{month}
+    defaults: { _controller: "IluniBookBundle:Filter\Birthday:month" }
+    requirements: { month:  \d+ }

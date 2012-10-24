@@ -28,12 +28,24 @@ class BirthdayFilter extends AbstractType
         115 => 'Class of (year)'
     );
 
+    protected static $months_choices = array(
+        1=>'January', 2=>'February', 3=>'March', 4=>'April',
+        5=>'May', 6=>'June', 7=>'July', 8=>'August',
+        9=>'September', 10=>'October', 11=>'November', 12=>'December'
+    );
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('orderBy', 'order_by', array(
                 'choices'   => self::$order_by_choices))
-            // ...
+            ->add('monthBy', 'choice', array(
+                'choices'   => self::$months_choices,
+                'label'     => 'Month by',
+                'required'  => false,
+                'empty_value' => '-- Whole Year --',
+                'empty_data'  => null
+            ))
             ->add('community', 'community_holder');
     }
 

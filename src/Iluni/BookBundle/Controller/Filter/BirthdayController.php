@@ -26,7 +26,7 @@ class BirthdayController extends CommonFilterController
         $holder = $this->get('iluni_book.filter_options_holder');
         $params = $holder
             ->init('birthday', $request)
-            ->set(array('orderBy' => 1))
+            ->set(array('orderBy' => 75))
             ->compileOptions();
 
         $render_options = array(
@@ -60,11 +60,23 @@ class BirthdayController extends CommonFilterController
             'filter_form'   => $filterForm->createView(),
             'options' => array(
                 'path' => 'alumni_birthday',
-                'use_fields' => array()
+                'use_fields' => array('monthBy')
             )
         );
 
         return $this->renderTwig('List:filter/base', $render_options);
+    }
+
+    private function forwardFilterPost($params)
+    {
+        return $this->doForwardFilterPost('birthday', 'index', $params);
+    }
+
+    public function monthAction($month)
+    {
+        return $this->forwardFilterPost(
+            array('monthBy' => $month)
+        );
     }
 }
 

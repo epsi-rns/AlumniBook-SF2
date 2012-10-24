@@ -78,6 +78,15 @@ class AlumniRepository extends CommonConstraintRepository
         }
     }
 
+    protected function checkConstraintMonthBy($constraint = array())
+    {
+        if (isset($constraint['monthBy'])) {
+           $this->qb
+                ->andWhere('MONTH(r.birthdate) = :month_by')
+                ->setParameter('month_by', $constraint['monthBy']);
+        }
+    }
+
     private function addCustomDependency()
     {
         // http://www.simukti.net/blog/2012/04/05/how-to-select-year-month-day-in-doctrine2/
@@ -97,24 +106,20 @@ class AlumniRepository extends CommonConstraintRepository
         $this->addCustomDependency();
 
         $this->qb = $this->createQueryBuilder('r')
-            ->select('r, ac, r.id, '
+            ->select('r, ac, c, r.id, '
                 .'WEEKDAY(r.birthdate) as a_weekday, '
                 .'DAY(r.birthdate) as a_day, '  // Day of Month
                 .'MONTH(r.birthdate) as a_month, '
                 .'YEAR(r.birthdate) as a_year')
             ->leftJoin('r.acommunities', 'ac')
-            //->leftJoin('ac.community', 'c');
+            ->leftJoin('ac.community', 'c')
             ->where('r.birthdate is not null');
 
         $this->checkConstraintOrderBy($constraint);
+        $this->checkConstraintMonthBy($constraint);
         $this->checkConstraintCommunity($constraint);
 
-        // Debugging purpose.
-        $dql = $this->qb->getDql();
-        $em = $this->getEntityManager();
-        $query = $em->createQuery($dql);
-
-        return $query;
+        return $this->qb->getQuery();
     }
 
     public function findQueryNameLike($name = null)

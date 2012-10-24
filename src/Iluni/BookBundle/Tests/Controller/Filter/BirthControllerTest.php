@@ -9,26 +9,24 @@ use Iluni\BookBundle\Tests\ControllerTestCase;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class AlumniControllerTest extends ControllerTestCase
+class BirthControllerTest extends ControllerTestCase
 {
     public function testFilterScenario()
     {
         $client = $this->startScenario();
 
         // find entity
-        $crawler = $client->request('GET', '/alumni/');
+        $crawler = $client->request('GET', '/alumni/birthday/11');
         $statusCode = $client->getResponse()->getStatusCode();
         $this->assertSame(200, $statusCode);
 
         // Prepare Data, fill in the form
-        $formName = 'iluni_bookbundle_alumnifilter';
+        $formName = 'iluni_bookbundle_birthdayfilter';
         $formData = array(
-            $formName.'[orderBy]'  => 12,
-            $formName.'[community][faculty]'  => 4,
-            $formName.'[name]'  => '%nymous%',
+            $formName.'[orderBy]'  => 75
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_show');
+        $this->continueFilterScenario($crawler, $formData, 'list_edit');
     }
 }
 

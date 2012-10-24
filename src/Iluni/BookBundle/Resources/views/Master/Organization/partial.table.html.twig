@@ -17,7 +17,7 @@
         {{ parent() }}
 
         {% if is_granted('ROLE_EDITOR') %}
-        <td width="8%">
+        <td width="8%" class="action">
             {{ crud.link_to_action_show(
                 'org_show', { 'id': entity.id }) }}
             {{ crud.link_to_action_edit(

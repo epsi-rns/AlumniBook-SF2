@@ -366,29 +366,13 @@
         <source>-- Select District --</source>
         <target>-- Pilih Kabupaten --</target>
       </trans-unit>
-      <trans-unit id="95">
-        <source>-- Pick Alumni --</source>
-        <target>-- Petik Alumni --</target>
-      </trans-unit>
-      <trans-unit id="96">
-        <source>-- Lookup Alumna/us Name --</source>
-        <target>-- Cari nama alumni dalam daftar --</target>
-      </trans-unit>
-      <trans-unit id="97">
-        <source>-- Pick Organization/ Company --</source>
-        <target>-- Petik Organisasi/ Perusahaan --</target>
-      </trans-unit>
-      <trans-unit id="98">
-        <source>-- Lookup Organization/ Company Nam --</source>
-        <target>-- Cari nama perusahaan dalam daftar --</target>
-      </trans-unit>
       <trans-unit id="99">
-        <source>-- Pick Community --</source>
-        <target>-- Petik Komunitas --</target>
+        <source>Group</source>
+        <target>Kelompok</target>
       </trans-unit>
       <trans-unit id="100">
-        <source>-- Lookup Community Name --</source>
-        <target>-- Cari nama komunitas dalam daftar --</target>
+        <source>-- Default --</source>
+        <target>-- Pilihan Default --</target>
       </trans-unit>
       <trans-unit id="101">
         <source>-- Academic Formal --</source>
@@ -399,8 +383,8 @@
         <target>-- Badan Kemahasiswaan --</target>
       </trans-unit>
       <trans-unit id="103">
-        <source>-- Default --</source>
-        <target>-- Pilihan Default --</target>
+        <source>-- Whole Year --</source>
+        <target>-- Setahun Penuh --</target>
       </trans-unit>
       <trans-unit id="104">
         <source>-- All Kind of Contacts --</source>
@@ -458,9 +442,29 @@
         <source>-- all districts in this province --</source>
         <target>-- Semua kabupaten di propinsi ini --</target>
       </trans-unit>
-      <trans-unit id="118">
-        <source>Group</source>
-        <target>Kelompok</target>
+      <trans-unit id="120">
+        <source>-- Pick Alumni --</source>
+        <target>-- Petik Alumni --</target>
+      </trans-unit>
+      <trans-unit id="121">
+        <source>-- Lookup Alumna/us Name --</source>
+        <target>-- Cari nama alumni dalam daftar --</target>
+      </trans-unit>
+      <trans-unit id="122">
+        <source>-- Pick Organization/ Company --</source>
+        <target>-- Petik Organisasi/ Perusahaan --</target>
+      </trans-unit>
+      <trans-unit id="123">
+        <source>-- Lookup Organization/ Company Nam --</source>
+        <target>-- Cari nama perusahaan dalam daftar --</target>
+      </trans-unit>
+      <trans-unit id="124">
+        <source>-- Pick Community --</source>
+        <target>-- Petik Komunitas --</target>
+      </trans-unit>
+      <trans-unit id="125">
+        <source>-- Lookup Community Name --</source>
+        <target>-- Cari nama komunitas dalam daftar --</target>
       </trans-unit>
     </body>
   </file>

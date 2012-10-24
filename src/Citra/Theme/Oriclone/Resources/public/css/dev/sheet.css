@@ -22,6 +22,10 @@
     padding: 2px 4px;
 }
 
+.sheet td.action {
+    white-space: nowrap;
+}
+
 
 tr.even {
     background: #EFEFEF;

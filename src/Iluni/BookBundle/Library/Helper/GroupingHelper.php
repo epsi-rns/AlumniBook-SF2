@@ -183,11 +183,11 @@ class GroupingHelper
             case 73:
                 $key = $entity->get('birthdate');
                 break;
-            */
-            // case is alumni descendant
             case 74:
                 $key = $entity['a_day'];
                 break;
+            */
+            // case is alumni descendant
             case 75:
                 $key = $entity['a_month']
                     .' - '.$entity[0]->getBirthdate()->format('F');
