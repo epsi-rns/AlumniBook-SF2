@@ -331,14 +331,14 @@ class Alumni
         return $this->acommunities[$this->viewcount++];
     }
 
-    public function getCommunityText()
+    public function getCommunityArray()
     {
         $comies = array();
 
-        $communities = $this->acommunities;
-        foreach ($communities as $community) {
-            $comy = $community->getCommunity();
-            $year = $community->getClassYear();
+        $acommunities = $this->acommunities;
+        foreach ($acommunities as $acommunity) {
+            $comy = $acommunity->getCommunity();
+            $year = $acommunity->getClassYear();
             // $text = $this->textShort($comy, 15);
 
             if (!empty($year)) {
@@ -346,9 +346,7 @@ class Alumni
             }
             $comies[] = $text;
         }
-
-        $text_comy = implode('<br/>', $comies);
-        return $text_comy;
+        return $comies;
     }
 
     /**

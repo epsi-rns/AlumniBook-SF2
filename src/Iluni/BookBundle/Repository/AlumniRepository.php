@@ -3,6 +3,7 @@
 namespace Iluni\BookBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 use Iluni\BookBundle\Repository\CommonConstraintRepository;
 
@@ -19,6 +20,7 @@ class AlumniRepository extends CommonConstraintRepository
     protected static $order_by_choices = array(
         1  => 'r.id',   // default
         24 => 'r.name',
+        28 => 'r.name',
 
         11 => 'r.created',
         12 => 'r.updated',
@@ -76,32 +78,43 @@ class AlumniRepository extends CommonConstraintRepository
         }
     }
 
+    private function addCustomDependency()
+    {
+        // http://www.simukti.net/blog/2012/04/05/how-to-select-year-month-day-in-doctrine2/
+
+        $emConfig = $this->getEntityManager()->getConfiguration();
+        $dqlf_path = 'Iluni\BookBundle\Library\Doctrine\Mysql';
+
+        $emConfig->addCustomDatetimeFunction('WEEKDAY', $dqlf_path.'\Weekday');
+        $emConfig->addCustomDatetimeFunction('YEAR', $dqlf_path.'\Year');
+        $emConfig->addCustomDatetimeFunction('MONTH', $dqlf_path.'\Month');
+        $emConfig->addCustomDatetimeFunction('DAY', $dqlf_path.'\Day'); //
+    }
+
     public function findQueryBirthdayFilter($constraint = array())
     {
-        $this->qb = $this->createQueryBuilder('r')
-            ->select('r, ac')
-            ->leftJoin('r.acommunities', 'ac')
-            ->where('r.birthdate is not null');
-        /*
         // Warning: mySQL specific
-        $query = Doctrine_Core::getTable('Alumni')
-          ->createQuery('a')
-          ->select('a.aid, a.name, a.fullname, '
-            .'a.gender, a.created_at, a.birthdate, '
-            .'WEEKDAY(a.birthdate) as a_weekday, '
-            .'DAYOFMONTH(a.birthdate) as a_day, '
-            .'MONTH(a.birthdate) as a_month, '
-            .'YEAR(a.birthdate) as a_year, '
-            .'ac.*'
-            )
-          ->leftJoin('a.ACommunities ac')
-          ->andWhere('a.birthdate is not null');
-        */
+        $this->addCustomDependency();
+
+        $this->qb = $this->createQueryBuilder('r')
+            ->select('r, ac, r.id, '
+                .'WEEKDAY(r.birthdate) as a_weekday, '
+                .'DAY(r.birthdate) as a_day, '  // Day of Month
+                .'MONTH(r.birthdate) as a_month, '
+                .'YEAR(r.birthdate) as a_year')
+            ->leftJoin('r.acommunities', 'ac')
+            //->leftJoin('ac.community', 'c');
+            ->where('r.birthdate is not null');
 
         $this->checkConstraintOrderBy($constraint);
         $this->checkConstraintCommunity($constraint);
 
-        return $this->qb->getQuery();
+        // Debugging purpose.
+        $dql = $this->qb->getDql();
+        $em = $this->getEntityManager();
+        $query = $em->createQuery($dql);
+
+        return $query;
     }
 
     public function findQueryNameLike($name = null)
@@ -155,30 +168,6 @@ class AlumniRepository extends CommonConstraintRepository
         $row = $query->getSingleResult();
 
         return $row['last_update'];
-    }
-
-    public function getLastUpdateOldCode($translator)
-    {
-        $last_update = $this->getLastUpdate();
-
-        $format = '%A, %e %B %Y, %T';
-        $format = $translator->trans($format);
-
-        $timelastupdate = strtotime($last_update);
-        $lastupdatetext = strftime($format, $timelastupdate);
-
-        return $lastupdatetext;
-    }
-
-    public function getLastUpdateForCover2()
-    {
-        $last_update = $this->getLastUpdate();
-        $format = 'l, j F Y, H:i:s';
-
-        $updated = new \DateTime(trim($last_update));
-        $lastupdatetext = $updated->format($format);
-
-        return $lastupdatetext;
     }
 
     public function getLastUpdateForCover($translator)

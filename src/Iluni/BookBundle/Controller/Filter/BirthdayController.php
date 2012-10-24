@@ -6,65 +6,61 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 use Iluni\BookBundle\Library\Controller\CommonFilterController;
-use Iluni\BookBundle\Form\Filter\AlumniFilter;
+use Iluni\BookBundle\Form\Filter\BirthdayFilter;
 
 use Iluni\BookBundle\Library\LD3\DepartmentFilterLD3;
 
 /**
- * Alumni filter controller.
+ * Birthday filter controller.
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class AlumniController extends CommonFilterController
+class BirthdayController extends CommonFilterController
 {
     /**
-     * Lists all Alumni entities.
+     * Lists all birthday of alumni entities.
      *
      */
     public function indexAction(Request $request)
     {
         $holder = $this->get('iluni_book.filter_options_holder');
         $params = $holder
-            ->init('alumni', $request)
+            ->init('birthday', $request)
             ->set(array('orderBy' => 1))
             ->compileOptions();
 
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Alumni:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Alumni:table'
+            'filterAction' => 'IluniBookBundle:Filter/Birthday:filter',
+            'tableAction'  => 'IluniBookBundle:Filter/Birthday:table'
         );
 
-        return $this->renderTwig('Master/Alumni:index', $render_options);
+        return $this->renderTwig('Master/Birthday:index', $render_options);
     }
 
     public function tableAction($params, $page)
     {
         $query = $this
             ->getRepository('Alumni')
-            ->findQueryFilter($params);
+            ->findQueryBirthdayFilter($params);
 
         $render_options = $this->processFilter($params, $query, $page);
-        $render_options['path'] = 'alumni';
+        $render_options['path'] = 'alumni_birthday';
 
-        return $this->renderTwig('Master/Alumni:partial.table', $render_options);
+        return $this->renderTwig('Master/Birthday:partial.table', $render_options);
     }
 
     public function filterAction($params)
     {
-        $filterForm = $this->createForm(new AlumniFilter());
+        $filterForm = $this->createForm(new BirthdayFilter());
         $filterForm->bind($params);
-
-        $ld3 = new DepartmentFilterLD3($this);
-        $JSOptions = $ld3->getJavascriptOptions('alumni', $params);
 
         $render_options = array(
             'filter_form'   => $filterForm->createView(),
             'options' => array(
-                'path' => 'alumni',
-                'use_fields' => array('name', 'update_st', 'update_nd'),
-                'ld3' => $JSOptions
+                'path' => 'alumni_birthday',
+                'use_fields' => array()
             )
         );
 

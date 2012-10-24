@@ -116,6 +116,9 @@ class GroupingHelper
             case 27:
                 $key = strtoupper(substr($entity->getAOMap()->getOrganization(), 0, 1));
                 break; // Organization
+            case 28:
+                $key = strtoupper(substr($entity[0]->getName(), 0, 1));
+                break; // Alumna/us
             /* Not grouping either
             case 30:
                 $key = $entity->get('product');
@@ -178,21 +181,23 @@ class GroupingHelper
 
             /* Not grouping either
             case 73:
-                $result = $row->get('birthdate');
-                break;
-            case 74:
-                $result = $row->get('a_day');
+                $key = $entity->get('birthdate');
                 break;
             */
             // case is alumni descendant
+            case 74:
+                $key = $entity['a_day'];
+                break;
             case 75:
-                $result = $this->months[$row->get('a_month')];
+                $key = $entity['a_month']
+                    .' - '.$entity[0]->getBirthdate()->format('F');
                 break;
             case 76:
-                $result = $row->get('a_year');
+                $key = $entity['a_year'];
                 break;
             case 77:
-                $result = $this->weekdays[$row->get('a_weekday')];
+                $key = $entity['a_weekday']
+                    .' - '.$entity[0]->getBirthdate()->format('l');
                 break;
             case 81:
                 $key = $entity->getCommunity();

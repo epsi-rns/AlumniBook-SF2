@@ -1,0 +1,90 @@
+<?php
+
+namespace Iluni\BookBundle\Repository;
+
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
+
+use Iluni\BookBundle\Repository\CommonConstraintRepository;
+
+/**
+ * AlumniRepository Unused
+ *
+ * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
+ */
+class AlumniRepository extends CommonConstraintRepository
+{
+    protected static $order_by_choices = array(
+        ...
+    );
+
+    // Just show how not worthy is this, compared to DQL Custom Function
+    public function findNativeQueryBirthdayFilter($constraint = array())
+    {
+        $sample = 'SELECT id, name FROM users WHERE name = ?';
+        $sql = 'SELECT
+            a.aid, a.name, a.fullname, a.birthdate, a.gender,
+            ac.did, ac.class_year, ac.name,
+            c.cid, c.name as cname
+            FROM alumni a
+            LEFT JOIN a_communities ac ON (ac.aid = a.aid)
+            LEFT JOIN community c ON (c.cid = ac.cid)
+            WHERE a.birthdate is not null
+        ';
+
+        $rsm = new ResultSetMapping;
+        $rsm->addEntityResult('IluniBookBundle:Alumni', 'r');
+        $rsm->addFieldResult('r', 'aid', 'id');
+        $rsm->addFieldResult('r', 'name', 'name');
+        $rsm->addFieldResult('r', 'gender', 'gender');
+        $rsm->addFieldResult('r', 'fullname', 'fullname');
+        $rsm->addFieldResult('r', 'birthdate', 'birthdate');
+
+        // Must use FQDN
+        $class = 'Iluni\BookBundle\Entity\Detail\AlumniCommunities';
+        $rsm->addJoinedEntityResult($class, 'ac', 'r', 'acommunities');
+        $rsm->addFieldResult('ac', 'did', 'id');
+        $rsm->addFieldResult('ac', 'class_year', 'classYear');
+        $rsm->addFieldResult('ac', 'name', 'name');
+
+        // Must use FQDN
+        $class = 'Iluni\BookBundle\Entity\Community';
+        $rsm->addJoinedEntityResult($class, 'c', 'ac', 'community');
+        $rsm->addFieldResult('c', 'cid', 'id');
+        $rsm->addFieldResult('c', 'cname', 'name');
+
+
+        $em = $this->getEntityManager();
+        $query = $em->createNativeQuery($sql, $rsm);
+
+        return $query;
+    }
+
+
+
+    public function getLastUpdateOldCode($translator)
+    {
+        $last_update = $this->getLastUpdate();
+
+        $format = '%A, %e %B %Y, %T';
+        $format = $translator->trans($format);
+
+        $timelastupdate = strtotime($last_update);
+        $lastupdatetext = strftime($format, $timelastupdate);
+
+        return $lastupdatetext;
+    }
+
+    public function getLastUpdateForCover2()
+    {
+        $last_update = $this->getLastUpdate();
+        $format = 'l, j F Y, H:i:s';
+
+        $updated = new \DateTime(trim($last_update));
+        $lastupdatetext = $updated->format($format);
+
+        return $lastupdatetext;
+    }
+
+}
+

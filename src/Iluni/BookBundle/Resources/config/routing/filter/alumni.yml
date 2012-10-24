@@ -2,6 +2,6 @@ alumni:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Alumni:index" }
 
-alumni_birth:
-    pattern:  /birth
-    defaults: { _controller: "IluniBookBundle:Filter\Alumni:birth" }
+alumni_birthday:
+    pattern:  /birthday
+    defaults: { _controller: "IluniBookBundle:Filter\Birthday:index" }

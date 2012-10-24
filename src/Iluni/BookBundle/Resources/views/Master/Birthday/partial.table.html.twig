@@ -1,0 +1,59 @@
+{% extends 'IluniBookBundle:List:table/featured.html.twig' %}
+{% import 'IluniBookBundle:Common:macro/crud.html.twig' as crud %}
+
+{% block table_loop_attribute %}title="{{
+    entity|salute|trans({},'elements')}} {{
+    entity.name}}"{% endblock %}
+
+{% block table_header %}
+        {{ parent() }}
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <th>{% trans from 'forms' %}Action{% endtrans %}</th>
+        {% endif %}
+
+        <th>{% trans from 'forms' %}Full Name{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Community{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Birth Date{% endtrans %}</th>
+
+        <th>{% trans from 'forms' %}Weekday{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Day{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Month{% endtrans %}</th>
+        <th>{% trans from 'forms' %}Year{% endtrans %}</th>
+{% endblock %}
+
+{% block table_rows_outer %}
+    {% for row in entities %}
+    {% set entity = row[0] %}
+    {% set count = count + 1 %}
+    {% set day = entity.birthdate %}
+
+    <tr class="post-bg-{{ day|date('m')
+        }}" {{ block('table_loop_attribute') }}>
+        {{ block('table_row') }}
+    </tr>
+    {% endfor %}
+ {% endblock %}
+
+{% block table_row %}
+        <td valign="top" width="2%">{{ count }}</td>
+
+        {% if is_granted('ROLE_EDITOR') %}
+        <td width="8%">
+            {{ crud.link_to_action_show(
+                'alumni_show', { 'id': entity.id }) }}
+            {{ crud.link_to_action_edit(
+                'alumni_edit', { 'id': entity.id }) }}
+        </td>
+        {% endif %}
+
+        <td><a href="{{ path('alumni_show', { 'id': entity.id }) }}"
+          >{{ entity.fullname|textShort(20) }}</a></td>
+        <td>{{ entity.communityArray|join('<br/>')|textShort(20) }}</td>
+        <td>{{ day|date('Y-m-d') }}</td>
+
+        <td>{{ day|date('l')|trans({},'calendar') }}</td>
+        <td>{{ day|date('j') }}</td>
+        <td>{{ day|date('F')|trans({},'calendar') }}</td>
+        <td>{{ day|date('Y') }}</td>
+{% endblock %}

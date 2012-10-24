@@ -76,18 +76,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "v1.0.0-ALPHA3"
+                "reference": "181b71e9a19bcdc93a9bf5c19dc0ef9615656173"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/data-fixtures/zipball/v1.0.0-ALPHA3",
-                "reference": "v1.0.0-ALPHA3",
+                "url": "https://github.com/doctrine/data-fixtures/zipball/181b71e9a19bcdc93a9bf5c19dc0ef9615656173",
+                "reference": "181b71e9a19bcdc93a9bf5c19dc0ef9615656173",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
-            "time": "1348136794",
+            "time": "1350901469",
             "type": "library",
             "installation-source": "source",
             "autoload": {
@@ -249,12 +249,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "1e2c7af26f9f7ac9110d47cee8133d700fb99ae1"
+                "reference": "9edc67af16e736a31605e7fa9c9e3edbd9db6427"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/DoctrineFixturesBundle/zipball/1e2c7af26f9f7ac9110d47cee8133d700fb99ae1",
-                "reference": "1e2c7af26f9f7ac9110d47cee8133d700fb99ae1",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle/zipball/9edc67af16e736a31605e7fa9c9e3edbd9db6427",
+                "reference": "9edc67af16e736a31605e7fa9c9e3edbd9db6427",
                 "shasum": ""
             },
             "require": {
@@ -263,7 +263,7 @@
                 "doctrine/doctrine-bundle": "1.0.*",
                 "symfony/doctrine-bridge": ">=2.1.0,<2.3-dev"
             },
-            "time": "1349789605",
+            "time": "1350914272",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -565,7 +565,7 @@
                 "doctrine/orm": ">=2.1",
                 "doctrine/mongodb-odm": "*"
             },
-            "time": "2012-07-12 11:26:40",
+            "time": "2012-07-11 21:26:40",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -622,7 +622,7 @@
                 "symfony/framework-bundle": "2.*",
                 "jms/cg": "1.0.0"
             },
-            "time": "2012-01-01 08:50:26",
+            "time": "2011-12-31 18:50:26",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -664,7 +664,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-01 08:40:52",
+            "time": "2011-12-31 18:40:52",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -766,7 +766,7 @@
             "require": {
                 "php": ">=5.3.0"
             },
-            "time": "2012-01-01 09:32:49",
+            "time": "2011-12-31 19:32:49",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -941,7 +941,7 @@
                 "knplabs/knp-menu": "1.1.*",
                 "symfony/framework-bundle": ">=2.0,<2.2-dev"
             },
-            "time": "2012-05-16 00:56:49",
+            "time": "2012-05-15 10:56:49",
             "type": "symfony-bundle",
             "installation-source": "dist",
             "autoload": {
@@ -1241,12 +1241,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "567fc0df42c145148f51899431aa342d7700ab45"
+                "reference": "a32584adf3d6e2269ff6950202b2a399d553db8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/63e95a036d3103a9997fadae8779d5ede345977e",
-                "reference": "63e95a036d3103a9997fadae8779d5ede345977e",
+                "url": "https://github.com/sonata-project/SonataAdminBundle/zipball/a32584adf3d6e2269ff6950202b2a399d553db8e",
+                "reference": "a32584adf3d6e2269ff6950202b2a399d553db8e",
                 "shasum": ""
             },
             "require": {
@@ -1262,7 +1262,7 @@
                 "sonata-project/doctrine-orm-admin-bundle": "dev-master",
                 "sonata-project/intl-bundle": "dev-master"
             },
-            "time": "1350295667",
+            "time": "1350979875",
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1357,12 +1357,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataCacheBundle",
-                "reference": "39b3e0de003ac5541e6b0f55a6c56550b32d0ff7"
+                "reference": "4e4fdd21aa3195124854b58ec2e847efb8ce6ce4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataCacheBundle/zipball/39b3e0de003ac5541e6b0f55a6c56550b32d0ff7",
-                "reference": "39b3e0de003ac5541e6b0f55a6c56550b32d0ff7",
+                "url": "https://github.com/sonata-project/SonataCacheBundle/zipball/4e4fdd21aa3195124854b58ec2e847efb8ce6ce4",
+                "reference": "4e4fdd21aa3195124854b58ec2e847efb8ce6ce4",
                 "shasum": ""
             },
             "require": {
@@ -1372,11 +1372,14 @@
                 "doctrine/orm": ">=2.2.0"
             },
             "suggest": {
-                "doctrine/orm": ">=2.2.0",
-                "ext-apc": "*",
-                "ext-memcached": "*"
+                "doctrine/doctrine-bundle": "ORM support",
+                "doctrine/orm": "ORM support",
+                "doctrine/phpcr-bundle": "PHPCR ODM support",
+                "doctrine/phpcr-odm": "PHPCR ODM support",
+                "ext-apc": "Caching with ext/apc",
+                "ext-memcached": "Caching with ext/memcached"
             },
-            "time": "1350514172",
+            "time": "1350981646",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1511,12 +1514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataIntlBundle",
-                "reference": "d21d91368e4f6f90130de4bb873099ff6c5fc41b"
+                "reference": "0208ca4b0fbb9531a5cfe059f1d3458a49e94602"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/sonata-project/SonataIntlBundle/zipball/d21d91368e4f6f90130de4bb873099ff6c5fc41b",
-                "reference": "d21d91368e4f6f90130de4bb873099ff6c5fc41b",
+                "url": "https://github.com/sonata-project/SonataIntlBundle/zipball/0208ca4b0fbb9531a5cfe059f1d3458a49e94602",
+                "reference": "0208ca4b0fbb9531a5cfe059f1d3458a49e94602",
                 "shasum": ""
             },
             "require": {
@@ -1527,7 +1530,7 @@
                 "twig/twig": "*",
                 "ext-intl": "*"
             },
-            "time": "1350555522",
+            "time": "1350936345",
             "type": "symfony-bundle",
             "installation-source": "source",
             "autoload": {
@@ -1897,12 +1900,12 @@
             "source": {
                 "type": "git",
                 "url": "git://github.com/symfony/symfony.git",
-                "reference": "bb636c857abea60ac3a27ce0ab62ea979b3aad58"
+                "reference": "28482f8216de3289f35519f32d829499a5ffb632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/symfony/symfony/zipball/bb636c857abea60ac3a27ce0ab62ea979b3aad58",
-                "reference": "bb636c857abea60ac3a27ce0ab62ea979b3aad58",
+                "url": "https://github.com/symfony/symfony/zipball/28482f8216de3289f35519f32d829499a5ffb632",
+                "reference": "28482f8216de3289f35519f32d829499a5ffb632",
                 "shasum": ""
             },
             "require": {
@@ -1951,7 +1954,7 @@
                 "propel/propel1": "dev-master",
                 "monolog/monolog": "1.*"
             },
-            "time": "1350717030",
+            "time": "1350937201",
             "type": "library",
             "extra": {
                 "branch-alias": {

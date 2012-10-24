@@ -33,7 +33,7 @@
         <td><a href="{{ path('about_alumni', { 'aid': entity.id }) }}"
           >{{ entity.fullname|textShort(20) }}</a>
           {{ entity.updated|pastDateImage }}</td>
-        <td>{{ entity.communityText|raw|textShort(15) }}</td>
+        <td>{{ entity.communityArray|join('<br/>')|textShort(15) }}</td>
         <td>{% if entity.updated %}
             {{ entity.updated|date('Y-m-d H:i:s') }}
         {% endif %}</td>
