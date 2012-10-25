@@ -1,33 +1,39 @@
-office_list:
-    pattern:  /{oid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:list" }
-    requirements: { oid:  \d+ }
-    
-office_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:show" }
-    requirements: { id:  \d+ }
-    
-office_new:
-    pattern:  /{oid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:new" }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\Office
+    name:      office
+    id_master: oid
 
-office_create:
-    pattern:  /{oid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:create" }
-    requirements: { _method: post }
-
-office_edit:
-    pattern:  /{id}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:edit" }
-    requirements: { id:  \d+ }
-
-office_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:update" }
-    requirements: { _method: post }
-
-office_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\Office:delete" }
-    requirements: { _method: post }
+# office_list:
+#     pattern:  /{oid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:list" }
+#     requirements: { oid:  \d+ }
+#
+# office_show:
+#     pattern:  /{id}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:show" }
+#     requirements: { id:  \d+ }
+#
+# office_new:
+#     pattern:  /{oid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:new" }
+#
+# office_create:
+#     pattern:  /{oid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:create" }
+#     requirements: { _method: post }
+#
+# office_edit:
+#     pattern:  /{id}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:edit" }
+#     requirements: { id:  \d+ }
+#
+# office_update:
+#     pattern:  /{id}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:update" }
+#     requirements: { _method: post }
+#
+# office_delete:
+#     pattern:  /{id}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\Office:delete" }
+#     requirements: { _method: post }

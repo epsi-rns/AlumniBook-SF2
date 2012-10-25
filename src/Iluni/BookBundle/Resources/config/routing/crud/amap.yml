@@ -1,39 +1,42 @@
-amap_list:
-    pattern:  /{aid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:list" }
-    requirements: { aid:  \d+ }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\AMap
+    name:      amap
+    id_master: aid
+    id_entity: mid
 
-amap_show:
-    pattern:  /{mid}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:show" }
-    requirements: { mid:  \d+ }
+# amap_list:
+#     pattern:  /{aid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:list" }
+#     requirements: { aid:  \d+ }
+#
+# amap_show:
+#     pattern:  /{mid}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:show" }
+#     requirements: { mid:  \d+ }
+#
+# amap_new:
+#     pattern:  /{aid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:new" }
+#
+# amap_create:
+#     pattern:  /{aid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:create" }
+#     requirements: { _method: post }
+#
+# amap_edit:
+#     pattern:  /{mid}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:edit" }
+#     requirements: { mid:  \d+ }
+#
+# amap_update:
+#     pattern:  /{mid}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:update" }
+#     requirements: { _method: post }
+#
+# amap_delete:
+#     pattern:  /{mid}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\AMap:delete" }
+#     requirements: { _method: post }
+#
 
-amap_new:
-    pattern:  /{aid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:new" }
-
-amap_create:
-    pattern:  /{aid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:create" }
-    requirements: { _method: post }
-
-amap_edit:
-    pattern:  /{mid}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:edit" }
-    requirements: { mid:  \d+ }
-
-amap_update:
-    pattern:  /{mid}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:update" }
-    requirements: { _method: post }
-
-amap_delete:
-    pattern:  /{mid}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:delete" }
-    requirements: { _method: post }
-
-# utility for testing purpose, master-detail crawler
-amap_first:
-    pattern:  /first.{_format}
-    defaults: { _controller: "IluniBookBundle:CRUD\AMap:first", _format: html }
-    requirements: { _format: (html|json), _method: GET }

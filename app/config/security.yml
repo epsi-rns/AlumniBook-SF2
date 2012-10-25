@@ -59,7 +59,7 @@ security:
     # authorization
     access_control:
         # -> Anyone can see
-        - { path: ^/(menu|index.atom), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(menu|index.atom|(\w+)/language), roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
         # -> Sample
         #- { path: ^/user/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

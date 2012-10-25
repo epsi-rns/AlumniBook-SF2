@@ -5,7 +5,7 @@ Iluni\BookBundle\Entity\Category\Province:
     id:
       type: smallint
       column: province_id
-      generator: { strategy: AUTO }
+      generator: { strategy: NONE }
   fields:
     name:
       type: string

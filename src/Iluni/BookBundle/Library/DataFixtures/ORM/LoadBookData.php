@@ -17,7 +17,7 @@ abstract class LoadBookData extends AbstractFixture implements ContainerAwareInt
     /**
      * @var Symfony\Component\DependencyInjection\ContainerInterface
      */
-    private $container;
+    protected $container;
 
     /**
      * Make the sc available to our loader.
@@ -36,8 +36,9 @@ abstract class LoadBookData extends AbstractFixture implements ContainerAwareInt
      */
     public function getModelFixtures()
     {
-        $fixturesPath = realpath(dirname(__FILE__).'/../../../DataFixtures/Fixtures');
-        $fixtures     = Yaml::parse(file_get_contents($fixturesPath. '/'. $this->getModelFile(). '.yml'));
+        $kernel = $this->container->get('kernel');
+        $path = $kernel->locateResource('@IluniBookBundle/DataFixtures/Fixtures/');
+        $fixtures     = Yaml::parse(file_get_contents($path. '/'. $this->getModelFile(). '.yml'));
 
         return $fixtures;
     }

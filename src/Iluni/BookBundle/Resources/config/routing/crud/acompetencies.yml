@@ -1,33 +1,39 @@
-acompetencies_list:
-    pattern:  /{aid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:list" }
-    requirements: { aid:  \d+ }
-    
-acompetencies_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:show" }
-    requirements: { id:  \d+ }
-    
-acompetencies_new:
-    pattern:  /{aid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:new" }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\ACompetencies
+    name:      acompetencies
+    id_master: aid
 
-acompetencies_create:
-    pattern:  /{aid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:create" }
-    requirements: { _method: post }
-
-acompetencies_edit:
-    pattern:  /{id}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:edit" }
-    requirements: { id:  \d+ }
-
-acompetencies_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:update" }
-    requirements: { _method: post }
-
-acompetencies_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:delete" }
-    requirements: { _method: post }
+# acompetencies_list:
+#     pattern:  /{aid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:list" }
+#     requirements: { aid:  \d+ }
+#
+# acompetencies_show:
+#     pattern:  /{id}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:show" }
+#     requirements: { id:  \d+ }
+#
+# acompetencies_new:
+#     pattern:  /{aid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:new" }
+#
+# acompetencies_create:
+#     pattern:  /{aid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:create" }
+#     requirements: { _method: post }
+#
+# acompetencies_edit:
+#     pattern:  /{id}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:edit" }
+#     requirements: { id:  \d+ }
+#
+# acompetencies_update:
+#     pattern:  /{id}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:update" }
+#     requirements: { _method: post }
+#
+# acompetencies_delete:
+#     pattern:  /{id}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\ACompetencies:delete" }
+#     requirements: { _method: post }

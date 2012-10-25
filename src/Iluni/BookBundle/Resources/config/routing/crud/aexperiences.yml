@@ -1,33 +1,39 @@
-aexperiences_list:
-    pattern:  /{aid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:list" }
-    requirements: { aid:  \d+ }
-    
-aexperiences_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:show" }
-    requirements: { id:  \d+ }
-    
-aexperiences_new:
-    pattern:  /{aid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:new" }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\AExperiences
+    name:      aexperiences
+    id_master: aid
 
-aexperiences_create:
-    pattern:  /{aid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:create" }
-    requirements: { _method: post }
-
-aexperiences_edit:
-    pattern:  /{id}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:edit" }
-    requirements: { id:  \d+ }
-    
-aexperiences_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:update" }
-    requirements: { _method: post }
-
-aexperiences_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:delete" }
-    requirements: { _method: post }
+# aexperiences_list:
+#     pattern:  /{aid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:list" }
+#     requirements: { aid:  \d+ }
+#
+# aexperiences_show:
+#     pattern:  /{id}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:show" }
+#     requirements: { id:  \d+ }
+#
+# aexperiences_new:
+#     pattern:  /{aid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:new" }
+#
+# aexperiences_create:
+#     pattern:  /{aid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:create" }
+#     requirements: { _method: post }
+#
+# aexperiences_edit:
+#     pattern:  /{id}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:edit" }
+#     requirements: { id:  \d+ }
+#
+# aexperiences_update:
+#     pattern:  /{id}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:update" }
+#     requirements: { _method: post }
+#
+# aexperiences_delete:
+#     pattern:  /{id}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\AExperiences:delete" }
+#     requirements: { _method: post }

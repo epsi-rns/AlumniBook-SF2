@@ -16,8 +16,9 @@ abstract class LoadBookDetailData extends LoadBookData implements ContainerAware
      */
     public function getModelFixtures()
     {
-        $fixturesPath = realpath(dirname(__FILE__).'/../../../DataFixtures/Fixtures');
-        $fixtures     = Yaml::parse(file_get_contents($fixturesPath. '/Detail/'. $this->getModelFile(). '.yml'));
+        $kernel = $this->container->get('kernel');
+        $path = $kernel->locateResource('@IluniBookBundle/DataFixtures/Fixtures/');
+        $fixtures     = Yaml::parse(file_get_contents($path. '/Detail/'. $this->getModelFile(). '.yml'));
 
         return $fixtures;
     }

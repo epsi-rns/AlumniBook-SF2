@@ -1,33 +1,39 @@
-workplace_list:
-    pattern:  /{mid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:list" }
-    requirements: { mid:  \d+ }
-    
-workplace_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:show" }
-    requirements: { id:  \d+ }
-    
-workplace_new:
-    pattern:  /{mid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:new" }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\Workplace
+    name:      workplace
+    id_master: mid
 
-workplace_create:
-    pattern:  /{mid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:create" }
-    requirements: { _method: post }
-
-workplace_edit:
-    pattern:  /{id}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:edit" }
-    requirements: { id:  \d+ }
-
-workplace_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:update" }
-    requirements: { _method: post }
-
-workplace_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\Workplace:delete" }
-    requirements: { _method: post }
+# workplace_list:
+#     pattern:  /{mid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:list" }
+#     requirements: { mid:  \d+ }
+#
+# workplace_show:
+#     pattern:  /{id}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:show" }
+#     requirements: { id:  \d+ }
+#
+# workplace_new:
+#     pattern:  /{mid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:new" }
+#
+# workplace_create:
+#     pattern:  /{mid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:create" }
+#     requirements: { _method: post }
+#
+# workplace_edit:
+#     pattern:  /{id}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:edit" }
+#     requirements: { id:  \d+ }
+#
+# workplace_update:
+#     pattern:  /{id}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:update" }
+#     requirements: { _method: post }
+#
+# workplace_delete:
+#     pattern:  /{id}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\Workplace:delete" }
+#     requirements: { _method: post }

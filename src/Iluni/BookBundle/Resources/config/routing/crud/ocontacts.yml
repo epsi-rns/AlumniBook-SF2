@@ -1,33 +1,39 @@
-ocontacts_list:
-    pattern:  /{oid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:list" }
-    requirements: { oid:  \d+ }
-    
-ocontacts_show:
-    pattern:  /{id}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:show" }
-    requirements: { id:  \d+ }
-    
-ocontacts_new:
-    pattern:  /{oid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:new" }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\OContacts
+    name:      ocontacts
+    id_master: oid
 
-ocontacts_create:
-    pattern:  /{oid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:create" }
-    requirements: { _method: post }
-
-ocontacts_edit:
-    pattern:  /{id}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:edit" }
-    requirements: { id:  \d+ }
-
-ocontacts_update:
-    pattern:  /{id}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:update" }
-    requirements: { _method: post }
-
-ocontacts_delete:
-    pattern:  /{id}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\OContacts:delete" }
-    requirements: { _method: post }
+# ocontacts_list:
+#     pattern:  /{oid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:list" }
+#     requirements: { oid:  \d+ }
+#
+# ocontacts_show:
+#     pattern:  /{id}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:show" }
+#     requirements: { id:  \d+ }
+#
+# ocontacts_new:
+#     pattern:  /{oid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:new" }
+#
+# ocontacts_create:
+#     pattern:  /{oid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:create" }
+#     requirements: { _method: post }
+#
+# ocontacts_edit:
+#     pattern:  /{id}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:edit" }
+#     requirements: { id:  \d+ }
+#
+# ocontacts_update:
+#     pattern:  /{id}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:update" }
+#     requirements: { _method: post }
+#
+# ocontacts_delete:
+#     pattern:  /{id}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\OContacts:delete" }
+#     requirements: { _method: post }

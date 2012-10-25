@@ -16,8 +16,9 @@ abstract class LoadBookCategoryData extends LoadBookData implements ContainerAwa
      */
     public function getModelFixtures()
     {
-        $fixturesPath = realpath(dirname(__FILE__).'/../../../DataFixtures/Fixtures');
-        $fixtures     = Yaml::parse(file_get_contents($fixturesPath. '/Category/'. $this->getModelFile(). '.yml'));
+        $kernel = $this->container->get('kernel');
+        $path = $kernel->locateResource('@IluniBookBundle/DataFixtures/Fixtures/');
+        $fixtures     = Yaml::parse(file_get_contents($path. '/Category/'. $this->getModelFile(). '.yml'));
 
         return $fixtures;
     }

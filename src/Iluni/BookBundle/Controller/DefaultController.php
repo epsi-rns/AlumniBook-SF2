@@ -43,8 +43,7 @@ class DefaultController extends Controller
             $response->headers->set('Content-type', 'application/json');
             return $response;
         } else {
-            $response = $this->forward('IluniBookBundle:Default:index');
-            return $response;
+            return $this->redirect($this->generateUrl('main_homepage'));
         }
     }
 

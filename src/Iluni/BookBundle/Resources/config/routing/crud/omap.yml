@@ -1,33 +1,40 @@
-omap_list:
-    pattern:  /{oid}/list
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:list" }
-    requirements: { oid:  \d+ }
-    
-omap_show:
-    pattern:  /{mid}/show
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:show" }
-    requirements: { mid:  \d+ }
+# CRUD Routing Configuration
+options:
+    class:     IluniBookBundle:CRUD\OMap
+    name:      omap
+    id_master: oid
+    id_entity: mid
 
-omap_new:
-    pattern:  /{oid}/new
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:new" }
-
-omap_create:
-    pattern:  /{oid}/create
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:create" }
-    requirements: { _method: post }
-
-omap_edit:
-    pattern:  /{mid}/edit
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:edit" }
-    requirements: { mid:  \d+ }
-
-omap_update:
-    pattern:  /{mid}/update
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:update" }
-    requirements: { _method: post }
-
-omap_delete:
-    pattern:  /{mid}/delete
-    defaults: { _controller: "IluniBookBundle:CRUD\OMap:delete" }
-    requirements: { _method: post }
+# omap_list:
+#     pattern:  /{oid}/list
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:list" }
+#     requirements: { oid:  \d+ }
+#
+# omap_show:
+#     pattern:  /{mid}/show
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:show" }
+#     requirements: { mid:  \d+ }
+#
+# omap_new:
+#     pattern:  /{oid}/new
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:new" }
+#
+# omap_create:
+#     pattern:  /{oid}/create
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:create" }
+#     requirements: { _method: post }
+#
+# omap_edit:
+#     pattern:  /{mid}/edit
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:edit" }
+#     requirements: { mid:  \d+ }
+#
+# omap_update:
+#     pattern:  /{mid}/update
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:update" }
+#     requirements: { _method: post }
+#
+# omap_delete:
+#     pattern:  /{mid}/delete
+#     defaults: { _controller: "IluniBookBundle:CRUD\OMap:delete" }
+#     requirements: { _method: post }

@@ -1,67 +1,105 @@
 IBB_crud_alumni:
     resource: "@IluniBookBundle/Resources/config/routing/crud/alumni.yml"
     prefix:   /alumni
-    
+    type: crud
+
 IBB_crud_org:
     resource: "@IluniBookBundle/Resources/config/routing/crud/organization.yml"
     prefix:   /org
+    type: crud
 
 IBB_crud_community:
     resource: "@IluniBookBundle/Resources/config/routing/crud/community.yml"
     prefix:   /community
+    type: crud
 
 IBB_crud_acommunities:
     resource: "@IluniBookBundle/Resources/config/routing/crud/acommunities.yml"
     prefix:   /acommunities
-    
+    type: crud
+
 IBB_crud_acompetencies:
     resource: "@IluniBookBundle/Resources/config/routing/crud/acompetencies.yml"
     prefix:   /acompetencies
+    type: crud
 
 IBB_crud_aexperiences:
     resource: "@IluniBookBundle/Resources/config/routing/crud/aexperiences.yml"
     prefix:   /aexperiences
+    type: crud
 
 IBB_crud_acertifications:
     resource: "@IluniBookBundle/Resources/config/routing/crud/acertifications.yml"
     prefix:   /acertifications
+    type: crud
 
 IBB_crud_adegrees:
     resource: "@IluniBookBundle/Resources/config/routing/crud/adegrees.yml"
     prefix:   /adegrees
-    
+    type: crud
+
 IBB_crud_ofields:
     resource: "@IluniBookBundle/Resources/config/routing/crud/ofields.yml"
     prefix:   /ofields
+    type: crud
 
 IBB_crud_amap:
     resource: "@IluniBookBundle/Resources/config/routing/crud/amap.yml"
     prefix:   /amap
+    type: crud
 
 IBB_crud_omap:
     resource: "@IluniBookBundle/Resources/config/routing/crud/omap.yml"
     prefix:   /omap
-    
+    type: crud
+
 IBB_crud_residence:
     resource: "@IluniBookBundle/Resources/config/routing/crud/residence.yml"
     prefix:   /residence
+    type: crud
 
 IBB_crud_office:
     resource: "@IluniBookBundle/Resources/config/routing/crud/office.yml"
     prefix:   /office
+    type: crud
 
 IBB_crud_workplace:
     resource: "@IluniBookBundle/Resources/config/routing/crud/workplace.yml"
     prefix:   /workplace
+    type: crud
 
 IBB_crud_acontacts:
     resource: "@IluniBookBundle/Resources/config/routing/crud/acontacts.yml"
     prefix:   /acontacts
-    
+    type: crud
+
 IBB_crud_ocontacts:
     resource: "@IluniBookBundle/Resources/config/routing/crud/ocontacts.yml"
     prefix:   /ocontacts
-    
+    type: crud
+
 IBB_crud_mcontacts:
     resource: "@IluniBookBundle/Resources/config/routing/crud/mcontacts.yml"
     prefix:   /mcontacts
+    type: crud
+
+# utility for testing purpose, master-detail crawler
+alumni_first:
+    pattern:  /alumni/first.{_format}
+    defaults: { _controller: "IluniBookBundle:CRUD\Alumni:first", _format: html }
+    requirements: { _format: (html|json), _method: GET }
+
+community_first:
+    pattern:  /community/first.{_format}
+    defaults: { _controller: "IluniBookBundle:CRUD\Community:first", _format: html }
+    requirements: { _format: (html|json), _method: GET }
+
+org_first:
+    pattern:  /org/first.{_format}
+    defaults: { _controller: "IluniBookBundle:CRUD\Organization:first", _format: html }
+    requirements: { _format: (html|json), _method: GET }
+
+amap_first:
+    pattern:  /amap/first.{_format}
+    defaults: { _controller: "IluniBookBundle:CRUD\AMap:first", _format: html }
+    requirements: { _format: (html|json), _method: GET }
