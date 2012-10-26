@@ -21,7 +21,7 @@ can use this source code freely without my permission.
 
 ## Sections
 
-*   [Detail](https://github.com/epsi/AlumniBook-SF2/blob/master/FEATURE.md)
+*   [Detail](https://github.com/epsi/AlumniBook-SF2/blob/master/src/Iluni/BookBundle/Resources/doc/feature.md)
 
     This page containing
 
@@ -31,9 +31,9 @@ can use this source code freely without my permission.
     *   included Bundle,
     *   More on License
 
-*   [Install](https://github.com/epsi/AlumniBook-SF2/blob/master/INSTALL.md)
+*   [Install](https://github.com/epsi/AlumniBook-SF2/blob/master/src/Iluni/BookBundle/Resources/doc/install.rst)
 
-*   [Learning](https://github.com/epsi/AlumniBook-SF2/blob/master/STEP.md)
+*   [Learning](https://github.com/epsi/AlumniBook-SF2/blob/master/src/Iluni/BookBundle/Resources/doc/step.rst)
 
 
 

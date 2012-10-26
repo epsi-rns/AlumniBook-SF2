@@ -27,11 +27,14 @@
 {% block top_language %}
 
         <a href="{{ path('main_language', { 'locale' : 'en' }) }}">
-            <img alt="English" title="English (United Kingdom)" border="0"
-            src="{{ asset('bundles/ilunibook/images/cultures/en.gif') }}" /></a>
+            <img alt="United Kingdom" title="English (British)" border="0" class="flag"
+            src="{{ asset('bundles/ilunibook/images/flags/gb.png') }}" /></a>
         <a href="{{ path('main_language', { 'locale' : 'id' }) }}">
-            <img alt="Indonesia" title="Bahasa Indonesia (Indonesia)" border="0"
-            src="{{ asset('bundles/ilunibook/images/cultures/id.gif') }}" /></a>
+            <img alt="Indonesia" title="Bahasa Indonesia (Indonesia)" border="0" class="flag"
+            src="{{ asset('bundles/ilunibook/images/flags/id.png') }}" /></a>
+        <a href="{{ path('main_language', { 'locale' : 'tr' }) }}">
+            <img alt="Türkiye" title="Türkçe" border="0" class="flag"
+            src="{{ asset('bundles/ilunibook/images/flags/tr.png') }}" /></a>
 {% endblock %}
 
 {% block top %}

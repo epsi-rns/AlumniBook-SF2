@@ -11,7 +11,10 @@ class LocaleForm extends AbstractType
     {
         $builder
             ->add('locale', 'choice', array(
-                'choices'   => array('en'=>'English', 'id'=>'Indonesia'),
+                'choices'   => array(
+                    'en' => 'English',
+                    'id' => 'Indonesia',
+                    'tr' => 'Türkçe'),
                 'empty_value' => false,
                 'label' => 'Choose a language:'
             ));

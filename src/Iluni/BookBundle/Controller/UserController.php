@@ -35,11 +35,13 @@ class UserController extends Controller
     public function checkAction()
     {
         // The security layer will intercept this request
+        throw new \RuntimeException('Humm... It seems that the firewall is not configured correctly...');
     }
 
     public function logoutAction()
     {
         // The security layer will intercept this request
+        throw new \RuntimeException('Humm... It seems that the firewall is not configured correctly...');
     }
 }
 

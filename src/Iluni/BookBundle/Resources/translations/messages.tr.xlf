@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="tr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="31">
+        <source>Username</source>
+        <target>Kullanıcı adı</target>
+      </trans-unit>
+      <trans-unit id="32">
+        <source>Password</source>
+        <target>Parola</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

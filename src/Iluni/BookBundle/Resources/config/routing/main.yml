@@ -25,5 +25,5 @@ main_department_all:
 main_language:
     pattern:  /{locale}/language.{_format}
     defaults: { _controller: IluniBookBundle:Default:language, _format: html }
-    requirements: { locale: ^en|id$, _format: (html|json), _method: GET }
+    requirements: { locale: ^en|id|tr$, _format: (html|json), _method: GET }
 

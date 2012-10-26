@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="tr" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="1">
+        <source>Sunday</source>
+        <target>Pazar</target>
+      </trans-unit>
+      <trans-unit id="2">
+        <source>Monday</source>
+        <target>Pazartesi</target>
+      </trans-unit>
+      <trans-unit id="3">
+        <source>Tuesday</source>
+        <target>Salı</target>
+      </trans-unit>
+      <trans-unit id="4">
+        <source>Wednesday</source>
+        <target>Çarşamba</target>
+      </trans-unit>
+      <trans-unit id="5">
+        <source>Thursday</source>
+        <target>Perşembe</target>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>Friday</source>
+        <target>Cuma</target>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>Saturday</source>
+        <target>Cumartesi</target>
+      </trans-unit>
+      <trans-unit id="8">
+        <source>January</source>
+        <target>Ocak</target>
+      </trans-unit>
+      <trans-unit id="9">
+        <source>February</source>
+        <target>Şubat</target>
+      </trans-unit>
+      <trans-unit id="10">
+        <source>March</source>
+        <target>Mart</target>
+      </trans-unit>
+      <trans-unit id="11">
+        <source>April</source>
+        <target>Nisan</target>
+      </trans-unit>
+      <trans-unit id="12">
+        <source>May</source>
+        <target>Mayıs</target>
+      </trans-unit>
+      <trans-unit id="13">
+        <source>June</source>
+        <target>Haziran</target>
+      </trans-unit>
+      <trans-unit id="14">
+        <source>July</source>
+        <target>Temmuz</target>
+      </trans-unit>
+      <trans-unit id="15">
+        <source>August</source>
+        <target>Ağustos</target>
+      </trans-unit>
+      <trans-unit id="16">
+        <source>September</source>
+        <target>Eylül</target>
+      </trans-unit>
+      <trans-unit id="17">
+        <source>October</source>
+        <target>Ekim</target>
+      </trans-unit>
+      <trans-unit id="18">
+        <source>November</source>
+        <target>Kasım</target>
+      </trans-unit>
+      <trans-unit id="19">
+        <source>December</source>
+        <target>Aralık</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

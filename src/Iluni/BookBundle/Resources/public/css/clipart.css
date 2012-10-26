@@ -4,6 +4,11 @@
     background: url(../images/logo/makara.png) no-repeat top left;
 }
 
+.flag {
+    width: 20px;
+    height: 12px;
+}
+
 .clip_population {
     background: url(../images/openclipart/population.png) no-repeat top left;
     float: left;
