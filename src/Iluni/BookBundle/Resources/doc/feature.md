@@ -36,7 +36,7 @@ Feature
       now we have mootools-symfony-ajax combination (but not integration).
     * form field validation
     * theme effects
-    * <del>sfWidgetFormDatePicker</del>
+    * DatePickerBundle
     * dynamic drop down list using ajax (master-detail)
     * Using a special iframe lightbox for value lookup.
       This input also utilize a lookup modal widget.
@@ -48,7 +48,12 @@ Feature
     * <del>Control parameter via app.yml</del>
     * <del>A few source images (XCF's GIMP), only small files.<del>
 *   Few plugins: each has their own README.md, most are only mootools wrapper.
-*   <del>Also utilize I18n translation in form filter.</del>
+*   I18n translation: english, Bahasa Indonesia, <del>Türkçe.</del>
+*   Custom Extensions:
+    * Twig (Tab, and specific task)
+    * Assetic (CSS compressor)
+    * Doctrine (Calendar function)
+    * Routing (CRUD loader)
 
 
 <del>Screenshot</del>

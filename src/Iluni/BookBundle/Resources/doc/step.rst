@@ -24,6 +24,7 @@ The very basic is a page that is not using any entity e.g. about page.
     will match url request to DefaultController.php.
 
     ::
+
         ../Controller/DefaultController.php
 
     In this DefaultController class there is an aboutAction() method
@@ -32,6 +33,7 @@ The very basic is a page that is not using any entity e.g. about page.
 -   Twig Template
 
     ::
+
         ../Resources/views/Modules/Default/about.html.twig
 
     It is using twig inheritance, in this case is standard layout.
@@ -39,6 +41,7 @@ The very basic is a page that is not using any entity e.g. about page.
 -   Browser
 
     ::
+
         http://book2/app_dev.php/about
 
 
@@ -52,26 +55,31 @@ Let's say the alumni entity as example.
 -   Doctrine2 mapping
 
     ::
+
         ../Resources/config/doctrine/Alumni.orm.yml
 
     After create mapping from E-R diagram you would make a php class
 
     ::
+
         $ app/console doctrine:generate:entities --no-backup IluniBookBundle
 
 -   Entity Class
 
     ::
+
         ../Entity/Alumni.php
 
     You can add any necessary method or modify to suit your needs.
 
     ::
+
         $ app/console doctrine:schema:update --force
 
     Or list them all
 
     ::
+
         $ app/console doctrine:mapping:info
 
 -   Data Fixtures
@@ -81,23 +89,27 @@ Let's say the alumni entity as example.
     Let's have a look:
 
     ::
+
         ../DataFitures/Fixtures/100_alumni.yml
 
     Nevermind the number, it is just an order of which fixtures executed.
     This yaml itself is just a data that needed to be interpreted by a class.
 
     ::
+
         ../DataFitures/ORM/LoadAlumniData.php
 
     You need fixtures bundle to run data fixtures
 
     ::
+
         vendor/doctrine/data-fixtures/
         vendor/doctrine/data-fixtures-bundle/
 
     Let's run it from console
 
     ::
+
         $ app/console doctrine:fixtures:load --append
 
 
@@ -106,6 +118,7 @@ Let's say the alumni entity as example.
     After this step you might want to create crud.
 
     ::
+
         $ php app/console doctrine:generate:crud \
         --entity=IluniBookBundle:Alumni \
         --route-prefix=alumni --with-write --format=yml
@@ -124,11 +137,13 @@ This the controller to manipulate data entry.
     Again, first we need to setup routing:
 
     ::
+
         ../Resources/config/routing/crud/alumni.yml
 
 -   Controller
 
     ::
+
         ../Controller/CRUD/AlumniController.php
 
     This controller has many action:
@@ -139,11 +154,13 @@ This the controller to manipulate data entry.
 -   Form
 
     ::
+
         ../Form/Entity/AlumniForm.php
 
     Each field in this form might use a constraint.
 
     ::
+
         ../Resources/config/validation.yml
 
 -   Twig
@@ -151,17 +168,20 @@ This the controller to manipulate data entry.
     Since this controller has many action, it needs many twig files.
 
     ::
+
         ../Resources/views/Master/Alumni/show.html.twig
         ../Resources/views/Master/Alumni/form.html.twig
 
 -   Browser
 
     ::
+
         http://book2/app_dev.php/alumni/1/show
 
 -   Test
 
     ::
+
         Tests/Controller/CRUD/AlumniControllerTest.php
 
 
@@ -177,16 +197,19 @@ To limit data viewed, we are using pagination.
     As usual:
 
     ::
+
         ../Resources/config/routing/filter/alumni.yml
 
     Debugging
 
     ::
+
         $ php app/console router:debug alumni
 
 -   Controller
 
     ::
+
         ../Controller/Filter/AlumniController.php
 
     This controller only one action: index.
@@ -198,12 +221,14 @@ To limit data viewed, we are using pagination.
 -   Filter Form
 
     ::
+
         ../Form/Filter/AlumniForm.php
 
     Some field in this form might use a reusable custom field
     e.g. ordering.
 
     ::
+
         ../Form/Type/OrderByType.php
 
 -   Repository
@@ -213,6 +238,7 @@ To limit data viewed, we are using pagination.
     We need special class called repository to handle queries.
 
     ::
+
         ../Repository/AlumniRepository.php
 
     One Entity can only have one repository.
@@ -223,6 +249,7 @@ To limit data viewed, we are using pagination.
     Since this controller has many action, it needs many twig files.
 
     ::
+
         ../Resources/views/Master/Alumni/index.html.twig
         ../Resources/views/Master/Alumni/partial.table.html.twig
         ../Resources/views/List/filter/base.html.twig
@@ -230,11 +257,13 @@ To limit data viewed, we are using pagination.
 -   Browser
 
     ::
+
         http://book2/app_dev.php/alumni/
 
 -   Test
 
     ::
+
         Tests/Controller/Filter/AlumniControllerTest.php
 
 3rd Party
@@ -245,6 +274,7 @@ To limit data viewed, we are using pagination.
     Sometimes you need other bundle, eg. Sonata. The famous admin bundle.
 
     ::
+
         vendor/sonata-project/*/
 
 -   Admin Form
@@ -256,11 +286,13 @@ To limit data viewed, we are using pagination.
     Let's name it Admin directory as it is self explainatory.
 
     ::
+
         Admin/Category/CompetencyAdmin.php
 
 -   Browser
 
     ::
+
         http://book2/app_dev.php/admin/iluni/book/category-competency/list
 
 
