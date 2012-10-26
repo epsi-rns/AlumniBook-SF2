@@ -4,7 +4,7 @@ Install
 These guidance below a common installation step for symfony2 project.
 Although it looks long. It should be easy for symfony coder.
 
-For more guidance please visit 'symfony installation`_ .
+For more guidance please visit `symfony installation`_.
 
 .. _symfony installation: http://symfony.com/doc/2.0/book/installation.html
 
