@@ -7,7 +7,7 @@ And this project is the result.
 
 For more comprehensive material,
 there are many good tutorial that you can read in internet.
-My favorite reading stuff is `Jobeet2 by ens.ro`_ .
+My favorite reading stuff is `Jobeet2 by ens.ro`_.
 
 .. _Jobeet2 by ens.ro: http://www.ens.ro/2012/03/21/jobeet-tutorial-with-symfony2/
 

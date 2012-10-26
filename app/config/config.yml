@@ -1,5 +1,5 @@
 parameters:
-    locale: id
+    locale: en
 
 imports:
     - { resource: parameters.yml }

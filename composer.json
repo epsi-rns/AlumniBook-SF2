@@ -1,6 +1,6 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "iluni/alumni-book2",
+    "description": "The AlumniBook distribution",
     "autoload": {
         "psr-0": { "": "src/" }
     },
