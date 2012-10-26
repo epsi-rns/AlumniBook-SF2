@@ -4,8 +4,9 @@ Install
 These guidance below a common installation step for symfony2 project.
 Although it looks long. It should be easy for symfony coder.
 
-For more guidance please visit
-.. _symfony installation: http://symfony.com/doc/2.0/book/installation.html .
+For more guidance please visit 'symfony installation`_ .
+
+.. _symfony installation: http://symfony.com/doc/2.0/book/installation.html
 
 Apache Configuration
 --------------------
@@ -130,11 +131,17 @@ Tools
 -----
 
 I'm using these tools during development process
+
 -   LAMP stack on Debian/ Mint
+
 -   Windows: WampServer and Git for windows
+
 -   Client Side: Firebug
+
 -   Text Editor: Geany
+
 -   Image Editor: GIMP
+
 -   MP3 player is useful sometimes. A a cup coffee would be very helpful.
 
 
@@ -142,15 +149,24 @@ Framework
 ---------
 
 I'm using PHP + JS.
+
 -   PHP Framework: Symfony2
+
 -   ORM: Doctrine2 (DQL)
+
 -   Templating Engine: Twig
+
 -   Javascript Framework: Mootools 1.3
 
 
 Other knowledge to consider.
+
 -   PHP itself
+
 -   HTML and CSS Standard. HTML5 and CSS3 is optional.
+
 -   Regular Expression
+
 -   Admin tools: PHPmyAdmin, PgAdmin
+
 -   Web 2.0 Approach: AJAX, REST.
