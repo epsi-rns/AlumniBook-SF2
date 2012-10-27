@@ -27,15 +27,19 @@ class ADegreesType extends AbstractType
                 'query_builder' => $query_builder,
                 // 'preferred_choices' => array(10) // hardcoded default value
             ))
-            ->add('admitted')
-            ->add('graduated')
+            ->add('admitted', 'integer', array('required' => false))
+            ->add('graduated', 'integer', array('required' => false))
 
             // Set default here, as alternate of setting in entity constructor
             ->add('degree')
             ->add('institution')
             ->add('major')
             ->add('minor')
-            ->add('concentration');
+            ->add('concentration')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\AlumniDegrees'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

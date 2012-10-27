@@ -274,4 +274,3 @@ class AlumniDegrees
         return $this->alumni;
     }
 }
-

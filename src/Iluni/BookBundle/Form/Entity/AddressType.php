@@ -49,15 +49,6 @@ class AddressType extends AbstractType
             ->add('district', 'partial_district_choice', array(
                 'master_index' => 0
             ))
-            /*
-            ->add('district', 'entity', array(
-                'class' => 'Iluni\BookBundle\Entity\Category\District',
-                'property' => 'name',
-                'empty_value' => '-- Select District --',
-                'required' => false,
-                'query_builder' => $query_builder,
-            ))
-            */
             ->add('postalCode', 'text', array(
                 'label'  => 'Postal Code',
                 'required' => false

@@ -17,7 +17,11 @@ class ACertificationsType extends AbstractType
     {
         $builder
             ->add('certification')
-            ->add('institution');
+            ->add('institution')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\AlumniCertifications'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

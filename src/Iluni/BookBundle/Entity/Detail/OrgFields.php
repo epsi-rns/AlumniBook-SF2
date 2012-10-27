@@ -135,4 +135,3 @@ class OrgFields
         return $this->bizField;
     }
 }
-

@@ -326,4 +326,3 @@ class AlumniOrgMap
         return $this->jobType;
     }
 }
-

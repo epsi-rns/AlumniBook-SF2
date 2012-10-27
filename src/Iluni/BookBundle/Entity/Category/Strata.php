@@ -68,4 +68,3 @@ class Strata
         return $this->getName();
     }
 }
-

@@ -141,4 +141,3 @@ class Department
         return $this->community;
     }
 }
-

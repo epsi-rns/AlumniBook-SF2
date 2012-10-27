@@ -68,4 +68,3 @@ class Country
         return $this->getName();
     }
 }
-

@@ -39,4 +39,3 @@ class OrgContacts extends Contacts
         return $this->organization;
     }
 }
-

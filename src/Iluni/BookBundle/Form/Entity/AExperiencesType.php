@@ -23,8 +23,18 @@ class AExperiencesType extends AbstractType
                 'label'  => 'Job Position',
                 'required' => false
             ))
-            ->add('yearIn', 'text', array('label'  => 'Year in'))
-            ->add('yearOut', 'text', array('label'  => 'Year out'));
+            ->add('yearIn', 'integer', array(
+                'label'    => 'Year in',
+                'required' => false
+            ))
+            ->add('yearOut', 'integer', array(
+                'label'  => 'Year out',
+                'required' => false
+            ))
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\AlumniExperiences'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

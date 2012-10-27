@@ -33,6 +33,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             // project bundles
             new Citra\Mootools\SharedBundle\MootoolsBundle(),
+            new Citra\Mootools\AutoValidatorBundle\AutoValidatorBundle(),
             new Citra\Mootools\DatePickerBundle\DatePickerBundle(),
             new Citra\Mootools\DiaBoxBundle\DiaBoxBundle(),
             new Citra\Mootools\NoobSlideBundle\NoobSlideBundle(),

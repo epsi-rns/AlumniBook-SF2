@@ -39,4 +39,3 @@ class OrgAddress extends Address
         return $this->organization;
     }
 }
-

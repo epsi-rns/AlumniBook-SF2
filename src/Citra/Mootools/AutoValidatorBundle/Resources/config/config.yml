@@ -1,0 +1,4 @@
+twig:
+    form:
+        resources:
+            - 'AutoValidatorBundle:Form:autovalidator_widget.html.twig'

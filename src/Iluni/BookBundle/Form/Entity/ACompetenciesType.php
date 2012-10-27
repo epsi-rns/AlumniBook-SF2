@@ -21,7 +21,11 @@ class ACompetenciesType extends AbstractType
                 'class' => 'Iluni\BookBundle\Entity\Category\Competency',
                 'empty_value' => false,
             ))
-            ->add('description');
+            ->add('description')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\AlumniCompetencies'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

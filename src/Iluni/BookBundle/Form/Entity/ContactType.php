@@ -22,7 +22,11 @@ class ContactType extends AbstractType
                 'empty_value' => false,
                 'label'  => 'Contact Type'
             ))
-            ->add('contact');
+            ->add('contact')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Base\Contacts'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

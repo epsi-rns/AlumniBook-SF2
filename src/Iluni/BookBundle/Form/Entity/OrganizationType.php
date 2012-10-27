@@ -25,10 +25,14 @@ class OrganizationType extends AbstractType
                 'link_title' => 'Lookup Organization/ Company Name',
                 'link_route' => 'modal_org'
             ))
+            ->add('note')
             //->add('fullname')
             //->add('createdAt')
             //->add('updatedAt')
-            ->add('note');
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Organization'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

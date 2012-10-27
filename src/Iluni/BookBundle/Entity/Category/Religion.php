@@ -68,4 +68,3 @@ class Religion
         return $this->getName();
     }
 }
-

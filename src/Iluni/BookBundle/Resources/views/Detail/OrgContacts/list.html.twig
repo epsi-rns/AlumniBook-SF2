@@ -31,9 +31,6 @@
 
 {% block table_links %}
     {{ crud.link_to_new_in_list('ocontacts_new', 'oid', 'oid') }}
-        <a class="icon_new" href="{{ path('ocontacts_new',
-            { 'oid': app.request.attributes.get('oid') })
-        }}">{% trans from 'actions' %}Create a new entry{% endtrans %}</a>
 {% endblock %}
 
 {% block body %}

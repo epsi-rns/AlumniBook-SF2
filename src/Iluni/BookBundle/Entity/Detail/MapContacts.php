@@ -40,4 +40,3 @@ class MapContacts extends Contacts
         return $this->alumni_org_map;
     }
 }
-

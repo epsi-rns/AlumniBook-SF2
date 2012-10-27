@@ -426,4 +426,3 @@ class Alumni
         return $this->acommunities;
     }
 }
-

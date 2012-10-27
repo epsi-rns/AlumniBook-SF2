@@ -117,4 +117,3 @@ class JobPosition
         return $this->alumni_org_map;
     }
 }
-

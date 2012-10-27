@@ -40,4 +40,3 @@ class MapAddress extends Address
         return $this->alumni_org_map;
     }
 }
-

@@ -27,12 +27,19 @@ class ACommunitiesType extends AbstractType
                 'link_title' => 'Lookup Community Name',
                 'link_route' => 'modal_community'
             ))
-            ->add('classYear', 'text', array(
+            ->add('classYear', 'integer', array(
                 'label'  => 'Class of (year)'
             ))
             ->add('classSub', 'text', array(
                 'label'  => 'Subclass',
                 'required' => false
+            ))
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\AlumniCommunities',
+                'include' => array(
+                    'community_name'    => 'required'
+                )
             ));
     }
 

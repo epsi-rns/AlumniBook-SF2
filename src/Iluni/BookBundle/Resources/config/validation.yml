@@ -3,8 +3,9 @@ Iluni\BookBundle\Entity\Alumni:
     properties:
         name:
             - NotBlank: ~
-            - MinLength: 3
-            - MaxLength: 50
+            - Length:
+                min: 3
+                max: 50
         gender:
             - Choice: { choices: [M, F] }
         birthdate:
@@ -18,24 +19,29 @@ Iluni\BookBundle\Entity\Organization:
     properties:
         name:
             - NotBlank: ~
-            - MinLength: 3
-            - MaxLength: 50
+            - Length:
+                min: 3
+                max: 50
 
 Iluni\BookBundle\Entity\Community:
     properties:
         name:
             - NotBlank: ~
-            - MinLength: 3
-            - MaxLength: 50
+            - Length:
+                min: 3
+                max: 50
         typeId:
             - Choice: { choices: [1, 2] }
 
 Iluni\BookBundle\Entity\Detail\AlumniCommunities:
     properties:
         classYear:
+            - NotBlank: ~
             - Range:
                 min: 1960
                 max: 2020
+            - Type:
+                type: integer
 
 Iluni\BookBundle\Entity\Base\Address:
     constraints:
@@ -46,39 +52,61 @@ Iluni\BookBundle\Entity\Base\Contacts:
     properties:
         contact:
             - NotBlank: ~
-            - MinLength: 3
+            - Length:
+                min: 3
+        contactType:
+            - NotBlank: ~
 
 Iluni\BookBundle\Entity\Detail\AlumniExperiences:
     properties:
+        organization:
+            - NotBlank: ~
+            - Length:
+                min: 3
         yearIn:
             - Range:
                 min: 1960
                 max: 2020
+            - Type:
+                type: integer
         yearOut:
             - Range:
                 min: 1960
                 max: 2020
+            - Type:
+                type: integer
 
 Iluni\BookBundle\Entity\Detail\AlumniDegrees:
     properties:
+        institution:
+            - NotBlank: ~
+            - Length:
+                min: 3
         admitted:
             - Range:
                 min: 1960
                 max: 2020
+            - Type:
+                type: integer
         graduated:
             - Range:
                 min: 1960
                 max: 2020
+            - Type:
+                type: integer
 
 Iluni\BookBundle\Entity\Detail\AlumniCertifications:
     properties:
         certification:
             - NotBlank: ~
-            - MinLength: 5
-            - MaxLength: 50
+            - Length:
+                min: 5
+                max: 50
         institution:
-            - MinLength: 5
-            - MaxLength: 20
+            - Length:
+                min: 5
+                max: 20
+
 
 # Below is used by Sonata
 

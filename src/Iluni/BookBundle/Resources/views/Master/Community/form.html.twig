@@ -16,18 +16,6 @@
         {% include 'IluniBookBundle:Shared/Javascript:dynamic_dropdown.html.twig' %}
     {% endif %}
 
-    {% set form_id = edit_form.vars.name %}
-
-    <script type="text/javascript">
-        window.addEvent("domready",function(){
-            document.id('{{ form_id }}_name').addClass('required');
-            document.id('{{ form_id }}_program').addClass('required');
-            document.id('{{ form_id }}_department').addClass('required');
-            document.id('{{ form_id }}_faculty').addClass('required');
-            new FormValidator.Inline('form_validate');
-        });
-    </script>
-
     <form action="{{ path }}" method="post" id="form_validate" {{ form_enctype(edit_form) }}>
         {{ form_widget(edit_form) }}
         &nbsp;

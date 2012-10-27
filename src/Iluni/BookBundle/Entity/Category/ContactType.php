@@ -68,4 +68,3 @@ class ContactType
         return $this->getName();
     }
 }
-

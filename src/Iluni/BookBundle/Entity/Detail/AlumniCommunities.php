@@ -293,4 +293,3 @@ class AlumniCommunities
         return $this->getName();
     }
 }
-

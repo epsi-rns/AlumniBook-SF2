@@ -46,10 +46,14 @@ class AlumniType extends AbstractType
                 'required' => false,
                 'query_builder' => $query_builder,
             ))
-            ->add('note');
+            ->add('note')
             //->add('fullname')
             //->add('createdAt')
             //->add('updatedAt')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Alumni'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

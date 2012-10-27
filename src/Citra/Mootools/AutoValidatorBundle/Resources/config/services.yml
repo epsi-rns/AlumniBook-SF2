@@ -1,0 +1,7 @@
+services:
+    form.type.autovalidator:
+        class: Citra\Mootools\AutoValidatorBundle\Form\Type\AutoValidatorType
+        arguments:
+            - "@service_container"
+        tags:
+            - { name: form.type, alias: autovalidator }

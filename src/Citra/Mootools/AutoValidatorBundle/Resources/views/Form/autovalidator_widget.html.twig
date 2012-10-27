@@ -1,0 +1,18 @@
+{# autovalidator_widget.html.twig #}
+
+{% block autovalidator_widget %}
+{% if fields|length > 0 %}
+    {% set idns = form.parent.vars.name %}
+
+    <script type="text/javascript">
+        window.addEvent("domready",function(){
+            {% for fieldname, class in fields %}
+
+            document.id('{{ idns }}_{{fieldname}}').addClass('{{ class }}');
+            {% endfor %}
+
+            new FormValidator.Inline('{{ form_id }}');
+        });
+    </script>
+{% endif %}
+{% endblock autovalidator_widget %}

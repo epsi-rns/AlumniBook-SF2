@@ -39,4 +39,3 @@ class AlumniContacts extends Contacts
         return $this->alumni;
     }
 }
-

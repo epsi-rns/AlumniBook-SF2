@@ -246,4 +246,3 @@ class Community
         return $this->acommunities;
     }
 }
-

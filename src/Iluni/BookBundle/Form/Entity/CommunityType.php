@@ -47,6 +47,15 @@ class CommunityType extends AbstractType
             ))*/
             ->add('department', 'partial_department_choice', array(
                 'master_index' => 0
+            ))
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle'  => '@IluniBookBundle',
+                'entity'  => 'Iluni\BookBundle\Entity\Alumni',
+                'include' => array(
+                    'program'    => 'required',
+                    'department' => 'required',
+                    'faculty'    => 'required',
+                )
             ));
     }
 

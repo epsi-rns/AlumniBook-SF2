@@ -39,6 +39,11 @@ class OMapType extends AbstractType
                 'empty_value' => '-- Select Job Position --',
                 'required' => false,
                 'label'  => 'Job Position'
+            ))
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'include' => array(
+                    'alumni_name'    => 'required'
+                )
             ));
     }
 

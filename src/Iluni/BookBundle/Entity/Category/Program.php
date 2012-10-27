@@ -114,4 +114,3 @@ class Program
         return $this->community;
     }
 }
-

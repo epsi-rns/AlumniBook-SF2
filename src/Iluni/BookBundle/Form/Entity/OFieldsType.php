@@ -23,7 +23,11 @@ class OFieldsType extends AbstractType
                 'label'  => 'Business Field'
             ))
             ->add('product')
-            ->add('description');
+            ->add('description')
+            ->add('mootoolsvalidator', 'autovalidator', array(
+                'bundle' => '@IluniBookBundle',
+                'entity' => 'Iluni\BookBundle\Entity\Detail\OrgFields'
+            ));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)

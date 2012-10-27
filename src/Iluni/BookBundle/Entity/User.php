@@ -174,4 +174,3 @@ class User implements UserInterface
         return $this->username === $user->getUsername();
     }
 }
-

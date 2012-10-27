@@ -106,4 +106,3 @@ class AlumniCertifications
         return $this->alumni;
     }
 }
-

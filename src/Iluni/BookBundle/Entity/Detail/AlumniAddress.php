@@ -39,4 +39,3 @@ class AlumniAddress extends Address
         return $this->alumni;
     }
 }
-
