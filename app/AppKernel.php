@@ -32,6 +32,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             // project bundles
+            new Citra\CommonBundle\CommonBundle(),
             new Citra\Mootools\SharedBundle\MootoolsBundle(),
             new Citra\Mootools\AutoValidatorBundle\AutoValidatorBundle(),
             new Citra\Mootools\DatePickerBundle\DatePickerBundle(),

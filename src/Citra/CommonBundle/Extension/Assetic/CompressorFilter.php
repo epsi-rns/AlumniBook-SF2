@@ -1,6 +1,6 @@
 <?php
 
-namespace Citra\Theme\Oriclone\Assetic;
+namespace Citra\CommonBundle\Extension\Assetic;
 
 use Assetic\Asset\AssetInterface;
 use Assetic\Filter\FilterInterface;

@@ -13,7 +13,7 @@ AppKernel.php
 ----------------
 
 Add AutoValidatorBundle to your application kernel.
-This bundle depend on MootoolsBundle.
+This bundle has soft dependencies on MootoolsBundle.
 
     // app/AppKernel.php
     public function registerBundles()
@@ -67,8 +67,19 @@ in case you want to configure validator class manually.
 *   'include' => array('community_name' => 'required minLength:3')
 *   'exclude' => array('name', 'gender')
 
-You are allowed to copy and change the code
+Deault form_id is form_validate
+
+*   'form_id' => 'form_validate'
+
+Do not forget to add id tag in your form:
+
+    <form ... id="form_validate" ... >
+        ...
+    </form>
+
+You may want to change the code
 to suit your needs. e.g. port to jquery.
+
 
 License
 -------

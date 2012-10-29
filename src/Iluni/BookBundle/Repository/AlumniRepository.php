@@ -92,7 +92,7 @@ class AlumniRepository extends CommonConstraintRepository
         // http://www.simukti.net/blog/2012/04/05/how-to-select-year-month-day-in-doctrine2/
 
         $emConfig = $this->getEntityManager()->getConfiguration();
-        $dqlf_path = 'Iluni\BookBundle\Library\Doctrine\Mysql';
+        $dqlf_path = 'Citra\CommonBundle\Extension\Doctrine\Mysql';
 
         $emConfig->addCustomDatetimeFunction('WEEKDAY', $dqlf_path.'\Weekday');
         $emConfig->addCustomDatetimeFunction('YEAR', $dqlf_path.'\Year');

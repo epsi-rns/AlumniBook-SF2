@@ -13,7 +13,7 @@
  * to kontakt@beberlei.de so I can send you a copy immediately.
  */
 
-namespace Iluni\BookBundle\Library\Doctrine\Mysql;
+namespace Citra\CommonBundle\Extension\Doctrine\Mysql;
 
 use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\AST\Functions\FunctionNode;

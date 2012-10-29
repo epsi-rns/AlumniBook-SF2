@@ -1,0 +1,12 @@
+services:
+    # routing
+    citra.routing.crud:
+        class: Citra\CommonBundle\Extension\Routing\CrudLoader
+        tags:
+            - { name: routing.loader }
+        arguments: [ @service_container ]
+
+    citra.assetic.compressorfilter:
+        class: Citra\CommonBundle\Extension\Assetic\CompressorFilter
+        tags:
+            -  { name: assetic.filter, alias: csscompress}

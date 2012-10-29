@@ -10,13 +10,6 @@ services:
 #        class: %iluni_book.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
 
-    # routing
-    iluni_book.routing.crud:
-        class: Iluni\BookBundle\Library\Routing\CrudLoader
-        tags:
-            - { name: routing.loader }
-        arguments: [ @service_container ]
-
     # twig
     iluni_book.twig.extension:
         class: Iluni\BookBundle\Library\Twig\BookExtension

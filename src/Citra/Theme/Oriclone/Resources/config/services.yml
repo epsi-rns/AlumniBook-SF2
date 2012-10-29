@@ -8,10 +8,3 @@ services:
             -  { name: twig.extension }
         arguments:
             - "@service_container"
-
-    oriclone.assetic.compressorfilter:
-        class: Citra\Theme\Oriclone\Assetic\CompressorFilter
-        tags:
-            -  { name: assetic.filter, alias: csscompress}
-
-

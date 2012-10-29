@@ -1,7 +1,7 @@
 <?php
 // http://php-and-symfony.matthiasnoback.nl/2012/01/symfony2-dynamically-add-routes/
 
-namespace Iluni\BookBundle\Library\Routing;
+namespace Citra\CommonBundle\Extension\Routing;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Yaml\Yaml;
