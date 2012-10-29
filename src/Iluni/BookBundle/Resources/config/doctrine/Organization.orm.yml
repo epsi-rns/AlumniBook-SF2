@@ -42,23 +42,25 @@ Iluni\BookBundle\Entity\Organization:
       gedmo:
         timestampable:
           on: update
+    slug:
+      type: string
+      length: 128
+      gedmo:
+        slug:
+          fields: [name]
     lft:
       type: integer
-      gedmo:
-        - treeLeft
+      gedmo: [ treeLeft ]
     rgt:
       type: integer
-      gedmo:
-        - treeRight
+      gedmo: [ treeRight ]
     root:
       type: integer
       nullable: true
-      gedmo:
-        - treeRoot
+      gedmo: [ treeRoot ]
     lvl:
       type: integer
-      gedmo:
-        - treeLevel
+      gedmo: [ treeLevel ]
   manyToOne:
     parent:
       targetEntity: Iluni\BookBundle\Entity\Organization
@@ -67,14 +69,16 @@ Iluni\BookBundle\Entity\Organization:
         name: parent_id
         referencedColumnName: oid
         onDelete: SET NULL
-      gedmo:
-        - treeParent
+      gedmo: [ treeParent ]
   oneToMany:
     children:
       targetEntity: Iluni\BookBundle\Entity\Organization
       mappedBy: parent
       orderBy:
         lft: ASC
+  indexes:
+    search_idx:
+      columns: slug
   lifecycleCallbacks:
     prePersist: [ setFullnameValue ]
     preUpdate: [ setFullnameValue ]

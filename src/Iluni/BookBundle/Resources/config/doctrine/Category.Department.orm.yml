@@ -12,8 +12,7 @@ Iluni\BookBundle\Entity\Category\Department:
       column: department
       length: 40
       unique: true
-      gedmo:
-        - translatable
+      gedmo: [ translatable ]
   manyToOne:
     faculty:
       targetEntity: Iluni\BookBundle\Entity\Category\Faculty

@@ -24,3 +24,8 @@ monolog:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+#swiftmailer:
+#    transport: gmail
+#    username:  %gmail_username%
+#    password:  %gmail_password%

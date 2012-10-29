@@ -12,6 +12,5 @@ Iluni\BookBundle\Entity\Category\ContactType:
       column: contact_type
       length: 25
       unique: true
-      gedmo:
-        - translatable
+      gedmo: [ translatable ]
   lifecycleCallbacks: {  }

@@ -34,7 +34,7 @@
         </td>
         {% endif %}
 
-        <td><a href="{{ path('about_alumni', { 'aid': entity.alumni.id }) }}"
+        <td><a href="{{ path('about_alumni_slug', { 'slug': entity.alumni.slug }) }}"
           >{{ entity.alumni }}</a></td>
         <td>{{ entity.alumni.community }}</td>
 

@@ -15,23 +15,20 @@ services:
         class: Iluni\BookBundle\Library\Routing\CrudLoader
         tags:
             - { name: routing.loader }
-        arguments:
-            - "@service_container"
+        arguments: [ @service_container ]
 
     # twig
     iluni_book.twig.extension:
         class: Iluni\BookBundle\Library\Twig\BookExtension
         tags:
             - { name: twig.extension }
-        arguments:
-            - "@service_container"
+        arguments: [ @service_container ]
 
     iluni_book.twig.tab:
         class: Iluni\BookBundle\Library\Twig\BookTabExtension
         tags:
             - { name: twig.extension }
-        arguments:
-            - "@router"
+        arguments: [ @router ]
 
     # listener
     iluni_book.listener.locale:
@@ -58,10 +55,9 @@ services:
 
     iluni_book.filter_options_holder:
         class: Iluni\BookBundle\Library\OptionsHolder\FilterOptionsHolder
-        arguments: ["@session"]
+        arguments: [ @session ]
 
     # 3rd party fork
     ideato.pager:
         class: Iluni\BookBundle\Library\Pager\DoctrinePager
-        arguments:
-            - %ideato.pager.max_per_page%
+        arguments: [ %ideato.pager.max_per_page% ]

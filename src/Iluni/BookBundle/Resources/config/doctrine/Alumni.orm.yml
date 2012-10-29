@@ -55,6 +55,12 @@ Iluni\BookBundle\Entity\Alumni:
       gedmo:
         timestampable:
           on: update
+    slug:
+      type: string
+      length: 128
+      gedmo:
+        slug:
+          fields: [name]
   manyToOne:
     religion:
       targetEntity: Iluni\BookBundle\Entity\Category\Religion
@@ -72,7 +78,9 @@ Iluni\BookBundle\Entity\Alumni:
       mappedBy: alumni
       # inversedBy:
       # orphanRemoval: false
-
+  indexes:
+    search_idx:
+      columns: slug
   lifecycleCallbacks:
     prePersist: [ setFullnameValue ]
     preUpdate: [ setFullnameValue ]

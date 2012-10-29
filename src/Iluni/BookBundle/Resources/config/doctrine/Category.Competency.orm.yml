@@ -14,8 +14,7 @@ Iluni\BookBundle\Entity\Category\Competency:
       column: competency
       length: 30
       unique: true
-      gedmo:
-        - translatable
+      gedmo: [ translatable ]
     memo:
       type: text
       nullable: true

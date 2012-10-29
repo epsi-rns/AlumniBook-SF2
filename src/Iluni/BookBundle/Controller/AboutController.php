@@ -58,11 +58,43 @@ class AboutController extends CommonController implements
         ));
     }
 
+    public function alumniSlugAction($slug)
+    {
+        $entity = $this
+            ->getRepository('Alumni')
+            ->findOneBySlug($slug);
+        $aid = $entity->getId();
+        $maps = $this
+            ->getRepository('Detail\AlumniOrgMap')
+            ->findBy(array('alumni' => $aid));
+
+        return $this->renderTwig('About/Alumni:main', array(
+            'one' => $entity,
+            'maps' => $maps
+        ));
+    }
+
     public function orgAction($oid)
     {
         $entity = $this
             ->getRepository('Organization')
             ->find($oid);
+        $maps = $this
+            ->getRepository('Detail\AlumniOrgMap')
+            ->findBy(array('organization' => $oid));
+
+        return $this->renderTwig('About/Org:main', array(
+            'one' => $entity,
+            'maps' => $maps
+        ));
+    }
+
+    public function orgSlugAction($slug)
+    {
+        $entity = $this
+            ->getRepository('Organization')
+            ->findOneBySlug($slug);
+        $oid = $entity->getId();
         $maps = $this
             ->getRepository('Detail\AlumniOrgMap')
             ->findBy(array('organization' => $oid));

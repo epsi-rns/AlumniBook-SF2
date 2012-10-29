@@ -30,7 +30,7 @@
         </td>
         {% endif %}
 
-        <td><a href="{{ path('about_alumni', { 'aid': entity.id }) }}"
+        <td><a href="{{ path('about_alumni_slug', { 'slug': entity.slug }) }}"
           >{{ entity.fullname|textShort(20) }}</a>
           {{ entity.updated|pastDateImage }}</td>
         <td>{{ entity.communityArray|join('<br/>')|textShort(15) }}</td>

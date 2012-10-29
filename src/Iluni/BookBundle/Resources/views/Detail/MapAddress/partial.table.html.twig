@@ -28,10 +28,10 @@
         </td>
         {% endif %}
 
-        <td><a href="{{ path('about_alumni', { 'aid': map.alumni.id }) }}"
+        <td><a href="{{ path('about_alumni_slug', { 'slug': map.alumni.slug }) }}"
           >{{ map.alumni|textShort(20) }}</a></td>
         <td>{{ map.alumni.community|textShort(20) }}</td>
-        <td><a href="{{ path('about_org', { 'oid': map.organization.id }) }}"
+        <td><a href="{{ path('about_org_slug', { 'slug': map.organization.slug }) }}"
           >{{ map.organization }}</a></td>
         <td>{{ entity.address|textShort(25) }}</td>
         <td>{{ entity.region|textShort(25) }}</td>

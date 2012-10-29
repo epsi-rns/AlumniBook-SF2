@@ -7,7 +7,7 @@ services:
       class: Iluni\BookBundle\Form\Type\TranslatedFieldType
       arguments: [ @service_container ]
       tags:
-       - { name: form.type, alias: translatable_field }
+            - { name: form.type, alias: translatable_field }
 
     # shortcut: order by type
     form.type.order_by:

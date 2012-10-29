@@ -25,7 +25,7 @@
         </td>
         {% endif %}
 
-        <td><a href="{{ path('about_org', { 'oid': entity.organization.id }) }}"
+        <td><a href="{{ path('about_org_slug', { 'slug': entity.organization.slug }) }}"
           >{{ entity.organization|textShort(20) }}</a></td>
         <td>{{ entity.address|textShort(25) }}</td>
         <td>{{ entity.region|textShort(25) }}</td>

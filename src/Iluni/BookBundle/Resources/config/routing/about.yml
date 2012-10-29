@@ -6,6 +6,16 @@ about_org:
     pattern:  /{oid}/org/
     defaults: { _controller: "IluniBookBundle:About:org" }
 
+about_alumni_slug:
+    pattern:  /alumni/{slug}/
+    defaults: { _controller: "IluniBookBundle:About:alumniSlug" }
+    # requirements: { slug: .+ } # permisive slash
+
+about_org_slug:
+    pattern:  /org/{slug}/
+    defaults: { _controller: "IluniBookBundle:About:orgSlug" }
+    # requirements: { slug: .+ } # permisive slash
+
 detail_alumni:
     pattern:  /{aid}/adet/
     defaults: { _controller: "IluniBookBundle:About:adet" }
