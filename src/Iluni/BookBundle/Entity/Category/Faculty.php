@@ -152,4 +152,5 @@ class Faculty
     {
         return $this->community;
     }
+
 }

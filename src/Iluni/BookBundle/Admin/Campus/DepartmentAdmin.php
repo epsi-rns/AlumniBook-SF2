@@ -32,7 +32,8 @@ class DepartmentAdmin extends Admin
     {
         $formMapper
             ->add('name', null, array('help'=>'A department name'))
-            ->add('faculty', null, array(
+            // 'sonata_type_model_list' would be cool
+            ->add('faculty', 'sonata_type_model', array(
                 'help'=>'Select faculty where the department belong to'
             ));
     }

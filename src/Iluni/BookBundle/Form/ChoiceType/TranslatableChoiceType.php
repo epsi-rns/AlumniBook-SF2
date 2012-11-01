@@ -1,4 +1,8 @@
 <?php
+// Better alternative:
+// https://github.com/liip/LiipFormTranslationChoiceBundle
+// https://github.com/liip/LiipFormTranslationChoiceBundle/blob/master/Form/Type/TranslationChoiceType.php
+
 namespace Iluni\BookBundle\Form\ChoiceType;
 
 use Symfony\Component\Form\AbstractType;

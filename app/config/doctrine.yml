@@ -24,13 +24,6 @@ doctrine:
                         prefix: Gedmo\Translatable\Entity
                         dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
 
-                        # this one is optional and will default to the name set for the mapping
-                        alias: GedmoTranslatable
-
-                #dql:
-                #    datetime_functions:
-                #        test_datetime: Iluni\BookBundle\DQL\DatetimeFunction
-
 # Doctrine Extensions Configuration
 stof_doctrine_extensions:
     default_locale: en_us
@@ -41,3 +34,4 @@ stof_doctrine_extensions:
             translatable:  true
             tree:          true
             sluggable:     true
+            sortable:      true

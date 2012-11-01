@@ -31,7 +31,12 @@ class FacultyAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name', null, array('help'=>'A faculty name'));
+            ->add('name', null, array('help'=>'A faculty name'))
+            ->add('departments', 'sonata_type_collection', array(), array(
+                'edit' => 'inline',  // inline|standard
+                'inline' => 'table', // table|standard
+                'sortable'  => 'position'
+            ));
     }
 
     protected function configureListFields(ListMapper $listMapper)
