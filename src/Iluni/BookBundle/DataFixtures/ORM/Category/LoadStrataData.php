@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\Strata;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\Strata;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadStrataData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadStrataData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -45,7 +45,7 @@ class LoadStrataData extends LoadBookCategoryData implements OrderedFixtureInter
     */
     public function getModelFile()
     {
-        return '031_strata';
+        return 'Category/031_strata';
     }
 
     public function getOrder()

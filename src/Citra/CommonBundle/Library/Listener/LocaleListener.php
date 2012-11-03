@@ -1,6 +1,6 @@
 <?php
 
-namespace Iluni\BookBundle\Library\Listener;
+namespace Citra\CommonBundle\Library\Listener;
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;

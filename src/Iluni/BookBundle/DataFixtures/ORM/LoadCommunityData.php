@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Community;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Community;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadCommunityData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadCommunityData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -56,7 +56,7 @@ class LoadCommunityData extends LoadBookCategoryData implements OrderedFixtureIn
     */
     public function getModelFile()
     {
-        return '025_community';
+        return 'Category/025_community';
     }
 
     public function getOrder()

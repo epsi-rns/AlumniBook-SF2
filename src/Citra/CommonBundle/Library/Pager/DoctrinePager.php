@@ -1,10 +1,11 @@
 <?php
 // Modified version of Ideato\SimplePagerBundle\Pagination\Pager
+// https://github.com/ideatosrl/SimplePagerBundle
 
-namespace Iluni\BookBundle\Library\Pager;
+namespace Citra\CommonBundle\Library\Pager;
 
 use Doctrine\ORM\Tools\Pagination\Paginator;
-use Iluni\BookBundle\Library\Pager\sfPager;
+use Citra\CommonBundle\Library\Pager\sfPager;
 
 class DoctrinePager extends sfPager
 {

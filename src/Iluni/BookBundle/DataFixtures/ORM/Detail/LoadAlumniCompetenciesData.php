@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\AlumniCompetencies;
 
 /**
@@ -15,7 +15,7 @@ use Iluni\BookBundle\Entity\Detail\AlumniCompetencies;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadAlumniCompetenciesData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadAlumniCompetenciesData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -73,7 +73,7 @@ class LoadAlumniCompetenciesData extends LoadBookDetailData implements OrderedFi
     */
     public function getModelFile()
     {
-        return '120_acompetencies';
+        return 'Detail/120_acompetencies';
     }
 
     public function getOrder()

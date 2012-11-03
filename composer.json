@@ -25,7 +25,7 @@
         "gedmo/doctrine-extensions": "2.3.2",
         "stof/doctrine-extensions-bundle": "dev-master",
         "twig/extensions": "dev-master",
-        "sonata-project/admin-bundle": "2.1.x-dev",
+        "sonata-project/admin-bundle": "dev-master",
         "sonata-project/doctrine-orm-admin-bundle": "dev-master",
         "sonata-project/intl-bundle": "dev-master",
         "sonata-project/cache-bundle": "dev-master",

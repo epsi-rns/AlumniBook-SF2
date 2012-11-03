@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\JobPosition;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\JobPosition;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadJobPositionData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadJobPositionData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -50,7 +50,7 @@ class LoadJobPositionData extends LoadBookCategoryData implements OrderedFixture
     */
     public function getModelFile()
     {
-        return '041_job_position';
+        return 'Category/041_job_position';
     }
 
     public function getOrder()

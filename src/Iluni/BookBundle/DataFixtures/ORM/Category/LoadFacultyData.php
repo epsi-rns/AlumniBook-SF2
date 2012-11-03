@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\Faculty;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\Faculty;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadFacultyData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadFacultyData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -50,7 +50,7 @@ class LoadFacultyData extends LoadBookCategoryData implements OrderedFixtureInte
     */
     public function getModelFile()
     {
-        return '021_faculty';
+        return 'Category/021_faculty';
     }
 
     public function getOrder()

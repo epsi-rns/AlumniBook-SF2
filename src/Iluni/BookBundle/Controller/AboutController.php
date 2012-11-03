@@ -7,7 +7,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-use Iluni\BookBundle\Library\Controller\InitializableControllerInterface;
+use Citra\CommonBundle\Library\Controller\InitializableControllerInterface;
 use Iluni\BookBundle\Library\Controller\CommonController;
 use Iluni\BookBundle\Entity\Alumni;
 use Iluni\BookBundle\Entity\Organization;

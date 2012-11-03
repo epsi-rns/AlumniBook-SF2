@@ -1,6 +1,6 @@
 <?php
 
-namespace Iluni\BookBundle\Library\Controller;
+namespace Citra\CommonBundle\Library\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 

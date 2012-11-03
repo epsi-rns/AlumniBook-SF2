@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\District;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\District;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadDistrictData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadDistrictData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -48,7 +48,7 @@ class LoadDistrictData extends LoadBookCategoryData implements OrderedFixtureInt
     */
     public function getModelFile()
     {
-        return '072_district';
+        return 'Category/072_district';
     }
 
     public function getOrder()

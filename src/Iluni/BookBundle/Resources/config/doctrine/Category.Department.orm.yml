@@ -17,11 +17,6 @@ Iluni\BookBundle\Entity\Category\Department:
     #  type: integer
     #  gedmo:
     #    - sortablePosition
-    #category:
-    #  type: string
-    #  length: 128
-    #  gedmo:
-    #    - sortableGroup
   manyToOne:
     faculty:
       targetEntity: Iluni\BookBundle\Entity\Category\Faculty

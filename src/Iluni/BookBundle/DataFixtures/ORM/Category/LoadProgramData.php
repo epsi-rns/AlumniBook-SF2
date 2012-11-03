@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\Program;
 
 #use Stof\DoctrineExtensionsBundle\DependencyInjection\StofDoctrineExtensionsExtension;
@@ -17,7 +17,7 @@ use Gedmo\Translatable\Entity\Translation;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadProgramData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadProgramData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -56,7 +56,7 @@ class LoadProgramData extends LoadBookCategoryData implements OrderedFixtureInte
     */
     public function getModelFile()
     {
-        return '020_program';
+        return 'Category/020_program';
     }
 
     public function getOrder()

@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Request;
 
-use Iluni\BookBundle\Library\Controller\InitializableControllerInterface;
+use Citra\CommonBundle\Library\Controller\InitializableControllerInterface;
 use Iluni\BookBundle\Library\LD3\DepartmentFilterLD3;
 use Iluni\BookBundle\Library\LD3\DepartmentEditLD3;
 use Iluni\BookBundle\Library\LD3\DistrictEditLD3;

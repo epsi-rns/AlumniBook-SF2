@@ -1,12 +1,34 @@
+parameters:
+    ideato.pager.max_per_page: 20
+
 services:
-    # routing
+    # listener
+    citra.listener.locale:
+        class: Citra\CommonBundle\Library\Listener\LocaleListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
+
+    citra.listener.before_controller:
+        class: Citra\CommonBundle\Library\Listener\BeforeControllerListener
+        scope: request
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+
+    # extension:routing
     citra.routing.crud:
         class: Citra\CommonBundle\Extension\Routing\CrudLoader
         tags:
             - { name: routing.loader }
         arguments: [ @service_container ]
 
+    # extension:assetic
     citra.assetic.compressorfilter:
         class: Citra\CommonBundle\Extension\Assetic\CompressorFilter
         tags:
             -  { name: assetic.filter, alias: csscompress}
+
+    # 3rd party fork
+    ideato.pager:
+        class: Citra\CommonBundle\Library\Pager\DoctrinePager
+        arguments: [ %ideato.pager.max_per_page% ]

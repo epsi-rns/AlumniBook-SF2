@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\AlumniDegrees;
 
 /**
@@ -15,7 +15,7 @@ use Iluni\BookBundle\Entity\Detail\AlumniDegrees;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadAlumniDegreesData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadAlumniDegreesData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -83,7 +83,7 @@ class LoadAlumniDegreesData extends LoadBookDetailData implements OrderedFixture
     */
     public function getModelFile()
     {
-        return '123_adegrees';
+        return 'Detail/123_adegrees';
     }
 
     public function getOrder()

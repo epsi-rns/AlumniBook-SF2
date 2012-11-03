@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\AlumniOrgMap;
 
 /**
@@ -15,7 +15,7 @@ use Iluni\BookBundle\Entity\Detail\AlumniOrgMap;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadAlumniOrgMapData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadAlumniOrgMapData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -89,7 +89,7 @@ class LoadAlumniOrgMapData extends LoadBookDetailData implements OrderedFixtureI
     */
     public function getModelFile()
     {
-        return '210_ao_map';
+        return 'Detail/210_ao_map';
     }
 
     public function getOrder()

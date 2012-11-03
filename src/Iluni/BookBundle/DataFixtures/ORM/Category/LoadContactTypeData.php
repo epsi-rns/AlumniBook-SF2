@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\ContactType;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\ContactType;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadContactTypeData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadContactTypeData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -50,7 +50,7 @@ class LoadContactTypeData extends LoadBookCategoryData implements OrderedFixture
     */
     public function getModelFile()
     {
-        return '060_contact_type';
+        return 'Category/060_contact_type';
     }
 
     public function getOrder()

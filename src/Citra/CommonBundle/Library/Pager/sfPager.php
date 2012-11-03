@@ -1,7 +1,8 @@
 <?php
 // Modified version of Ideato\SimplePagerBundle\Pager\sfPager
+// https://github.com/ideatosrl/SimplePagerBundle
 
-namespace Iluni\BookBundle\Library\Pager;
+namespace Citra\CommonBundle\Library\Pager;
 
 /*
  * This file is part of the symfony package.

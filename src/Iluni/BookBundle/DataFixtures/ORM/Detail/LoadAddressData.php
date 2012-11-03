@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\AlumniAddress;
 use Iluni\BookBundle\Entity\Detail\OrgAddress;
 use Iluni\BookBundle\Entity\Detail\MapAddress;
@@ -17,7 +17,7 @@ use Iluni\BookBundle\Entity\Detail\MapAddress;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadAddressData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadAddressData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -199,7 +199,7 @@ class LoadAddressData extends LoadBookDetailData implements OrderedFixtureInterf
     */
     public function getModelFile()
     {
-        return '310_address';
+        return 'Detail/310_address';
     }
 
     public function getOrder()

@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\OrgFields;
 
 /**
@@ -15,7 +15,7 @@ use Iluni\BookBundle\Entity\Detail\OrgFields;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadOrgFieldsData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadOrgFieldsData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -82,7 +82,7 @@ class LoadOrgFieldsData extends LoadBookDetailData implements OrderedFixtureInte
     */
     public function getModelFile()
     {
-        return '220_ofields';
+        return 'Detail/220_ofields';
     }
 
     public function getOrder()

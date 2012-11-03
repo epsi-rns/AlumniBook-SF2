@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookCategoryData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Category\BizField;
 
 /**
@@ -14,7 +14,7 @@ use Iluni\BookBundle\Entity\Category\BizField;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadBizFieldData extends LoadBookCategoryData implements OrderedFixtureInterface
+class LoadBizFieldData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -50,7 +50,7 @@ class LoadBizFieldData extends LoadBookCategoryData implements OrderedFixtureInt
     */
     public function getModelFile()
     {
-        return '050_biz_field';
+        return 'Category/050_biz_field';
     }
 
     public function getOrder()

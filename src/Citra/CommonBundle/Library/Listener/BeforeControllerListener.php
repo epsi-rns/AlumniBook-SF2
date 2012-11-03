@@ -1,10 +1,10 @@
 <?php
 
-namespace Iluni\BookBundle\Library\Listener;
+namespace Citra\CommonBundle\Library\Listener;
 
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
 use Symfony\Component\Security\Core\SecurityContextInterface;
-use Iluni\BookBundle\Library\Controller\InitializableControllerInterface;
+use Citra\CommonBundle\Library\Controller\InitializableControllerInterface;
 
 /**
 * @author Matt Drollette <matt@drollette.com>

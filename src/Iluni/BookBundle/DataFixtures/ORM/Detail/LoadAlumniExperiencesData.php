@@ -6,7 +6,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Iluni\BookBundle\Library\DataFixtures\ORM\LoadBookDetailData;
+use Iluni\BookBundle\DataFixtures\LoadBookData;
 use Iluni\BookBundle\Entity\Detail\AlumniExperiences;
 
 /**
@@ -15,7 +15,7 @@ use Iluni\BookBundle\Entity\Detail\AlumniExperiences;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class LoadAlumniExperiencesData extends LoadBookDetailData implements OrderedFixtureInterface
+class LoadAlumniExperiencesData extends LoadBookData implements OrderedFixtureInterface
 {
     public function load(ObjectManager $em)
     {
@@ -82,7 +82,7 @@ class LoadAlumniExperiencesData extends LoadBookDetailData implements OrderedFix
     */
     public function getModelFile()
     {
-        return '122_aexperiences';
+        return 'Detail/122_aexperiences';
     }
 
     public function getOrder()
