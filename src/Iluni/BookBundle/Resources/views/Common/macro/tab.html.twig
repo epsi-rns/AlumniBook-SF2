@@ -15,15 +15,3 @@
     </ul>
     </div>
 {% endmacro %}
-
-{% macro tab_unused() %}
-    {#
-    <div class="menu_tabs" title="Related Attributes">
-    <ul>
-      {% for key, tab in tabs %}
-        {% set hash_id, var_name, caption, route = tab[0], tab[1], tab[2], tab[3] %}
-        <li{% if module == key %} class="selected"{% endif %}>
-            <a href="{{ path(route, { (hash_id) : attribute(_context, var_name) }) }}">{{ caption|trans }}</a>
-        </li>
-    #}
-{% endmacro %}

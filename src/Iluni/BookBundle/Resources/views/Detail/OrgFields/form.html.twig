@@ -13,8 +13,6 @@
 {% block subtitle %}{{ entity.organization }}{% endblock %}
 
 {% block body %}
-    {% set form_id = edit_form.vars.name %}
-
     <form action="{{ path }}" method="post" id="form_validate" {{ form_enctype(edit_form) }}>
         {{ form_widget(edit_form) }}
         &nbsp;
