@@ -11,7 +11,7 @@
             document.id('{{ idns }}_{{fieldname}}').addClass('{{ class }}');
             {% endfor %}
 
-            new FormValidator.Inline('{{ form_id }}');
+            new Form.Validator.Inline('{{ form_id }}');
         });
     </script>
 {% endif %}

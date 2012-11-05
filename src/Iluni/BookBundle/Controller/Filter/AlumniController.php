@@ -32,15 +32,18 @@ class AlumniController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Alumni:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Alumni:table'
+            'filterRoute' => 'alumni_partial_filter',
+            'tableRoute'  => 'alumni_partial_table'
         );
 
         return $this->renderTwig('Master/Alumni:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Alumni')
             ->findQueryFilter($params);
@@ -51,8 +54,10 @@ class AlumniController extends CommonFilterController
         return $this->renderTwig('Master/Alumni:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new AlumniFilter());
         $filterForm->bind($params);
 

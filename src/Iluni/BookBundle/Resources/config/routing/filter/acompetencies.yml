@@ -2,10 +2,13 @@ acompetencies:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\ACompetencies:index" }
 
-#acompetencies_partial_table:
-#    pattern:  /
-#    defaults: { _controller: "IluniBookBundle:Filter\ACompetencies:table" }
-#     requirements: { _method: POST }
+acompetencies_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\ACompetencies:table" }
+
+acompetencies_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\ACompetencies:filter" }
 
 acompetencies_categories:
     pattern:  /categories

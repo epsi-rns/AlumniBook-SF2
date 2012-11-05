@@ -1,0 +1,25 @@
+{% extends 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block body %}
+
+    <script type="text/javascript">
+        data = {{ params|json_encode()|raw }}
+
+        target_table = '{{ path (tableRoute) }}?page={{page}}';
+        bindInnerRequest(target_table, 'part_table', data);
+
+        target_filter = '{{ path (filterRoute) }}';
+        bindInnerRequest(target_filter, 'part_filter', data);
+    </script>
+
+    <div id="part_filter"></div>
+    <br/>
+
+    {% block table_summary %}{% endblock %}
+
+    <div id="part_table"></div>
+    <br/>
+
+    {% block table_links %}{% endblock %}
+
+{% endblock %}

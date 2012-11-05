@@ -32,15 +32,18 @@ class BirthdayController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Birthday:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Birthday:table'
+            'filterRoute' => 'alumni_birthday_partial_filter',
+            'tableRoute'  => 'alumni_birthday_partial_table'
         );
 
         return $this->renderTwig('Master/Birthday:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Alumni')
             ->findQueryBirthdayFilter($params);
@@ -51,8 +54,10 @@ class BirthdayController extends CommonFilterController
         return $this->renderTwig('Master/Birthday:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new BirthdayFilter());
         $filterForm->bind($params);
 

@@ -28,15 +28,18 @@ class OMapController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/OMap:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/OMap:table'
+            'filterRoute' => 'omap_partial_filter',
+            'tableRoute'  => 'omap_partial_table'
         );
 
         return $this->renderTwig('Detail/OrgMap:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniOrgMap')
             ->findOrgQueryFilter($params);
@@ -47,8 +50,10 @@ class OMapController extends CommonFilterController
         return $this->renderTwig('Detail/OrgMap:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new OMapFilter());
         $filterForm->bind($params);
 

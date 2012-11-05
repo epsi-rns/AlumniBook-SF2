@@ -1,3 +1,11 @@
 adegrees:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\ADegrees:index" }
+
+adegrees_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\ADegrees:table" }
+
+adegrees_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\ADegrees:filter" }

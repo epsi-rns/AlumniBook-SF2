@@ -2,3 +2,10 @@ workplace:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Workplace:index" }
 
+workplace_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\Workplace:table" }
+
+workplace_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\Workplace:filter" }

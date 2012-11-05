@@ -30,15 +30,18 @@ class OrganizationController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Organization:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Organization:table'
+            'filterRoute' => 'org_partial_filter',
+            'tableRoute'  => 'org_partial_table'
         );
 
         return $this->renderTwig('Master/Organization:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Organization')
             ->findQueryFilter($params);
@@ -49,8 +52,10 @@ class OrganizationController extends CommonFilterController
         return $this->renderTwig('Master/Organization:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new OrganizationFilter());
         $filterForm->bind($params);
 

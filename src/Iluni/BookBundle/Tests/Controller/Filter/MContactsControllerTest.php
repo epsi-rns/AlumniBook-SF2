@@ -28,7 +28,11 @@ class MContactsControllerTest extends ControllerTestCase
             $formName.'[contactType]'  => 4,
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/mcontacts/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/mcontacts/table?page=1&orderBy=6';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

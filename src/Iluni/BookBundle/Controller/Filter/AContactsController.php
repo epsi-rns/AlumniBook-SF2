@@ -28,15 +28,18 @@ class AContactsController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/AContacts:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/AContacts:table'
+            'filterRoute' => 'acontacts_partial_filter',
+            'tableRoute'  => 'acontacts_partial_table'
         );
 
         return $this->renderTwig('Detail/AlumniContacts:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniContacts')
             ->findQueryFilter($params);
@@ -47,8 +50,10 @@ class AContactsController extends CommonFilterController
         return $this->renderTwig('Detail/AlumniContacts:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new AContactsFilter());
         $filterForm->bind($params);
 

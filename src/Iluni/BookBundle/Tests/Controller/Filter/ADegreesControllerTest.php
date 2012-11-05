@@ -27,7 +27,11 @@ class ADegreesControllerTest extends ControllerTestCase
             $formName.'[community][faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/adegrees/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/adegrees/table?page=1&orderBy=105';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

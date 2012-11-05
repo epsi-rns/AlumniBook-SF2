@@ -26,15 +26,18 @@ class OContactsController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/OContacts:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/OContacts:table'
+            'filterRoute' => 'ocontacts_partial_filter',
+            'tableRoute'  => 'ocontacts_partial_table'
         );
 
         return $this->renderTwig('Detail/OrgContacts:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\OrgContacts')
             ->findQueryFilter($params);
@@ -45,8 +48,10 @@ class OContactsController extends CommonFilterController
         return $this->renderTwig('Detail/OrgContacts:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new OContactsFilter());
         $filterForm->bind($params);
 

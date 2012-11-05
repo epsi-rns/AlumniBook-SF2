@@ -9,7 +9,7 @@ use Iluni\BookBundle\Tests\ControllerTestCase;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class MAdrressControllerTest extends ControllerTestCase
+class MAddressControllerTest extends ControllerTestCase
 {
     public function testFilterScenario()
     {
@@ -27,7 +27,11 @@ class MAdrressControllerTest extends ControllerTestCase
             $formName.'[community][faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/workplace/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/workplace/table?page=1&orderBy=6';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

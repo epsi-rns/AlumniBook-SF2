@@ -26,15 +26,18 @@ class CommunityController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Community:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Community:table'
+            'filterRoute' => 'community_partial_filter',
+            'tableRoute'  => 'community_partial_table'
         );
 
         return $this->renderTwig('Master/Community:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Community')
             ->findQueryFilter($params);
@@ -45,8 +48,10 @@ class CommunityController extends CommonFilterController
         return $this->renderTwig('Master/Community:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new CommunityFilter());
         $filterForm->bind($params);
 

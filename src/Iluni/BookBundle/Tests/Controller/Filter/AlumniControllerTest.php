@@ -28,7 +28,11 @@ class AlumniControllerTest extends ControllerTestCase
             $formName.'[name]'  => '%nymous%',
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_show');
+        $url_path = '/alumni/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/alumni/table?page=1&orderBy=1';
+        $this->continueTableScenario($url_path, 'list_show');
     }
 }
 

@@ -27,7 +27,11 @@ class OContactsControllerTest extends ControllerTestCase
             $formName.'[contactType]'  => 4,
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/ocontacts/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/ocontacts/table?page=1&orderBy=6';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

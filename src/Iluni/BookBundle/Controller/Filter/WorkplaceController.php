@@ -28,27 +28,32 @@ class WorkplaceController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Workplace:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Workplace:table'
+            'filterRoute' => 'workplace_partial_filter',
+            'tableRoute'  => 'workplace_partial_table'
         );
 
         return $this->renderTwig('Detail/MapAddress:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\MapAddress')
             ->findQueryFilter($params);
 
         $render_options = $this->processFilter($params, $query, $page);
-        $render_options['path'] = 'maddress';
+        $render_options['path'] = 'workplace';
 
         return $this->renderTwig('Detail/MapAddress:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new MAddressFilter());
         $filterForm->bind($params);
 

@@ -11,3 +11,10 @@ ofields_category:
     defaults: { _controller: "IluniBookBundle:Filter\OFields:category" }
     requirements: { cid:  \d+ }
 
+ofields_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\OFields:table" }
+
+ofields_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\OFields:filter" }

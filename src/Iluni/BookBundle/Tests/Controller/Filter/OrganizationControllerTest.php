@@ -27,7 +27,12 @@ class OrganizationControllerTest extends ControllerTestCase
             $formName.'[name]'  => '%epa%',
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_show');
+
+        $url_path = '/org/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/org/table?page=1&orderBy=25';
+        $this->continueTableScenario($url_path, 'list_show');
     }
 }
 

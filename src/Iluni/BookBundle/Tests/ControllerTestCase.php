@@ -48,13 +48,47 @@ abstract class ControllerTestCase extends WebTestCase
         return $client;
     }
 
-    public function continueFilterScenario($crawler, $formData, $linkelement)
+    public function continueCategoriesScenario($url_path)
     {
         $client = $this->client;
+
+        // find categories
+        $crawler = $client->request('GET', $url_path);
+        $statusCode = $client->getResponse()->getStatusCode();
+        $this->assertSame(200, $statusCode);
+
+        // pick test target
+        $element = 'ul#categories li a';
+        $node = $crawler->filter($element)->first();
+        $testValue = $node->text();
+
+        // select category
+        $link = $crawler->selectLink($testValue)->link();
+        $crawler = $client->click($link);
+        $statusCode = $client->getResponse()->getStatusCode();
+        $this->assertSame(200, $statusCode);
+    }
+
+    public function continueFilterScenario($url_path, $formData)
+    {
+        $client = $this->client;
+
+        $crawler = $client->request('GET', $url_path);
+        $statusCode = $client->getResponse()->getStatusCode();
+        $this->assertSame(200, $statusCode);
 
         // Submit it with create action
         $form = $crawler->selectButton('Apply')->form($formData);
         $client->submit($form);
+        $statusCode = $client->getResponse()->getStatusCode();
+        $this->assertSame(200, $statusCode);
+    }
+
+    public function continueTableScenario($url_path, $linkelement)
+    {
+        $client = $this->client;
+
+        $crawler = $client->request('GET', $url_path);
         $statusCode = $client->getResponse()->getStatusCode();
         $this->assertSame(200, $statusCode);
 

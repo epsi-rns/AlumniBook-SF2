@@ -27,7 +27,11 @@ class CommunityControllerTest extends ControllerTestCase
             $formName.'[faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/community/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/community/table?page=1&orderBy=94';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

@@ -2,3 +2,10 @@ org:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Organization:index" }
 
+org_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\Organization:table" }
+
+org_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\Organization:filter" }

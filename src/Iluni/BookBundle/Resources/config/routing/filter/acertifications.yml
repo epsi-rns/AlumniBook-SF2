@@ -1,3 +1,11 @@
 acertifications:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\ACertifications:index" }
+
+acertifications_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\ACertifications:table" }
+
+acertifications_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\ACertifications:filter" }

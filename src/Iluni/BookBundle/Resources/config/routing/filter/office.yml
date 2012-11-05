@@ -1,3 +1,11 @@
 office:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Office:index" }
+
+office_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\Office:table" }
+
+office_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\Office:filter" }

@@ -32,8 +32,8 @@ class ACommunitiesController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/ACommunities:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/ACommunities:table'
+            'filterRoute' => 'acommunities_partial_filter',
+            'tableRoute'  => 'acommunities_partial_table'
         );
 
         $params_summary = $this->getSummaryParams($params);
@@ -44,8 +44,11 @@ class ACommunitiesController extends CommonFilterController
         return $this->renderTwig('Detail/AlumniCommunities:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniCommunities')
             ->findQueryFilter($params);
@@ -56,8 +59,10 @@ class ACommunitiesController extends CommonFilterController
         return $this->renderTwig('Detail/AlumniCommunities:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new ACommunitiesFilter());
         $filterForm->bind($params);
 

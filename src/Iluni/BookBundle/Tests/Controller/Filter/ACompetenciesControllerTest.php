@@ -15,27 +15,8 @@ class ACompetenciesControllerTest extends ControllerTestCase
     {
         $client = $this->startScenario();
 
-        // find categories
-        $crawler = $client->request('GET', '/acompetencies/categories');
-        $statusCode = $client->getResponse()->getStatusCode();
-        $this->assertSame(200, $statusCode);
-
-        // pick test target
-        $element = 'ul#categories li a';
-        $node = $crawler->filter($element)->first();
-        $testValue = $node->text();
-
-        // select category
-        $link = $crawler->selectLink($testValue)->link();
-        $crawler = $client->click($link);
-        $statusCode = $client->getResponse()->getStatusCode();
-        $this->assertSame(200, $statusCode);
-
-        // test selected value
-        $element1 = 'select#iluni_bookbundle_acompetenciesfilter_competency';
-        $element2 = 'option[selected]';
-        $node = $crawler->filter($element1)->filter($element2);
-        $this->assertEquals($testValue, $node->text());
+        $url_path = '/acompetencies/categories';
+        $this->continueCategoriesScenario($url_path);
 
         // Prepare Data, fill in the form
         $formName = 'iluni_bookbundle_acompetenciesfilter';
@@ -44,7 +25,11 @@ class ACompetenciesControllerTest extends ControllerTestCase
             $formName.'[community][faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/acompetencies/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/acompetencies/table?page=1&orderBy=105';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

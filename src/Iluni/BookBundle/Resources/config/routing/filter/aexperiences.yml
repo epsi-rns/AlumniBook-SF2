@@ -2,3 +2,10 @@ aexperiences:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\AExperiences:index" }
 
+aexperiences_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\AExperiences:table" }
+
+aexperiences_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\AExperiences:filter" }

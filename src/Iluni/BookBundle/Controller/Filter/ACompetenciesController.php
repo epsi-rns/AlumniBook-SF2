@@ -32,15 +32,18 @@ class ACompetenciesController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/ACompetencies:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/ACompetencies:table'
+            'filterRoute' => 'acompetencies_partial_filter',
+            'tableRoute'  => 'acompetencies_partial_table'
         );
 
         return $this->renderTwig('Detail/AlumniCompetencies:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniCompetencies')
             ->findQueryFilter($params);
@@ -51,8 +54,10 @@ class ACompetenciesController extends CommonFilterController
         return $this->renderTwig('Detail/AlumniCompetencies:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new ACompetenciesFilter());
         $filterForm->bind($params);
 

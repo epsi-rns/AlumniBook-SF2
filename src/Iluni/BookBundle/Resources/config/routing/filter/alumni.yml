@@ -2,9 +2,25 @@ alumni:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Alumni:index" }
 
+alumni_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\Alumni:table" }
+
+alumni_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\Alumni:filter" }
+
 alumni_birthday:
     pattern:  /birthday
     defaults: { _controller: "IluniBookBundle:Filter\Birthday:index" }
+
+alumni_birthday_partial_table:
+    pattern:  /birthday/table
+    defaults: { _controller: "IluniBookBundle:Filter\Birthday:table" }
+
+alumni_birthday_partial_filter:
+    pattern:  /birthday/filter
+    defaults: { _controller: "IluniBookBundle:Filter\Birthday:filter" }
 
 alumni_birthday_month:
     pattern:  /birthday/{month}

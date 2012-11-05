@@ -30,15 +30,18 @@ class OFieldsController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/OFields:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/OFields:table'
+            'filterRoute' => 'ofields_partial_filter',
+            'tableRoute'  => 'ofields_partial_table'
         );
 
         return $this->renderTwig('Detail/OrgFields:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\OrgFields')
             ->findQueryFilter($params);
@@ -49,8 +52,10 @@ class OFieldsController extends CommonFilterController
         return $this->renderTwig('Detail/OrgFields:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new OFieldsFilter());
         $filterForm->bind($params);
 

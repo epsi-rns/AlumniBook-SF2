@@ -27,7 +27,11 @@ class ACertificationsControllerTest extends ControllerTestCase
             $formName.'[community][faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/acertifications/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/acertifications/table?page=1&orderBy=105';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

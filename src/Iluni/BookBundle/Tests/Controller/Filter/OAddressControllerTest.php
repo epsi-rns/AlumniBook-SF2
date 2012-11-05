@@ -9,7 +9,7 @@ use Iluni\BookBundle\Tests\ControllerTestCase;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class OAdrressControllerTest extends ControllerTestCase
+class OAddressControllerTest extends ControllerTestCase
 {
     public function testFilterScenario()
     {
@@ -26,7 +26,11 @@ class OAdrressControllerTest extends ControllerTestCase
             $formName.'[orderBy]'  => 61
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/office/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/office/table?page=1&orderBy=6';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

@@ -27,7 +27,11 @@ class AExperiencesControllerTest extends ControllerTestCase
             $formName.'[community][faculty]'  => 4
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/aexperiences/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/aexperiences/table?page=1&orderBy=105';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 

@@ -26,15 +26,18 @@ class OfficeController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Office:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Office:table'
+            'filterRoute' => 'office_partial_filter',
+            'tableRoute'  => 'office_partial_table'
         );
 
         return $this->renderTwig('Detail/OrgAddress:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\OrgAddress')
             ->findQueryFilter($params);
@@ -45,8 +48,10 @@ class OfficeController extends CommonFilterController
         return $this->renderTwig('Detail/OrgAddress:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new OAddressFilter());
         $filterForm->bind($params);
 

@@ -2,6 +2,14 @@ amap:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\AMap:index" }
 
+amap_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\AMap:table" }
+
+amap_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\AMap:filter" }
+
 amap_categories:
     pattern:  /categories
     defaults: { _controller: "IluniBookBundle:Filter\AMap:categories" }

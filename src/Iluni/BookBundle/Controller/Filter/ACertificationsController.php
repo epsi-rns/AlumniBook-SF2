@@ -32,15 +32,18 @@ class ACertificationsController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/ACertifications:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/ACertifications:table'
+            'filterRoute' => 'acertifications_partial_filter',
+            'tableRoute'  => 'acertifications_partial_table'
         );
 
         return $this->renderTwig('Detail/AlumniCertifications:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniCertifications')
             ->findQueryFilter($params);
@@ -51,8 +54,10 @@ class ACertificationsController extends CommonFilterController
         return $this->renderTwig('Detail/AlumniCertifications:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new ACertificationsFilter());
         $filterForm->bind($params);
 

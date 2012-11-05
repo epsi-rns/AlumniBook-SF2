@@ -1,3 +1,11 @@
 community:
     pattern:  /
     defaults: { _controller: "IluniBookBundle:Filter\Community:index" }
+
+community_partial_table:
+    pattern:  /table
+    defaults: { _controller: "IluniBookBundle:Filter\Community:table" }
+
+community_partial_filter:
+    pattern:  /filter
+    defaults: { _controller: "IluniBookBundle:Filter\Community:filter" }

@@ -28,27 +28,32 @@ class ResidenceController extends CommonFilterController
         $render_options = array(
             'params' => $params,
             'page'   => $request->query->getDigits('page', 1),
-            'filterAction' => 'IluniBookBundle:Filter/Residence:filter',
-            'tableAction'  => 'IluniBookBundle:Filter/Residence:table'
+            'filterRoute' => 'residence_partial_filter',
+            'tableRoute'  => 'residence_partial_table'
         );
 
         return $this->renderTwig('Detail/AlumniAddress:index', $render_options);
     }
 
-    public function tableAction($params, $page)
+    public function tableAction(Request $request)
     {
+        $params = $request->query->all();
+        $page = (int) $params['page'];
+
         $query = $this
             ->getRepository('Detail\AlumniAddress')
             ->findQueryFilter($params);
 
         $render_options = $this->processFilter($params, $query, $page);
-        $render_options['path'] = 'aaddress';
+        $render_options['path'] = 'residence';
 
         return $this->renderTwig('Detail/AlumniAddress:partial.table', $render_options);
     }
 
-    public function filterAction($params)
+    public function filterAction(Request $request)
     {
+        $params = $request->query->all();
+
         $filterForm = $this->createForm(new AAddressFilter());
         $filterForm->bind($params);
 

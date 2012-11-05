@@ -9,7 +9,7 @@ use Iluni\BookBundle\Tests\ControllerTestCase;
  *
  * @author E.R. Nurwijayadi <epsi.rns@gmail.com>
  */
-class BirthControllerTest extends ControllerTestCase
+class BirthdayControllerTest extends ControllerTestCase
 {
     public function testFilterScenario()
     {
@@ -26,7 +26,11 @@ class BirthControllerTest extends ControllerTestCase
             $formName.'[orderBy]'  => 75
         );
 
-        $this->continueFilterScenario($crawler, $formData, 'list_edit');
+        $url_path = '/alumni/birthday/filter';
+        $this->continueFilterScenario($url_path, $formData);
+
+        $url_path = '/alumni/birthday/table?page=1&orderBy=75';
+        $this->continueTableScenario($url_path, 'list_edit');
     }
 }
 
