@@ -9,7 +9,9 @@
       {% for key, tab in tabs %}
         {% set vars = tab_extract(tab, hash) %}
         <li{% if module == key %} class="selected"{% endif %}>
-            <a href="{{ vars.url }}">{{ vars.caption|trans({},'navigation') }}</a>
+            <a href="{{ vars.url }}" class="ajax">{{
+                vars.caption|trans({},'navigation')
+            }}</a>
         </li>
       {% endfor %}
     </ul>

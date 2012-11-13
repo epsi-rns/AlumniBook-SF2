@@ -3,7 +3,7 @@
 
 {% macro link_to_new(path_new, hash_argument) %}
 
-    <a class = "icon_new" href="{{
+    <a class = "icon_new no_ajax" href="{{
         path(path_new, hash_argument)
     }}">{% trans from 'actions' %}Create a new entry{% endtrans %}</a>
 {% endmacro %}
@@ -11,14 +11,14 @@
 
 {% macro link_to_new_in_list(path_new, id_name_route, id_name_get) %}
 
-    <a class="icon_new" href="{{ path(path_new,
+    <a class="icon_new ajax" href="{{ path(path_new,
         { (id_name_route): app.request.attributes.get(id_name_get) })
     }}">{% trans from 'actions' %}Create a new entry{% endtrans %}</a>
 {% endmacro %}
 
 
 {% macro link_to_edit(path_edit, hash_argument) %}
-
+    {# unused #}
     <a class = "icon_edit" href="{{
         path(path_edit, hash_argument)
     }}">{% trans from 'actions' %}edit{% endtrans %}</a>
@@ -27,7 +27,7 @@
 
 {% macro link_to__edit(path_edit, hash_argument) %}
 
-    <a class = "icon_edit" href="{{
+    <a class = "icon_edit ajax" href="{{
         path(path_edit, hash_argument)
     }}">{% trans from 'actions' %}Edit{% endtrans %}</a>
 {% endmacro %}
@@ -35,7 +35,7 @@
 
 {% macro link_to__list(path_list, hash_argument) %}
 
-    <a class = "icon_list" href="{{
+    <a class = "icon_list no_ajax" href="{{
         path(path_list, hash_argument)
     }}">{% trans from 'actions' %}List{% endtrans %}</a>
 {% endmacro %}
@@ -43,7 +43,7 @@
 
 {% macro link_to_backtolist(path_list, hash_argument) %}
 
-    <a class = "icon_list" href="{{
+    <a class = "icon_list no_ajax" href="{{
         path(path_list, hash_argument)
     }}">{% trans from 'actions' %}Back to the list{% endtrans %}</a>
 {% endmacro %}
@@ -60,31 +60,31 @@
 
 {% macro link_to_action_list(path_list, hash_argument) %}
 
-    <a class="icon_list" name="list_list" href="{{
+    <a class="icon_list no_ajax" name="list_list" href="{{
         path(path_list, hash_argument)
     }}" title="{% trans from 'actions' %}List{% endtrans %}">&nbsp;</a>
 {% endmacro %}
 
 {% macro link_to_action_edit(path_edit, hash_argument) %}
 
-    <a class="icon_edit" name="list_edit" href="{{
+    <a class="icon_edit no_ajax" name="list_edit" href="{{
         path(path_edit, hash_argument)
     }}" title="{% trans from 'actions' %}Edit{% endtrans %}">&nbsp;</a>
 {% endmacro %}
 
 {% macro link_to_action_show(path_show, hash_argument) %}
 
-    <a class="icon_show" name="list_show" href="{{
+    <a class="icon_show no_ajax" name="list_show" href="{{
         path(path_show, hash_argument)
     }}" title="{% trans from 'actions' %}Show{% endtrans %}">&nbsp;</a>
 {% endmacro %}
 
 {% macro link_to_actions_in_list(path_show, path_edit, hash_argument) %}
 
-    <a class="icon_show" name="list_show" href="{{
+    <a class="icon_show ajax" name="list_show" href="{{
         path(path_show, hash_argument)
     }}" title="{% trans from 'actions' %}Show{% endtrans %}">&nbsp;</a>
-    <a class="icon_edit" name="list_edit" href="{{
+    <a class="icon_edit ajax" name="list_edit" href="{{
         path(path_edit, hash_argument)
     }}" title="{% trans from 'actions' %}Edit{% endtrans %}">&nbsp;</a>
 {% endmacro %}

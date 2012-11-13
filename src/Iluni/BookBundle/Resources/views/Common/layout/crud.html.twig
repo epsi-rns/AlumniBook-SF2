@@ -1,0 +1,16 @@
+{% extends app.request.isXmlHttpRequest
+    ? 'IluniBookBundle:Common:layout/ajax.html.twig'
+    : 'IluniBookBundle:Common:layout/standard.html.twig' %}
+
+{% block content %}
+<div id="container-request">
+    {{ block ('theme_flash') }}
+    {% block body %}{% endblock %}
+
+    {% if not app.request.isXmlHttpRequest %}
+    <script type="text/javascript">
+        ajaxified('container-request');
+    </script>
+    {% endif %}
+</div>
+{% endblock %}
